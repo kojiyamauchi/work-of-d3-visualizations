@@ -2,5 +2,11 @@
 node_modules
 .htaccess
 .htpasswd
+index.html
 csv/data.csv
 movies/sample.mp4
+images/*
+addImages/*
+sass/*
+css/*
+maps/*
