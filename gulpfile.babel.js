@@ -41,8 +41,8 @@ const postCssPlugIn = [autoprefixer({
 }), flexbug] // PostCSS plugin.
 const addImgDir = ('addImages/*') // added image fold,
 const dstImgDir = ('images/*') // compression image fold,
-const upLoadFileWrite = (['index.html', 'css/app.min.css', 'js/core.min.js', 'images/*', 'movies/*']) // upload file.
-const notUpLoadFileWrite = ([]) // don't upload file.
+const upLoadFileWrite = (['index.html', 'css/app.min.css', 'js/core.min.js', 'json/*', 'csv/*', 'images/*', 'movies/*']) // upload file.
+const notUpLoadFileWrite = (['!.DS_Store', '!.gitkeep']) // don't upload file.
 const upLoadFile = upLoadFileWrite.concat(notUpLoadFileWrite) // ftp upload files.
 
 // webpack.
@@ -183,7 +183,7 @@ gulp.task('ftpUpLoad', () => {
   const ftpConnect = ftp.create({
     host: '***',
     user: '***',
-    password: '***',
+    password: '***',
     parallel: 7,
     log: gutil.log
   })
