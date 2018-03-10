@@ -42,9 +42,11 @@ const visualizationsSP = () => {
                       const getGender = csv[i].gender
                       if(getGender === '男') {
                         console.log(`男は => ${csv[i].population}`)
+                        /* Add Visualization Core Functions This Line. */
                       }
                       if(getGender === '女') {
                         console.log(`女は => ${csv[i].population}`)
+                        /* Add Visualization Core Functions This Line. */
                       }
                     }
                   }

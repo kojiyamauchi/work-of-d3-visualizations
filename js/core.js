@@ -10065,9 +10065,11 @@ var visualizationsPC = function visualizationsPC() {
                       var getGender = csv[_i3].gender;
                       if (getGender === '男') {
                         console.log('\u7537\u306F => ' + csv[_i3].population);
+                        /* Add Visualization Core Functions This Line. */
                       }
                       if (getGender === '女') {
                         console.log('\u5973\u306F => ' + csv[_i3].population);
+                        /* Add Visualization Core Functions This Line. */
                       }
                     }
                   }
