@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,37 +73,84 @@
 "use strict";
 
 
-// Add Flag on Body Functions.
+[{
+  "time": "6:00",
+  "meridiem": "a.m.",
+  "militaryTime": "6:00"
+}, {
+  "time": "7:00",
+  "meridiem": "a.m.",
+  "militaryTime": "7:00"
+}, {
+  "time": "8:00",
+  "meridiem": "a.m.",
+  "militaryTime": "8:00"
+}, {
+  "time": "9:00",
+  "meridiem": "a.m.",
+  "militaryTime": "9:00"
+}, {
+  "time": "10:00",
+  "meridiem": "a.m.",
+  "militaryTime": "10:00"
+}, {
+  "time": "11:00",
+  "meridiem": "a.m.",
+  "militaryTime": "11:00"
+}, {
+  "time": "12:00",
+  "meridiem": "p.m.",
+  "militaryTime": "12:00"
+}, {
+  "time": "1:00",
+  "meridiem": "p.m.",
+  "militaryTime": "13:00"
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var addFlag = function addFlag() {
-  var target = document.body;
-  var SP = 768;
-  var PCTB = 1280;
-  var PC = 1920;
-  var coreFunc = function coreFunc() {
-    var WW = window.innerWidth;
-    if (WW < SP) {
-      target.classList.add('sp');
-      target.classList.remove('pctb');
-      target.classList.remove('pc');
-    } else if (WW >= SP && WW < PCTB) {
-      target.classList.add('pctb');
-      target.classList.remove('sp');
-      target.classList.remove('pc');
-    } else if (WW >= PCTB) {
-      target.classList.add('pc');
-      target.classList.remove('sp');
-      target.classList.remove('pctb');
-    }
-  };
-  window.addEventListener('load', coreFunc, false);
-  window.addEventListener('resize', coreFunc, false);
-};
-
-exports.default = addFlag;
+}, {
+  "time": "2:00",
+  "meridiem": "p.m.",
+  "militaryTime": "14:00"
+}, {
+  "time": "3:00",
+  "meridiem": "p.m.",
+  "militaryTime": "15:00"
+}, {
+  "time": "4:00",
+  "meridiem": "p.m.",
+  "militaryTime": "16:00"
+}, {
+  "time": "5:00",
+  "meridiem": "p.m.",
+  "militaryTime": "17:00"
+}, {
+  "time": "6:00",
+  "meridiem": "p.m.",
+  "militaryTime": "18:00"
+}, {
+  "time": "7:00",
+  "meridiem": "p.m.",
+  "militaryTime": "19:00"
+}, {
+  "time": "8:00",
+  "meridiem": "p.m.",
+  "militaryTime": "20:00"
+}, {
+  "time": "9:00",
+  "meridiem": "p.m.",
+  "militaryTime": "21:00"
+}, {
+  "time": "10:00",
+  "meridiem": "p.m.",
+  "militaryTime": "22:00"
+}, {
+  "time": "11:00",
+  "meridiem": "p.m.",
+  "militaryTime": "23:00"
+}, {
+  "time": "12:00",
+  "meridiem": "a.m.",
+  "militaryTime": "0:00"
+}];
 
 /***/ }),
 /* 1 */
@@ -112,379 +159,46 @@ exports.default = addFlag;
 "use strict";
 
 
-// Drawer Toggle Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawers = function drawers() {
-  var drawer = document.querySelector('.fn-drawer-city');
-  var hideBTN = document.querySelector('.fn-button-back-to-map');
-  var showBTNPC = document.querySelectorAll('.fn-tag');
-  var showBTNPCLen = showBTNPC.length;
-  var showBTNSP = document.querySelectorAll('.fn-button-city');
-  var showBTNSPLen = showBTNSP.length;
-  var drawerHIDE = function drawerHIDE() {
-    drawer.classList.remove('is-active');
-  };
-  hideBTN.addEventListener('click', drawerHIDE, false);
-  for (var i = 0; i < showBTNPCLen; i++) {
-    showBTNPC[i].onclick = function () {
-      drawer.classList.add('is-active');
-    };
-  }
-  for (var _i = 0; _i < showBTNSPLen; _i++) {
-    showBTNSP[_i].onclick = function () {
-      drawer.classList.add('is-active');
-    };
-  }
-};
-
-exports.default = drawers;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Size Setting Triangle Graph SVG.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sizeSettingSVG = function sizeSettingSVG() {
-  var target = document.querySelectorAll('.fn-triangle-graph-polygon');
-  var targetLen = target.length;
-  var coreFunc = function coreFunc() {
-    var flagSP = document.body.classList.contains('sp');
-    var flagPCTB = document.body.classList.contains('pctb');
-    var flagPC = document.body.classList.contains('pc');
-    if (flagSP) {
-      for (var i = 0; i < targetLen; i++) {
-        target[i].setAttribute('points', '11,0 23,62 0,62');
-      }
-    }
-    if (flagPCTB) {
-      for (var _i = 0; _i < targetLen; _i++) {
-        target[_i].setAttribute('points', '20,0 40,107 0,107');
-      }
-    }
-    if (flagPC) {
-      for (var _i2 = 0; _i2 < targetLen; _i2++) {
-        target[_i2].setAttribute('points', '30,0 60,160 0,160');
-      }
-    }
-  };
-  window.addEventListener('load', coreFunc, false);
-  window.addEventListener('resize', coreFunc, false);
-};
-
-exports.default = sizeSettingSVG;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Slider Clicked Function.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sliderClicked = function sliderClicked() {
-  var movie = document.getElementById('fn-movie');
-  var slider = document.querySelector('.fn-slider');
-  var playButtonSP = document.querySelector('.fn-button-play');
-  slider.addEventListener('click', function () {
-    if (movie.paused === true) {
-      movie.play();
-      slider.classList.remove('is-stop');
-      playButtonSP.classList.remove('is-stop');
-    } else {
-      movie.pause();
-      slider.classList.add('is-stop');
-      playButtonSP.classList.add('is-stop');
-    }
-  });
-  playButtonSP.addEventListener('click', function () {
-    if (movie.paused === true) {
-      movie.play();
-      playButtonSP.classList.remove('is-stop');
-      slider.classList.remove('is-stop');
-    } else {
-      movie.pause();
-      playButtonSP.classList.add('is-stop');
-      slider.classList.add('is-stop');
-    }
-  });
-};
-
-exports.default = sliderClicked;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Customize of Slider.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sliders = function sliders() {
-  var movie = document.getElementById('fn-movie');
-  var target = document.querySelector('.fn-range-active');
-  var range = document.querySelector('.fn-slider');
-  var rangeFullVal = range.max;
-  var rangePoint = document.querySelectorAll('.fn-range-point');
-  var pointLen = rangePoint.length;
-  var pointVal = rangeFullVal / (pointLen - 1);
-  var sliderTime = document.querySelectorAll('.fn-slider-time');
-  var coreFunc = function coreFunc(range) {
-    return function (event) {
-      if (range.value < rangeFullVal / 2) {
-        target.style.width = range.value / rangeFullVal * 100 + 1 + '%';
-      }
-      if (range.value >= rangeFullVal / 2) {
-        target.style.width = range.value / rangeFullVal * 100 + '%';
-      }
-      for (var i = 0; i < pointLen; i++) {
-        if (range.value >= pointVal * i) {
-          rangePoint[i].classList.add('is-active');
-          sliderTime[i].classList.add('is-active');
-        } else {
-          rangePoint[i].classList.remove('is-active');
-          sliderTime[i].classList.remove('is-active');
-        }
-      }
-    };
-  };
-  movie.addEventListener('timeupdate', coreFunc(range), false);
-  range.addEventListener('input', coreFunc(range), false);
-};
-
-exports.default = sliders;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Json.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _timeAlignment = __webpack_require__(7);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Sync Setting Movies <-> Slider.
-var syncSlider = function syncSlider() {
-  var movie = document.getElementById('fn-movie');
-  var slider = document.querySelector('.fn-slider');
-  slider.addEventListener('input', function () {
-    var time = slider.value / 10;
-    movie.currentTime = time;
-  });
-  movie.addEventListener('timeupdate', function () {
-    var val = movie.currentTime * 10;
-    slider.value = val;
-    var addTimeTarget = document.querySelector('.fn-time');
-    var addMeridiemTarget = document.querySelector('.fn-meridiem');
-    var timeAlignmentLen = _timeAlignment2.default.length;
-    var movieTotalTimes = 120 * 10;
-    var totalHour = 18;
-    var setMath = movieTotalTimes / totalHour;
-    for (var i = 0; i < timeAlignmentLen; i++) {
-      if (val > setMath * i && val <= setMath * (i + 1)) {
-        addTimeTarget.innerText = _timeAlignment2.default[i].time;
-        addMeridiemTarget.innerText = _timeAlignment2.default[i].meridiem;
-      }
-    }
-  });
-};exports.default = syncSlider;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(9);
-
-var _d2 = _interopRequireDefault(_d);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-var visualization = function visualization() {
-
-  var importCSV = './csv/data.csv';
-
-  _d2.default.csv(importCSV, function (error, csv) {
-
-    var cityBTNPC = document.querySelectorAll('.fn-tag');
-    var cityBTNPCLen = cityBTNPC.length;
-    var cityBTNSP = document.querySelectorAll('.fn-button-city');
-    var cityBTNSPLen = cityBTNSP.length;
-    for (var i = 0; i < cityBTNPCLen; i++) {
-      cityBTNPC[i].onclick = function () {};
-    }
-    for (var _i = 0; _i < cityBTNSPLen; _i++) {
-      cityBTNSP[_i].onclick = function () {};
-    }
-
-    var movie = document.getElementById('fn-movie');
-    movie.addEventListener('timeupdate', function () {
-      var getHour = document.querySelector('.fn-time').innerText;
-      var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-    });
-
-    var csvLen = csv.length;
-    for (var _i2 = 0; _i2 < csvLen; _i2++) {}
-  });
-};exports.default = visualization;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 [{
-  "time": "6:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-sapporo",
+  "buttonSP": "fn-button-sapporo",
+  "searchWord": "札幌市"
 }, {
-  "time": "7:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-sendai",
+  "buttonSP": "fn-button-sendai",
+  "searchWord": "仙台市"
 }, {
-  "time": "8:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-tokyo",
+  "buttonSP": "fn-button-tokyo",
+  "searchWord": "東京都"
 }, {
-  "time": "9:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-nagoya",
+  "buttonSP": "fn-button-nagoya",
+  "searchWord": "名古屋市"
 }, {
-  "time": "10:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-kyoto",
+  "buttonSP": "fn-button-kyoto",
+  "searchWord": "京都市"
 }, {
-  "time": "11:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-osaka",
+  "buttonSP": "fn-button-osaka",
+  "searchWord": "大阪市"
 }, {
-  "time": "12:00",
-  "meridiem": "p.m."
+  "buttonPC": "fn-tag-hiroshima",
+  "buttonSP": "fn-button-hiroshima",
+  "searchWord": "広島市"
 }, {
-  "time": "1:00",
-  "meridiem": "p.m."
+  "buttonPC": "fn-tag-fukuoka",
+  "buttonSP": "fn-button-fukuoka",
+  "searchWord": "福岡市"
 }, {
-  "time": "2:00",
-  "meridiem": "p.m."
-}, {
-  "time": "3:00",
-  "meridiem": "p.m."
-}, {
-  "time": "4:00",
-  "meridiem": "p.m."
-}, {
-  "time": "5:00",
-  "meridiem": "p.m."
-}, {
-  "time": "6:00",
-  "meridiem": "p.m."
-}, {
-  "time": "7:00",
-  "meridiem": "p.m."
-}, {
-  "time": "8:00",
-  "meridiem": "p.m."
-}, {
-  "time": "9:00",
-  "meridiem": "p.m."
-}, {
-  "time": "10:00",
-  "meridiem": "p.m."
-}, {
-  "time": "11:00",
-  "meridiem": "p.m."
-}, {
-  "time": "12:00",
-  "meridiem": "a.m."
+  "buttonPC": "fn-tag-naha",
+  "buttonSP": "fn-button-naha",
+  "searchWord": "那覇市"
 }];
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Modules.
-
-var _addFlag = __webpack_require__(0);
-
-var _addFlag2 = _interopRequireDefault(_addFlag);
-
-var _sizeSettingSVG = __webpack_require__(2);
-
-var _sizeSettingSVG2 = _interopRequireDefault(_sizeSettingSVG);
-
-var _syncSlider = __webpack_require__(5);
-
-var _syncSlider2 = _interopRequireDefault(_syncSlider);
-
-var _sliderClicked = __webpack_require__(3);
-
-var _sliderClicked2 = _interopRequireDefault(_sliderClicked);
-
-var _sliders = __webpack_require__(4);
-
-var _sliders2 = _interopRequireDefault(_sliders);
-
-var _drawers = __webpack_require__(1);
-
-var _drawers2 = _interopRequireDefault(_drawers);
-
-var _visualization = __webpack_require__(6);
-
-var _visualization2 = _interopRequireDefault(_visualization);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Require All Functions.
-(0, _addFlag2.default)();
-(0, _sizeSettingSVG2.default)();
-(0, _syncSlider2.default)();
-(0, _sliderClicked2.default)();
-(0, _sliders2.default)();
-(0, _drawers2.default)();
-visualization();
-
-/***/ }),
-/* 9 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -10045,6 +9759,465 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
 				__WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)); else if (typeof module === "object" && module.exports) module.exports = d3; else this.d3 = d3;
 }();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Add Flag on Body Functions.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var addFlag = function addFlag() {
+  var target = document.body;
+  var SP = 768;
+  var PCTB = 1280;
+  var PC = 1920;
+  var coreFunc = function coreFunc() {
+    var WW = window.innerWidth;
+    if (WW < SP) {
+      target.classList.add('sp');
+      target.classList.remove('pctb');
+      target.classList.remove('pc');
+    } else if (WW >= SP && WW < PCTB) {
+      target.classList.add('pctb');
+      target.classList.remove('sp');
+      target.classList.remove('pc');
+    } else if (WW >= PCTB) {
+      target.classList.add('pc');
+      target.classList.remove('sp');
+      target.classList.remove('pctb');
+    }
+  };
+  window.addEventListener('load', coreFunc, false);
+  window.addEventListener('resize', coreFunc, false);
+};
+
+exports.default = addFlag;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Drawer Hide Functions.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawers = function drawers() {
+  var drawer = document.querySelector('.fn-drawer-city');
+  var hideBTN = document.querySelector('.fn-button-back-to-map');
+  var drawerHIDE = function drawerHIDE() {
+    drawer.classList.remove('is-active');
+  };
+  hideBTN.addEventListener('click', drawerHIDE, false);
+};
+
+exports.default = drawers;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Size Setting Triangle Graph SVG.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sizeSettingSVG = function sizeSettingSVG() {
+  var target = document.querySelectorAll('.fn-triangle-graph-polygon');
+  var targetLen = target.length;
+  var coreFunc = function coreFunc() {
+    var flagSP = document.body.classList.contains('sp');
+    var flagPCTB = document.body.classList.contains('pctb');
+    var flagPC = document.body.classList.contains('pc');
+    if (flagSP) {
+      for (var i = 0; i < targetLen; i++) {
+        target[i].setAttribute('points', '11,0 23,62 0,62');
+      }
+    }
+    if (flagPCTB) {
+      for (var _i = 0; _i < targetLen; _i++) {
+        target[_i].setAttribute('points', '20,0 40,107 0,107');
+      }
+    }
+    if (flagPC) {
+      for (var _i2 = 0; _i2 < targetLen; _i2++) {
+        target[_i2].setAttribute('points', '30,0 60,160 0,160');
+      }
+    }
+  };
+  window.addEventListener('load', coreFunc, false);
+  window.addEventListener('resize', coreFunc, false);
+};
+
+exports.default = sizeSettingSVG;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Slider Clicked Function.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sliderClicked = function sliderClicked() {
+  var movie = document.getElementById('fn-movie');
+  var slider = document.querySelector('.fn-slider');
+  var playButtonSP = document.querySelector('.fn-button-play');
+  slider.addEventListener('click', function () {
+    if (movie.paused === true) {
+      movie.play();
+      slider.classList.remove('is-stop');
+      playButtonSP.classList.remove('is-stop');
+    } else {
+      movie.pause();
+      slider.classList.add('is-stop');
+      playButtonSP.classList.add('is-stop');
+    }
+  });
+  playButtonSP.addEventListener('click', function () {
+    if (movie.paused === true) {
+      movie.play();
+      playButtonSP.classList.remove('is-stop');
+      slider.classList.remove('is-stop');
+    } else {
+      movie.pause();
+      playButtonSP.classList.add('is-stop');
+      slider.classList.add('is-stop');
+    }
+  });
+};
+
+exports.default = sliderClicked;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Customize of Slider.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sliders = function sliders() {
+  var movie = document.getElementById('fn-movie');
+  var target = document.querySelector('.fn-range-active');
+  var range = document.querySelector('.fn-slider');
+  var rangeFullVal = range.max;
+  var rangePoint = document.querySelectorAll('.fn-range-point');
+  var pointLen = rangePoint.length;
+  var pointVal = rangeFullVal / (pointLen - 1);
+  var sliderTime = document.querySelectorAll('.fn-slider-time');
+  var coreFunc = function coreFunc(range) {
+    return function (event) {
+      if (range.value < rangeFullVal / 2) {
+        target.style.width = range.value / rangeFullVal * 100 + 1 + '%';
+      }
+      if (range.value >= rangeFullVal / 2) {
+        target.style.width = range.value / rangeFullVal * 100 + '%';
+      }
+      for (var i = 0; i < pointLen; i++) {
+        if (range.value >= pointVal * i) {
+          rangePoint[i].classList.add('is-active');
+          sliderTime[i].classList.add('is-active');
+        } else {
+          rangePoint[i].classList.remove('is-active');
+          sliderTime[i].classList.remove('is-active');
+        }
+      }
+    };
+  };
+  movie.addEventListener('timeupdate', coreFunc(range), false);
+  range.addEventListener('input', coreFunc(range), false);
+};
+
+exports.default = sliders;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import Json.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _timeAlignment = __webpack_require__(0);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Sync Setting Movies <-> Slider.
+var syncSlider = function syncSlider() {
+  var movie = document.getElementById('fn-movie');
+  var slider = document.querySelector('.fn-slider');
+  slider.addEventListener('input', function () {
+    var time = slider.value / 10;
+    movie.currentTime = time;
+  });
+  movie.addEventListener('timeupdate', function () {
+    var val = movie.currentTime * 10;
+    slider.value = val;
+    var addTimeTarget = document.querySelector('.fn-time');
+    var addMeridiemTarget = document.querySelector('.fn-meridiem');
+    var timeAlignmentLen = _timeAlignment2.default.length;
+    var movieTotalTimes = 120 * 10;
+    var totalHour = 18;
+    var setMath = movieTotalTimes / totalHour;
+    for (var i = 0; i < timeAlignmentLen; i++) {
+      if (val > setMath * i && val <= setMath * (i + 1)) {
+        addTimeTarget.innerText = _timeAlignment2.default[i].time;
+        addMeridiemTarget.innerText = _timeAlignment2.default[i].meridiem;
+      }
+    }
+  });
+};exports.default = syncSlider;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(2);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _timeAlignment = __webpack_require__(0);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Visualizations PC Functions.
+
+
+// Import Json.
+var visualizationsPC = function visualizationsPC() {
+
+  // Import CSV.
+  var importCSV = './csv/data.csv';
+
+  // Core Functions.
+  _d2.default.csv(importCSV, function (error, csv) {
+    var csvLen = csv.length;
+    var movie = document.getElementById('fn-movie');
+    var drawer = document.querySelector('.fn-drawer-city');
+    var cityBTNPC = document.querySelectorAll('.fn-tag');
+    var cityBTNPCLen = cityBTNPC.length;
+    var timeAlignmentLen = _timeAlignment2.default.length;
+    var cityCheckedLen = _cityChecked2.default.length;
+    movie.addEventListener('timeupdate', function () {
+      for (var i = 0; i < cityBTNPCLen; i++) {
+        cityBTNPC[i].onclick = function () {
+          var getHour = document.querySelector('.fn-time').innerText;
+          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
+          var getID = this.getAttribute('id');
+          drawer.classList.add('is-active');
+          for (var _i = 0; _i < timeAlignmentLen; _i++) {
+            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
+              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
+              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
+                if (getID === _cityChecked2.default[_i2].buttonPC) {
+                  var getCity = _cityChecked2.default[_i2].searchWord;
+                  for (var _i3 = 0; _i3 < csvLen; _i3++) {
+                    if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
+                      console.log('\u6642\u9593\u306F => ' + csv[_i3].time);
+                      console.log('\u90FD\u5E02\u306F => ' + csv[_i3].city);
+                      var getGender = csv[_i3].gender;
+                      if (getGender === '男') {
+                        console.log('\u7537\u306F => ' + csv[_i3].population);
+                      }
+                      if (getGender === '女') {
+                        console.log('\u5973\u306F => ' + csv[_i3].population);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+      }
+    });
+  });
+};exports.default = visualizationsPC;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(2);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _timeAlignment = __webpack_require__(0);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Visualizations SP Functions.
+
+
+// Import Json.
+var visualizationsSP = function visualizationsSP() {
+
+  // Import CSV.
+  var importCSV = './csv/data.csv';
+
+  // Core Functions.
+  _d2.default.csv(importCSV, function (error, csv) {
+    var csvLen = csv.length;
+    var movie = document.getElementById('fn-movie');
+    var drawer = document.querySelector('.fn-drawer-city');
+    var cityBTNSP = document.querySelectorAll('.fn-button-city');
+    var cityBTNSPLen = cityBTNSP.length;
+    var timeAlignmentLen = _timeAlignment2.default.length;
+    var cityCheckedLen = _cityChecked2.default.length;
+    movie.addEventListener('timeupdate', function () {
+      for (var i = 0; i < cityBTNSPLen; i++) {
+        cityBTNSP[i].onclick = function () {
+          var getHour = document.querySelector('.fn-time').innerText;
+          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
+          var getID = this.getAttribute('id');
+          drawer.classList.add('is-active');
+          for (var _i = 0; _i < timeAlignmentLen; _i++) {
+            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
+              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
+              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
+                if (getID === _cityChecked2.default[_i2].buttonSP) {
+                  var getCity = _cityChecked2.default[_i2].searchWord;
+                  for (var _i3 = 0; _i3 < csvLen; _i3++) {
+                    if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
+                      console.log('\u6642\u9593\u306F => ' + csv[_i3].time);
+                      console.log('\u90FD\u5E02\u306F => ' + csv[_i3].city);
+                      var getGender = csv[_i3].gender;
+                      if (getGender === '男') {
+                        console.log('\u7537\u306F => ' + csv[_i3].population);
+                      }
+                      if (getGender === '女') {
+                        console.log('\u5973\u306F => ' + csv[_i3].population);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+      }
+    });
+  });
+};exports.default = visualizationsSP;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import Modules.
+
+var _addFlag = __webpack_require__(3);
+
+var _addFlag2 = _interopRequireDefault(_addFlag);
+
+var _sizeSettingSVG = __webpack_require__(5);
+
+var _sizeSettingSVG2 = _interopRequireDefault(_sizeSettingSVG);
+
+var _syncSlider = __webpack_require__(8);
+
+var _syncSlider2 = _interopRequireDefault(_syncSlider);
+
+var _sliderClicked = __webpack_require__(6);
+
+var _sliderClicked2 = _interopRequireDefault(_sliderClicked);
+
+var _sliders = __webpack_require__(7);
+
+var _sliders2 = _interopRequireDefault(_sliders);
+
+var _drawers = __webpack_require__(4);
+
+var _drawers2 = _interopRequireDefault(_drawers);
+
+var _visualizationsPC = __webpack_require__(9);
+
+var _visualizationsPC2 = _interopRequireDefault(_visualizationsPC);
+
+var _visualizationsSP = __webpack_require__(10);
+
+var _visualizationsSP2 = _interopRequireDefault(_visualizationsSP);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Require All Functions.
+(0, _addFlag2.default)();
+(0, _sizeSettingSVG2.default)();
+(0, _syncSlider2.default)();
+(0, _sliderClicked2.default)();
+(0, _sliders2.default)();
+(0, _drawers2.default)();
+(0, _visualizationsPC2.default)();
+(0, _visualizationsSP2.default)();
 
 /***/ })
 /******/ ]);

@@ -7,7 +7,8 @@ import syncSlider from './modules/syncSlider'
 import sliderClicked from './modules/sliderClicked'
 import sliders from './modules/sliders'
 import drawers from './modules/drawers'
-import visualizarion from './modules/visualization'
+import visualizationsPC from './modules/visualizationsPC'
+import visualizationsSP from './modules/visualizationsSP'
 
 // Require All Functions.
 addFlag()
@@ -16,4 +17,5 @@ syncSlider()
 sliderClicked()
 sliders()
 drawers()
-visualization()
+visualizationsPC()
+visualizationsSP()

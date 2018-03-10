@@ -1,0 +1,46 @@
+[{
+    "buttonPC": "fn-tag-sapporo",
+    "buttonSP": "fn-button-sapporo",
+    "searchWord": "札幌市"
+  },
+  {
+    "buttonPC": "fn-tag-sendai",
+    "buttonSP": "fn-button-sendai",
+    "searchWord": "仙台市"
+  },
+  {
+    "buttonPC": "fn-tag-tokyo",
+    "buttonSP": "fn-button-tokyo",
+    "searchWord": "東京都"
+  },
+  {
+    "buttonPC": "fn-tag-nagoya",
+    "buttonSP": "fn-button-nagoya",
+    "searchWord": "名古屋市"
+  },
+  {
+    "buttonPC": "fn-tag-kyoto",
+    "buttonSP": "fn-button-kyoto",
+    "searchWord": "京都市"
+  },
+  {
+    "buttonPC": "fn-tag-osaka",
+    "buttonSP": "fn-button-osaka",
+    "searchWord": "大阪市"
+  },
+  {
+    "buttonPC": "fn-tag-hiroshima",
+    "buttonSP": "fn-button-hiroshima",
+    "searchWord": "広島市"
+  },
+  {
+    "buttonPC": "fn-tag-fukuoka",
+    "buttonSP": "fn-button-fukuoka",
+    "searchWord": "福岡市"
+  },
+  {
+    "buttonPC": "fn-tag-naha",
+    "buttonSP": "fn-button-naha",
+    "searchWord": "那覇市"
+  }
+]

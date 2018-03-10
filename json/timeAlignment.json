@@ -1,77 +1,97 @@
 [{
     "time": "6:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "6:00"
   },
   {
     "time": "7:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "7:00"
   },
   {
     "time": "8:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "8:00"
   },
   {
     "time": "9:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "9:00"
   },
   {
     "time": "10:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "10:00"
   },
   {
     "time": "11:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "11:00"
   },
   {
     "time": "12:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "12:00"
   },
   {
     "time": "1:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "13:00"
+
   },
   {
     "time": "2:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "14:00"
   },
   {
     "time": "3:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "15:00"
   },
   {
     "time": "4:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "16:00"
   },
   {
     "time": "5:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "17:00"
   },
   {
     "time": "6:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "18:00"
   },
   {
     "time": "7:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "19:00"
   },
   {
     "time": "8:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "20:00"
   },
   {
     "time": "9:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "21:00"
   },
   {
     "time": "10:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "22:00"
   },
   {
     "time": "11:00",
-    "meridiem": "p.m."
+    "meridiem": "p.m.",
+    "militaryTime": "23:00"
   },
   {
     "time": "12:00",
-    "meridiem": "a.m."
+    "meridiem": "a.m.",
+    "militaryTime": "0:00"
   }
 ]
