@@ -37,15 +37,13 @@ const visualizationsPC = () => {
                   const getCity = cityChecked[i].searchWord
                   for(let i = 0; i < csvLen; i++) {
                     if(getMilitaryTime === csv[i].time && getCity === csv[i].city) {
-                      console.log(`時間は => ${csv[i].time}`)
-                      console.log(`都市は => ${csv[i].city}`)
                       const getGender = csv[i].gender
                       if(getGender === '男') {
-                        console.log(`男は => ${csv[i].population}`)
+                        console.log(`${csv[i].time}の${csv[i].city}の男の人数は => ${csv[i].population}`)
                         /* Add Visualization Core Functions This Line. */
                       }
                       if(getGender === '女') {
-                        console.log(`女は => ${csv[i].population}`)
+                        console.log(`${csv[i].time}の${csv[i].city}の女の人数は => ${csv[i].population}`)
                         /* Add Visualization Core Functions This Line. */
                       }
                     }

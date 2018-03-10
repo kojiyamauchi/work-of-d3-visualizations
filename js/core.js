@@ -10060,15 +10060,13 @@ var visualizationsPC = function visualizationsPC() {
                   var getCity = _cityChecked2.default[_i2].searchWord;
                   for (var _i3 = 0; _i3 < csvLen; _i3++) {
                     if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
-                      console.log('\u6642\u9593\u306F => ' + csv[_i3].time);
-                      console.log('\u90FD\u5E02\u306F => ' + csv[_i3].city);
                       var getGender = csv[_i3].gender;
                       if (getGender === '男') {
-                        console.log('\u7537\u306F => ' + csv[_i3].population);
+                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u7537\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
                         /* Add Visualization Core Functions This Line. */
                       }
                       if (getGender === '女') {
-                        console.log('\u5973\u306F => ' + csv[_i3].population);
+                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u5973\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
                         /* Add Visualization Core Functions This Line. */
                       }
                     }
@@ -10145,14 +10143,14 @@ var visualizationsSP = function visualizationsSP() {
                   var getCity = _cityChecked2.default[_i2].searchWord;
                   for (var _i3 = 0; _i3 < csvLen; _i3++) {
                     if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
-                      console.log('\u6642\u9593\u306F => ' + csv[_i3].time);
-                      console.log('\u90FD\u5E02\u306F => ' + csv[_i3].city);
                       var getGender = csv[_i3].gender;
                       if (getGender === '男') {
-                        console.log('\u7537\u306F => ' + csv[_i3].population);
+                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u7537\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
+                        /* Add Visualization Core Functions This Line. */
                       }
                       if (getGender === '女') {
-                        console.log('\u5973\u306F => ' + csv[_i3].population);
+                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u5973\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
+                        /* Add Visualization Core Functions This Line. */
                       }
                     }
                   }
