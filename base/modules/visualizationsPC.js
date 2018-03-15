@@ -19,7 +19,7 @@ const visualizationsPC = () => {
   // Core Functions.
   d3.csv(importCSV, (error, csv) => {
 
-    d3.selectAll('.fn-triangle-graph-polygon').attr("transform", "translate(0, 160)")
+    d3.selectAll('.fn-triangle-graph-polygon').classed({ 'is-init': false }).attr('transform', 'translate(0, 160)')
 
     let totalPopArry = []
     const csvLen = csv.length
