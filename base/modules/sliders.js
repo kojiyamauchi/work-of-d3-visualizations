@@ -13,10 +13,10 @@ const sliders = () => {
   const coreFunc = range => {
     return event => {
       if(range.value < rangeFullVal / 2) {
-        target.style.width = (range.value / rangeFullVal * 100) + 1 + '%'
+        target.style.width = `${(range.value / rangeFullVal * 100) + 1}%`
       }
       if(range.value >= rangeFullVal / 2) {
-        target.style.width = (range.value / rangeFullVal * 100) + '%'
+        target.style.width = `${(range.value / rangeFullVal * 100)}%`
       }
       for(let i = 0; i < pointLen; i++) {
         if(range.value >= pointVal * i) {

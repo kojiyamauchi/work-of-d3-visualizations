@@ -4,10 +4,11 @@
 const sizeSettingSVG = () => {
   const target = document.querySelectorAll('.fn-triangle-graph-polygon')
   const targetLen = target.length
+  const checkTarget = document.querySelector('.first-view')
   const coreFunc = () => {
-    const flagSP = document.body.classList.contains('sp')
-    const flagPCTB = document.body.classList.contains('pctb')
-    const flagPC = document.body.classList.contains('pc')
+    const flagSP = checkTarget.classList.contains('sp')
+    const flagPCTB = checkTarget.classList.contains('pctb')
+    const flagPC = checkTarget.classList.contains('pc')
     if(flagSP) {
       for(let i = 0; i < targetLen; i++) {
         target[i].setAttribute('points', '11,0 23,62 0,62');

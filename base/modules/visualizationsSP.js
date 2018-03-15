@@ -1,61 +1,58 @@
-'use strict'
+ 'use strict'
 
-// Import D3.js
-import d3 from "d3"
+ // Import D3.js
+ import d3 from "d3"
 
-// Import Json.
-import timeAlignment from '../../json/timeAlignment.json'
-import cityChecked from '../../json/cityChecked.json'
+ // Import Heat Graph Functions.
+ import heatGraphSP from './heatGraphSP'
 
-// Visualizations SP Functions.
-const visualizationsSP = () => {
+ // Import Json.
+ import timeAlignment from '../json/timeAlignment.json'
+ import cityChecked from '../json/cityChecked.json'
 
-  // Import CSV.
-  const importCSV = './csv/data.csv'
+ // Visualizations SP Functions.
+ const visualizationsSP = () => {
 
-  // Core Functions.
-  d3.csv(importCSV, (error, csv) => {
-    const csvLen = csv.length
-    const movie = document.getElementById('fn-movie')
-    const drawer = document.querySelector('.fn-drawer-city')
-    const cityBTNSP = document.querySelectorAll('.fn-button-city')
-    const cityBTNSPLen = cityBTNSP.length
-    const timeAlignmentLen = timeAlignment.length
-    const cityCheckedLen = cityChecked.length
-    movie.addEventListener('timeupdate', () => {
-      for(let i = 0; i < cityBTNSPLen; i++) {
-        cityBTNSP[i].onclick = function () {
-          const getHour = document.querySelector('.fn-time').innerText
-          const getMeridiem = document.querySelector('.fn-meridiem').innerText
-          const getID = this.getAttribute('id')
-          drawer.classList.add('is-active')
-          for(let i = 0; i < timeAlignmentLen; i++) {
-            if(getMeridiem === timeAlignment[i].meridiem && getHour === timeAlignment[i].time) {
-              const getMilitaryTime = timeAlignment[i].militaryTime
-              for(let i = 0; i < cityCheckedLen; i++) {
-                if(getID === cityChecked[i].buttonSP) {
-                  const getCity = cityChecked[i].searchWord
-                  for(let i = 0; i < csvLen; i++) {
-                    if(getMilitaryTime === csv[i].time && getCity === csv[i].city) {
-                      const getGender = csv[i].gender
-                      if(getGender === '男') {
-                        console.log(`${csv[i].time}の${csv[i].city}の男の人数は => ${csv[i].population}`)
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                      if(getGender === '女') {
-                        console.log(`${csv[i].time}の${csv[i].city}の女の人数は => ${csv[i].population}`)
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    })
-  })
-}
+   // Import CSV.
+   const importCSV = './fv/csv/data.csv'
 
-export default visualizationsSP
+   // Core Functions.
+   d3.csv(importCSV, (error, csv) => {
+
+     d3.selectAll('.fn-triangle-graph-polygon').attr("transform", "translate(0, 62)")
+
+     let totalPopArry = []
+     const csvLen = csv.length
+     const movie = document.getElementById('fn-movie')
+     const cityBTNPC = document.querySelectorAll('.fn-tag')
+     const cityBTNPCLen = cityBTNPC.length
+     const timeAlignmentLen = timeAlignment.length
+     const cityCheckedLen = cityChecked.length
+
+     movie.addEventListener('timeupdate', () => {
+       const getHour = document.querySelector('.fn-time').innerText
+       const getMeridiem = document.querySelector('.fn-meridiem').innerText
+       for(let i = 0; i < timeAlignmentLen; i++) {
+         if(getMeridiem === timeAlignment[i].meridiem && getHour === timeAlignment[i].time) {
+           const getMilitaryTime = timeAlignment[i].militaryTime
+           for(let i = 0; i < cityBTNPCLen; i++) {
+             const getID = cityBTNPC[i].getAttribute('id')
+             for(let i = 0; i < cityCheckedLen; i++) {
+               if(getID === cityChecked[i].buttonPC) {
+                 const getCity = cityChecked[i].searchWord
+                 for(let i = 0; i < csvLen; i++) {
+                   if(getMilitaryTime === csv[i].time && getCity === csv[i].city) {
+                     totalPopArry.push(Number(csv[i].population.replace(/\,/g, '')))
+                   }
+                 }
+               }
+             }
+             heatGraphSP(totalPopArry, getID)
+           }
+         }
+       }
+     })
+   })
+ }
+
+ export default visualizationsSP

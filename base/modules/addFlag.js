@@ -2,7 +2,7 @@
 
 // Add Flag on Body Functions.
 const addFlag = () => {
-  const target = document.body
+  const target = document.querySelector('.first-view')
   const SP = 768
   const PCTB = 1280
   const PC = 1920
