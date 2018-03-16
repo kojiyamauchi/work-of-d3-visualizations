@@ -25,7 +25,6 @@ const heatGraphPC = (totalPopArry, getID) => {
       const getBasisPop = setBasisCity.firstElementChild.innerText
       const getCityPopRatio = 160 - 160 * (dummyChild.innerText / getBasisPop * 0.8)
       const getCityPopRatioNaha = 160 - 160 * (dummyChild.innerText / getBasisPop * 2.5)
-      //d3.select('#' + getID + '-sync-polygon').transition().duration(1500).attr('transform', 'translate(0, ' + getCityPopRatio + ')')
       d3.select(`#${getID}-sync-polygon`).transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatio})`)
       d3.select('#fn-tag-tokyo-sync-polygon').transition().duration(1500).attr('transform', 'translate(0, 0)')
       d3.select('#fn-tag-naha-sync-polygon').transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatioNaha})`)
