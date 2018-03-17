@@ -1,7 +1,7 @@
 'use strict'
 
 // Import Json.
-import timeAlignment from '../json/timeAlignment.json'
+import timeAlignment from '../../json/timeAlignment.json'
 
 // Sync Setting Movies <-> Slider.
 const syncSlider = () => {

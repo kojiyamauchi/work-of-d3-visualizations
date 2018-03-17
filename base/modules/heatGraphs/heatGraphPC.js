@@ -29,7 +29,7 @@ const heatGraphPC = (totalPopArry, getID) => {
       d3.select('#fn-tag-tokyo-sync-polygon').transition().duration(1500).attr('transform', 'translate(0, 0)')
       d3.select('#fn-tag-naha-sync-polygon').transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatioNaha})`)
     }, 1)
-    setInterval(function () {
+    setInterval(() => {
       if(startTotalPop <= getTotalPop) {
         addPop.innerText = startTotalPop.toLocaleString();
         startTotalPop++

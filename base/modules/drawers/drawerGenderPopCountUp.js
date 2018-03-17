@@ -4,17 +4,17 @@
 import d3 from "d3"
 
 // Drawer Total Population Count Up Functions.
-const drawerGenderPopCountUp = (csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJA) => {
+const drawerGenderPopCountUp = (csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP) => {
   const csv1Len = csv1.length
   const cityEN = document.querySelector('.fn-app-city-en')
-  const cityJA = document.querySelector('.fn-app-city-ja')
+  const cityJP = document.querySelector('.fn-app-city-ja')
   const malePop = document.querySelector('.fn-app-male-population')
   const femalePop = document.querySelector('.fn-app-female-population')
   for(let i = 0; i < csv1Len; i++) {
     if(getMilitaryTime === csv1[i].time && getCity === csv1[i].city) {
       const getGender = csv1[i].gender
       cityEN.innerText = getCityEN
-      cityJA.innerText = getCityJA
+      cityJP.innerText = getCityJP
       if(getGender === '男') {
         totalPopArry.push(Number(csv1[i].population.replace(/\,/g, '')))
         let startPop = Number(csv1[i].population.replace(/\,/g, '') - 150)

@@ -11,20 +11,24 @@ const drawers = () => {
   const maleGraph = document.querySelector('.fn-app-female-graph-inner')
   const femaleGraph = document.querySelector('.fn-app-male-graph-inner')
   const hideBTN = document.querySelector('.fn-button-back-to-map')
+  const foreignTotalPop = document.querySelector('.fn-app-visited-population')
+  const countriesPop = document.querySelectorAll('.fn-countries-population')
   const countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population')
   const countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner')
-  const countriesGraphWrapLen = countriesGraphWrap.length
+  const countriesPopLen = countriesPop.length
 
   const drawerHIDE = () => {
     drawer.classList.remove('is-active')
     totalPop.innerText = `ーーーーー`
     malePop.innerText = `ーーーーー`
     femalePop.innerText = `ーーーーー`
+    foreignTotalPop.innerText = `ーーーー`
     maleWrap.removeAttribute('style')
     femaleWrap.removeAttribute('style')
     maleGraph.removeAttribute('style')
     femaleGraph.removeAttribute('style')
-    for(let i = 0; i < countriesGraphWrapLen; i++) {
+    for(let i = 0; i < countriesPopLen; i++) {
+      countriesPop[i].innerText = `ーーー`
       countriesGraphWrap[i].removeAttribute('style')
       countriesGraph[i].removeAttribute('style')
     }
