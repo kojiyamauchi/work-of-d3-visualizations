@@ -1,7 +1,7 @@
 'use strict'
 
-// Drawer Hide Functions.
-const drawers = () => {
+// Drawer Close Functions.
+const drawerClosed = () => {
   const drawer = document.querySelector('.fn-drawer-city')
   const totalPop = document.querySelector('.fn-app-population')
   const malePop = document.querySelector('.fn-app-male-population')
@@ -17,7 +17,7 @@ const drawers = () => {
   const countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner')
   const countriesPopLen = countriesPop.length
 
-  const drawerHIDE = () => {
+  const coreFunc = () => {
     drawer.classList.remove('is-active')
     totalPop.innerText = `ーーーーー`
     malePop.innerText = `ーーーーー`
@@ -33,7 +33,7 @@ const drawers = () => {
       countriesGraph[i].removeAttribute('style')
     }
   }
-  hideBTN.addEventListener('click', drawerHIDE, false)
+  hideBTN.addEventListener('click', coreFunc, false)
 }
 
-export default drawers
+export default drawerClosed

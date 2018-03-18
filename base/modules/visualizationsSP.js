@@ -3,12 +3,12 @@
 // Import D3.js
 import d3 from 'd3'
 
-// Import Heat Graph Functions.
-import heatGraphSP from './heatGraphs/heatGraphSP'
-
 // Import Json.
 import timeAlignment from '../json/timeAlignment.json'
 import cityChecked from '../json/cityChecked.json'
+
+// Import Heat Graph Functions.
+import heatGraphSP from './heatGraphs/heatGraphSP'
 
 // Visualizations SP Functions.
 const visualizationsSP = () => {

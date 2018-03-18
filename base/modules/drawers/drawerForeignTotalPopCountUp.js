@@ -5,7 +5,7 @@ const drawerForeignTotalPopCountUp = totalForeignArry => {
   const foreignTotalPop = document.querySelector('.fn-app-visited-population')
   const totalForeignArryLen = totalForeignArry.length
   let addTotalPop = totalForeignArry.reduce((current, arryForeign) => current += arryForeign, 0)
-  let startTotalPop = addTotalPop - 150
+  let startTotalPop = addTotalPop - 100
   const getTotalPop = addTotalPop
   const duration = 10;
   totalForeignArry.length = 0

@@ -10,7 +10,7 @@ const drawerTotalPopCountUp = totalPopArry => {
   for(let i = 0; i < totalPopArryLen; i++) {
     addTotalPop += totalPopArry[i]
   }
-  let startTotalPop = addTotalPop - 150
+  let startTotalPop = addTotalPop - 100
   const getTotalPop = addTotalPop
   const getMalePop = totalPopArry[0]
   const getFemalePop = totalPopArry[1]

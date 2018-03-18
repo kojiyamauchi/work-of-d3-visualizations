@@ -7,7 +7,7 @@ import visualizationsSP from './visualizationsSP'
 import visualizationsDrawerSP from './visualizationsDrawerSP'
 
 const deviceJunctions = () => {
-  const coreFunction = () => {
+  const coreFunctions = () => {
     const target = document.querySelector('.first-view')
     const flagCheckPC = target.classList.contains('pc')
     const flagCheckPCTB = target.classList.contains('pctb')
@@ -21,8 +21,8 @@ const deviceJunctions = () => {
       visualizationsDrawerSP()
     }
   }
-  window.addEventListener('load', coreFunction, false)
-  window.addEventListener('resize', coreFunction, false)
+  window.addEventListener('load', coreFunctions, false)
+  window.addEventListener('resize', coreFunctions, false)
 }
 
 export default deviceJunctions

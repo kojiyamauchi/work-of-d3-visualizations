@@ -31,7 +31,7 @@ const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCi
           getCountriesFlagArry.push(countryName[i].flagPath)
           for(let i = 0; i < addCountriesLen; i++) {
             const getGraphWidth = getPoplutaionArry[i] / getPoplutaionArry[0] * 100
-            let startPop = getPoplutaionArry[i] - 150 >= 0 ? getPoplutaionArry[i] - 150 : 0
+            let startPop = getPoplutaionArry[i] - 100 >= 0 ? getPoplutaionArry[i] - 100 : 0
             const getPop = getPoplutaionArry[i]
             const duration = 10;
             addCountries[i].innerText = getCountriesArry[i]
@@ -47,7 +47,6 @@ const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCi
               d3.select(countriesGraph[i]).transition().duration(1500).style('width', '100%')
             }, 500)
           }
-
         }
       }
     }

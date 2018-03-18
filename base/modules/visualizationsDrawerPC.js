@@ -3,15 +3,15 @@
 // Import D3.js
 import d3 from 'd3'
 
-// Import Common Drawer Population Count Up Functions.
+// Import Json.
+import timeAlignment from '../json/timeAlignment.json'
+import cityChecked from '../json/cityChecked.json'
+
+// Import Common Drawer Visualization Functions.
 import drawerTotalPopCountUp from './drawers/drawerTotalPopCountUp'
 import drawerGenderPopCountUp from './drawers/drawerGenderPopCountUp'
 import drawerForeignTotalPopCountUp from './drawers/drawerForeignTotalPopCountUp'
 import drawerForeignTourists from './drawers/drawerForeignTourists'
-
-// Import Json.
-import timeAlignment from '../json/timeAlignment.json'
-import cityChecked from '../json/cityChecked.json'
 
 // Visualizations PC Functions.
 const visualizationsDrawerPC = () => {

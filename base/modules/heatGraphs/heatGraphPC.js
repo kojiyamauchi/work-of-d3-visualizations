@@ -14,9 +14,9 @@ const heatGraphPC = (totalPopArry, getID) => {
   for(let i = 0; i < totalPopArryLen; i++) {
     addTotalPop += totalPopArry[i]
   }
-  let startTotalPop = addTotalPop - 150
+  let startTotalPop = addTotalPop - 100
   const getTotalPop = addTotalPop
-  const duration = 5
+  const duration = 10
   totalPopArry.length = 0
   if(dummyChild.innerText != getTotalPop) {
     dummyChild.innerText = getTotalPop
@@ -28,7 +28,7 @@ const heatGraphPC = (totalPopArry, getID) => {
       d3.select(`#${getID}-sync-polygon`).transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatio})`)
       d3.select('#fn-tag-tokyo-sync-polygon').transition().duration(1500).attr('transform', 'translate(0, 0)')
       d3.select('#fn-tag-naha-sync-polygon').transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatioNaha})`)
-    }, 1)
+    }, 10)
     setInterval(() => {
       if(startTotalPop <= getTotalPop) {
         addPop.innerText = startTotalPop.toLocaleString();

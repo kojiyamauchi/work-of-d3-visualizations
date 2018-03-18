@@ -1,181 +1,226 @@
 [{
-    "countryNameJA": "オーストラリア",
-    "countryNameEN": "Australia"
+    "countryNameJP": "オーストラリア",
+    "countryNameEN": "Australia",
+    "flagPath": "australia"
   },
   {
-    "countryNameJA": "オーストリア",
-    "countryNameEN": "Austria"
+    "countryNameJP": "オーストリア",
+    "countryNameEN": "Austria",
+    "flagPath": "austria"
   },
   {
-    "countryNameJA": "中華人民共和国|中国",
-    "countryNameEN": "China"
+    "countryNameJP": "中華人民共和国|中国",
+    "countryNameEN": "China",
+    "flagPath": "china"
   },
   {
-    "countryNameJA": "イギリス",
-    "countryNameEN": "United Kingdom"
+    "countryNameJP": "イギリス",
+    "countryNameEN": "United Kingdom",
+    "flagPath": "united-kingdom"
   },
   {
-    "countryNameJA": "香港",
-    "countryNameEN": "Hong Kong"
+    "countryNameJP": "香港",
+    "countryNameEN": "Hong Kong",
+    "flagPath": "hong-kong"
   },
   {
-    "countryNameJA": "大韓民国",
-    "countryNameEN": "Korea"
+    "countryNameJP": "大韓民国",
+    "countryNameEN": "Korea",
+    "flagPath": "korea"
   },
   {
-    "countryNameJA": "マレーシア",
-    "countryNameEN": "Malaysia"
+    "countryNameJP": "マレーシア",
+    "countryNameEN": "Malaysia",
+    "flagPath": "malaysia"
   },
   {
-    "countryNameJA": "ロシア|ロシア連邦",
-    "countryNameEN": "Russia"
+    "countryNameJP": "ロシア|ロシア連邦",
+    "countryNameEN": "Russia",
+    "flagPath": "russia"
   },
   {
-    "countryNameJA": "シンガポール",
-    "countryNameEN": "Singapore"
+    "countryNameJP": "シンガポール",
+    "countryNameEN": "Singapore",
+    "flagPath": "singapore"
   },
   {
-    "countryNameJA": "スウェーデン",
-    "countryNameEN": "Sweden"
+    "countryNameJP": "スウェーデン",
+    "countryNameEN": "Sweden",
+    "flagPath": "sweden"
   },
   {
-    "countryNameJA": "タイ王国|タイ",
-    "countryNameEN": "Thailand"
+    "countryNameJP": "タイ王国|タイ",
+    "countryNameEN": "Thailand",
+    "flagPath": "thailand"
   },
   {
-    "countryNameJA": "台湾",
-    "countryNameEN": "Taiwan"
+    "countryNameJP": "台湾",
+    "countryNameEN": "Taiwan",
+    "flagPath": "taiwan"
   },
   {
-    "countryNameJA": "アメリカ合衆国",
-    "countryNameEN": "USA"
+    "countryNameJP": "アメリカ合衆国",
+    "countryNameEN": "USA",
+    "flagPath": "usa"
   },
   {
-    "countryNameJA": "不明",
-    "countryNameEN": "Unknown"
+    "countryNameJP": "不明",
+    "countryNameEN": "Unknown",
+    "flagPath": "unknown"
   },
   {
-    "countryNameJA": "フランス",
-    "countryNameEN": "France"
+    "countryNameJP": "フランス",
+    "countryNameEN": "France",
+    "flagPath": "france"
   },
   {
-    "countryNameJA": "インドネシア",
-    "countryNameEN": "Indonesia"
+    "countryNameJP": "インドネシア",
+    "countryNameEN": "Indonesia",
+    "flagPath": "indonesia"
   },
   {
-    "countryNameJA": "イタリア",
-    "countryNameEN": "Italy"
+    "countryNameJP": "イタリア",
+    "countryNameEN": "Italy",
+    "flagPath": "italy"
   },
   {
-    "countryNameJA": "ベルギー",
-    "countryNameEN": "Belgium"
+    "countryNameJP": "ベルギー",
+    "countryNameEN": "Belgium",
+    "flagPath": "belgium"
   },
   {
-    "countryNameJA": "カナダ",
-    "countryNameEN": "Canada"
+    "countryNameJP": "カナダ",
+    "countryNameEN": "Canada",
+    "flagPath": "canada"
   },
   {
-    "countryNameJA": "スイス",
-    "countryNameEN": "Switzerland"
+    "countryNameJP": "スイス",
+    "countryNameEN": "Switzerland",
+    "flagPath": "switzerland"
   },
   {
-    "countryNameJA": "チェコ",
-    "countryNameEN": "Czech"
+    "countryNameJP": "チェコ",
+    "countryNameEN": "Czech",
+    "flagPath": "czech"
   },
   {
-    "countryNameJA": "ドイツ",
-    "countryNameEN": "Germany"
+    "countryNameJP": "ドイツ",
+    "countryNameEN": "Germany",
+    "flagPath": "germany"
   },
   {
-    "countryNameJA": "デンマーク",
-    "countryNameEN": "Denmark"
+    "countryNameJP": "デンマーク",
+    "countryNameEN": "Denmark",
+    "flagPath": "denmark"
   },
   {
-    "countryNameJA": "スペイン",
-    "countryNameEN": "Spain"
+    "countryNameJP": "スペイン",
+    "countryNameEN": "Spain",
+    "flagPath": "spain"
   },
   {
-    "countryNameJA": "エストニア",
-    "countryNameEN": "Estonia"
+    "countryNameJP": "エストニア",
+    "countryNameEN": "Estonia",
+    "flagPath": "estonia"
   },
   {
-    "countryNameJA": "フィンランド",
-    "countryNameEN": "Finland"
+    "countryNameJP": "フィンランド",
+    "countryNameEN": "Finland",
+    "flagPath": "finland"
   },
   {
-    "countryNameJA": "インド",
-    "countryNameEN": "India"
+    "countryNameJP": "インド",
+    "countryNameEN": "India",
+    "flagPath": "india"
   },
   {
-    "countryNameJA": "イスラエル",
-    "countryNameEN": "Israel"
+    "countryNameJP": "イスラエル",
+    "countryNameEN": "Israel",
+    "flagPath": "israel"
   },
   {
-    "countryNameJA": "メキシコ",
-    "countryNameEN": "Mexico"
+    "countryNameJP": "メキシコ",
+    "countryNameEN": "Mexico",
+    "flagPath": "mexico"
   },
   {
-    "countryNameJA": "オランダ",
-    "countryNameEN": "Netherlands"
+    "countryNameJP": "オランダ",
+    "countryNameEN": "Netherlands",
+    "flagPath": "netherlands"
   },
   {
-    "countryNameJA": "ノルウェー",
-    "countryNameEN": "Norway"
+    "countryNameJP": "ノルウェー",
+    "countryNameEN": "Norway",
+    "flagPath": "norway"
   },
   {
-    "countryNameJA": "ニュージーランド",
-    "countryNameEN": "New zealand"
+    "countryNameJP": "ニュージーランド",
+    "countryNameEN": "New zealand",
+    "flagPath": "new-zealand"
   },
   {
-    "countryNameJA": "フィリピン",
-    "countryNameEN": "Philippines"
+    "countryNameJP": "フィリピン",
+    "countryNameEN": "Philippines",
+    "flagPath": "philippines"
   },
   {
-    "countryNameJA": "ポーランド",
-    "countryNameEN": "Poland"
+    "countryNameJP": "ポーランド",
+    "countryNameEN": "Poland",
+    "flagPath": "poland"
   },
   {
-    "countryNameJA": "ポルトガル",
-    "countryNameEN": "Portugal"
+    "countryNameJP": "ポルトガル",
+    "countryNameEN": "Portugal",
+    "flagPath": "portugal"
   },
   {
-    "countryNameJA": "カタール",
-    "countryNameEN": "Qatar"
+    "countryNameJP": "カタール",
+    "countryNameEN": "Qatar",
+    "flagPath": "qatar"
   },
   {
-    "countryNameJA": "ルーマニア",
-    "countryNameEN": "Romania"
+    "countryNameJP": "ルーマニア",
+    "countryNameEN": "Romania",
+    "flagPath": "romania"
   },
   {
-    "countryNameJA": "トルコ",
-    "countryNameEN": "Turkey"
+    "countryNameJP": "トルコ",
+    "countryNameEN": "Turkey",
+    "flagPath": "turkey"
   },
   {
-    "countryNameJA": "ベトナム",
-    "countryNameEN": "Vietnam"
+    "countryNameJP": "ベトナム",
+    "countryNameEN": "Vietnam",
+    "flagPath": "vietnam"
   },
   {
-    "countryNameJA": "ルクセンブルク",
-    "countryNameEN": "Luxembourg"
+    "countryNameJP": "ルクセンブルク",
+    "countryNameEN": "Luxembourg",
+    "flagPath": "luxembourg"
   },
   {
-    "countryNameJA": "アラブ首長国連邦",
-    "countryNameEN": "UAE"
+    "countryNameJP": "アラブ首長国連邦",
+    "countryNameEN": "UAE",
+    "flagPath": "uae"
   },
   {
-    "countryNameJA": "ミャンマー",
-    "countryNameEN": "Myanmar"
+    "countryNameJP": "ミャンマー",
+    "countryNameEN": "Myanmar",
+    "flagPath": "myanmar"
   },
   {
-    "countryNameJA": "ブラジル",
-    "countryNameEN": "Brazil"
+    "countryNameJP": "ブラジル",
+    "countryNameEN": "Brazil",
+    "flagPath": "brazil"
   },
   {
-    "countryNameJA": "アイルランド",
-    "countryNameEN": "Ireland"
+    "countryNameJP": "アイルランド",
+    "countryNameEN": "Ireland",
+    "flagPath": "ireland"
   },
   {
-    "countryNameJA": "アルゼンチン",
-    "countryNameEN": "Argentina"
+    "countryNameJP": "アルゼンチン",
+    "countryNameEN": "Argentina",
+    "flagPath": "argentina"
   }
 ]

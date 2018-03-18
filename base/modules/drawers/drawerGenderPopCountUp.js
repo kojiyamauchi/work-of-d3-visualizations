@@ -17,7 +17,7 @@ const drawerGenderPopCountUp = (csv1, i, totalPopArry, getMilitaryTime, getCity,
       cityJP.innerText = getCityJP
       if(getGender === '男') {
         totalPopArry.push(Number(csv1[i].population.replace(/\,/g, '')))
-        let startPop = Number(csv1[i].population.replace(/\,/g, '') - 150)
+        let startPop = Number(csv1[i].population.replace(/\,/g, '') - 100)
         const getPop = Number(csv1[i].population.replace(/\,/g, ''))
         const duration = 10;
         setTimeout(() => {
@@ -32,7 +32,7 @@ const drawerGenderPopCountUp = (csv1, i, totalPopArry, getMilitaryTime, getCity,
       }
       if(getGender === '女') {
         totalPopArry.push(Number(csv1[i].population.replace(/\,/g, '')))
-        let startPop = Number(csv1[i].population.replace(/\,/g, '') - 150)
+        let startPop = Number(csv1[i].population.replace(/\,/g, '') - 100)
         const getPop = Number(csv1[i].population.replace(/\,/g, ''))
         const duration = 10;
         setTimeout(() => {

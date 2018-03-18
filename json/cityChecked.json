@@ -1,46 +1,64 @@
 [{
     "buttonPC": "fn-tag-sapporo",
     "buttonSP": "fn-button-sapporo",
-    "searchWord": "札幌市"
+    "searchWord": "札幌市",
+    "cityEN": "SAPPORO",
+    "cityJP": "札幌"
   },
   {
     "buttonPC": "fn-tag-sendai",
     "buttonSP": "fn-button-sendai",
-    "searchWord": "仙台市"
+    "searchWord": "仙台市",
+    "cityEN": "SENDAI",
+    "cityJP": "仙台"
   },
   {
     "buttonPC": "fn-tag-tokyo",
     "buttonSP": "fn-button-tokyo",
-    "searchWord": "東京都"
+    "searchWord": "東京都",
+    "cityEN": "TOKYO",
+    "cityJP": "東京"
   },
   {
     "buttonPC": "fn-tag-nagoya",
     "buttonSP": "fn-button-nagoya",
-    "searchWord": "名古屋市"
+    "searchWord": "名古屋市",
+    "cityEN": "NAGOYA",
+    "cityJP": "名古屋"
   },
   {
     "buttonPC": "fn-tag-kyoto",
     "buttonSP": "fn-button-kyoto",
-    "searchWord": "京都市"
+    "searchWord": "京都市",
+    "cityEN": "KYOTO",
+    "cityJP": "京都"
   },
   {
     "buttonPC": "fn-tag-osaka",
     "buttonSP": "fn-button-osaka",
-    "searchWord": "大阪市"
+    "searchWord": "大阪市",
+    "cityEN": "OSAKA",
+    "cityJP": "大阪"
   },
   {
     "buttonPC": "fn-tag-hiroshima",
     "buttonSP": "fn-button-hiroshima",
-    "searchWord": "広島市"
+    "searchWord": "広島市",
+    "cityEN": "HIROSHIMA",
+    "cityJP": "広島"
   },
   {
     "buttonPC": "fn-tag-fukuoka",
     "buttonSP": "fn-button-fukuoka",
-    "searchWord": "福岡市"
+    "searchWord": "福岡市",
+    "cityEN": "FUKUOKA",
+    "cityJP": "福岡"
   },
   {
     "buttonPC": "fn-tag-naha",
     "buttonSP": "fn-button-naha",
-    "searchWord": "那覇市"
+    "searchWord": "那覇市",
+    "cityEN": "NAHA",
+    "cityJP": "那覇"
   }
 ]
