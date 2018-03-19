@@ -3,17 +3,15 @@
 // Import Modules.
 import addFlag from './modules/settings/addFlag'
 import sizeSettingSVG from './modules/settings/sizeSettingSVG'
-import syncSliders from './modules/sliders/syncSliders'
-import sliderClicked from './modules/sliders/sliderClicked'
-import sliders from './modules/sliders/sliders'
 import drawerClosed from './modules/drawers/drawerClosed'
+import sliderClicked from './modules/sliders/sliderClicked'
+import syncSliders from './modules/sliders/syncSliders'
 import deviceJunctions from './modules/deviceJunctions'
 
 // Require All Functions.
 addFlag()
 sizeSettingSVG()
-syncSliders()
-sliderClicked()
-sliders()
 drawerClosed()
+sliderClicked()
+syncSliders()
 deviceJunctions()
