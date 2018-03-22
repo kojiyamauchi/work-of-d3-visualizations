@@ -16,7 +16,7 @@ import drawerForeignTourists from './drawers/drawerForeignTourists'
 // Visualizations PC Functions.
 const visualizationsDrawerPC = () => {
 
-  //Import CSV.
+  // Import CSV.
   const importCSV1 = './fv/csv/data.csv'
   const importCSV2 = './fv/csv/foreignTourists.csv'
 
@@ -37,6 +37,7 @@ const visualizationsDrawerPC = () => {
           const getHour = document.querySelector('.fn-time').innerText
           const getMeridiem = document.querySelector('.fn-meridiem').innerText
           const getID = this.getAttribute('id')
+          movie.pause()
           drawer.classList.add('is-active')
           for(let i = 0; i < timeAlignmentLen; i++) {
             if(getMeridiem === timeAlignment[i].meridiem && getHour === timeAlignment[i].time) {

@@ -8,20 +8,16 @@ import timeAlignment from '../json/timeAlignment.json'
 import cityChecked from '../json/cityChecked.json'
 
 // Import Heat Graph Functions.
-import heatGraphSP from './heatGraphs/heatGraphSP'
+import heatGraph from './heatGraph/heatGraph'
 
-// Visualizations SP Functions.
-const visualizationsSP = () => {
+// Visualizations PC Functions.
+const visualizations = () => {
 
   // Import CSV.
   const importCSV1 = './fv/csv/data.csv'
 
   // Core Functions.
   d3.csv(importCSV1, (error, csv1) => {
-
-    d3.selectAll('.fn-triangle-graph-polygon').classed({
-      'is-init': false
-    }).attr('transform', 'translate(0, 62)')
 
     let totalPopArry = []
     const csv1Len = csv1.length
@@ -49,7 +45,7 @@ const visualizationsSP = () => {
                 }
               }
             }
-            heatGraphSP(totalPopArry, getID)
+            heatGraph(totalPopArry, getID)
           }
         }
       }
@@ -57,4 +53,4 @@ const visualizationsSP = () => {
   })
 }
 
-export default visualizationsSP
+export default visualizations

@@ -2,16 +2,20 @@
 
 // Import Modules.
 import addFlag from './modules/settings/addFlag'
-import sizeSettingSVG from './modules/settings/sizeSettingSVG'
+import initHeatGraph from './modules/heatGraph/initHeatGraph'
 import drawerClosed from './modules/drawers/drawerClosed'
 import sliderClicked from './modules/sliders/sliderClicked'
 import syncSliders from './modules/sliders/syncSliders'
-import deviceJunctions from './modules/deviceJunctions'
+import visualizationsDrawerPC from './modules/visualizationsDrawerPC'
+import visualizationsDrawerSP from './modules/visualizationsDrawerSP'
+import visualizations from './modules/visualizations'
 
 // Require All Functions.
 addFlag()
-sizeSettingSVG()
+initHeatGraph()
 drawerClosed()
 sliderClicked()
 syncSliders()
-deviceJunctions()
+visualizationsDrawerPC()
+visualizationsDrawerSP()
+visualizations()

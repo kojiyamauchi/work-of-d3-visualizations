@@ -37,6 +37,7 @@ const visualizationsDrawerSP = () => {
           const getHour = document.querySelector('.fn-time').innerText
           const getMeridiem = document.querySelector('.fn-meridiem').innerText
           const getID = this.getAttribute('id')
+          movie.pause()
           drawer.classList.add('is-active')
           for(let i = 0; i < timeAlignmentLen; i++) {
             if(getMeridiem === timeAlignment[i].meridiem && getHour === timeAlignment[i].time) {

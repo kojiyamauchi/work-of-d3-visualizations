@@ -2,6 +2,7 @@
 
 // Drawer Close Functions.
 const drawerClosed = () => {
+  const movie = document.getElementById('fn-movie')
   const drawer = document.querySelector('.fn-drawer-city')
   const totalPop = document.querySelector('.fn-app-population')
   const malePop = document.querySelector('.fn-app-male-population')
@@ -10,7 +11,7 @@ const drawerClosed = () => {
   const femaleWrap = document.querySelector('.gender-female-wrapper')
   const maleGraph = document.querySelector('.fn-app-female-graph-inner')
   const femaleGraph = document.querySelector('.fn-app-male-graph-inner')
-  const hideBTN = document.querySelector('.fn-button-back-to-map')
+  const closeBTN = document.querySelector('.fn-button-back-to-map')
   const foreignTotalPop = document.querySelector('.fn-app-visited-population')
   const countriesPop = document.querySelectorAll('.fn-countries-population')
   const countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population')
@@ -18,6 +19,7 @@ const drawerClosed = () => {
   const countriesPopLen = countriesPop.length
 
   const coreFunc = () => {
+    movie.play()
     drawer.classList.remove('is-active')
     totalPop.innerText = `ーーーーー`
     malePop.innerText = `ーーーーー`
@@ -33,7 +35,7 @@ const drawerClosed = () => {
       countriesGraph[i].removeAttribute('style')
     }
   }
-  hideBTN.addEventListener('click', coreFunc, false)
+  closeBTN.addEventListener('click', coreFunc, false)
 }
 
 export default drawerClosed
