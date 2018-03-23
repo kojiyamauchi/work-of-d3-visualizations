@@ -13,6 +13,8 @@ const syncSliders = () => {
   const addTimeTarget = document.querySelector('.fn-time')
   const addMeridiemTarget = document.querySelector('.fn-meridiem')
   const timeAlignmentLen = timeAlignment.length
+  const addHour = document.querySelector('.hour')
+  const addMinute = document.querySelector('.minute')
 
   // Sync of Slider for Movie.
   const syncSlider = (sliderMaxVal, setCalculation) => {
@@ -34,6 +36,12 @@ const syncSliders = () => {
           addMeridiemTarget.innerText = timeAlignment[i].meridiem
         }
       }
+      const getColonPosition = addTimeTarget.innerText.indexOf(':')
+      const getHour = addTimeTarget.innerText.slice(0,getColonPosition)
+      const getNumber = Math.floor(movie.currentTime)
+      const getMinute = (getNumber % 2) != 0 ? 30 : 0
+      addHour.innerText = getHour
+      addMinute.innerText = (`0${getMinute}`).slice(-2)
       sliders(slider, sliderMaxVal)
     })
   }
@@ -41,7 +49,7 @@ const syncSliders = () => {
   // Movie Loaded Functions => CallBack Sync Slider & Movie Play Functions.
   movie.addEventListener('loadedmetadata', () => {
     const sliderMaxVal = slider.max
-    const movieTotalTime = movie.duration
+    const movieTotalTime = Math.round(movie.duration)
     const setCalculation = Math.round(sliderMaxVal / movieTotalTime)
     const totalHour = 18
     const setHourPoints = movieTotalTime * setCalculation / totalHour

@@ -14,9 +14,9 @@ const heatGraph = (totalPopArry, getID) => {
   for(let i = 0; i < totalPopArryLen; i++) {
     addTotalPop += totalPopArry[i]
   }
-  let startTotalPop = addTotalPop - 100
+  let startTotalPop = addTotalPop - 75
   const getTotalPop = addTotalPop
-  const duration = 10
+  const duration = 1
   totalPopArry.length = 0
   if(dummyChild.innerText != getTotalPop) {
     dummyChild.innerText = getTotalPop
@@ -31,9 +31,9 @@ const heatGraph = (totalPopArry, getID) => {
       const getBasisPop = setBasisCity.firstElementChild.innerText
       const getCityPopRatio = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * addBasisRatio)
       const getCityPopRatioNaha = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * 2.5)
-      d3.select(`#${getID}-sync-polygon`).transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatio})`)
-      d3.select('#fn-tag-tokyo-sync-polygon').transition().duration(1500).attr('transform', 'translate(0, 0)')
-      d3.select('#fn-tag-naha-sync-polygon').transition().duration(1500).attr('transform', `translate(0, ${getCityPopRatioNaha})`)
+      d3.select(`#${getID}-sync-polygon`).transition().duration(750).attr('transform', `translate(0, ${getCityPopRatio})`)
+      d3.select('#fn-tag-tokyo-sync-polygon').transition().duration(750).attr('transform', 'translate(0, 0)')
+      d3.select('#fn-tag-naha-sync-polygon').transition().duration(750).attr('transform', `translate(0, ${getCityPopRatioNaha})`)
     }, 10)
     setInterval(() => {
       if(startTotalPop <= getTotalPop) {
