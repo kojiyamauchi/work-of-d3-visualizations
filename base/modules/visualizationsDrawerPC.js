@@ -12,6 +12,7 @@ import drawerTotalPopCountUp from './drawers/drawerTotalPopCountUp'
 import drawerGenderPopCountUp from './drawers/drawerGenderPopCountUp'
 import drawerForeignTotalPopCountUp from './drawers/drawerForeignTotalPopCountUp'
 import drawerForeignTourists from './drawers/drawerForeignTourists'
+import drawerHeatGraph from './drawers/drawerHeatGraph'
 
 // Visualizations PC Functions.
 const visualizationsDrawerPC = () => {
@@ -47,8 +48,10 @@ const visualizationsDrawerPC = () => {
                   const getCity = cityChecked[i].searchWord
                   const getCityEN = cityChecked[i].cityEN
                   const getCityJP = cityChecked[i].cityJP
+                  const getCityLower = cityChecked[i].cityLowerEN
                   drawerGenderPopCountUp(csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP)
                   drawerForeignTourists(csv2, i, totalForeignArry, getMilitaryTime, getCity)
+                  drawerHeatGraph(getCityLower)
                 }
               }
             }

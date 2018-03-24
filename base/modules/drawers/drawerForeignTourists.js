@@ -19,6 +19,17 @@ const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCi
   const countriesFlag = document.querySelectorAll('.fn-icon-flag')
   const countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population')
   const countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner')
+  const closeBTN = document.querySelector('.fn-button-back-to-map')
+  const graphCallBackCore = (transition, callback) => {
+    let index = 0
+    transition
+      .each(() => {
+        ++index
+      })
+      .each('end', () => {
+        if(!--index) callback.apply(this, arguments)
+      })
+  }
 
   for(let i = 0; i < csv2Len; i++) {
     if(getMilitaryTime === csv2[i].time && getCity === csv2[i].city) {
@@ -44,7 +55,9 @@ const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCi
                   startPop++;
                 }
               }, duration)
-              d3.select(countriesGraph[i]).transition().duration(1500).style('width', '100%')
+              d3.select(countriesGraph[i]).transition().duration(1500).style('width', '100%').call(graphCallBackCore, () => {
+                closeBTN.disabled = false
+              })
             }, 500)
           }
         }

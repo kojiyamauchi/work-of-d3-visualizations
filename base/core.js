@@ -9,6 +9,7 @@ import syncSliders from './modules/sliders/syncSliders'
 import visualizationsDrawerPC from './modules/visualizationsDrawerPC'
 import visualizationsDrawerSP from './modules/visualizationsDrawerSP'
 import visualizations from './modules/visualizations'
+import forIE from './modules/settings/forIE'
 
 // Require All Functions.
 addFlag()
@@ -19,3 +20,4 @@ syncSliders()
 visualizationsDrawerPC()
 visualizationsDrawerSP()
 visualizations()
+forIE()
