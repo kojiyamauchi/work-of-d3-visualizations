@@ -17,24 +17,27 @@ import drawerHeatGraph from './drawers/drawerHeatGraph'
 // Visualizations PC Functions.
 const visualizationsDrawerPC = () => {
 
-  // Import CSV.
-  const importCSV1 = './fv/csv/data.csv'
-  const importCSV2 = './fv/csv/foreignTourists.csv'
+  const cityBTNPC = document.querySelectorAll('.fn-tag')
+  const cityBTNPCLen = cityBTNPC.length
+  const cityCheckedLen = cityChecked.length
 
-  // Core Functions.
-  d3.csv(importCSV1, (error, csv1) => {
-    d3.csv(importCSV2, (error, csv2) => {
+  // Clicked City Button, Function Start on PC.
+  for(let i = 0; i < cityBTNPCLen; i++) {
+    cityBTNPC[i].onclick = function () {
 
-      let totalPopArry = []
-      let totalForeignArry = []
-      const movie = document.getElementById('fn-movie')
-      const drawer = document.querySelector('.fn-drawer-city')
-      const cityBTNPC = document.querySelectorAll('.fn-tag')
-      const cityBTNPCLen = cityBTNPC.length
-      const timeAlignmentLen = timeAlignment.length
-      const cityCheckedLen = cityChecked.length
-      for(let i = 0; i < cityBTNPCLen; i++) {
-        cityBTNPC[i].onclick = function () {
+      // Import CSV.
+      const importCSV1 = './fv/csv/data.csv'
+      const importCSV2 = './fv/csv/foreignTourists.csv'
+
+      // Core Functions.
+      d3.csv(importCSV1, (error, csv1) => {
+        d3.csv(importCSV2, (error, csv2) => {
+
+          let totalPopArry = []
+          let totalForeignArry = []
+          const movie = document.getElementById('fn-movie')
+          const drawer = document.querySelector('.fn-drawer-city')
+          const timeAlignmentLen = timeAlignment.length
           const getHour = document.querySelector('.fn-time').innerText
           const getMeridiem = document.querySelector('.fn-meridiem').innerText
           const getID = this.getAttribute('id')
@@ -58,10 +61,10 @@ const visualizationsDrawerPC = () => {
           }
           drawerTotalPopCountUp(totalPopArry)
           drawerForeignTotalPopCountUp(totalForeignArry)
-        }
-      }
-    })
-  })
+        })
+      })
+    }
+  }
 }
 
 export default visualizationsDrawerPC
