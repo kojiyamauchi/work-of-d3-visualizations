@@ -1,7 +1,7 @@
 'use strict'
 
 // Import D3.js
-import d3 from "d3"
+import d3 from 'd3'
 
 // Heat Graph PC Functions.
 const heatGraph = (totalPopArry, getID) => {
@@ -14,7 +14,7 @@ const heatGraph = (totalPopArry, getID) => {
   for(let i = 0; i < totalPopArryLen; i++) {
     addTotalPop += totalPopArry[i]
   }
-  let startTotalPop = addTotalPop - 75
+  let startTotalPop = addTotalPop - 40
   const getTotalPop = addTotalPop
   const duration = 1
   totalPopArry.length = 0

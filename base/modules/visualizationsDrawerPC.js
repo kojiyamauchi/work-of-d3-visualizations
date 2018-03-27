@@ -4,8 +4,8 @@
 import d3 from 'd3'
 
 // Import Json.
-import timeAlignment from '../json/timeAlignment.json'
-import cityChecked from '../json/cityChecked.json'
+import timeAlignment from '../../json/timeAlignment.json'
+import cityChecked from '../../json/cityChecked.json'
 
 // Import Common Drawer Visualization Functions.
 import drawerTotalPopCountUp from './drawers/drawerTotalPopCountUp'
@@ -20,14 +20,18 @@ const visualizationsDrawerPC = () => {
   const cityBTNPC = document.querySelectorAll('.fn-tag')
   const cityBTNPCLen = cityBTNPC.length
   const cityCheckedLen = cityChecked.length
+  const movie = document.getElementById('fn-movie')
+  const drawer = document.querySelector('.fn-drawer-city')
+  const drawerCityBG = document.querySelector('.fn-city-map')
+  const timeAlignmentLen = timeAlignment.length
 
   // Clicked City Button, Function Start on PC.
   for(let i = 0; i < cityBTNPCLen; i++) {
     cityBTNPC[i].onclick = function () {
 
       // Import CSV.
-      const importCSV1 = './fv/csv/data.csv'
-      const importCSV2 = './fv/csv/foreignTourists.csv'
+      const importCSV1 = './csv/data.csv'
+      const importCSV2 = './csv/foreignTourists.csv'
 
       // Core Functions.
       d3.csv(importCSV1, (error, csv1) => {
@@ -35,9 +39,6 @@ const visualizationsDrawerPC = () => {
 
           let totalPopArry = []
           let totalForeignArry = []
-          const movie = document.getElementById('fn-movie')
-          const drawer = document.querySelector('.fn-drawer-city')
-          const timeAlignmentLen = timeAlignment.length
           const getHour = document.querySelector('.fn-time').innerText
           const getMeridiem = document.querySelector('.fn-meridiem').innerText
           const getID = this.getAttribute('id')
@@ -52,6 +53,7 @@ const visualizationsDrawerPC = () => {
                   const getCityEN = cityChecked[i].cityEN
                   const getCityJP = cityChecked[i].cityJP
                   const getCityLower = cityChecked[i].cityLowerEN
+                  drawerCityBG.classList.add(getCityLower)
                   drawerGenderPopCountUp(csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP)
                   drawerForeignTourists(csv2, i, totalForeignArry, getMilitaryTime, getCity)
                   drawerHeatGraph(getCityLower)

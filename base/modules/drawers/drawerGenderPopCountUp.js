@@ -1,9 +1,9 @@
 'use strict'
 
 // Import D3.js
-import d3 from "d3"
+import d3 from 'd3'
 
-// Drawer Total Population Count Up Functions.
+// Drawer Gender Population Count Up Functions.
 const drawerGenderPopCountUp = (csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP) => {
   const csv1Len = csv1.length
   const cityEN = document.querySelector('.fn-app-city-en')

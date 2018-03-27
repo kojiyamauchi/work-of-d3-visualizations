@@ -1,10 +1,10 @@
 'use strict'
 
 // Import D3.js
-import d3 from "d3"
+import d3 from 'd3'
 
 // Import Json.
-import countryName from '../../json/countryName.json'
+import countryName from '../../../json/countryName.json'
 
 // Drawer Foreign Tourists Functions.
 const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCity) => {
@@ -46,7 +46,7 @@ const drawerForeignTourists = (csv2, i, totalForeignArry, getMilitaryTime, getCi
             const getPop = getPoplutaionArry[i]
             const duration = 10;
             addCountries[i].innerText = getCountriesArry[i]
-            countriesFlag[i].setAttribute('src', `fv/svg/icon_${getCountriesFlagArry[i]}.svg`)
+            countriesFlag[i].setAttribute('src', `images/icon_${getCountriesFlagArry[i]}.svg`)
             countriesGraphWrap[i].style.width = `${getGraphWidth}%`
             setTimeout(() => {
               setInterval(() => {

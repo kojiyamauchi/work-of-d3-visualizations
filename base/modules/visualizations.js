@@ -4,17 +4,17 @@
 import d3 from 'd3'
 
 // Import Json.
-import timeAlignment from '../json/timeAlignment.json'
-import cityChecked from '../json/cityChecked.json'
+import timeAlignment from '../../json/timeAlignment.json'
+import cityChecked from '../../json/cityChecked.json'
 
 // Import Heat Graph Functions.
 import heatGraph from './heatGraph/heatGraph'
 
-// Visualizations PC Functions.
+// Visualizations Functions.
 const visualizations = () => {
 
   // Import CSV.
-  const importCSV1 = './fv/csv/data.csv'
+  const importCSV1 = './csv/data.csv'
 
   // Core Functions.
   d3.csv(importCSV1, (error, csv1) => {

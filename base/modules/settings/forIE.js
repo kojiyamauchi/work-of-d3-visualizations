@@ -2,7 +2,7 @@
 
 // For IE Functions.
 const forIE = () => {
-  const showTarget = document.querySelectorAll('.for-IE-triangle-graph')
+  const showTarget = document.querySelectorAll('.fn-IE-triangle-graph')
   const targetLen = showTarget.length
   const hideTarget = document.querySelectorAll('.fn-svg-graph')
   const ua = navigator.userAgent

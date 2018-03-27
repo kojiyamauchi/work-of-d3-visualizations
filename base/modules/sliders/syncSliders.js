@@ -1,7 +1,7 @@
 'use strict'
 
 // Import Json.
-import timeAlignment from '../../json/timeAlignment.json'
+import timeAlignment from '../../../json/timeAlignment.json'
 
 // Import Customize of Slider Functions.
 import sliders from './sliders'
@@ -13,8 +13,8 @@ const syncSliders = () => {
   const addTimeTarget = document.querySelector('.fn-time')
   const addMeridiemTarget = document.querySelector('.fn-meridiem')
   const timeAlignmentLen = timeAlignment.length
-  const addHour = document.querySelector('.hour')
-  const addMinute = document.querySelector('.minute')
+  const addHour = document.querySelector('.fn-hour')
+  const addMinute = document.querySelector('.fn-minute')
 
   // Sync of Slider for Movie.
   const syncSlider = (sliderMaxVal, setCalculation) => {
@@ -37,7 +37,7 @@ const syncSliders = () => {
         }
       }
       const getColonPosition = addTimeTarget.innerText.indexOf(':')
-      const getHour = addTimeTarget.innerText.slice(0,getColonPosition)
+      const getHour = addTimeTarget.innerText.slice(0, getColonPosition)
       const getNumber = Math.floor(movie.currentTime)
       const getMinute = (getNumber % 2) != 0 ? 30 : 0
       addHour.innerText = getHour

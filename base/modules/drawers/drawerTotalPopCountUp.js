@@ -3,8 +3,8 @@
 // Drawer Total Population Count Up Functions.
 const drawerTotalPopCountUp = totalPopArry => {
   const totalPop = document.querySelector('.fn-app-population')
-  const maleWrap = document.querySelector('.gender-male-wrapper')
-  const femaleWrap = document.querySelector('.gender-female-wrapper')
+  const maleWrap = document.querySelector('.fn-gender-male-wrapper')
+  const femaleWrap = document.querySelector('.fn-gender-female-wrapper')
   const totalPopArryLen = totalPopArry.length
   let addTotalPop = 0
   for(let i = 0; i < totalPopArryLen; i++) {
