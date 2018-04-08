@@ -3,7 +3,7 @@ node_modules
 .htaccess
 .htpasswd
 index.html
-csv/data.csv
+csv/*
 movies/sample.mp4
 images/*
 addImages/*
