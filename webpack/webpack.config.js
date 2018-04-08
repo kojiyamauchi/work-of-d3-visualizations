@@ -39,8 +39,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      }
+      },
       // ES6 Compile End.
+      // Import Json File.
+      {
+        test: /\.json$/,
+        exclude: /node_modules/,
+        loader: 'json-loader'
+      }
+      // Import Json File End.
     ]
   },
   resolve: {
