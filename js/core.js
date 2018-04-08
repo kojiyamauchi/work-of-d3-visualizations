@@ -63,142 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-[{
-  "time": "6:00",
-  "meridiem": "a.m.",
-  "militaryTime": "6:00"
-}, {
-  "time": "7:00",
-  "meridiem": "a.m.",
-  "militaryTime": "7:00"
-}, {
-  "time": "8:00",
-  "meridiem": "a.m.",
-  "militaryTime": "8:00"
-}, {
-  "time": "9:00",
-  "meridiem": "a.m.",
-  "militaryTime": "9:00"
-}, {
-  "time": "10:00",
-  "meridiem": "a.m.",
-  "militaryTime": "10:00"
-}, {
-  "time": "11:00",
-  "meridiem": "a.m.",
-  "militaryTime": "11:00"
-}, {
-  "time": "12:00",
-  "meridiem": "p.m.",
-  "militaryTime": "12:00"
-}, {
-  "time": "1:00",
-  "meridiem": "p.m.",
-  "militaryTime": "13:00"
-
-}, {
-  "time": "2:00",
-  "meridiem": "p.m.",
-  "militaryTime": "14:00"
-}, {
-  "time": "3:00",
-  "meridiem": "p.m.",
-  "militaryTime": "15:00"
-}, {
-  "time": "4:00",
-  "meridiem": "p.m.",
-  "militaryTime": "16:00"
-}, {
-  "time": "5:00",
-  "meridiem": "p.m.",
-  "militaryTime": "17:00"
-}, {
-  "time": "6:00",
-  "meridiem": "p.m.",
-  "militaryTime": "18:00"
-}, {
-  "time": "7:00",
-  "meridiem": "p.m.",
-  "militaryTime": "19:00"
-}, {
-  "time": "8:00",
-  "meridiem": "p.m.",
-  "militaryTime": "20:00"
-}, {
-  "time": "9:00",
-  "meridiem": "p.m.",
-  "militaryTime": "21:00"
-}, {
-  "time": "10:00",
-  "meridiem": "p.m.",
-  "militaryTime": "22:00"
-}, {
-  "time": "11:00",
-  "meridiem": "p.m.",
-  "militaryTime": "23:00"
-}, {
-  "time": "12:00",
-  "meridiem": "a.m.",
-  "militaryTime": "0:00"
-}];
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-[{
-  "buttonPC": "fn-tag-sapporo",
-  "buttonSP": "fn-button-sapporo",
-  "searchWord": "札幌市"
-}, {
-  "buttonPC": "fn-tag-sendai",
-  "buttonSP": "fn-button-sendai",
-  "searchWord": "仙台市"
-}, {
-  "buttonPC": "fn-tag-tokyo",
-  "buttonSP": "fn-button-tokyo",
-  "searchWord": "東京都"
-}, {
-  "buttonPC": "fn-tag-nagoya",
-  "buttonSP": "fn-button-nagoya",
-  "searchWord": "名古屋市"
-}, {
-  "buttonPC": "fn-tag-kyoto",
-  "buttonSP": "fn-button-kyoto",
-  "searchWord": "京都市"
-}, {
-  "buttonPC": "fn-tag-osaka",
-  "buttonSP": "fn-button-osaka",
-  "searchWord": "大阪市"
-}, {
-  "buttonPC": "fn-tag-hiroshima",
-  "buttonSP": "fn-button-hiroshima",
-  "searchWord": "広島市"
-}, {
-  "buttonPC": "fn-tag-fukuoka",
-  "buttonSP": "fn-button-fukuoka",
-  "searchWord": "福岡市"
-}, {
-  "buttonPC": "fn-tag-naha",
-  "buttonSP": "fn-button-naha",
-  "searchWord": "那覇市"
-}];
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -9761,7 +9630,414 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
 }();
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = [{ "buttonPC": "fn-tag-sapporo", "buttonSP": "fn-button-sapporo", "searchWord": "札幌市", "cityJP": "札幌", "cityEN": "SAPPORO", "cityLowerEN": "sapporo" }, { "buttonPC": "fn-tag-sendai", "buttonSP": "fn-button-sendai", "searchWord": "仙台市", "cityJP": "仙台", "cityEN": "SENDAI", "cityLowerEN": "sendai" }, { "buttonPC": "fn-tag-tokyo", "buttonSP": "fn-button-tokyo", "searchWord": "東京都", "cityJP": "東京", "cityEN": "TOKYO", "cityLowerEN": "tokyo" }, { "buttonPC": "fn-tag-nagoya", "buttonSP": "fn-button-nagoya", "searchWord": "名古屋市", "cityJP": "名古屋", "cityEN": "NAGOYA", "cityLowerEN": "nagoya" }, { "buttonPC": "fn-tag-kyoto", "buttonSP": "fn-button-kyoto", "searchWord": "京都市", "cityJP": "京都", "cityEN": "KYOTO", "cityLowerEN": "kyoto" }, { "buttonPC": "fn-tag-osaka", "buttonSP": "fn-button-osaka", "searchWord": "大阪市", "cityJP": "大阪", "cityEN": "OSAKA", "cityLowerEN": "osaka" }, { "buttonPC": "fn-tag-hiroshima", "buttonSP": "fn-button-hiroshima", "searchWord": "広島市", "cityJP": "広島", "cityEN": "HIROSHIMA", "cityLowerEN": "hiroshima" }, { "buttonPC": "fn-tag-fukuoka", "buttonSP": "fn-button-fukuoka", "searchWord": "福岡市", "cityJP": "福岡", "cityEN": "FUKUOKA", "cityLowerEN": "fukuoka" }, { "buttonPC": "fn-tag-naha", "buttonSP": "fn-button-naha", "searchWord": "那覇市", "cityJP": "那覇", "cityEN": "NAHA", "cityLowerEN": "naha" }];
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = [{ "time": "6:00", "meridiem": "a.m.", "militaryTime": "6:00" }, { "time": "7:00", "meridiem": "a.m.", "militaryTime": "7:00" }, { "time": "8:00", "meridiem": "a.m.", "militaryTime": "8:00" }, { "time": "9:00", "meridiem": "a.m.", "militaryTime": "9:00" }, { "time": "10:00", "meridiem": "a.m.", "militaryTime": "10:00" }, { "time": "11:00", "meridiem": "a.m.", "militaryTime": "11:00" }, { "time": "12:00", "meridiem": "p.m.", "militaryTime": "12:00" }, { "time": "1:00", "meridiem": "p.m.", "militaryTime": "13:00" }, { "time": "2:00", "meridiem": "p.m.", "militaryTime": "14:00" }, { "time": "3:00", "meridiem": "p.m.", "militaryTime": "15:00" }, { "time": "4:00", "meridiem": "p.m.", "militaryTime": "16:00" }, { "time": "5:00", "meridiem": "p.m.", "militaryTime": "17:00" }, { "time": "6:00", "meridiem": "p.m.", "militaryTime": "18:00" }, { "time": "7:00", "meridiem": "p.m.", "militaryTime": "19:00" }, { "time": "8:00", "meridiem": "p.m.", "militaryTime": "20:00" }, { "time": "9:00", "meridiem": "p.m.", "militaryTime": "21:00" }, { "time": "10:00", "meridiem": "p.m.", "militaryTime": "22:00" }, { "time": "11:00", "meridiem": "p.m.", "militaryTime": "23:00" }, { "time": "12:00", "meridiem": "a.m.", "militaryTime": "0:00" }];
+
+/***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Drawer Total Population of Foreign Tourist Count Up Functions.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawerForeignTotalPopCountUp = function drawerForeignTotalPopCountUp(totalForeignArry) {
+  var foreignTotalPop = document.querySelector('.fn-app-visited-population');
+  var totalForeignArryLen = totalForeignArry.length;
+  var addTotalPop = totalForeignArry.reduce(function (current, arryForeign) {
+    return current += arryForeign;
+  }, 0);
+  var startTotalPop = addTotalPop - 100;
+  var getTotalPop = addTotalPop;
+  var duration = 10;
+  totalForeignArry.length = 0;
+  setTimeout(function () {
+    setInterval(function () {
+      if (startTotalPop <= getTotalPop) {
+        foreignTotalPop.innerText = startTotalPop.toLocaleString();
+        startTotalPop++;
+      }
+    }, duration);
+  }, 500);
+};
+
+exports.default = drawerForeignTotalPopCountUp;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _arguments = arguments;
+
+// Import Json.
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _countryName = __webpack_require__(20);
+
+var _countryName2 = _interopRequireDefault(_countryName);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Drawer Foreign Tourists Functions.
+var drawerForeignTourists = function drawerForeignTourists(csv2, i, totalForeignArry, getMilitaryTime, getCity) {
+  var getPoplutaionArry = [];
+  var getCountriesArry = [];
+  var getCountriesFlagArry = [];
+  var csv2Len = csv2.length;
+  var countryNameLen = _countryName2.default.length;
+  var addCountries = document.querySelectorAll('.fn-countries-name');
+  var addCountriesLen = addCountries.length;
+  var countriesPop = document.querySelectorAll('.fn-countries-population');
+  var countriesFlag = document.querySelectorAll('.fn-icon-flag');
+  var countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');
+  var countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');
+  var closeBTN = document.querySelector('.fn-button-back-to-map');
+  var graphCallBackCore = function graphCallBackCore(transition, callback) {
+    var index = 0;
+    transition.each(function () {
+      ++index;
+    }).each('end', function () {
+      if (! --index) callback.apply(undefined, _arguments);
+    });
+  };
+
+  for (var _i = 0; _i < csv2Len; _i++) {
+    if (getMilitaryTime === csv2[_i].time && getCity === csv2[_i].city) {
+      totalForeignArry.push(Number(csv2[_i].population));
+      getPoplutaionArry.push(Number(csv2[_i].population));
+      var getCountries = csv2[_i].country;
+      for (var _i2 = 0; _i2 < countryNameLen; _i2++) {
+        if (getCountries === _countryName2.default[_i2].countryNameJP) {
+          getCountriesArry.push(_countryName2.default[_i2].countryNameEN);
+          getCountriesFlagArry.push(_countryName2.default[_i2].flagPath);
+
+          var _loop = function _loop(_i3) {
+            var getGraphWidth = getPoplutaionArry[_i3] / getPoplutaionArry[0] * 100;
+            var startPop = getPoplutaionArry[_i3] - 100 >= 0 ? getPoplutaionArry[_i3] - 100 : 0;
+            var getPop = getPoplutaionArry[_i3];
+            var duration = 10;
+            addCountries[_i3].innerText = getCountriesArry[_i3];
+            countriesFlag[_i3].setAttribute('src', 'images/icon_' + getCountriesFlagArry[_i3] + '.svg');
+            countriesGraphWrap[_i3].style.width = getGraphWidth + '%';
+            setTimeout(function () {
+              setInterval(function () {
+                if (startPop <= getPop) {
+                  countriesPop[_i3].innerText = startPop.toLocaleString();
+                  startPop++;
+                }
+              }, duration);
+              _d2.default.select(countriesGraph[_i3]).transition().duration(1500).style('width', '100%').call(graphCallBackCore, function () {
+                closeBTN.disabled = false;
+              });
+            }, 500);
+          };
+
+          for (var _i3 = 0; _i3 < addCountriesLen; _i3++) {
+            _loop(_i3);
+          }
+        }
+      }
+    }
+  }
+};
+
+exports.default = drawerForeignTourists;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Drawer Gender Population Count Up Functions.
+var drawerGenderPopCountUp = function drawerGenderPopCountUp(csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP) {
+  var csv1Len = csv1.length;
+  var cityEN = document.querySelector('.fn-app-city-en');
+  var cityJP = document.querySelector('.fn-app-city-ja');
+  var malePop = document.querySelector('.fn-app-male-population');
+  var femalePop = document.querySelector('.fn-app-female-population');
+  for (var _i = 0; _i < csv1Len; _i++) {
+    if (getMilitaryTime === csv1[_i].time && getCity === csv1[_i].city) {
+      var getGender = csv1[_i].gender;
+      cityEN.innerText = getCityEN;
+      cityJP.innerText = getCityJP;
+      if (getGender === '男') {
+        (function () {
+          totalPopArry.push(Number(csv1[_i].population.replace(/\,/g, '')));
+          var startPop = Number(csv1[_i].population.replace(/\,/g, '') - 100);
+          var getPop = Number(csv1[_i].population.replace(/\,/g, ''));
+          var duration = 10;
+          setTimeout(function () {
+            setInterval(function () {
+              if (startPop <= getPop) {
+                malePop.innerText = startPop.toLocaleString();
+                startPop++;
+              }
+            }, duration);
+            _d2.default.select('.fn-app-male-graph-inner').transition().duration(1500).style('width', '100%');
+          }, 500);
+        })();
+      }
+      if (getGender === '女') {
+        (function () {
+          totalPopArry.push(Number(csv1[_i].population.replace(/\,/g, '')));
+          var startPop = Number(csv1[_i].population.replace(/\,/g, '') - 100);
+          var getPop = Number(csv1[_i].population.replace(/\,/g, ''));
+          var duration = 10;
+          setTimeout(function () {
+            setInterval(function () {
+              if (startPop <= getPop) {
+                femalePop.innerText = startPop.toLocaleString();
+                startPop++;
+              }
+            }, duration);
+            _d2.default.select('.fn-app-female-graph-inner').transition().duration(1500).style('width', '100%');
+          }, 500);
+        })();
+      }
+    }
+  }
+};exports.default = drawerGenderPopCountUp;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Drawer Heat Graph Functions.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawerHeatGraph = function drawerHeatGraph(getCityLower) {
+  var target = document.querySelector('.fn-add-heat-graph');
+  var getHeatGraph = document.querySelector('.fn-triangle-graph-' + getCityLower);
+  var cloneHeatGraph = getHeatGraph.cloneNode(true);
+  var getSVG = cloneHeatGraph.firstElementChild;
+  var setClsSVG = getSVG.classList.add('clone-svg-graph');
+  var getDefs = getSVG.lastElementChild;
+  var getClipPath = getDefs.lastElementChild;
+  var repID = getClipPath.setAttribute('id', 'clone-svg-clip');
+  target.appendChild(cloneHeatGraph);
+};
+
+exports.default = drawerHeatGraph;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Drawer Total Population Count Up Functions.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawerTotalPopCountUp = function drawerTotalPopCountUp(totalPopArry) {
+  var totalPop = document.querySelector('.fn-app-population');
+  var maleWrap = document.querySelector('.fn-gender-male-wrapper');
+  var femaleWrap = document.querySelector('.fn-gender-female-wrapper');
+  var totalPopArryLen = totalPopArry.length;
+  var addTotalPop = 0;
+  for (var i = 0; i < totalPopArryLen; i++) {
+    addTotalPop += totalPopArry[i];
+  }
+  var startTotalPop = addTotalPop - 100;
+  var getTotalPop = addTotalPop;
+  var getMalePop = totalPopArry[0];
+  var getFemalePop = totalPopArry[1];
+  var getMaleWidth = getMalePop / getTotalPop * 100;
+  var getFemaleWidth = getFemalePop / getTotalPop * 100;
+  var duration = 10;
+  maleWrap.style.width = getMaleWidth + '%';
+  femaleWrap.style.width = getFemaleWidth + '%';
+  totalPopArry.length = 0;
+  setTimeout(function () {
+    setInterval(function () {
+      if (startTotalPop <= getTotalPop) {
+        totalPop.innerText = startTotalPop.toLocaleString();
+        startTotalPop++;
+      }
+    }, duration);
+  }, 500);
+};
+
+exports.default = drawerTotalPopCountUp;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import Json.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Drawer Close Functions.
+var drawerClosed = function drawerClosed() {
+  var closeBTN = document.querySelector('.fn-button-back-to-map');
+  var movie = document.getElementById('fn-movie');
+  var drawer = document.querySelector('.fn-drawer-city');
+  var totalPop = document.querySelector('.fn-app-population');
+  var malePop = document.querySelector('.fn-app-male-population');
+  var femalePop = document.querySelector('.fn-app-female-population');
+  var foreignTotalPop = document.querySelector('.fn-app-visited-population');
+  var maleWrap = document.querySelector('.fn-gender-male-wrapper');
+  var femaleWrap = document.querySelector('.fn-gender-female-wrapper');
+  var maleGraph = document.querySelector('.fn-app-female-graph-inner');
+  var femaleGraph = document.querySelector('.fn-app-male-graph-inner');
+  var drawerHeatGraphWrap = document.querySelector('.fn-add-heat-graph');
+  var countriesPop = document.querySelectorAll('.fn-countries-population');
+  var countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');
+  var countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');
+  var countriesPopLen = countriesPop.length;
+  var drawerCityBG = document.querySelector('.fn-city-map');
+  var cityCheckedLen = _cityChecked2.default.length;
+
+  var coreFunc = function coreFunc() {
+    movie.play();
+    drawer.classList.remove('is-active');
+    totalPop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
+    malePop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
+    femalePop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
+    foreignTotalPop.innerText = '\u30FC\u30FC\u30FC\u30FC';
+    maleWrap.removeAttribute('style');
+    femaleWrap.removeAttribute('style');
+    maleGraph.removeAttribute('style');
+    femaleGraph.removeAttribute('style');
+    drawerHeatGraphWrap.textContent = null;
+    for (var i = 0; i < countriesPopLen; i++) {
+      countriesPop[i].innerText = '\u30FC\u30FC\u30FC';
+      countriesGraphWrap[i].removeAttribute('style');
+      countriesGraph[i].removeAttribute('style');
+    }
+    for (var _i = 0; _i < cityCheckedLen; _i++) {
+      var getCityLower = _cityChecked2.default[_i].cityLowerEN;
+      drawerCityBG.classList.remove(_cityChecked2.default[_i].cityLowerEN);
+    }
+    closeBTN.disabled = true;
+  };
+  closeBTN.addEventListener('click', coreFunc, false);
+};exports.default = drawerClosed;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Init Heat Graph Functions.
+var initHeatGraph = function initHeatGraph() {
+  var target = document.querySelectorAll('.fn-triangle-graph-polygon');
+  var targetLen = target.length;
+  var checkFlag = document.querySelector('.first-view');
+  var coreFunc = function coreFunc() {
+    var flagSP = checkFlag.classList.contains('sp');
+    var flagPCTB = checkFlag.classList.contains('pctb');
+    var flagPC = checkFlag.classList.contains('pc');
+    var addSizePoint = flagSP ? '62' : flagPCTB ? '107' : '162';
+    if (flagSP) {
+      for (var i = 0; i < targetLen; i++) {
+        target[i].setAttribute('points', '11,0 23,62 0,62');
+      }
+    }
+    if (flagPCTB) {
+      for (var _i = 0; _i < targetLen; _i++) {
+        target[_i].setAttribute('points', '20,0 40,107 0,107');
+      }
+    }
+    if (flagPC) {
+      for (var _i2 = 0; _i2 < targetLen; _i2++) {
+        target[_i2].setAttribute('points', '30,0 60,160 0,160');
+      }
+    }
+    _d2.default.selectAll(target).classed({
+      'is-init': false
+    }).attr('transform', 'translate(0, ' + addSizePoint + ')');
+  };
+  window.addEventListener('load', coreFunc, false);
+  window.addEventListener('resize', coreFunc, false);
+};exports.default = initHeatGraph;
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9773,7 +10049,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var addFlag = function addFlag() {
-  var target = document.body;
+  var target = document.querySelector('.first-view');
   var SP = 768;
   var PCTB = 1280;
   var PC = 1920;
@@ -9800,71 +10076,34 @@ var addFlag = function addFlag() {
 exports.default = addFlag;
 
 /***/ }),
-/* 4 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-// Drawer Hide Functions.
+// For IE Functions.
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var drawers = function drawers() {
-  var drawer = document.querySelector('.fn-drawer-city');
-  var hideBTN = document.querySelector('.fn-button-back-to-map');
-  var drawerHIDE = function drawerHIDE() {
-    drawer.classList.remove('is-active');
-  };
-  hideBTN.addEventListener('click', drawerHIDE, false);
+var forIE = function forIE() {
+  var showTarget = document.querySelectorAll('.fn-IE-triangle-graph');
+  var targetLen = showTarget.length;
+  var hideTarget = document.querySelectorAll('.fn-svg-graph');
+  var ua = navigator.userAgent;
+  if (ua.indexOf('MSIE') > -1 || ua.indexOf('Trident') > -1 || ua.indexOf('Edge') > -1) {
+    for (var i = 0; 0 < targetLen; i++) {
+      showTarget[i].classList.add('is-IE');
+      hideTarget[i].classList.add('is-IE');
+    }
+  }
 };
 
-exports.default = drawers;
+exports.default = forIE;
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Size Setting Triangle Graph SVG.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sizeSettingSVG = function sizeSettingSVG() {
-  var target = document.querySelectorAll('.fn-triangle-graph-polygon');
-  var targetLen = target.length;
-  var coreFunc = function coreFunc() {
-    var flagSP = document.body.classList.contains('sp');
-    var flagPCTB = document.body.classList.contains('pctb');
-    var flagPC = document.body.classList.contains('pc');
-    if (flagSP) {
-      for (var i = 0; i < targetLen; i++) {
-        target[i].setAttribute('points', '11,0 23,62 0,62');
-      }
-    }
-    if (flagPCTB) {
-      for (var _i = 0; _i < targetLen; _i++) {
-        target[_i].setAttribute('points', '20,0 40,107 0,107');
-      }
-    }
-    if (flagPC) {
-      for (var _i2 = 0; _i2 < targetLen; _i2++) {
-        target[_i2].setAttribute('points', '30,0 60,160 0,160');
-      }
-    }
-  };
-  window.addEventListener('load', coreFunc, false);
-  window.addEventListener('resize', coreFunc, false);
-};
-
-exports.default = sizeSettingSVG;
-
-/***/ }),
-/* 6 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9877,19 +10116,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var sliderClicked = function sliderClicked() {
   var movie = document.getElementById('fn-movie');
-  var slider = document.querySelector('.fn-slider');
   var playButtonSP = document.querySelector('.fn-button-play');
-  slider.addEventListener('click', function () {
-    if (movie.paused === true) {
-      movie.play();
-      slider.classList.remove('is-stop');
-      playButtonSP.classList.remove('is-stop');
-    } else {
-      movie.pause();
-      slider.classList.add('is-stop');
-      playButtonSP.classList.add('is-stop');
-    }
-  });
   playButtonSP.addEventListener('click', function () {
     if (movie.paused === true) {
       movie.play();
@@ -9906,7 +10133,515 @@ var sliderClicked = function sliderClicked() {
 exports.default = sliderClicked;
 
 /***/ }),
-/* 7 */
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import Json.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _timeAlignment = __webpack_require__(2);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _sliders = __webpack_require__(19);
+
+var _sliders2 = _interopRequireDefault(_sliders);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Sync Setting Movies <-> Slider.
+var syncSliders = function syncSliders() {
+  var movie = document.getElementById('fn-movie');
+  var slider = document.querySelector('.fn-slider');
+  var addTimeTarget = document.querySelector('.fn-time');
+  var addMeridiemTarget = document.querySelector('.fn-meridiem');
+  var timeAlignmentLen = _timeAlignment2.default.length;
+  var addHour = document.querySelector('.fn-hour');
+  var addMinute = document.querySelector('.fn-minute');
+
+  // Sync of Slider for Movie.
+  var syncSlider = function syncSlider(sliderMaxVal, setCalculation) {
+    slider.addEventListener('input', function () {
+      var time = slider.value / setCalculation;
+      movie.currentTime = time;
+      (0, _sliders2.default)(slider, sliderMaxVal);
+    });
+  };
+
+  // Created Sync of Movie for Slider & Time View Functions.
+  var moviePlay = function moviePlay(sliderMaxVal, setHourPoints, setCalculation) {
+    movie.addEventListener('timeupdate', function () {
+      var val = movie.currentTime * setCalculation;
+      slider.value = val;
+      for (var i = 0; i < timeAlignmentLen; i++) {
+        if (val > setHourPoints * i && val <= setHourPoints * (i + 1)) {
+          addTimeTarget.innerText = _timeAlignment2.default[i].time;
+          addMeridiemTarget.innerText = _timeAlignment2.default[i].meridiem;
+        }
+      }
+      var getColonPosition = addTimeTarget.innerText.indexOf(':');
+      var getHour = addTimeTarget.innerText.slice(0, getColonPosition);
+      var getNumber = Math.floor(movie.currentTime);
+      var getMinute = getNumber % 2 != 0 ? 30 : 0;
+      addHour.innerText = getHour;
+      addMinute.innerText = ('0' + getMinute).slice(-2);
+      (0, _sliders2.default)(slider, sliderMaxVal);
+    });
+  };
+
+  // Movie Loaded Functions => CallBack Sync Slider & Movie Play Functions.
+  movie.addEventListener('loadedmetadata', function () {
+    var sliderMaxVal = slider.max;
+    var movieTotalTime = Math.round(movie.duration);
+    var setCalculation = Math.round(sliderMaxVal / movieTotalTime);
+    var totalHour = 18;
+    var setHourPoints = movieTotalTime * setCalculation / totalHour;
+    syncSlider(sliderMaxVal, setCalculation);
+    moviePlay(sliderMaxVal, setHourPoints, setCalculation);
+  });
+};
+
+// Import Customize of Slider Functions.
+exports.default = syncSliders;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _timeAlignment = __webpack_require__(2);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+var _heatGraph = __webpack_require__(18);
+
+var _heatGraph2 = _interopRequireDefault(_heatGraph);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Visualizations Functions.
+var visualizations = function visualizations() {
+
+  // Import CSV.
+  var importCSV1 = './csv/data.csv';
+
+  // Core Functions.
+  _d2.default.csv(importCSV1, function (error, csv1) {
+
+    var totalPopArry = [];
+    var csv1Len = csv1.length;
+    var movie = document.getElementById('fn-movie');
+    var cityBTNPC = document.querySelectorAll('.fn-tag');
+    var cityBTNPCLen = cityBTNPC.length;
+    var timeAlignmentLen = _timeAlignment2.default.length;
+    var cityCheckedLen = _cityChecked2.default.length;
+
+    movie.addEventListener('timeupdate', function () {
+      var getHour = document.querySelector('.fn-time').innerText;
+      var getMeridiem = document.querySelector('.fn-meridiem').innerText;
+      for (var i = 0; i < timeAlignmentLen; i++) {
+        if (getMeridiem === _timeAlignment2.default[i].meridiem && getHour === _timeAlignment2.default[i].time) {
+          var getMilitaryTime = _timeAlignment2.default[i].militaryTime;
+          for (var _i = 0; _i < cityBTNPCLen; _i++) {
+            var getID = cityBTNPC[_i].getAttribute('id');
+            for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
+              if (getID === _cityChecked2.default[_i2].buttonPC) {
+                var getCity = _cityChecked2.default[_i2].searchWord;
+                for (var _i3 = 0; _i3 < csv1Len; _i3++) {
+                  if (getMilitaryTime === csv1[_i3].time && getCity === csv1[_i3].city) {
+                    totalPopArry.push(Number(csv1[_i3].population.replace(/\,/g, '')));
+                  }
+                }
+              }
+            }
+            (0, _heatGraph2.default)(totalPopArry, getID);
+          }
+        }
+      }
+    });
+  });
+};
+
+// Import Heat Graph Functions.
+
+
+// Import Json.
+exports.default = visualizations;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _timeAlignment = __webpack_require__(2);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+var _drawerTotalPopCountUp = __webpack_require__(7);
+
+var _drawerTotalPopCountUp2 = _interopRequireDefault(_drawerTotalPopCountUp);
+
+var _drawerGenderPopCountUp = __webpack_require__(5);
+
+var _drawerGenderPopCountUp2 = _interopRequireDefault(_drawerGenderPopCountUp);
+
+var _drawerForeignTotalPopCountUp = __webpack_require__(3);
+
+var _drawerForeignTotalPopCountUp2 = _interopRequireDefault(_drawerForeignTotalPopCountUp);
+
+var _drawerForeignTourists = __webpack_require__(4);
+
+var _drawerForeignTourists2 = _interopRequireDefault(_drawerForeignTourists);
+
+var _drawerHeatGraph = __webpack_require__(6);
+
+var _drawerHeatGraph2 = _interopRequireDefault(_drawerHeatGraph);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Visualizations PC Functions.
+var visualizationsDrawerPC = function visualizationsDrawerPC() {
+
+  var cityBTNPC = document.querySelectorAll('.fn-tag');
+  var cityBTNPCLen = cityBTNPC.length;
+
+  // Clicked City Button, Function Start on PC.
+  for (var i = 0; i < cityBTNPCLen; i++) {
+    cityBTNPC[i].onclick = function () {
+      var _this = this;
+
+      // Import CSV.
+      var importCSV1 = './csv/data.csv';
+      var importCSV2 = './csv/foreignTourists.csv';
+
+      var movie = document.getElementById('fn-movie');
+      var drawer = document.querySelector('.fn-drawer-city');
+      var drawerCityBG = document.querySelector('.fn-city-map');
+      var cityCheckedLen = _cityChecked2.default.length;
+      var timeAlignmentLen = _timeAlignment2.default.length;
+
+      // Core Functions.
+      _d2.default.csv(importCSV1, function (error, csv1) {
+        _d2.default.csv(importCSV2, function (error, csv2) {
+
+          var totalPopArry = [];
+          var totalForeignArry = [];
+          var getHour = document.querySelector('.fn-time').innerText;
+          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
+          var getID = _this.getAttribute('id');
+          movie.pause();
+          drawer.classList.add('is-active');
+          for (var _i = 0; _i < timeAlignmentLen; _i++) {
+            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
+              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
+              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
+                if (getID === _cityChecked2.default[_i2].buttonPC) {
+                  var getCity = _cityChecked2.default[_i2].searchWord;
+                  var getCityEN = _cityChecked2.default[_i2].cityEN;
+                  var getCityJP = _cityChecked2.default[_i2].cityJP;
+                  var getCityLower = _cityChecked2.default[_i2].cityLowerEN;
+                  drawerCityBG.classList.add(getCityLower);
+                  (0, _drawerGenderPopCountUp2.default)(csv1, _i2, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP);
+                  (0, _drawerForeignTourists2.default)(csv2, _i2, totalForeignArry, getMilitaryTime, getCity);
+                  (0, _drawerHeatGraph2.default)(getCityLower);
+                }
+              }
+            }
+          }
+          (0, _drawerTotalPopCountUp2.default)(totalPopArry);
+          (0, _drawerForeignTotalPopCountUp2.default)(totalForeignArry);
+        });
+      });
+    };
+  }
+};
+
+// Import Common Drawer Visualization Functions.
+
+
+// Import Json.
+exports.default = visualizationsDrawerPC;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+var _timeAlignment = __webpack_require__(2);
+
+var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
+
+var _cityChecked = __webpack_require__(1);
+
+var _cityChecked2 = _interopRequireDefault(_cityChecked);
+
+var _drawerTotalPopCountUp = __webpack_require__(7);
+
+var _drawerTotalPopCountUp2 = _interopRequireDefault(_drawerTotalPopCountUp);
+
+var _drawerGenderPopCountUp = __webpack_require__(5);
+
+var _drawerGenderPopCountUp2 = _interopRequireDefault(_drawerGenderPopCountUp);
+
+var _drawerForeignTotalPopCountUp = __webpack_require__(3);
+
+var _drawerForeignTotalPopCountUp2 = _interopRequireDefault(_drawerForeignTotalPopCountUp);
+
+var _drawerForeignTourists = __webpack_require__(4);
+
+var _drawerForeignTourists2 = _interopRequireDefault(_drawerForeignTourists);
+
+var _drawerHeatGraph = __webpack_require__(6);
+
+var _drawerHeatGraph2 = _interopRequireDefault(_drawerHeatGraph);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Visualizations SP Functions.
+var visualizationsDrawerSP = function visualizationsDrawerSP() {
+
+  var cityBTNSP = document.querySelectorAll('.fn-button-city');
+  var cityBTNSPLen = cityBTNSP.length;
+
+  // Clicked City Button, Function Start on SP.
+  for (var i = 0; i < cityBTNSPLen; i++) {
+    cityBTNSP[i].onclick = function () {
+      var _this = this;
+
+      // Import CSV.
+      var importCSV1 = './csv/data.csv';
+      var importCSV2 = './csv/foreignTourists.csv';
+
+      var movie = document.getElementById('fn-movie');
+      var drawer = document.querySelector('.fn-drawer-city');
+      var drawerCityBG = document.querySelector('.fn-city-map');
+      var cityCheckedLen = _cityChecked2.default.length;
+      var timeAlignmentLen = _timeAlignment2.default.length;
+
+      // Core Functions.
+      _d2.default.csv(importCSV1, function (error, csv1) {
+        _d2.default.csv(importCSV2, function (error, csv2) {
+
+          var totalPopArry = [];
+          var totalForeignArry = [];
+          var getHour = document.querySelector('.fn-time').innerText;
+          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
+          var getID = _this.getAttribute('id');
+          movie.pause();
+          drawer.classList.add('is-active');
+          for (var _i = 0; _i < timeAlignmentLen; _i++) {
+            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
+              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
+              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
+                if (getID === _cityChecked2.default[_i2].buttonSP) {
+                  var getCity = _cityChecked2.default[_i2].searchWord;
+                  var getCityEN = _cityChecked2.default[_i2].cityEN;
+                  var getCityJP = _cityChecked2.default[_i2].cityJP;
+                  var getCityLower = _cityChecked2.default[_i2].cityLowerEN;
+                  drawerCityBG.classList.add(getCityLower);
+                  (0, _drawerGenderPopCountUp2.default)(csv1, _i2, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP);
+                  (0, _drawerForeignTourists2.default)(csv2, _i2, totalForeignArry, getMilitaryTime, getCity);
+                  (0, _drawerHeatGraph2.default)(getCityLower);
+                }
+              }
+            }
+          }
+          (0, _drawerTotalPopCountUp2.default)(totalPopArry);
+          (0, _drawerForeignTotalPopCountUp2.default)(totalForeignArry);
+        });
+      });
+    };
+  }
+};
+
+// Import Common Drawer Visualization Functions.
+
+
+// Import Json.
+exports.default = visualizationsDrawerSP;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import Modules.
+
+var _forIE = __webpack_require__(11);
+
+var _forIE2 = _interopRequireDefault(_forIE);
+
+var _addFlag = __webpack_require__(10);
+
+var _addFlag2 = _interopRequireDefault(_addFlag);
+
+var _initHeatGraph = __webpack_require__(9);
+
+var _initHeatGraph2 = _interopRequireDefault(_initHeatGraph);
+
+var _drawerClosed = __webpack_require__(8);
+
+var _drawerClosed2 = _interopRequireDefault(_drawerClosed);
+
+var _sliderClicked = __webpack_require__(12);
+
+var _sliderClicked2 = _interopRequireDefault(_sliderClicked);
+
+var _syncSliders = __webpack_require__(13);
+
+var _syncSliders2 = _interopRequireDefault(_syncSliders);
+
+var _visualizationsDrawerPC = __webpack_require__(15);
+
+var _visualizationsDrawerPC2 = _interopRequireDefault(_visualizationsDrawerPC);
+
+var _visualizationsDrawerSP = __webpack_require__(16);
+
+var _visualizationsDrawerSP2 = _interopRequireDefault(_visualizationsDrawerSP);
+
+var _visualizations = __webpack_require__(14);
+
+var _visualizations2 = _interopRequireDefault(_visualizations);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Require All Functions.
+(0, _forIE2.default)();
+(0, _addFlag2.default)();
+(0, _initHeatGraph2.default)();
+(0, _drawerClosed2.default)();
+(0, _sliderClicked2.default)();
+(0, _syncSliders2.default)();
+(0, _visualizationsDrawerPC2.default)();
+(0, _visualizationsDrawerSP2.default)();
+(0, _visualizations2.default)();
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Import D3.js
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _d = __webpack_require__(0);
+
+var _d2 = _interopRequireDefault(_d);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// Heat Graph PC Functions.
+var heatGraph = function heatGraph(totalPopArry, getID) {
+
+  var totalPopArryLen = totalPopArry.length;
+  var getTags = document.getElementById(getID);
+  var dummyChild = getTags.firstElementChild;
+  var addPop = getTags.lastElementChild;
+  var addTotalPop = 0;
+  for (var i = 0; i < totalPopArryLen; i++) {
+    addTotalPop += totalPopArry[i];
+  }
+  var startTotalPop = addTotalPop - 40;
+  var getTotalPop = addTotalPop;
+  var duration = 1;
+  totalPopArry.length = 0;
+  if (dummyChild.innerText != getTotalPop) {
+    dummyChild.innerText = getTotalPop;
+    setTimeout(function () {
+      var checkFlag = document.querySelector('.first-view');
+      var flagSP = checkFlag.classList.contains('sp');
+      var flagPCTB = checkFlag.classList.contains('pctb');
+      var flagPC = checkFlag.classList.contains('pc');
+      var addSizePoint = flagSP ? '62' : flagPCTB ? '107' : '162';
+      var addBasisRatio = flagSP ? '1' : '0.8';
+      var setBasisCity = document.getElementById('fn-tag-osaka');
+      var getBasisPop = setBasisCity.firstElementChild.innerText;
+      var getCityPopRatio = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * addBasisRatio);
+      var getCityPopRatioNaha = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * 2.5);
+      _d2.default.select('#' + getID + '-sync-polygon').transition().duration(750).attr('transform', 'translate(0, ' + getCityPopRatio + ')');
+      _d2.default.select('#fn-tag-tokyo-sync-polygon').transition().duration(750).attr('transform', 'translate(0, 0)');
+      _d2.default.select('#fn-tag-naha-sync-polygon').transition().duration(750).attr('transform', 'translate(0, ' + getCityPopRatioNaha + ')');
+    }, 10);
+    setInterval(function () {
+      if (startTotalPop <= getTotalPop) {
+        addPop.innerText = startTotalPop.toLocaleString();
+        startTotalPop++;
+      }
+    }, duration);
+  }
+};exports.default = heatGraph;
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9917,307 +10652,39 @@ exports.default = sliderClicked;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var sliders = function sliders() {
-  var movie = document.getElementById('fn-movie');
+var sliders = function sliders(slider, sliderMaxVal) {
   var target = document.querySelector('.fn-range-active');
-  var range = document.querySelector('.fn-slider');
-  var rangeFullVal = range.max;
   var rangePoint = document.querySelectorAll('.fn-range-point');
   var pointLen = rangePoint.length;
-  var pointVal = rangeFullVal / (pointLen - 1);
+  var pointVal = sliderMaxVal / (pointLen - 1);
   var sliderTime = document.querySelectorAll('.fn-slider-time');
-  var coreFunc = function coreFunc(range) {
-    return function (event) {
-      if (range.value < rangeFullVal / 2) {
-        target.style.width = range.value / rangeFullVal * 100 + 1 + '%';
-      }
-      if (range.value >= rangeFullVal / 2) {
-        target.style.width = range.value / rangeFullVal * 100 + '%';
-      }
-      for (var i = 0; i < pointLen; i++) {
-        if (range.value >= pointVal * i) {
-          rangePoint[i].classList.add('is-active');
-          sliderTime[i].classList.add('is-active');
-        } else {
-          rangePoint[i].classList.remove('is-active');
-          sliderTime[i].classList.remove('is-active');
-        }
-      }
-    };
-  };
-  movie.addEventListener('timeupdate', coreFunc(range), false);
-  range.addEventListener('input', coreFunc(range), false);
+  if (slider.value < sliderMaxVal / 2) {
+    target.style.width = slider.value / sliderMaxVal * 100 + 1 + '%';
+  }
+  if (slider.value >= sliderMaxVal / 2) {
+    target.style.width = slider.value / sliderMaxVal * 100 + '%';
+  }
+  for (var i = 0; i < pointLen; i++) {
+    if (slider.value >= pointVal * i) {
+      rangePoint[i].classList.add('is-active');
+      sliderTime[i].classList.add('is-active');
+    } else {
+      rangePoint[i].classList.remove('is-active');
+      sliderTime[i].classList.remove('is-active');
+    }
+  }
 };
 
 exports.default = sliders;
 
 /***/ }),
-/* 8 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-// Import Json.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _timeAlignment = __webpack_require__(0);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Sync Setting Movies <-> Slider.
-var syncSlider = function syncSlider() {
-  var movie = document.getElementById('fn-movie');
-  var slider = document.querySelector('.fn-slider');
-  slider.addEventListener('input', function () {
-    var time = slider.value / 10;
-    movie.currentTime = time;
-  });
-  movie.addEventListener('timeupdate', function () {
-    var val = movie.currentTime * 10;
-    slider.value = val;
-    var addTimeTarget = document.querySelector('.fn-time');
-    var addMeridiemTarget = document.querySelector('.fn-meridiem');
-    var timeAlignmentLen = _timeAlignment2.default.length;
-    var movieTotalTimes = 120 * 10;
-    var totalHour = 18;
-    var setMath = movieTotalTimes / totalHour;
-    for (var i = 0; i < timeAlignmentLen; i++) {
-      if (val > setMath * i && val <= setMath * (i + 1)) {
-        addTimeTarget.innerText = _timeAlignment2.default[i].time;
-        addMeridiemTarget.innerText = _timeAlignment2.default[i].meridiem;
-      }
-    }
-  });
-};exports.default = syncSlider;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(2);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _timeAlignment = __webpack_require__(0);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Visualizations PC Functions.
-
-
-// Import Json.
-var visualizationsPC = function visualizationsPC() {
-
-  // Import CSV.
-  var importCSV = './csv/data.csv';
-
-  // Core Functions.
-  _d2.default.csv(importCSV, function (error, csv) {
-    var csvLen = csv.length;
-    var movie = document.getElementById('fn-movie');
-    var drawer = document.querySelector('.fn-drawer-city');
-    var cityBTNPC = document.querySelectorAll('.fn-tag');
-    var cityBTNPCLen = cityBTNPC.length;
-    var timeAlignmentLen = _timeAlignment2.default.length;
-    var cityCheckedLen = _cityChecked2.default.length;
-    movie.addEventListener('timeupdate', function () {
-      for (var i = 0; i < cityBTNPCLen; i++) {
-        cityBTNPC[i].onclick = function () {
-          var getHour = document.querySelector('.fn-time').innerText;
-          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-          var getID = this.getAttribute('id');
-          drawer.classList.add('is-active');
-          for (var _i = 0; _i < timeAlignmentLen; _i++) {
-            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
-              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
-              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
-                if (getID === _cityChecked2.default[_i2].buttonPC) {
-                  var getCity = _cityChecked2.default[_i2].searchWord;
-                  for (var _i3 = 0; _i3 < csvLen; _i3++) {
-                    if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
-                      var getGender = csv[_i3].gender;
-                      if (getGender === '男') {
-                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u7537\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                      if (getGender === '女') {
-                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u5973\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        };
-      }
-    });
-  });
-};exports.default = visualizationsPC;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(2);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _timeAlignment = __webpack_require__(0);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Visualizations SP Functions.
-
-
-// Import Json.
-var visualizationsSP = function visualizationsSP() {
-
-  // Import CSV.
-  var importCSV = './csv/data.csv';
-
-  // Core Functions.
-  _d2.default.csv(importCSV, function (error, csv) {
-    var csvLen = csv.length;
-    var movie = document.getElementById('fn-movie');
-    var drawer = document.querySelector('.fn-drawer-city');
-    var cityBTNSP = document.querySelectorAll('.fn-button-city');
-    var cityBTNSPLen = cityBTNSP.length;
-    var timeAlignmentLen = _timeAlignment2.default.length;
-    var cityCheckedLen = _cityChecked2.default.length;
-    movie.addEventListener('timeupdate', function () {
-      for (var i = 0; i < cityBTNSPLen; i++) {
-        cityBTNSP[i].onclick = function () {
-          var getHour = document.querySelector('.fn-time').innerText;
-          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-          var getID = this.getAttribute('id');
-          drawer.classList.add('is-active');
-          for (var _i = 0; _i < timeAlignmentLen; _i++) {
-            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
-              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
-              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
-                if (getID === _cityChecked2.default[_i2].buttonSP) {
-                  var getCity = _cityChecked2.default[_i2].searchWord;
-                  for (var _i3 = 0; _i3 < csvLen; _i3++) {
-                    if (getMilitaryTime === csv[_i3].time && getCity === csv[_i3].city) {
-                      var getGender = csv[_i3].gender;
-                      if (getGender === '男') {
-                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u7537\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                      if (getGender === '女') {
-                        console.log(csv[_i3].time + '\u306E' + csv[_i3].city + '\u306E\u5973\u306E\u4EBA\u6570\u306F => ' + csv[_i3].population);
-                        /* Add Visualization Core Functions This Line. */
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        };
-      }
-    });
-  });
-};exports.default = visualizationsSP;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Modules.
-
-var _addFlag = __webpack_require__(3);
-
-var _addFlag2 = _interopRequireDefault(_addFlag);
-
-var _sizeSettingSVG = __webpack_require__(5);
-
-var _sizeSettingSVG2 = _interopRequireDefault(_sizeSettingSVG);
-
-var _syncSlider = __webpack_require__(8);
-
-var _syncSlider2 = _interopRequireDefault(_syncSlider);
-
-var _sliderClicked = __webpack_require__(6);
-
-var _sliderClicked2 = _interopRequireDefault(_sliderClicked);
-
-var _sliders = __webpack_require__(7);
-
-var _sliders2 = _interopRequireDefault(_sliders);
-
-var _drawers = __webpack_require__(4);
-
-var _drawers2 = _interopRequireDefault(_drawers);
-
-var _visualizationsPC = __webpack_require__(9);
-
-var _visualizationsPC2 = _interopRequireDefault(_visualizationsPC);
-
-var _visualizationsSP = __webpack_require__(10);
-
-var _visualizationsSP2 = _interopRequireDefault(_visualizationsSP);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Require All Functions.
-(0, _addFlag2.default)();
-(0, _sizeSettingSVG2.default)();
-(0, _syncSlider2.default)();
-(0, _sliderClicked2.default)();
-(0, _sliders2.default)();
-(0, _drawers2.default)();
-(0, _visualizationsPC2.default)();
-(0, _visualizationsSP2.default)();
+module.exports = [{ "countryNameJP": "オーストラリア", "countryNameEN": "Australia", "flagPath": "australia" }, { "countryNameJP": "オーストリア", "countryNameEN": "Austria", "flagPath": "austria" }, { "countryNameJP": "中華人民共和国|中国", "countryNameEN": "China", "flagPath": "china" }, { "countryNameJP": "イギリス", "countryNameEN": "United Kingdom", "flagPath": "united-kingdom" }, { "countryNameJP": "香港", "countryNameEN": "Hong Kong", "flagPath": "hong-kong" }, { "countryNameJP": "大韓民国", "countryNameEN": "Korea", "flagPath": "korea" }, { "countryNameJP": "マレーシア", "countryNameEN": "Malaysia", "flagPath": "malaysia" }, { "countryNameJP": "ロシア|ロシア連邦", "countryNameEN": "Russia", "flagPath": "russia" }, { "countryNameJP": "シンガポール", "countryNameEN": "Singapore", "flagPath": "singapore" }, { "countryNameJP": "スウェーデン", "countryNameEN": "Sweden", "flagPath": "sweden" }, { "countryNameJP": "タイ王国|タイ", "countryNameEN": "Thailand", "flagPath": "thailand" }, { "countryNameJP": "台湾", "countryNameEN": "Taiwan", "flagPath": "taiwan" }, { "countryNameJP": "アメリカ合衆国", "countryNameEN": "USA", "flagPath": "usa" }, { "countryNameJP": "不明", "countryNameEN": "Unknown", "flagPath": "unknown" }, { "countryNameJP": "フランス", "countryNameEN": "France", "flagPath": "france" }, { "countryNameJP": "インドネシア", "countryNameEN": "Indonesia", "flagPath": "indonesia" }, { "countryNameJP": "イタリア", "countryNameEN": "Italy", "flagPath": "italy" }, { "countryNameJP": "ベルギー", "countryNameEN": "Belgium", "flagPath": "belgium" }, { "countryNameJP": "カナダ", "countryNameEN": "Canada", "flagPath": "canada" }, { "countryNameJP": "スイス", "countryNameEN": "Switzerland", "flagPath": "switzerland" }, { "countryNameJP": "チェコ", "countryNameEN": "Czech", "flagPath": "czech" }, { "countryNameJP": "ドイツ", "countryNameEN": "Germany", "flagPath": "germany" }, { "countryNameJP": "デンマーク", "countryNameEN": "Denmark", "flagPath": "denmark" }, { "countryNameJP": "スペイン", "countryNameEN": "Spain", "flagPath": "spain" }, { "countryNameJP": "エストニア", "countryNameEN": "Estonia", "flagPath": "estonia" }, { "countryNameJP": "フィンランド", "countryNameEN": "Finland", "flagPath": "finland" }, { "countryNameJP": "インド", "countryNameEN": "India", "flagPath": "india" }, { "countryNameJP": "イスラエル", "countryNameEN": "Israel", "flagPath": "israel" }, { "countryNameJP": "メキシコ", "countryNameEN": "Mexico", "flagPath": "mexico" }, { "countryNameJP": "オランダ", "countryNameEN": "Netherlands", "flagPath": "netherlands" }, { "countryNameJP": "ノルウェー", "countryNameEN": "Norway", "flagPath": "norway" }, { "countryNameJP": "ニュージーランド", "countryNameEN": "New zealand", "flagPath": "new-zealand" }, { "countryNameJP": "フィリピン", "countryNameEN": "Philippines", "flagPath": "philippines" }, { "countryNameJP": "ポーランド", "countryNameEN": "Poland", "flagPath": "poland" }, { "countryNameJP": "ポルトガル", "countryNameEN": "Portugal", "flagPath": "portugal" }, { "countryNameJP": "カタール", "countryNameEN": "Qatar", "flagPath": "qatar" }, { "countryNameJP": "ルーマニア", "countryNameEN": "Romania", "flagPath": "romania" }, { "countryNameJP": "トルコ", "countryNameEN": "Turkey", "flagPath": "turkey" }, { "countryNameJP": "ベトナム", "countryNameEN": "Vietnam", "flagPath": "vietnam" }, { "countryNameJP": "ルクセンブルク", "countryNameEN": "Luxembourg", "flagPath": "luxembourg" }, { "countryNameJP": "アラブ首長国連邦", "countryNameEN": "UAE", "flagPath": "uae" }, { "countryNameJP": "ミャンマー", "countryNameEN": "Myanmar", "flagPath": "myanmar" }, { "countryNameJP": "ブラジル", "countryNameEN": "Brazil", "flagPath": "brazil" }, { "countryNameJP": "アイルランド", "countryNameEN": "Ireland", "flagPath": "ireland" }, { "countryNameJP": "アルゼンチン", "countryNameEN": "Argentina", "flagPath": "argentina" }];
 
 /***/ })
 /******/ ]);

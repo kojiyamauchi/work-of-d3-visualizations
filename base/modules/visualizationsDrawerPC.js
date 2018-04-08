@@ -19,11 +19,6 @@ const visualizationsDrawerPC = () => {
 
   const cityBTNPC = document.querySelectorAll('.fn-tag')
   const cityBTNPCLen = cityBTNPC.length
-  const cityCheckedLen = cityChecked.length
-  const movie = document.getElementById('fn-movie')
-  const drawer = document.querySelector('.fn-drawer-city')
-  const drawerCityBG = document.querySelector('.fn-city-map')
-  const timeAlignmentLen = timeAlignment.length
 
   // Clicked City Button, Function Start on PC.
   for(let i = 0; i < cityBTNPCLen; i++) {
@@ -32,6 +27,12 @@ const visualizationsDrawerPC = () => {
       // Import CSV.
       const importCSV1 = './csv/data.csv'
       const importCSV2 = './csv/foreignTourists.csv'
+
+      const movie = document.getElementById('fn-movie')
+      const drawer = document.querySelector('.fn-drawer-city')
+      const drawerCityBG = document.querySelector('.fn-city-map')
+      const cityCheckedLen = cityChecked.length
+      const timeAlignmentLen = timeAlignment.length
 
       // Core Functions.
       d3.csv(importCSV1, (error, csv1) => {
