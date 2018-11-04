@@ -20,7 +20,7 @@
     "trailing-comma": false,
     "max-line-length": [
       true,
-      120
+      160
     ],
     "interface-name": false,
     "ordered-imports": false,
