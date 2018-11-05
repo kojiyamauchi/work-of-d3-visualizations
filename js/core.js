@@ -1,10690 +1,2250 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/******/ ;(function(modules) {
+  // webpackBootstrap
+  /******/ // The module cache
+  /******/ var installedModules = {} // The require function
+  /******/
+  /******/ /******/ function __webpack_require__(moduleId) {
+    /******/
+    /******/ // Check if module is in cache
+    /******/ if (installedModules[moduleId]) {
+      /******/ return installedModules[moduleId].exports
+      /******/
+    } // Create a new module (and put it into the cache)
+    /******/ /******/ var module = (installedModules[moduleId] = {
+      /******/ i: moduleId,
+      /******/ l: false,
+      /******/ exports: {}
+      /******/
+    }) // Execute the module function
+    /******/
+    /******/ /******/ modules[moduleId].call(
+      module.exports,
+      module,
+      module.exports,
+      __webpack_require__
+    ) // Flag the module as loaded
+    /******/
+    /******/ /******/ module.l = true // Return the exports of the module
+    /******/
+    /******/ /******/ return module.exports
+    /******/
+  } // expose the modules object (__webpack_modules__)
+  /******/
+  /******/
+  /******/ /******/ __webpack_require__.m = modules // expose the module cache
+  /******/
+  /******/ /******/ __webpack_require__.c = installedModules // define getter function for harmony exports
+  /******/
+  /******/ /******/ __webpack_require__.d = function(exports, name, getter) {
+    /******/ if (!__webpack_require__.o(exports, name)) {
+      /******/ Object.defineProperty(exports, name, {
+        enumerable: true,
+        get: getter
+      })
+      /******/
+    }
+    /******/
+  } // define __esModule on exports
+  /******/
+  /******/ /******/ __webpack_require__.r = function(exports) {
+    /******/ if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+      /******/ Object.defineProperty(exports, Symbol.toStringTag, {
+        value: 'Module'
+      })
+      /******/
+    }
+    /******/ Object.defineProperty(exports, '__esModule', { value: true })
+    /******/
+  } // create a fake namespace object // mode & 1: value is a module id, require it // mode & 2: merge all properties of value into the ns // mode & 4: return value when already ns object // mode & 8|1: behave like require
+  /******/
+  /******/ /******/ /******/ /******/ /******/ /******/ __webpack_require__.t = function(
+    value,
+    mode
+  ) {
+    /******/ if (mode & 1) value = __webpack_require__(value)
+    /******/ if (mode & 8) return value
+    /******/ if (
+      mode & 4 &&
+      typeof value === 'object' &&
+      value &&
+      value.__esModule
+    )
+      return value
+    /******/ var ns = Object.create(null)
+    /******/ __webpack_require__.r(ns)
+    /******/ Object.defineProperty(ns, 'default', {
+      enumerable: true,
+      value: value
+    })
+    /******/ if (mode & 2 && typeof value != 'string')
+      for (var key in value)
+        __webpack_require__.d(
+          ns,
+          key,
+          function(key) {
+            return value[key]
+          }.bind(null, key)
+        )
+    /******/ return ns
+    /******/
+  } // getDefaultExport function for compatibility with non-harmony modules
+  /******/
+  /******/ /******/ __webpack_require__.n = function(module) {
+    /******/ var getter =
+      module && module.__esModule
+        ? /******/ function getDefault() {
+            return module['default']
+          }
+        : /******/ function getModuleExports() {
+            return module
+          }
+    /******/ __webpack_require__.d(getter, 'a', getter)
+    /******/ return getter
+    /******/
+  } // Object.prototype.hasOwnProperty.call
+  /******/
+  /******/ /******/ __webpack_require__.o = function(object, property) {
+    return Object.prototype.hasOwnProperty.call(object, property)
+  } // __webpack_public_path__
+  /******/
+  /******/ /******/ __webpack_require__.p = '' // Load entry module and return exports
+  /******/
+  /******/
+  /******/ /******/ return __webpack_require__(
+    (__webpack_require__.s = './base/core.js')
+  )
+  /******/
+})(
+  /************************************************************************/
+  /******/ {
+    /***/ './base/core.js':
+      /*!**********************!*\
+  !*** ./base/core.js ***!
+  \**********************/
+      /*! no static exports found */
+      /***/ function(module, exports, __webpack_require__) {
+        'use strict'
+        eval(
+          "\n\nvar _App = __webpack_require__(/*! @/base/modules/App */ \"./base/modules/App.ts\");\n\nvar _App2 = _interopRequireDefault(_App);\n\nvar _SetStates = __webpack_require__(/*! @/base/modules/state/SetStates */ \"./base/modules/state/SetStates.ts\");\n\nvar _SetStates2 = _interopRequireDefault(_SetStates);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Created Instance.\n/*\n\n Core.js\n\n*/\n\n// Import Modules.\nvar app = new _App2.default();\nvar setStates = new _SetStates2.default();\n\n// Initial.\napp.initialize();\n\n// DOM Content Loaded.\nwindow.addEventListener('DOMContentLoaded', function () {\n  // Call DOM Content Loaded Method.\n});\n\n// Load.\nwindow.addEventListener('load', function () {\n  // Call Load Method.\n  app.load(setStates.getWidth);\n});\n\n// Resize.\nwindow.addEventListener('resize', function () {\n  // Set View State.\n  setStates.setWidth = document.body.clientWidth;\n  // Call Resize Method.\n  app.resize(setStates.getWidth);\n});\n\n// Scroll.\nwindow.addEventListener('scroll', function () {\n  // Call Scroll Method.\n});\n\n//# sourceURL=webpack:///./base/core.js?"
+        )
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
-  var d3 = {
-    version: "3.5.17"
-  };
-  var d3_arraySlice = [].slice, d3_array = function(list) {
-    return d3_arraySlice.call(list);
-  };
-  var d3_document = this.document;
-  function d3_documentElement(node) {
-    return node && (node.ownerDocument || node.document || node).documentElement;
-  }
-  function d3_window(node) {
-    return node && (node.ownerDocument && node.ownerDocument.defaultView || node.document && node || node.defaultView);
-  }
-  if (d3_document) {
-    try {
-      d3_array(d3_document.documentElement.childNodes)[0].nodeType;
-    } catch (e) {
-      d3_array = function(list) {
-        var i = list.length, array = new Array(i);
-        while (i--) array[i] = list[i];
-        return array;
-      };
-    }
-  }
-  if (!Date.now) Date.now = function() {
-    return +new Date();
-  };
-  if (d3_document) {
-    try {
-      d3_document.createElement("DIV").style.setProperty("opacity", 0, "");
-    } catch (error) {
-      var d3_element_prototype = this.Element.prototype, d3_element_setAttribute = d3_element_prototype.setAttribute, d3_element_setAttributeNS = d3_element_prototype.setAttributeNS, d3_style_prototype = this.CSSStyleDeclaration.prototype, d3_style_setProperty = d3_style_prototype.setProperty;
-      d3_element_prototype.setAttribute = function(name, value) {
-        d3_element_setAttribute.call(this, name, value + "");
-      };
-      d3_element_prototype.setAttributeNS = function(space, local, value) {
-        d3_element_setAttributeNS.call(this, space, local, value + "");
-      };
-      d3_style_prototype.setProperty = function(name, value, priority) {
-        d3_style_setProperty.call(this, name, value + "", priority);
-      };
-    }
-  }
-  d3.ascending = d3_ascending;
-  function d3_ascending(a, b) {
-    return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
-  }
-  d3.descending = function(a, b) {
-    return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
-  };
-  d3.min = function(array, f) {
-    var i = -1, n = array.length, a, b;
-    if (arguments.length === 1) {
-      while (++i < n) if ((b = array[i]) != null && b >= b) {
-        a = b;
-        break;
-      }
-      while (++i < n) if ((b = array[i]) != null && a > b) a = b;
-    } else {
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null && b >= b) {
-        a = b;
-        break;
-      }
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null && a > b) a = b;
-    }
-    return a;
-  };
-  d3.max = function(array, f) {
-    var i = -1, n = array.length, a, b;
-    if (arguments.length === 1) {
-      while (++i < n) if ((b = array[i]) != null && b >= b) {
-        a = b;
-        break;
-      }
-      while (++i < n) if ((b = array[i]) != null && b > a) a = b;
-    } else {
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null && b >= b) {
-        a = b;
-        break;
-      }
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null && b > a) a = b;
-    }
-    return a;
-  };
-  d3.extent = function(array, f) {
-    var i = -1, n = array.length, a, b, c;
-    if (arguments.length === 1) {
-      while (++i < n) if ((b = array[i]) != null && b >= b) {
-        a = c = b;
-        break;
-      }
-      while (++i < n) if ((b = array[i]) != null) {
-        if (a > b) a = b;
-        if (c < b) c = b;
-      }
-    } else {
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null && b >= b) {
-        a = c = b;
-        break;
-      }
-      while (++i < n) if ((b = f.call(array, array[i], i)) != null) {
-        if (a > b) a = b;
-        if (c < b) c = b;
-      }
-    }
-    return [ a, c ];
-  };
-  function d3_number(x) {
-    return x === null ? NaN : +x;
-  }
-  function d3_numeric(x) {
-    return !isNaN(x);
-  }
-  d3.sum = function(array, f) {
-    var s = 0, n = array.length, a, i = -1;
-    if (arguments.length === 1) {
-      while (++i < n) if (d3_numeric(a = +array[i])) s += a;
-    } else {
-      while (++i < n) if (d3_numeric(a = +f.call(array, array[i], i))) s += a;
-    }
-    return s;
-  };
-  d3.mean = function(array, f) {
-    var s = 0, n = array.length, a, i = -1, j = n;
-    if (arguments.length === 1) {
-      while (++i < n) if (d3_numeric(a = d3_number(array[i]))) s += a; else --j;
-    } else {
-      while (++i < n) if (d3_numeric(a = d3_number(f.call(array, array[i], i)))) s += a; else --j;
-    }
-    if (j) return s / j;
-  };
-  d3.quantile = function(values, p) {
-    var H = (values.length - 1) * p + 1, h = Math.floor(H), v = +values[h - 1], e = H - h;
-    return e ? v + e * (values[h] - v) : v;
-  };
-  d3.median = function(array, f) {
-    var numbers = [], n = array.length, a, i = -1;
-    if (arguments.length === 1) {
-      while (++i < n) if (d3_numeric(a = d3_number(array[i]))) numbers.push(a);
-    } else {
-      while (++i < n) if (d3_numeric(a = d3_number(f.call(array, array[i], i)))) numbers.push(a);
-    }
-    if (numbers.length) return d3.quantile(numbers.sort(d3_ascending), .5);
-  };
-  d3.variance = function(array, f) {
-    var n = array.length, m = 0, a, d, s = 0, i = -1, j = 0;
-    if (arguments.length === 1) {
-      while (++i < n) {
-        if (d3_numeric(a = d3_number(array[i]))) {
-          d = a - m;
-          m += d / ++j;
-          s += d * (a - m);
-        }
-      }
-    } else {
-      while (++i < n) {
-        if (d3_numeric(a = d3_number(f.call(array, array[i], i)))) {
-          d = a - m;
-          m += d / ++j;
-          s += d * (a - m);
-        }
-      }
-    }
-    if (j > 1) return s / (j - 1);
-  };
-  d3.deviation = function() {
-    var v = d3.variance.apply(this, arguments);
-    return v ? Math.sqrt(v) : v;
-  };
-  function d3_bisector(compare) {
-    return {
-      left: function(a, x, lo, hi) {
-        if (arguments.length < 3) lo = 0;
-        if (arguments.length < 4) hi = a.length;
-        while (lo < hi) {
-          var mid = lo + hi >>> 1;
-          if (compare(a[mid], x) < 0) lo = mid + 1; else hi = mid;
-        }
-        return lo;
+        /***/
       },
-      right: function(a, x, lo, hi) {
-        if (arguments.length < 3) lo = 0;
-        if (arguments.length < 4) hi = a.length;
-        while (lo < hi) {
-          var mid = lo + hi >>> 1;
-          if (compare(a[mid], x) > 0) hi = mid; else lo = mid + 1;
-        }
-        return lo;
-      }
-    };
-  }
-  var d3_bisect = d3_bisector(d3_ascending);
-  d3.bisectLeft = d3_bisect.left;
-  d3.bisect = d3.bisectRight = d3_bisect.right;
-  d3.bisector = function(f) {
-    return d3_bisector(f.length === 1 ? function(d, x) {
-      return d3_ascending(f(d), x);
-    } : f);
-  };
-  d3.shuffle = function(array, i0, i1) {
-    if ((m = arguments.length) < 3) {
-      i1 = array.length;
-      if (m < 2) i0 = 0;
-    }
-    var m = i1 - i0, t, i;
-    while (m) {
-      i = Math.random() * m-- | 0;
-      t = array[m + i0], array[m + i0] = array[i + i0], array[i + i0] = t;
-    }
-    return array;
-  };
-  d3.permute = function(array, indexes) {
-    var i = indexes.length, permutes = new Array(i);
-    while (i--) permutes[i] = array[indexes[i]];
-    return permutes;
-  };
-  d3.pairs = function(array) {
-    var i = 0, n = array.length - 1, p0, p1 = array[0], pairs = new Array(n < 0 ? 0 : n);
-    while (i < n) pairs[i] = [ p0 = p1, p1 = array[++i] ];
-    return pairs;
-  };
-  d3.transpose = function(matrix) {
-    if (!(n = matrix.length)) return [];
-    for (var i = -1, m = d3.min(matrix, d3_transposeLength), transpose = new Array(m); ++i < m; ) {
-      for (var j = -1, n, row = transpose[i] = new Array(n); ++j < n; ) {
-        row[j] = matrix[j][i];
-      }
-    }
-    return transpose;
-  };
-  function d3_transposeLength(d) {
-    return d.length;
-  }
-  d3.zip = function() {
-    return d3.transpose(arguments);
-  };
-  d3.keys = function(map) {
-    var keys = [];
-    for (var key in map) keys.push(key);
-    return keys;
-  };
-  d3.values = function(map) {
-    var values = [];
-    for (var key in map) values.push(map[key]);
-    return values;
-  };
-  d3.entries = function(map) {
-    var entries = [];
-    for (var key in map) entries.push({
-      key: key,
-      value: map[key]
-    });
-    return entries;
-  };
-  d3.merge = function(arrays) {
-    var n = arrays.length, m, i = -1, j = 0, merged, array;
-    while (++i < n) j += arrays[i].length;
-    merged = new Array(j);
-    while (--n >= 0) {
-      array = arrays[n];
-      m = array.length;
-      while (--m >= 0) {
-        merged[--j] = array[m];
-      }
-    }
-    return merged;
-  };
-  var abs = Math.abs;
-  d3.range = function(start, stop, step) {
-    if (arguments.length < 3) {
-      step = 1;
-      if (arguments.length < 2) {
-        stop = start;
-        start = 0;
-      }
-    }
-    if ((stop - start) / step === Infinity) throw new Error("infinite range");
-    var range = [], k = d3_range_integerScale(abs(step)), i = -1, j;
-    start *= k, stop *= k, step *= k;
-    if (step < 0) while ((j = start + step * ++i) > stop) range.push(j / k); else while ((j = start + step * ++i) < stop) range.push(j / k);
-    return range;
-  };
-  function d3_range_integerScale(x) {
-    var k = 1;
-    while (x * k % 1) k *= 10;
-    return k;
-  }
-  function d3_class(ctor, properties) {
-    for (var key in properties) {
-      Object.defineProperty(ctor.prototype, key, {
-        value: properties[key],
-        enumerable: false
-      });
-    }
-  }
-  d3.map = function(object, f) {
-    var map = new d3_Map();
-    if (object instanceof d3_Map) {
-      object.forEach(function(key, value) {
-        map.set(key, value);
-      });
-    } else if (Array.isArray(object)) {
-      var i = -1, n = object.length, o;
-      if (arguments.length === 1) while (++i < n) map.set(i, object[i]); else while (++i < n) map.set(f.call(object, o = object[i], i), o);
-    } else {
-      for (var key in object) map.set(key, object[key]);
-    }
-    return map;
-  };
-  function d3_Map() {
-    this._ = Object.create(null);
-  }
-  var d3_map_proto = "__proto__", d3_map_zero = "\x00";
-  d3_class(d3_Map, {
-    has: d3_map_has,
-    get: function(key) {
-      return this._[d3_map_escape(key)];
-    },
-    set: function(key, value) {
-      return this._[d3_map_escape(key)] = value;
-    },
-    remove: d3_map_remove,
-    keys: d3_map_keys,
-    values: function() {
-      var values = [];
-      for (var key in this._) values.push(this._[key]);
-      return values;
-    },
-    entries: function() {
-      var entries = [];
-      for (var key in this._) entries.push({
-        key: d3_map_unescape(key),
-        value: this._[key]
-      });
-      return entries;
-    },
-    size: d3_map_size,
-    empty: d3_map_empty,
-    forEach: function(f) {
-      for (var key in this._) f.call(this, d3_map_unescape(key), this._[key]);
-    }
-  });
-  function d3_map_escape(key) {
-    return (key += "") === d3_map_proto || key[0] === d3_map_zero ? d3_map_zero + key : key;
-  }
-  function d3_map_unescape(key) {
-    return (key += "")[0] === d3_map_zero ? key.slice(1) : key;
-  }
-  function d3_map_has(key) {
-    return d3_map_escape(key) in this._;
-  }
-  function d3_map_remove(key) {
-    return (key = d3_map_escape(key)) in this._ && delete this._[key];
-  }
-  function d3_map_keys() {
-    var keys = [];
-    for (var key in this._) keys.push(d3_map_unescape(key));
-    return keys;
-  }
-  function d3_map_size() {
-    var size = 0;
-    for (var key in this._) ++size;
-    return size;
-  }
-  function d3_map_empty() {
-    for (var key in this._) return false;
-    return true;
-  }
-  d3.nest = function() {
-    var nest = {}, keys = [], sortKeys = [], sortValues, rollup;
-    function map(mapType, array, depth) {
-      if (depth >= keys.length) return rollup ? rollup.call(nest, array) : sortValues ? array.sort(sortValues) : array;
-      var i = -1, n = array.length, key = keys[depth++], keyValue, object, setter, valuesByKey = new d3_Map(), values;
-      while (++i < n) {
-        if (values = valuesByKey.get(keyValue = key(object = array[i]))) {
-          values.push(object);
-        } else {
-          valuesByKey.set(keyValue, [ object ]);
-        }
-      }
-      if (mapType) {
-        object = mapType();
-        setter = function(keyValue, values) {
-          object.set(keyValue, map(mapType, values, depth));
-        };
-      } else {
-        object = {};
-        setter = function(keyValue, values) {
-          object[keyValue] = map(mapType, values, depth);
-        };
-      }
-      valuesByKey.forEach(setter);
-      return object;
-    }
-    function entries(map, depth) {
-      if (depth >= keys.length) return map;
-      var array = [], sortKey = sortKeys[depth++];
-      map.forEach(function(key, keyMap) {
-        array.push({
-          key: key,
-          values: entries(keyMap, depth)
-        });
-      });
-      return sortKey ? array.sort(function(a, b) {
-        return sortKey(a.key, b.key);
-      }) : array;
-    }
-    nest.map = function(array, mapType) {
-      return map(mapType, array, 0);
-    };
-    nest.entries = function(array) {
-      return entries(map(d3.map, array, 0), 0);
-    };
-    nest.key = function(d) {
-      keys.push(d);
-      return nest;
-    };
-    nest.sortKeys = function(order) {
-      sortKeys[keys.length - 1] = order;
-      return nest;
-    };
-    nest.sortValues = function(order) {
-      sortValues = order;
-      return nest;
-    };
-    nest.rollup = function(f) {
-      rollup = f;
-      return nest;
-    };
-    return nest;
-  };
-  d3.set = function(array) {
-    var set = new d3_Set();
-    if (array) for (var i = 0, n = array.length; i < n; ++i) set.add(array[i]);
-    return set;
-  };
-  function d3_Set() {
-    this._ = Object.create(null);
-  }
-  d3_class(d3_Set, {
-    has: d3_map_has,
-    add: function(key) {
-      this._[d3_map_escape(key += "")] = true;
-      return key;
-    },
-    remove: d3_map_remove,
-    values: d3_map_keys,
-    size: d3_map_size,
-    empty: d3_map_empty,
-    forEach: function(f) {
-      for (var key in this._) f.call(this, d3_map_unescape(key));
-    }
-  });
-  d3.behavior = {};
-  function d3_identity(d) {
-    return d;
-  }
-  d3.rebind = function(target, source) {
-    var i = 1, n = arguments.length, method;
-    while (++i < n) target[method = arguments[i]] = d3_rebind(target, source, source[method]);
-    return target;
-  };
-  function d3_rebind(target, source, method) {
-    return function() {
-      var value = method.apply(source, arguments);
-      return value === source ? target : value;
-    };
-  }
-  function d3_vendorSymbol(object, name) {
-    if (name in object) return name;
-    name = name.charAt(0).toUpperCase() + name.slice(1);
-    for (var i = 0, n = d3_vendorPrefixes.length; i < n; ++i) {
-      var prefixName = d3_vendorPrefixes[i] + name;
-      if (prefixName in object) return prefixName;
-    }
-  }
-  var d3_vendorPrefixes = [ "webkit", "ms", "moz", "Moz", "o", "O" ];
-  function d3_noop() {}
-  d3.dispatch = function() {
-    var dispatch = new d3_dispatch(), i = -1, n = arguments.length;
-    while (++i < n) dispatch[arguments[i]] = d3_dispatch_event(dispatch);
-    return dispatch;
-  };
-  function d3_dispatch() {}
-  d3_dispatch.prototype.on = function(type, listener) {
-    var i = type.indexOf("."), name = "";
-    if (i >= 0) {
-      name = type.slice(i + 1);
-      type = type.slice(0, i);
-    }
-    if (type) return arguments.length < 2 ? this[type].on(name) : this[type].on(name, listener);
-    if (arguments.length === 2) {
-      if (listener == null) for (type in this) {
-        if (this.hasOwnProperty(type)) this[type].on(name, null);
-      }
-      return this;
-    }
-  };
-  function d3_dispatch_event(dispatch) {
-    var listeners = [], listenerByName = new d3_Map();
-    function event() {
-      var z = listeners, i = -1, n = z.length, l;
-      while (++i < n) if (l = z[i].on) l.apply(this, arguments);
-      return dispatch;
-    }
-    event.on = function(name, listener) {
-      var l = listenerByName.get(name), i;
-      if (arguments.length < 2) return l && l.on;
-      if (l) {
-        l.on = null;
-        listeners = listeners.slice(0, i = listeners.indexOf(l)).concat(listeners.slice(i + 1));
-        listenerByName.remove(name);
-      }
-      if (listener) listeners.push(listenerByName.set(name, {
-        on: listener
-      }));
-      return dispatch;
-    };
-    return event;
-  }
-  d3.event = null;
-  function d3_eventPreventDefault() {
-    d3.event.preventDefault();
-  }
-  function d3_eventSource() {
-    var e = d3.event, s;
-    while (s = e.sourceEvent) e = s;
-    return e;
-  }
-  function d3_eventDispatch(target) {
-    var dispatch = new d3_dispatch(), i = 0, n = arguments.length;
-    while (++i < n) dispatch[arguments[i]] = d3_dispatch_event(dispatch);
-    dispatch.of = function(thiz, argumentz) {
-      return function(e1) {
-        try {
-          var e0 = e1.sourceEvent = d3.event;
-          e1.target = target;
-          d3.event = e1;
-          dispatch[e1.type].apply(thiz, argumentz);
-        } finally {
-          d3.event = e0;
-        }
-      };
-    };
-    return dispatch;
-  }
-  d3.requote = function(s) {
-    return s.replace(d3_requote_re, "\\$&");
-  };
-  var d3_requote_re = /[\\\^\$\*\+\?\|\[\]\(\)\.\{\}]/g;
-  var d3_subclass = {}.__proto__ ? function(object, prototype) {
-    object.__proto__ = prototype;
-  } : function(object, prototype) {
-    for (var property in prototype) object[property] = prototype[property];
-  };
-  function d3_selection(groups) {
-    d3_subclass(groups, d3_selectionPrototype);
-    return groups;
-  }
-  var d3_select = function(s, n) {
-    return n.querySelector(s);
-  }, d3_selectAll = function(s, n) {
-    return n.querySelectorAll(s);
-  }, d3_selectMatches = function(n, s) {
-    var d3_selectMatcher = n.matches || n[d3_vendorSymbol(n, "matchesSelector")];
-    d3_selectMatches = function(n, s) {
-      return d3_selectMatcher.call(n, s);
-    };
-    return d3_selectMatches(n, s);
-  };
-  if (typeof Sizzle === "function") {
-    d3_select = function(s, n) {
-      return Sizzle(s, n)[0] || null;
-    };
-    d3_selectAll = Sizzle;
-    d3_selectMatches = Sizzle.matchesSelector;
-  }
-  d3.selection = function() {
-    return d3.select(d3_document.documentElement);
-  };
-  var d3_selectionPrototype = d3.selection.prototype = [];
-  d3_selectionPrototype.select = function(selector) {
-    var subgroups = [], subgroup, subnode, group, node;
-    selector = d3_selection_selector(selector);
-    for (var j = -1, m = this.length; ++j < m; ) {
-      subgroups.push(subgroup = []);
-      subgroup.parentNode = (group = this[j]).parentNode;
-      for (var i = -1, n = group.length; ++i < n; ) {
-        if (node = group[i]) {
-          subgroup.push(subnode = selector.call(node, node.__data__, i, j));
-          if (subnode && "__data__" in node) subnode.__data__ = node.__data__;
-        } else {
-          subgroup.push(null);
-        }
-      }
-    }
-    return d3_selection(subgroups);
-  };
-  function d3_selection_selector(selector) {
-    return typeof selector === "function" ? selector : function() {
-      return d3_select(selector, this);
-    };
-  }
-  d3_selectionPrototype.selectAll = function(selector) {
-    var subgroups = [], subgroup, node;
-    selector = d3_selection_selectorAll(selector);
-    for (var j = -1, m = this.length; ++j < m; ) {
-      for (var group = this[j], i = -1, n = group.length; ++i < n; ) {
-        if (node = group[i]) {
-          subgroups.push(subgroup = d3_array(selector.call(node, node.__data__, i, j)));
-          subgroup.parentNode = node;
-        }
-      }
-    }
-    return d3_selection(subgroups);
-  };
-  function d3_selection_selectorAll(selector) {
-    return typeof selector === "function" ? selector : function() {
-      return d3_selectAll(selector, this);
-    };
-  }
-  var d3_nsXhtml = "http://www.w3.org/1999/xhtml";
-  var d3_nsPrefix = {
-    svg: "http://www.w3.org/2000/svg",
-    xhtml: d3_nsXhtml,
-    xlink: "http://www.w3.org/1999/xlink",
-    xml: "http://www.w3.org/XML/1998/namespace",
-    xmlns: "http://www.w3.org/2000/xmlns/"
-  };
-  d3.ns = {
-    prefix: d3_nsPrefix,
-    qualify: function(name) {
-      var i = name.indexOf(":"), prefix = name;
-      if (i >= 0 && (prefix = name.slice(0, i)) !== "xmlns") name = name.slice(i + 1);
-      return d3_nsPrefix.hasOwnProperty(prefix) ? {
-        space: d3_nsPrefix[prefix],
-        local: name
-      } : name;
-    }
-  };
-  d3_selectionPrototype.attr = function(name, value) {
-    if (arguments.length < 2) {
-      if (typeof name === "string") {
-        var node = this.node();
-        name = d3.ns.qualify(name);
-        return name.local ? node.getAttributeNS(name.space, name.local) : node.getAttribute(name);
-      }
-      for (value in name) this.each(d3_selection_attr(value, name[value]));
-      return this;
-    }
-    return this.each(d3_selection_attr(name, value));
-  };
-  function d3_selection_attr(name, value) {
-    name = d3.ns.qualify(name);
-    function attrNull() {
-      this.removeAttribute(name);
-    }
-    function attrNullNS() {
-      this.removeAttributeNS(name.space, name.local);
-    }
-    function attrConstant() {
-      this.setAttribute(name, value);
-    }
-    function attrConstantNS() {
-      this.setAttributeNS(name.space, name.local, value);
-    }
-    function attrFunction() {
-      var x = value.apply(this, arguments);
-      if (x == null) this.removeAttribute(name); else this.setAttribute(name, x);
-    }
-    function attrFunctionNS() {
-      var x = value.apply(this, arguments);
-      if (x == null) this.removeAttributeNS(name.space, name.local); else this.setAttributeNS(name.space, name.local, x);
-    }
-    return value == null ? name.local ? attrNullNS : attrNull : typeof value === "function" ? name.local ? attrFunctionNS : attrFunction : name.local ? attrConstantNS : attrConstant;
-  }
-  function d3_collapse(s) {
-    return s.trim().replace(/\s+/g, " ");
-  }
-  d3_selectionPrototype.classed = function(name, value) {
-    if (arguments.length < 2) {
-      if (typeof name === "string") {
-        var node = this.node(), n = (name = d3_selection_classes(name)).length, i = -1;
-        if (value = node.classList) {
-          while (++i < n) if (!value.contains(name[i])) return false;
-        } else {
-          value = node.getAttribute("class");
-          while (++i < n) if (!d3_selection_classedRe(name[i]).test(value)) return false;
-        }
-        return true;
-      }
-      for (value in name) this.each(d3_selection_classed(value, name[value]));
-      return this;
-    }
-    return this.each(d3_selection_classed(name, value));
-  };
-  function d3_selection_classedRe(name) {
-    return new RegExp("(?:^|\\s+)" + d3.requote(name) + "(?:\\s+|$)", "g");
-  }
-  function d3_selection_classes(name) {
-    return (name + "").trim().split(/^|\s+/);
-  }
-  function d3_selection_classed(name, value) {
-    name = d3_selection_classes(name).map(d3_selection_classedName);
-    var n = name.length;
-    function classedConstant() {
-      var i = -1;
-      while (++i < n) name[i](this, value);
-    }
-    function classedFunction() {
-      var i = -1, x = value.apply(this, arguments);
-      while (++i < n) name[i](this, x);
-    }
-    return typeof value === "function" ? classedFunction : classedConstant;
-  }
-  function d3_selection_classedName(name) {
-    var re = d3_selection_classedRe(name);
-    return function(node, value) {
-      if (c = node.classList) return value ? c.add(name) : c.remove(name);
-      var c = node.getAttribute("class") || "";
-      if (value) {
-        re.lastIndex = 0;
-        if (!re.test(c)) node.setAttribute("class", d3_collapse(c + " " + name));
-      } else {
-        node.setAttribute("class", d3_collapse(c.replace(re, " ")));
-      }
-    };
-  }
-  d3_selectionPrototype.style = function(name, value, priority) {
-    var n = arguments.length;
-    if (n < 3) {
-      if (typeof name !== "string") {
-        if (n < 2) value = "";
-        for (priority in name) this.each(d3_selection_style(priority, name[priority], value));
-        return this;
-      }
-      if (n < 2) {
-        var node = this.node();
-        return d3_window(node).getComputedStyle(node, null).getPropertyValue(name);
-      }
-      priority = "";
-    }
-    return this.each(d3_selection_style(name, value, priority));
-  };
-  function d3_selection_style(name, value, priority) {
-    function styleNull() {
-      this.style.removeProperty(name);
-    }
-    function styleConstant() {
-      this.style.setProperty(name, value, priority);
-    }
-    function styleFunction() {
-      var x = value.apply(this, arguments);
-      if (x == null) this.style.removeProperty(name); else this.style.setProperty(name, x, priority);
-    }
-    return value == null ? styleNull : typeof value === "function" ? styleFunction : styleConstant;
-  }
-  d3_selectionPrototype.property = function(name, value) {
-    if (arguments.length < 2) {
-      if (typeof name === "string") return this.node()[name];
-      for (value in name) this.each(d3_selection_property(value, name[value]));
-      return this;
-    }
-    return this.each(d3_selection_property(name, value));
-  };
-  function d3_selection_property(name, value) {
-    function propertyNull() {
-      delete this[name];
-    }
-    function propertyConstant() {
-      this[name] = value;
-    }
-    function propertyFunction() {
-      var x = value.apply(this, arguments);
-      if (x == null) delete this[name]; else this[name] = x;
-    }
-    return value == null ? propertyNull : typeof value === "function" ? propertyFunction : propertyConstant;
-  }
-  d3_selectionPrototype.text = function(value) {
-    return arguments.length ? this.each(typeof value === "function" ? function() {
-      var v = value.apply(this, arguments);
-      this.textContent = v == null ? "" : v;
-    } : value == null ? function() {
-      this.textContent = "";
-    } : function() {
-      this.textContent = value;
-    }) : this.node().textContent;
-  };
-  d3_selectionPrototype.html = function(value) {
-    return arguments.length ? this.each(typeof value === "function" ? function() {
-      var v = value.apply(this, arguments);
-      this.innerHTML = v == null ? "" : v;
-    } : value == null ? function() {
-      this.innerHTML = "";
-    } : function() {
-      this.innerHTML = value;
-    }) : this.node().innerHTML;
-  };
-  d3_selectionPrototype.append = function(name) {
-    name = d3_selection_creator(name);
-    return this.select(function() {
-      return this.appendChild(name.apply(this, arguments));
-    });
-  };
-  function d3_selection_creator(name) {
-    function create() {
-      var document = this.ownerDocument, namespace = this.namespaceURI;
-      return namespace === d3_nsXhtml && document.documentElement.namespaceURI === d3_nsXhtml ? document.createElement(name) : document.createElementNS(namespace, name);
-    }
-    function createNS() {
-      return this.ownerDocument.createElementNS(name.space, name.local);
-    }
-    return typeof name === "function" ? name : (name = d3.ns.qualify(name)).local ? createNS : create;
-  }
-  d3_selectionPrototype.insert = function(name, before) {
-    name = d3_selection_creator(name);
-    before = d3_selection_selector(before);
-    return this.select(function() {
-      return this.insertBefore(name.apply(this, arguments), before.apply(this, arguments) || null);
-    });
-  };
-  d3_selectionPrototype.remove = function() {
-    return this.each(d3_selectionRemove);
-  };
-  function d3_selectionRemove() {
-    var parent = this.parentNode;
-    if (parent) parent.removeChild(this);
-  }
-  d3_selectionPrototype.data = function(value, key) {
-    var i = -1, n = this.length, group, node;
-    if (!arguments.length) {
-      value = new Array(n = (group = this[0]).length);
-      while (++i < n) {
-        if (node = group[i]) {
-          value[i] = node.__data__;
-        }
-      }
-      return value;
-    }
-    function bind(group, groupData) {
-      var i, n = group.length, m = groupData.length, n0 = Math.min(n, m), updateNodes = new Array(m), enterNodes = new Array(m), exitNodes = new Array(n), node, nodeData;
-      if (key) {
-        var nodeByKeyValue = new d3_Map(), keyValues = new Array(n), keyValue;
-        for (i = -1; ++i < n; ) {
-          if (node = group[i]) {
-            if (nodeByKeyValue.has(keyValue = key.call(node, node.__data__, i))) {
-              exitNodes[i] = node;
-            } else {
-              nodeByKeyValue.set(keyValue, node);
-            }
-            keyValues[i] = keyValue;
-          }
-        }
-        for (i = -1; ++i < m; ) {
-          if (!(node = nodeByKeyValue.get(keyValue = key.call(groupData, nodeData = groupData[i], i)))) {
-            enterNodes[i] = d3_selection_dataNode(nodeData);
-          } else if (node !== true) {
-            updateNodes[i] = node;
-            node.__data__ = nodeData;
-          }
-          nodeByKeyValue.set(keyValue, true);
-        }
-        for (i = -1; ++i < n; ) {
-          if (i in keyValues && nodeByKeyValue.get(keyValues[i]) !== true) {
-            exitNodes[i] = group[i];
-          }
-        }
-      } else {
-        for (i = -1; ++i < n0; ) {
-          node = group[i];
-          nodeData = groupData[i];
-          if (node) {
-            node.__data__ = nodeData;
-            updateNodes[i] = node;
-          } else {
-            enterNodes[i] = d3_selection_dataNode(nodeData);
-          }
-        }
-        for (;i < m; ++i) {
-          enterNodes[i] = d3_selection_dataNode(groupData[i]);
-        }
-        for (;i < n; ++i) {
-          exitNodes[i] = group[i];
-        }
-      }
-      enterNodes.update = updateNodes;
-      enterNodes.parentNode = updateNodes.parentNode = exitNodes.parentNode = group.parentNode;
-      enter.push(enterNodes);
-      update.push(updateNodes);
-      exit.push(exitNodes);
-    }
-    var enter = d3_selection_enter([]), update = d3_selection([]), exit = d3_selection([]);
-    if (typeof value === "function") {
-      while (++i < n) {
-        bind(group = this[i], value.call(group, group.parentNode.__data__, i));
-      }
-    } else {
-      while (++i < n) {
-        bind(group = this[i], value);
-      }
-    }
-    update.enter = function() {
-      return enter;
-    };
-    update.exit = function() {
-      return exit;
-    };
-    return update;
-  };
-  function d3_selection_dataNode(data) {
-    return {
-      __data__: data
-    };
-  }
-  d3_selectionPrototype.datum = function(value) {
-    return arguments.length ? this.property("__data__", value) : this.property("__data__");
-  };
-  d3_selectionPrototype.filter = function(filter) {
-    var subgroups = [], subgroup, group, node;
-    if (typeof filter !== "function") filter = d3_selection_filter(filter);
-    for (var j = 0, m = this.length; j < m; j++) {
-      subgroups.push(subgroup = []);
-      subgroup.parentNode = (group = this[j]).parentNode;
-      for (var i = 0, n = group.length; i < n; i++) {
-        if ((node = group[i]) && filter.call(node, node.__data__, i, j)) {
-          subgroup.push(node);
-        }
-      }
-    }
-    return d3_selection(subgroups);
-  };
-  function d3_selection_filter(selector) {
-    return function() {
-      return d3_selectMatches(this, selector);
-    };
-  }
-  d3_selectionPrototype.order = function() {
-    for (var j = -1, m = this.length; ++j < m; ) {
-      for (var group = this[j], i = group.length - 1, next = group[i], node; --i >= 0; ) {
-        if (node = group[i]) {
-          if (next && next !== node.nextSibling) next.parentNode.insertBefore(node, next);
-          next = node;
-        }
-      }
-    }
-    return this;
-  };
-  d3_selectionPrototype.sort = function(comparator) {
-    comparator = d3_selection_sortComparator.apply(this, arguments);
-    for (var j = -1, m = this.length; ++j < m; ) this[j].sort(comparator);
-    return this.order();
-  };
-  function d3_selection_sortComparator(comparator) {
-    if (!arguments.length) comparator = d3_ascending;
-    return function(a, b) {
-      return a && b ? comparator(a.__data__, b.__data__) : !a - !b;
-    };
-  }
-  d3_selectionPrototype.each = function(callback) {
-    return d3_selection_each(this, function(node, i, j) {
-      callback.call(node, node.__data__, i, j);
-    });
-  };
-  function d3_selection_each(groups, callback) {
-    for (var j = 0, m = groups.length; j < m; j++) {
-      for (var group = groups[j], i = 0, n = group.length, node; i < n; i++) {
-        if (node = group[i]) callback(node, i, j);
-      }
-    }
-    return groups;
-  }
-  d3_selectionPrototype.call = function(callback) {
-    var args = d3_array(arguments);
-    callback.apply(args[0] = this, args);
-    return this;
-  };
-  d3_selectionPrototype.empty = function() {
-    return !this.node();
-  };
-  d3_selectionPrototype.node = function() {
-    for (var j = 0, m = this.length; j < m; j++) {
-      for (var group = this[j], i = 0, n = group.length; i < n; i++) {
-        var node = group[i];
-        if (node) return node;
-      }
-    }
-    return null;
-  };
-  d3_selectionPrototype.size = function() {
-    var n = 0;
-    d3_selection_each(this, function() {
-      ++n;
-    });
-    return n;
-  };
-  function d3_selection_enter(selection) {
-    d3_subclass(selection, d3_selection_enterPrototype);
-    return selection;
-  }
-  var d3_selection_enterPrototype = [];
-  d3.selection.enter = d3_selection_enter;
-  d3.selection.enter.prototype = d3_selection_enterPrototype;
-  d3_selection_enterPrototype.append = d3_selectionPrototype.append;
-  d3_selection_enterPrototype.empty = d3_selectionPrototype.empty;
-  d3_selection_enterPrototype.node = d3_selectionPrototype.node;
-  d3_selection_enterPrototype.call = d3_selectionPrototype.call;
-  d3_selection_enterPrototype.size = d3_selectionPrototype.size;
-  d3_selection_enterPrototype.select = function(selector) {
-    var subgroups = [], subgroup, subnode, upgroup, group, node;
-    for (var j = -1, m = this.length; ++j < m; ) {
-      upgroup = (group = this[j]).update;
-      subgroups.push(subgroup = []);
-      subgroup.parentNode = group.parentNode;
-      for (var i = -1, n = group.length; ++i < n; ) {
-        if (node = group[i]) {
-          subgroup.push(upgroup[i] = subnode = selector.call(group.parentNode, node.__data__, i, j));
-          subnode.__data__ = node.__data__;
-        } else {
-          subgroup.push(null);
-        }
-      }
-    }
-    return d3_selection(subgroups);
-  };
-  d3_selection_enterPrototype.insert = function(name, before) {
-    if (arguments.length < 2) before = d3_selection_enterInsertBefore(this);
-    return d3_selectionPrototype.insert.call(this, name, before);
-  };
-  function d3_selection_enterInsertBefore(enter) {
-    var i0, j0;
-    return function(d, i, j) {
-      var group = enter[j].update, n = group.length, node;
-      if (j != j0) j0 = j, i0 = 0;
-      if (i >= i0) i0 = i + 1;
-      while (!(node = group[i0]) && ++i0 < n) ;
-      return node;
-    };
-  }
-  d3.select = function(node) {
-    var group;
-    if (typeof node === "string") {
-      group = [ d3_select(node, d3_document) ];
-      group.parentNode = d3_document.documentElement;
-    } else {
-      group = [ node ];
-      group.parentNode = d3_documentElement(node);
-    }
-    return d3_selection([ group ]);
-  };
-  d3.selectAll = function(nodes) {
-    var group;
-    if (typeof nodes === "string") {
-      group = d3_array(d3_selectAll(nodes, d3_document));
-      group.parentNode = d3_document.documentElement;
-    } else {
-      group = d3_array(nodes);
-      group.parentNode = null;
-    }
-    return d3_selection([ group ]);
-  };
-  d3_selectionPrototype.on = function(type, listener, capture) {
-    var n = arguments.length;
-    if (n < 3) {
-      if (typeof type !== "string") {
-        if (n < 2) listener = false;
-        for (capture in type) this.each(d3_selection_on(capture, type[capture], listener));
-        return this;
-      }
-      if (n < 2) return (n = this.node()["__on" + type]) && n._;
-      capture = false;
-    }
-    return this.each(d3_selection_on(type, listener, capture));
-  };
-  function d3_selection_on(type, listener, capture) {
-    var name = "__on" + type, i = type.indexOf("."), wrap = d3_selection_onListener;
-    if (i > 0) type = type.slice(0, i);
-    var filter = d3_selection_onFilters.get(type);
-    if (filter) type = filter, wrap = d3_selection_onFilter;
-    function onRemove() {
-      var l = this[name];
-      if (l) {
-        this.removeEventListener(type, l, l.$);
-        delete this[name];
-      }
-    }
-    function onAdd() {
-      var l = wrap(listener, d3_array(arguments));
-      onRemove.call(this);
-      this.addEventListener(type, this[name] = l, l.$ = capture);
-      l._ = listener;
-    }
-    function removeAll() {
-      var re = new RegExp("^__on([^.]+)" + d3.requote(type) + "$"), match;
-      for (var name in this) {
-        if (match = name.match(re)) {
-          var l = this[name];
-          this.removeEventListener(match[1], l, l.$);
-          delete this[name];
-        }
-      }
-    }
-    return i ? listener ? onAdd : onRemove : listener ? d3_noop : removeAll;
-  }
-  var d3_selection_onFilters = d3.map({
-    mouseenter: "mouseover",
-    mouseleave: "mouseout"
-  });
-  if (d3_document) {
-    d3_selection_onFilters.forEach(function(k) {
-      if ("on" + k in d3_document) d3_selection_onFilters.remove(k);
-    });
-  }
-  function d3_selection_onListener(listener, argumentz) {
-    return function(e) {
-      var o = d3.event;
-      d3.event = e;
-      argumentz[0] = this.__data__;
-      try {
-        listener.apply(this, argumentz);
-      } finally {
-        d3.event = o;
-      }
-    };
-  }
-  function d3_selection_onFilter(listener, argumentz) {
-    var l = d3_selection_onListener(listener, argumentz);
-    return function(e) {
-      var target = this, related = e.relatedTarget;
-      if (!related || related !== target && !(related.compareDocumentPosition(target) & 8)) {
-        l.call(target, e);
-      }
-    };
-  }
-  var d3_event_dragSelect, d3_event_dragId = 0;
-  function d3_event_dragSuppress(node) {
-    var name = ".dragsuppress-" + ++d3_event_dragId, click = "click" + name, w = d3.select(d3_window(node)).on("touchmove" + name, d3_eventPreventDefault).on("dragstart" + name, d3_eventPreventDefault).on("selectstart" + name, d3_eventPreventDefault);
-    if (d3_event_dragSelect == null) {
-      d3_event_dragSelect = "onselectstart" in node ? false : d3_vendorSymbol(node.style, "userSelect");
-    }
-    if (d3_event_dragSelect) {
-      var style = d3_documentElement(node).style, select = style[d3_event_dragSelect];
-      style[d3_event_dragSelect] = "none";
-    }
-    return function(suppressClick) {
-      w.on(name, null);
-      if (d3_event_dragSelect) style[d3_event_dragSelect] = select;
-      if (suppressClick) {
-        var off = function() {
-          w.on(click, null);
-        };
-        w.on(click, function() {
-          d3_eventPreventDefault();
-          off();
-        }, true);
-        setTimeout(off, 0);
-      }
-    };
-  }
-  d3.mouse = function(container) {
-    return d3_mousePoint(container, d3_eventSource());
-  };
-  var d3_mouse_bug44083 = this.navigator && /WebKit/.test(this.navigator.userAgent) ? -1 : 0;
-  function d3_mousePoint(container, e) {
-    if (e.changedTouches) e = e.changedTouches[0];
-    var svg = container.ownerSVGElement || container;
-    if (svg.createSVGPoint) {
-      var point = svg.createSVGPoint();
-      if (d3_mouse_bug44083 < 0) {
-        var window = d3_window(container);
-        if (window.scrollX || window.scrollY) {
-          svg = d3.select("body").append("svg").style({
-            position: "absolute",
-            top: 0,
-            left: 0,
-            margin: 0,
-            padding: 0,
-            border: "none"
-          }, "important");
-          var ctm = svg[0][0].getScreenCTM();
-          d3_mouse_bug44083 = !(ctm.f || ctm.e);
-          svg.remove();
-        }
-      }
-      if (d3_mouse_bug44083) point.x = e.pageX, point.y = e.pageY; else point.x = e.clientX, 
-      point.y = e.clientY;
-      point = point.matrixTransform(container.getScreenCTM().inverse());
-      return [ point.x, point.y ];
-    }
-    var rect = container.getBoundingClientRect();
-    return [ e.clientX - rect.left - container.clientLeft, e.clientY - rect.top - container.clientTop ];
-  }
-  d3.touch = function(container, touches, identifier) {
-    if (arguments.length < 3) identifier = touches, touches = d3_eventSource().changedTouches;
-    if (touches) for (var i = 0, n = touches.length, touch; i < n; ++i) {
-      if ((touch = touches[i]).identifier === identifier) {
-        return d3_mousePoint(container, touch);
-      }
-    }
-  };
-  d3.behavior.drag = function() {
-    var event = d3_eventDispatch(drag, "drag", "dragstart", "dragend"), origin = null, mousedown = dragstart(d3_noop, d3.mouse, d3_window, "mousemove", "mouseup"), touchstart = dragstart(d3_behavior_dragTouchId, d3.touch, d3_identity, "touchmove", "touchend");
-    function drag() {
-      this.on("mousedown.drag", mousedown).on("touchstart.drag", touchstart);
-    }
-    function dragstart(id, position, subject, move, end) {
-      return function() {
-        var that = this, target = d3.event.target.correspondingElement || d3.event.target, parent = that.parentNode, dispatch = event.of(that, arguments), dragged = 0, dragId = id(), dragName = ".drag" + (dragId == null ? "" : "-" + dragId), dragOffset, dragSubject = d3.select(subject(target)).on(move + dragName, moved).on(end + dragName, ended), dragRestore = d3_event_dragSuppress(target), position0 = position(parent, dragId);
-        if (origin) {
-          dragOffset = origin.apply(that, arguments);
-          dragOffset = [ dragOffset.x - position0[0], dragOffset.y - position0[1] ];
-        } else {
-          dragOffset = [ 0, 0 ];
-        }
-        dispatch({
-          type: "dragstart"
-        });
-        function moved() {
-          var position1 = position(parent, dragId), dx, dy;
-          if (!position1) return;
-          dx = position1[0] - position0[0];
-          dy = position1[1] - position0[1];
-          dragged |= dx | dy;
-          position0 = position1;
-          dispatch({
-            type: "drag",
-            x: position1[0] + dragOffset[0],
-            y: position1[1] + dragOffset[1],
-            dx: dx,
-            dy: dy
-          });
-        }
-        function ended() {
-          if (!position(parent, dragId)) return;
-          dragSubject.on(move + dragName, null).on(end + dragName, null);
-          dragRestore(dragged);
-          dispatch({
-            type: "dragend"
-          });
-        }
-      };
-    }
-    drag.origin = function(x) {
-      if (!arguments.length) return origin;
-      origin = x;
-      return drag;
-    };
-    return d3.rebind(drag, event, "on");
-  };
-  function d3_behavior_dragTouchId() {
-    return d3.event.changedTouches[0].identifier;
-  }
-  d3.touches = function(container, touches) {
-    if (arguments.length < 2) touches = d3_eventSource().touches;
-    return touches ? d3_array(touches).map(function(touch) {
-      var point = d3_mousePoint(container, touch);
-      point.identifier = touch.identifier;
-      return point;
-    }) : [];
-  };
-  var ε = 1e-6, ε2 = ε * ε, π = Math.PI, τ = 2 * π, τε = τ - ε, halfπ = π / 2, d3_radians = π / 180, d3_degrees = 180 / π;
-  function d3_sgn(x) {
-    return x > 0 ? 1 : x < 0 ? -1 : 0;
-  }
-  function d3_cross2d(a, b, c) {
-    return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
-  }
-  function d3_acos(x) {
-    return x > 1 ? 0 : x < -1 ? π : Math.acos(x);
-  }
-  function d3_asin(x) {
-    return x > 1 ? halfπ : x < -1 ? -halfπ : Math.asin(x);
-  }
-  function d3_sinh(x) {
-    return ((x = Math.exp(x)) - 1 / x) / 2;
-  }
-  function d3_cosh(x) {
-    return ((x = Math.exp(x)) + 1 / x) / 2;
-  }
-  function d3_tanh(x) {
-    return ((x = Math.exp(2 * x)) - 1) / (x + 1);
-  }
-  function d3_haversin(x) {
-    return (x = Math.sin(x / 2)) * x;
-  }
-  var ρ = Math.SQRT2, ρ2 = 2, ρ4 = 4;
-  d3.interpolateZoom = function(p0, p1) {
-    var ux0 = p0[0], uy0 = p0[1], w0 = p0[2], ux1 = p1[0], uy1 = p1[1], w1 = p1[2], dx = ux1 - ux0, dy = uy1 - uy0, d2 = dx * dx + dy * dy, i, S;
-    if (d2 < ε2) {
-      S = Math.log(w1 / w0) / ρ;
-      i = function(t) {
-        return [ ux0 + t * dx, uy0 + t * dy, w0 * Math.exp(ρ * t * S) ];
-      };
-    } else {
-      var d1 = Math.sqrt(d2), b0 = (w1 * w1 - w0 * w0 + ρ4 * d2) / (2 * w0 * ρ2 * d1), b1 = (w1 * w1 - w0 * w0 - ρ4 * d2) / (2 * w1 * ρ2 * d1), r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0), r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
-      S = (r1 - r0) / ρ;
-      i = function(t) {
-        var s = t * S, coshr0 = d3_cosh(r0), u = w0 / (ρ2 * d1) * (coshr0 * d3_tanh(ρ * s + r0) - d3_sinh(r0));
-        return [ ux0 + u * dx, uy0 + u * dy, w0 * coshr0 / d3_cosh(ρ * s + r0) ];
-      };
-    }
-    i.duration = S * 1e3;
-    return i;
-  };
-  d3.behavior.zoom = function() {
-    var view = {
-      x: 0,
-      y: 0,
-      k: 1
-    }, translate0, center0, center, size = [ 960, 500 ], scaleExtent = d3_behavior_zoomInfinity, duration = 250, zooming = 0, mousedown = "mousedown.zoom", mousemove = "mousemove.zoom", mouseup = "mouseup.zoom", mousewheelTimer, touchstart = "touchstart.zoom", touchtime, event = d3_eventDispatch(zoom, "zoomstart", "zoom", "zoomend"), x0, x1, y0, y1;
-    if (!d3_behavior_zoomWheel) {
-      d3_behavior_zoomWheel = "onwheel" in d3_document ? (d3_behavior_zoomDelta = function() {
-        return -d3.event.deltaY * (d3.event.deltaMode ? 120 : 1);
-      }, "wheel") : "onmousewheel" in d3_document ? (d3_behavior_zoomDelta = function() {
-        return d3.event.wheelDelta;
-      }, "mousewheel") : (d3_behavior_zoomDelta = function() {
-        return -d3.event.detail;
-      }, "MozMousePixelScroll");
-    }
-    function zoom(g) {
-      g.on(mousedown, mousedowned).on(d3_behavior_zoomWheel + ".zoom", mousewheeled).on("dblclick.zoom", dblclicked).on(touchstart, touchstarted);
-    }
-    zoom.event = function(g) {
-      g.each(function() {
-        var dispatch = event.of(this, arguments), view1 = view;
-        if (d3_transitionInheritId) {
-          d3.select(this).transition().each("start.zoom", function() {
-            view = this.__chart__ || {
-              x: 0,
-              y: 0,
-              k: 1
-            };
-            zoomstarted(dispatch);
-          }).tween("zoom:zoom", function() {
-            var dx = size[0], dy = size[1], cx = center0 ? center0[0] : dx / 2, cy = center0 ? center0[1] : dy / 2, i = d3.interpolateZoom([ (cx - view.x) / view.k, (cy - view.y) / view.k, dx / view.k ], [ (cx - view1.x) / view1.k, (cy - view1.y) / view1.k, dx / view1.k ]);
-            return function(t) {
-              var l = i(t), k = dx / l[2];
-              this.__chart__ = view = {
-                x: cx - l[0] * k,
-                y: cy - l[1] * k,
-                k: k
-              };
-              zoomed(dispatch);
-            };
-          }).each("interrupt.zoom", function() {
-            zoomended(dispatch);
-          }).each("end.zoom", function() {
-            zoomended(dispatch);
-          });
-        } else {
-          this.__chart__ = view;
-          zoomstarted(dispatch);
-          zoomed(dispatch);
-          zoomended(dispatch);
-        }
-      });
-    };
-    zoom.translate = function(_) {
-      if (!arguments.length) return [ view.x, view.y ];
-      view = {
-        x: +_[0],
-        y: +_[1],
-        k: view.k
-      };
-      rescale();
-      return zoom;
-    };
-    zoom.scale = function(_) {
-      if (!arguments.length) return view.k;
-      view = {
-        x: view.x,
-        y: view.y,
-        k: null
-      };
-      scaleTo(+_);
-      rescale();
-      return zoom;
-    };
-    zoom.scaleExtent = function(_) {
-      if (!arguments.length) return scaleExtent;
-      scaleExtent = _ == null ? d3_behavior_zoomInfinity : [ +_[0], +_[1] ];
-      return zoom;
-    };
-    zoom.center = function(_) {
-      if (!arguments.length) return center;
-      center = _ && [ +_[0], +_[1] ];
-      return zoom;
-    };
-    zoom.size = function(_) {
-      if (!arguments.length) return size;
-      size = _ && [ +_[0], +_[1] ];
-      return zoom;
-    };
-    zoom.duration = function(_) {
-      if (!arguments.length) return duration;
-      duration = +_;
-      return zoom;
-    };
-    zoom.x = function(z) {
-      if (!arguments.length) return x1;
-      x1 = z;
-      x0 = z.copy();
-      view = {
-        x: 0,
-        y: 0,
-        k: 1
-      };
-      return zoom;
-    };
-    zoom.y = function(z) {
-      if (!arguments.length) return y1;
-      y1 = z;
-      y0 = z.copy();
-      view = {
-        x: 0,
-        y: 0,
-        k: 1
-      };
-      return zoom;
-    };
-    function location(p) {
-      return [ (p[0] - view.x) / view.k, (p[1] - view.y) / view.k ];
-    }
-    function point(l) {
-      return [ l[0] * view.k + view.x, l[1] * view.k + view.y ];
-    }
-    function scaleTo(s) {
-      view.k = Math.max(scaleExtent[0], Math.min(scaleExtent[1], s));
-    }
-    function translateTo(p, l) {
-      l = point(l);
-      view.x += p[0] - l[0];
-      view.y += p[1] - l[1];
-    }
-    function zoomTo(that, p, l, k) {
-      that.__chart__ = {
-        x: view.x,
-        y: view.y,
-        k: view.k
-      };
-      scaleTo(Math.pow(2, k));
-      translateTo(center0 = p, l);
-      that = d3.select(that);
-      if (duration > 0) that = that.transition().duration(duration);
-      that.call(zoom.event);
-    }
-    function rescale() {
-      if (x1) x1.domain(x0.range().map(function(x) {
-        return (x - view.x) / view.k;
-      }).map(x0.invert));
-      if (y1) y1.domain(y0.range().map(function(y) {
-        return (y - view.y) / view.k;
-      }).map(y0.invert));
-    }
-    function zoomstarted(dispatch) {
-      if (!zooming++) dispatch({
-        type: "zoomstart"
-      });
-    }
-    function zoomed(dispatch) {
-      rescale();
-      dispatch({
-        type: "zoom",
-        scale: view.k,
-        translate: [ view.x, view.y ]
-      });
-    }
-    function zoomended(dispatch) {
-      if (!--zooming) dispatch({
-        type: "zoomend"
-      }), center0 = null;
-    }
-    function mousedowned() {
-      var that = this, dispatch = event.of(that, arguments), dragged = 0, subject = d3.select(d3_window(that)).on(mousemove, moved).on(mouseup, ended), location0 = location(d3.mouse(that)), dragRestore = d3_event_dragSuppress(that);
-      d3_selection_interrupt.call(that);
-      zoomstarted(dispatch);
-      function moved() {
-        dragged = 1;
-        translateTo(d3.mouse(that), location0);
-        zoomed(dispatch);
-      }
-      function ended() {
-        subject.on(mousemove, null).on(mouseup, null);
-        dragRestore(dragged);
-        zoomended(dispatch);
-      }
-    }
-    function touchstarted() {
-      var that = this, dispatch = event.of(that, arguments), locations0 = {}, distance0 = 0, scale0, zoomName = ".zoom-" + d3.event.changedTouches[0].identifier, touchmove = "touchmove" + zoomName, touchend = "touchend" + zoomName, targets = [], subject = d3.select(that), dragRestore = d3_event_dragSuppress(that);
-      started();
-      zoomstarted(dispatch);
-      subject.on(mousedown, null).on(touchstart, started);
-      function relocate() {
-        var touches = d3.touches(that);
-        scale0 = view.k;
-        touches.forEach(function(t) {
-          if (t.identifier in locations0) locations0[t.identifier] = location(t);
-        });
-        return touches;
-      }
-      function started() {
-        var target = d3.event.target;
-        d3.select(target).on(touchmove, moved).on(touchend, ended);
-        targets.push(target);
-        var changed = d3.event.changedTouches;
-        for (var i = 0, n = changed.length; i < n; ++i) {
-          locations0[changed[i].identifier] = null;
-        }
-        var touches = relocate(), now = Date.now();
-        if (touches.length === 1) {
-          if (now - touchtime < 500) {
-            var p = touches[0];
-            zoomTo(that, p, locations0[p.identifier], Math.floor(Math.log(view.k) / Math.LN2) + 1);
-            d3_eventPreventDefault();
-          }
-          touchtime = now;
-        } else if (touches.length > 1) {
-          var p = touches[0], q = touches[1], dx = p[0] - q[0], dy = p[1] - q[1];
-          distance0 = dx * dx + dy * dy;
-        }
-      }
-      function moved() {
-        var touches = d3.touches(that), p0, l0, p1, l1;
-        d3_selection_interrupt.call(that);
-        for (var i = 0, n = touches.length; i < n; ++i, l1 = null) {
-          p1 = touches[i];
-          if (l1 = locations0[p1.identifier]) {
-            if (l0) break;
-            p0 = p1, l0 = l1;
-          }
-        }
-        if (l1) {
-          var distance1 = (distance1 = p1[0] - p0[0]) * distance1 + (distance1 = p1[1] - p0[1]) * distance1, scale1 = distance0 && Math.sqrt(distance1 / distance0);
-          p0 = [ (p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2 ];
-          l0 = [ (l0[0] + l1[0]) / 2, (l0[1] + l1[1]) / 2 ];
-          scaleTo(scale1 * scale0);
-        }
-        touchtime = null;
-        translateTo(p0, l0);
-        zoomed(dispatch);
-      }
-      function ended() {
-        if (d3.event.touches.length) {
-          var changed = d3.event.changedTouches;
-          for (var i = 0, n = changed.length; i < n; ++i) {
-            delete locations0[changed[i].identifier];
-          }
-          for (var identifier in locations0) {
-            return void relocate();
-          }
-        }
-        d3.selectAll(targets).on(zoomName, null);
-        subject.on(mousedown, mousedowned).on(touchstart, touchstarted);
-        dragRestore();
-        zoomended(dispatch);
-      }
-    }
-    function mousewheeled() {
-      var dispatch = event.of(this, arguments);
-      if (mousewheelTimer) clearTimeout(mousewheelTimer); else d3_selection_interrupt.call(this), 
-      translate0 = location(center0 = center || d3.mouse(this)), zoomstarted(dispatch);
-      mousewheelTimer = setTimeout(function() {
-        mousewheelTimer = null;
-        zoomended(dispatch);
-      }, 50);
-      d3_eventPreventDefault();
-      scaleTo(Math.pow(2, d3_behavior_zoomDelta() * .002) * view.k);
-      translateTo(center0, translate0);
-      zoomed(dispatch);
-    }
-    function dblclicked() {
-      var p = d3.mouse(this), k = Math.log(view.k) / Math.LN2;
-      zoomTo(this, p, location(p), d3.event.shiftKey ? Math.ceil(k) - 1 : Math.floor(k) + 1);
-    }
-    return d3.rebind(zoom, event, "on");
-  };
-  var d3_behavior_zoomInfinity = [ 0, Infinity ], d3_behavior_zoomDelta, d3_behavior_zoomWheel;
-  d3.color = d3_color;
-  function d3_color() {}
-  d3_color.prototype.toString = function() {
-    return this.rgb() + "";
-  };
-  d3.hsl = d3_hsl;
-  function d3_hsl(h, s, l) {
-    return this instanceof d3_hsl ? void (this.h = +h, this.s = +s, this.l = +l) : arguments.length < 2 ? h instanceof d3_hsl ? new d3_hsl(h.h, h.s, h.l) : d3_rgb_parse("" + h, d3_rgb_hsl, d3_hsl) : new d3_hsl(h, s, l);
-  }
-  var d3_hslPrototype = d3_hsl.prototype = new d3_color();
-  d3_hslPrototype.brighter = function(k) {
-    k = Math.pow(.7, arguments.length ? k : 1);
-    return new d3_hsl(this.h, this.s, this.l / k);
-  };
-  d3_hslPrototype.darker = function(k) {
-    k = Math.pow(.7, arguments.length ? k : 1);
-    return new d3_hsl(this.h, this.s, k * this.l);
-  };
-  d3_hslPrototype.rgb = function() {
-    return d3_hsl_rgb(this.h, this.s, this.l);
-  };
-  function d3_hsl_rgb(h, s, l) {
-    var m1, m2;
-    h = isNaN(h) ? 0 : (h %= 360) < 0 ? h + 360 : h;
-    s = isNaN(s) ? 0 : s < 0 ? 0 : s > 1 ? 1 : s;
-    l = l < 0 ? 0 : l > 1 ? 1 : l;
-    m2 = l <= .5 ? l * (1 + s) : l + s - l * s;
-    m1 = 2 * l - m2;
-    function v(h) {
-      if (h > 360) h -= 360; else if (h < 0) h += 360;
-      if (h < 60) return m1 + (m2 - m1) * h / 60;
-      if (h < 180) return m2;
-      if (h < 240) return m1 + (m2 - m1) * (240 - h) / 60;
-      return m1;
-    }
-    function vv(h) {
-      return Math.round(v(h) * 255);
-    }
-    return new d3_rgb(vv(h + 120), vv(h), vv(h - 120));
-  }
-  d3.hcl = d3_hcl;
-  function d3_hcl(h, c, l) {
-    return this instanceof d3_hcl ? void (this.h = +h, this.c = +c, this.l = +l) : arguments.length < 2 ? h instanceof d3_hcl ? new d3_hcl(h.h, h.c, h.l) : h instanceof d3_lab ? d3_lab_hcl(h.l, h.a, h.b) : d3_lab_hcl((h = d3_rgb_lab((h = d3.rgb(h)).r, h.g, h.b)).l, h.a, h.b) : new d3_hcl(h, c, l);
-  }
-  var d3_hclPrototype = d3_hcl.prototype = new d3_color();
-  d3_hclPrototype.brighter = function(k) {
-    return new d3_hcl(this.h, this.c, Math.min(100, this.l + d3_lab_K * (arguments.length ? k : 1)));
-  };
-  d3_hclPrototype.darker = function(k) {
-    return new d3_hcl(this.h, this.c, Math.max(0, this.l - d3_lab_K * (arguments.length ? k : 1)));
-  };
-  d3_hclPrototype.rgb = function() {
-    return d3_hcl_lab(this.h, this.c, this.l).rgb();
-  };
-  function d3_hcl_lab(h, c, l) {
-    if (isNaN(h)) h = 0;
-    if (isNaN(c)) c = 0;
-    return new d3_lab(l, Math.cos(h *= d3_radians) * c, Math.sin(h) * c);
-  }
-  d3.lab = d3_lab;
-  function d3_lab(l, a, b) {
-    return this instanceof d3_lab ? void (this.l = +l, this.a = +a, this.b = +b) : arguments.length < 2 ? l instanceof d3_lab ? new d3_lab(l.l, l.a, l.b) : l instanceof d3_hcl ? d3_hcl_lab(l.h, l.c, l.l) : d3_rgb_lab((l = d3_rgb(l)).r, l.g, l.b) : new d3_lab(l, a, b);
-  }
-  var d3_lab_K = 18;
-  var d3_lab_X = .95047, d3_lab_Y = 1, d3_lab_Z = 1.08883;
-  var d3_labPrototype = d3_lab.prototype = new d3_color();
-  d3_labPrototype.brighter = function(k) {
-    return new d3_lab(Math.min(100, this.l + d3_lab_K * (arguments.length ? k : 1)), this.a, this.b);
-  };
-  d3_labPrototype.darker = function(k) {
-    return new d3_lab(Math.max(0, this.l - d3_lab_K * (arguments.length ? k : 1)), this.a, this.b);
-  };
-  d3_labPrototype.rgb = function() {
-    return d3_lab_rgb(this.l, this.a, this.b);
-  };
-  function d3_lab_rgb(l, a, b) {
-    var y = (l + 16) / 116, x = y + a / 500, z = y - b / 200;
-    x = d3_lab_xyz(x) * d3_lab_X;
-    y = d3_lab_xyz(y) * d3_lab_Y;
-    z = d3_lab_xyz(z) * d3_lab_Z;
-    return new d3_rgb(d3_xyz_rgb(3.2404542 * x - 1.5371385 * y - .4985314 * z), d3_xyz_rgb(-.969266 * x + 1.8760108 * y + .041556 * z), d3_xyz_rgb(.0556434 * x - .2040259 * y + 1.0572252 * z));
-  }
-  function d3_lab_hcl(l, a, b) {
-    return l > 0 ? new d3_hcl(Math.atan2(b, a) * d3_degrees, Math.sqrt(a * a + b * b), l) : new d3_hcl(NaN, NaN, l);
-  }
-  function d3_lab_xyz(x) {
-    return x > .206893034 ? x * x * x : (x - 4 / 29) / 7.787037;
-  }
-  function d3_xyz_lab(x) {
-    return x > .008856 ? Math.pow(x, 1 / 3) : 7.787037 * x + 4 / 29;
-  }
-  function d3_xyz_rgb(r) {
-    return Math.round(255 * (r <= .00304 ? 12.92 * r : 1.055 * Math.pow(r, 1 / 2.4) - .055));
-  }
-  d3.rgb = d3_rgb;
-  function d3_rgb(r, g, b) {
-    return this instanceof d3_rgb ? void (this.r = ~~r, this.g = ~~g, this.b = ~~b) : arguments.length < 2 ? r instanceof d3_rgb ? new d3_rgb(r.r, r.g, r.b) : d3_rgb_parse("" + r, d3_rgb, d3_hsl_rgb) : new d3_rgb(r, g, b);
-  }
-  function d3_rgbNumber(value) {
-    return new d3_rgb(value >> 16, value >> 8 & 255, value & 255);
-  }
-  function d3_rgbString(value) {
-    return d3_rgbNumber(value) + "";
-  }
-  var d3_rgbPrototype = d3_rgb.prototype = new d3_color();
-  d3_rgbPrototype.brighter = function(k) {
-    k = Math.pow(.7, arguments.length ? k : 1);
-    var r = this.r, g = this.g, b = this.b, i = 30;
-    if (!r && !g && !b) return new d3_rgb(i, i, i);
-    if (r && r < i) r = i;
-    if (g && g < i) g = i;
-    if (b && b < i) b = i;
-    return new d3_rgb(Math.min(255, r / k), Math.min(255, g / k), Math.min(255, b / k));
-  };
-  d3_rgbPrototype.darker = function(k) {
-    k = Math.pow(.7, arguments.length ? k : 1);
-    return new d3_rgb(k * this.r, k * this.g, k * this.b);
-  };
-  d3_rgbPrototype.hsl = function() {
-    return d3_rgb_hsl(this.r, this.g, this.b);
-  };
-  d3_rgbPrototype.toString = function() {
-    return "#" + d3_rgb_hex(this.r) + d3_rgb_hex(this.g) + d3_rgb_hex(this.b);
-  };
-  function d3_rgb_hex(v) {
-    return v < 16 ? "0" + Math.max(0, v).toString(16) : Math.min(255, v).toString(16);
-  }
-  function d3_rgb_parse(format, rgb, hsl) {
-    var r = 0, g = 0, b = 0, m1, m2, color;
-    m1 = /([a-z]+)\((.*)\)/.exec(format = format.toLowerCase());
-    if (m1) {
-      m2 = m1[2].split(",");
-      switch (m1[1]) {
-       case "hsl":
-        {
-          return hsl(parseFloat(m2[0]), parseFloat(m2[1]) / 100, parseFloat(m2[2]) / 100);
-        }
 
-       case "rgb":
-        {
-          return rgb(d3_rgb_parseNumber(m2[0]), d3_rgb_parseNumber(m2[1]), d3_rgb_parseNumber(m2[2]));
-        }
-      }
-    }
-    if (color = d3_rgb_names.get(format)) {
-      return rgb(color.r, color.g, color.b);
-    }
-    if (format != null && format.charAt(0) === "#" && !isNaN(color = parseInt(format.slice(1), 16))) {
-      if (format.length === 4) {
-        r = (color & 3840) >> 4;
-        r = r >> 4 | r;
-        g = color & 240;
-        g = g >> 4 | g;
-        b = color & 15;
-        b = b << 4 | b;
-      } else if (format.length === 7) {
-        r = (color & 16711680) >> 16;
-        g = (color & 65280) >> 8;
-        b = color & 255;
-      }
-    }
-    return rgb(r, g, b);
-  }
-  function d3_rgb_hsl(r, g, b) {
-    var min = Math.min(r /= 255, g /= 255, b /= 255), max = Math.max(r, g, b), d = max - min, h, s, l = (max + min) / 2;
-    if (d) {
-      s = l < .5 ? d / (max + min) : d / (2 - max - min);
-      if (r == max) h = (g - b) / d + (g < b ? 6 : 0); else if (g == max) h = (b - r) / d + 2; else h = (r - g) / d + 4;
-      h *= 60;
-    } else {
-      h = NaN;
-      s = l > 0 && l < 1 ? 0 : h;
-    }
-    return new d3_hsl(h, s, l);
-  }
-  function d3_rgb_lab(r, g, b) {
-    r = d3_rgb_xyz(r);
-    g = d3_rgb_xyz(g);
-    b = d3_rgb_xyz(b);
-    var x = d3_xyz_lab((.4124564 * r + .3575761 * g + .1804375 * b) / d3_lab_X), y = d3_xyz_lab((.2126729 * r + .7151522 * g + .072175 * b) / d3_lab_Y), z = d3_xyz_lab((.0193339 * r + .119192 * g + .9503041 * b) / d3_lab_Z);
-    return d3_lab(116 * y - 16, 500 * (x - y), 200 * (y - z));
-  }
-  function d3_rgb_xyz(r) {
-    return (r /= 255) <= .04045 ? r / 12.92 : Math.pow((r + .055) / 1.055, 2.4);
-  }
-  function d3_rgb_parseNumber(c) {
-    var f = parseFloat(c);
-    return c.charAt(c.length - 1) === "%" ? Math.round(f * 2.55) : f;
-  }
-  var d3_rgb_names = d3.map({
-    aliceblue: 15792383,
-    antiquewhite: 16444375,
-    aqua: 65535,
-    aquamarine: 8388564,
-    azure: 15794175,
-    beige: 16119260,
-    bisque: 16770244,
-    black: 0,
-    blanchedalmond: 16772045,
-    blue: 255,
-    blueviolet: 9055202,
-    brown: 10824234,
-    burlywood: 14596231,
-    cadetblue: 6266528,
-    chartreuse: 8388352,
-    chocolate: 13789470,
-    coral: 16744272,
-    cornflowerblue: 6591981,
-    cornsilk: 16775388,
-    crimson: 14423100,
-    cyan: 65535,
-    darkblue: 139,
-    darkcyan: 35723,
-    darkgoldenrod: 12092939,
-    darkgray: 11119017,
-    darkgreen: 25600,
-    darkgrey: 11119017,
-    darkkhaki: 12433259,
-    darkmagenta: 9109643,
-    darkolivegreen: 5597999,
-    darkorange: 16747520,
-    darkorchid: 10040012,
-    darkred: 9109504,
-    darksalmon: 15308410,
-    darkseagreen: 9419919,
-    darkslateblue: 4734347,
-    darkslategray: 3100495,
-    darkslategrey: 3100495,
-    darkturquoise: 52945,
-    darkviolet: 9699539,
-    deeppink: 16716947,
-    deepskyblue: 49151,
-    dimgray: 6908265,
-    dimgrey: 6908265,
-    dodgerblue: 2003199,
-    firebrick: 11674146,
-    floralwhite: 16775920,
-    forestgreen: 2263842,
-    fuchsia: 16711935,
-    gainsboro: 14474460,
-    ghostwhite: 16316671,
-    gold: 16766720,
-    goldenrod: 14329120,
-    gray: 8421504,
-    green: 32768,
-    greenyellow: 11403055,
-    grey: 8421504,
-    honeydew: 15794160,
-    hotpink: 16738740,
-    indianred: 13458524,
-    indigo: 4915330,
-    ivory: 16777200,
-    khaki: 15787660,
-    lavender: 15132410,
-    lavenderblush: 16773365,
-    lawngreen: 8190976,
-    lemonchiffon: 16775885,
-    lightblue: 11393254,
-    lightcoral: 15761536,
-    lightcyan: 14745599,
-    lightgoldenrodyellow: 16448210,
-    lightgray: 13882323,
-    lightgreen: 9498256,
-    lightgrey: 13882323,
-    lightpink: 16758465,
-    lightsalmon: 16752762,
-    lightseagreen: 2142890,
-    lightskyblue: 8900346,
-    lightslategray: 7833753,
-    lightslategrey: 7833753,
-    lightsteelblue: 11584734,
-    lightyellow: 16777184,
-    lime: 65280,
-    limegreen: 3329330,
-    linen: 16445670,
-    magenta: 16711935,
-    maroon: 8388608,
-    mediumaquamarine: 6737322,
-    mediumblue: 205,
-    mediumorchid: 12211667,
-    mediumpurple: 9662683,
-    mediumseagreen: 3978097,
-    mediumslateblue: 8087790,
-    mediumspringgreen: 64154,
-    mediumturquoise: 4772300,
-    mediumvioletred: 13047173,
-    midnightblue: 1644912,
-    mintcream: 16121850,
-    mistyrose: 16770273,
-    moccasin: 16770229,
-    navajowhite: 16768685,
-    navy: 128,
-    oldlace: 16643558,
-    olive: 8421376,
-    olivedrab: 7048739,
-    orange: 16753920,
-    orangered: 16729344,
-    orchid: 14315734,
-    palegoldenrod: 15657130,
-    palegreen: 10025880,
-    paleturquoise: 11529966,
-    palevioletred: 14381203,
-    papayawhip: 16773077,
-    peachpuff: 16767673,
-    peru: 13468991,
-    pink: 16761035,
-    plum: 14524637,
-    powderblue: 11591910,
-    purple: 8388736,
-    rebeccapurple: 6697881,
-    red: 16711680,
-    rosybrown: 12357519,
-    royalblue: 4286945,
-    saddlebrown: 9127187,
-    salmon: 16416882,
-    sandybrown: 16032864,
-    seagreen: 3050327,
-    seashell: 16774638,
-    sienna: 10506797,
-    silver: 12632256,
-    skyblue: 8900331,
-    slateblue: 6970061,
-    slategray: 7372944,
-    slategrey: 7372944,
-    snow: 16775930,
-    springgreen: 65407,
-    steelblue: 4620980,
-    tan: 13808780,
-    teal: 32896,
-    thistle: 14204888,
-    tomato: 16737095,
-    turquoise: 4251856,
-    violet: 15631086,
-    wheat: 16113331,
-    white: 16777215,
-    whitesmoke: 16119285,
-    yellow: 16776960,
-    yellowgreen: 10145074
-  });
-  d3_rgb_names.forEach(function(key, value) {
-    d3_rgb_names.set(key, d3_rgbNumber(value));
-  });
-  function d3_functor(v) {
-    return typeof v === "function" ? v : function() {
-      return v;
-    };
-  }
-  d3.functor = d3_functor;
-  d3.xhr = d3_xhrType(d3_identity);
-  function d3_xhrType(response) {
-    return function(url, mimeType, callback) {
-      if (arguments.length === 2 && typeof mimeType === "function") callback = mimeType, 
-      mimeType = null;
-      return d3_xhr(url, mimeType, response, callback);
-    };
-  }
-  function d3_xhr(url, mimeType, response, callback) {
-    var xhr = {}, dispatch = d3.dispatch("beforesend", "progress", "load", "error"), headers = {}, request = new XMLHttpRequest(), responseType = null;
-    if (this.XDomainRequest && !("withCredentials" in request) && /^(http(s)?:)?\/\//.test(url)) request = new XDomainRequest();
-    "onload" in request ? request.onload = request.onerror = respond : request.onreadystatechange = function() {
-      request.readyState > 3 && respond();
-    };
-    function respond() {
-      var status = request.status, result;
-      if (!status && d3_xhrHasResponse(request) || status >= 200 && status < 300 || status === 304) {
-        try {
-          result = response.call(xhr, request);
-        } catch (e) {
-          dispatch.error.call(xhr, e);
-          return;
-        }
-        dispatch.load.call(xhr, result);
-      } else {
-        dispatch.error.call(xhr, request);
-      }
-    }
-    request.onprogress = function(event) {
-      var o = d3.event;
-      d3.event = event;
-      try {
-        dispatch.progress.call(xhr, request);
-      } finally {
-        d3.event = o;
-      }
-    };
-    xhr.header = function(name, value) {
-      name = (name + "").toLowerCase();
-      if (arguments.length < 2) return headers[name];
-      if (value == null) delete headers[name]; else headers[name] = value + "";
-      return xhr;
-    };
-    xhr.mimeType = function(value) {
-      if (!arguments.length) return mimeType;
-      mimeType = value == null ? null : value + "";
-      return xhr;
-    };
-    xhr.responseType = function(value) {
-      if (!arguments.length) return responseType;
-      responseType = value;
-      return xhr;
-    };
-    xhr.response = function(value) {
-      response = value;
-      return xhr;
-    };
-    [ "get", "post" ].forEach(function(method) {
-      xhr[method] = function() {
-        return xhr.send.apply(xhr, [ method ].concat(d3_array(arguments)));
-      };
-    });
-    xhr.send = function(method, data, callback) {
-      if (arguments.length === 2 && typeof data === "function") callback = data, data = null;
-      request.open(method, url, true);
-      if (mimeType != null && !("accept" in headers)) headers["accept"] = mimeType + ",*/*";
-      if (request.setRequestHeader) for (var name in headers) request.setRequestHeader(name, headers[name]);
-      if (mimeType != null && request.overrideMimeType) request.overrideMimeType(mimeType);
-      if (responseType != null) request.responseType = responseType;
-      if (callback != null) xhr.on("error", callback).on("load", function(request) {
-        callback(null, request);
-      });
-      dispatch.beforesend.call(xhr, request);
-      request.send(data == null ? null : data);
-      return xhr;
-    };
-    xhr.abort = function() {
-      request.abort();
-      return xhr;
-    };
-    d3.rebind(xhr, dispatch, "on");
-    return callback == null ? xhr : xhr.get(d3_xhr_fixCallback(callback));
-  }
-  function d3_xhr_fixCallback(callback) {
-    return callback.length === 1 ? function(error, request) {
-      callback(error == null ? request : null);
-    } : callback;
-  }
-  function d3_xhrHasResponse(request) {
-    var type = request.responseType;
-    return type && type !== "text" ? request.response : request.responseText;
-  }
-  d3.dsv = function(delimiter, mimeType) {
-    var reFormat = new RegExp('["' + delimiter + "\n]"), delimiterCode = delimiter.charCodeAt(0);
-    function dsv(url, row, callback) {
-      if (arguments.length < 3) callback = row, row = null;
-      var xhr = d3_xhr(url, mimeType, row == null ? response : typedResponse(row), callback);
-      xhr.row = function(_) {
-        return arguments.length ? xhr.response((row = _) == null ? response : typedResponse(_)) : row;
-      };
-      return xhr;
-    }
-    function response(request) {
-      return dsv.parse(request.responseText);
-    }
-    function typedResponse(f) {
-      return function(request) {
-        return dsv.parse(request.responseText, f);
-      };
-    }
-    dsv.parse = function(text, f) {
-      var o;
-      return dsv.parseRows(text, function(row, i) {
-        if (o) return o(row, i - 1);
-        var a = new Function("d", "return {" + row.map(function(name, i) {
-          return JSON.stringify(name) + ": d[" + i + "]";
-        }).join(",") + "}");
-        o = f ? function(row, i) {
-          return f(a(row), i);
-        } : a;
-      });
-    };
-    dsv.parseRows = function(text, f) {
-      var EOL = {}, EOF = {}, rows = [], N = text.length, I = 0, n = 0, t, eol;
-      function token() {
-        if (I >= N) return EOF;
-        if (eol) return eol = false, EOL;
-        var j = I;
-        if (text.charCodeAt(j) === 34) {
-          var i = j;
-          while (i++ < N) {
-            if (text.charCodeAt(i) === 34) {
-              if (text.charCodeAt(i + 1) !== 34) break;
-              ++i;
-            }
-          }
-          I = i + 2;
-          var c = text.charCodeAt(i + 1);
-          if (c === 13) {
-            eol = true;
-            if (text.charCodeAt(i + 2) === 10) ++I;
-          } else if (c === 10) {
-            eol = true;
-          }
-          return text.slice(j + 1, i).replace(/""/g, '"');
-        }
-        while (I < N) {
-          var c = text.charCodeAt(I++), k = 1;
-          if (c === 10) eol = true; else if (c === 13) {
-            eol = true;
-            if (text.charCodeAt(I) === 10) ++I, ++k;
-          } else if (c !== delimiterCode) continue;
-          return text.slice(j, I - k);
-        }
-        return text.slice(j);
-      }
-      while ((t = token()) !== EOF) {
-        var a = [];
-        while (t !== EOL && t !== EOF) {
-          a.push(t);
-          t = token();
-        }
-        if (f && (a = f(a, n++)) == null) continue;
-        rows.push(a);
-      }
-      return rows;
-    };
-    dsv.format = function(rows) {
-      if (Array.isArray(rows[0])) return dsv.formatRows(rows);
-      var fieldSet = new d3_Set(), fields = [];
-      rows.forEach(function(row) {
-        for (var field in row) {
-          if (!fieldSet.has(field)) {
-            fields.push(fieldSet.add(field));
-          }
-        }
-      });
-      return [ fields.map(formatValue).join(delimiter) ].concat(rows.map(function(row) {
-        return fields.map(function(field) {
-          return formatValue(row[field]);
-        }).join(delimiter);
-      })).join("\n");
-    };
-    dsv.formatRows = function(rows) {
-      return rows.map(formatRow).join("\n");
-    };
-    function formatRow(row) {
-      return row.map(formatValue).join(delimiter);
-    }
-    function formatValue(text) {
-      return reFormat.test(text) ? '"' + text.replace(/\"/g, '""') + '"' : text;
-    }
-    return dsv;
-  };
-  d3.csv = d3.dsv(",", "text/csv");
-  d3.tsv = d3.dsv("	", "text/tab-separated-values");
-  var d3_timer_queueHead, d3_timer_queueTail, d3_timer_interval, d3_timer_timeout, d3_timer_frame = this[d3_vendorSymbol(this, "requestAnimationFrame")] || function(callback) {
-    setTimeout(callback, 17);
-  };
-  d3.timer = function() {
-    d3_timer.apply(this, arguments);
-  };
-  function d3_timer(callback, delay, then) {
-    var n = arguments.length;
-    if (n < 2) delay = 0;
-    if (n < 3) then = Date.now();
-    var time = then + delay, timer = {
-      c: callback,
-      t: time,
-      n: null
-    };
-    if (d3_timer_queueTail) d3_timer_queueTail.n = timer; else d3_timer_queueHead = timer;
-    d3_timer_queueTail = timer;
-    if (!d3_timer_interval) {
-      d3_timer_timeout = clearTimeout(d3_timer_timeout);
-      d3_timer_interval = 1;
-      d3_timer_frame(d3_timer_step);
-    }
-    return timer;
-  }
-  function d3_timer_step() {
-    var now = d3_timer_mark(), delay = d3_timer_sweep() - now;
-    if (delay > 24) {
-      if (isFinite(delay)) {
-        clearTimeout(d3_timer_timeout);
-        d3_timer_timeout = setTimeout(d3_timer_step, delay);
-      }
-      d3_timer_interval = 0;
-    } else {
-      d3_timer_interval = 1;
-      d3_timer_frame(d3_timer_step);
-    }
-  }
-  d3.timer.flush = function() {
-    d3_timer_mark();
-    d3_timer_sweep();
-  };
-  function d3_timer_mark() {
-    var now = Date.now(), timer = d3_timer_queueHead;
-    while (timer) {
-      if (now >= timer.t && timer.c(now - timer.t)) timer.c = null;
-      timer = timer.n;
-    }
-    return now;
-  }
-  function d3_timer_sweep() {
-    var t0, t1 = d3_timer_queueHead, time = Infinity;
-    while (t1) {
-      if (t1.c) {
-        if (t1.t < time) time = t1.t;
-        t1 = (t0 = t1).n;
-      } else {
-        t1 = t0 ? t0.n = t1.n : d3_timer_queueHead = t1.n;
-      }
-    }
-    d3_timer_queueTail = t0;
-    return time;
-  }
-  function d3_format_precision(x, p) {
-    return p - (x ? Math.ceil(Math.log(x) / Math.LN10) : 1);
-  }
-  d3.round = function(x, n) {
-    return n ? Math.round(x * (n = Math.pow(10, n))) / n : Math.round(x);
-  };
-  var d3_formatPrefixes = [ "y", "z", "a", "f", "p", "n", "µ", "m", "", "k", "M", "G", "T", "P", "E", "Z", "Y" ].map(d3_formatPrefix);
-  d3.formatPrefix = function(value, precision) {
-    var i = 0;
-    if (value = +value) {
-      if (value < 0) value *= -1;
-      if (precision) value = d3.round(value, d3_format_precision(value, precision));
-      i = 1 + Math.floor(1e-12 + Math.log(value) / Math.LN10);
-      i = Math.max(-24, Math.min(24, Math.floor((i - 1) / 3) * 3));
-    }
-    return d3_formatPrefixes[8 + i / 3];
-  };
-  function d3_formatPrefix(d, i) {
-    var k = Math.pow(10, abs(8 - i) * 3);
-    return {
-      scale: i > 8 ? function(d) {
-        return d / k;
-      } : function(d) {
-        return d * k;
+    /***/ './base/modules/App.ts':
+      /*!*****************************!*\
+  !*** ./base/modules/App.ts ***!
+  \*****************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _base_modules_database_CreateDataBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/base/modules/database/CreateDataBase */ "./base/modules/database/CreateDataBase.ts");\n/* harmony import */ var _base_modules_sliders_modules_SliderClicked__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/base/modules/sliders/modules/SliderClicked */ "./base/modules/sliders/modules/SliderClicked.ts");\n/* harmony import */ var _base_modules_sliders_modules_SyncSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/base/modules/sliders/modules/SyncSlider */ "./base/modules/sliders/modules/SyncSlider.ts");\n/* harmony import */ var _base_modules_sliders_modules_SyncPlayMovie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/base/modules/sliders/modules/SyncPlayMovie */ "./base/modules/sliders/modules/SyncPlayMovie.ts");\n/* harmony import */ var _base_modules_sliders_modules_SyncSliderStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/base/modules/sliders/modules/SyncSliderStyles */ "./base/modules/sliders/modules/SyncSliderStyles.ts");\n/* harmony import */ var _base_modules_visualizations_VisualizationsFV__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/base/modules/visualizations/VisualizationsFV */ "./base/modules/visualizations/VisualizationsFV.ts");\n/* harmony import */ var _base_modules_settings_ForIE__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/base/modules/settings/ForIE */ "./base/modules/settings/ForIE.ts");\n/* harmony import */ var _base_modules_settings_AddFlag__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/base/modules/settings/AddFlag */ "./base/modules/settings/AddFlag.ts");\n/* harmony import */ var _base_modules_settings_InitialTriangleGraph__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/base/modules/settings/InitialTriangleGraph */ "./base/modules/settings/InitialTriangleGraph.ts");\n/* harmony import */ var _base_modules_settings_InitialDrawer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/base/modules/settings/InitialDrawer */ "./base/modules/settings/InitialDrawer.ts");\n/* harmony import */ var _base_modules_visualizations_VisualizationsDrawer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/base/modules/visualizations/VisualizationsDrawer */ "./base/modules/visualizations/VisualizationsDrawer.ts");\n/*\n\n App.ts\n\n*/\nvar __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (undefined && undefined.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError("Generator is already executing.");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\n// Import Modules.\n\n\n\n\n\n\n\n\n\n\n\nvar App = /** @class */ (function () {\n    function App() {\n        this.createDataBase = new _base_modules_database_CreateDataBase__WEBPACK_IMPORTED_MODULE_0__["default"]();\n        this.sliderClicked = new _base_modules_sliders_modules_SliderClicked__WEBPACK_IMPORTED_MODULE_1__["default"]();\n        this.syncSlider = new _base_modules_sliders_modules_SyncSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();\n        this.syncPlayMovie = new _base_modules_sliders_modules_SyncPlayMovie__WEBPACK_IMPORTED_MODULE_3__["default"]();\n        this.syncSliderStyles = new _base_modules_sliders_modules_SyncSliderStyles__WEBPACK_IMPORTED_MODULE_4__["default"]();\n        this.visualizationsFV = new _base_modules_visualizations_VisualizationsFV__WEBPACK_IMPORTED_MODULE_5__["default"]();\n        this.forIE = new _base_modules_settings_ForIE__WEBPACK_IMPORTED_MODULE_6__["default"]();\n        this.addFlag = new _base_modules_settings_AddFlag__WEBPACK_IMPORTED_MODULE_7__["default"]();\n        this.initialTriangleGraph = new _base_modules_settings_InitialTriangleGraph__WEBPACK_IMPORTED_MODULE_8__["default"]();\n        this.initialDrawer = new _base_modules_settings_InitialDrawer__WEBPACK_IMPORTED_MODULE_9__["default"]();\n        this.visualizationsDrawer = new _base_modules_visualizations_VisualizationsDrawer__WEBPACK_IMPORTED_MODULE_10__["default"]();\n    }\n    App.prototype.asyncInitialize = function () {\n        return __awaiter(this, void 0, void 0, function () {\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0: return [4 /*yield*/, this.createDataBase.resolveDataBase()];\n                    case 1:\n                        _a.sent();\n                        this.syncPlayMovie.callSyncMovie(this.createDataBase.propDataBaseTimeAlignment);\n                        this.visualizationsFV.callVisualizations(this.createDataBase.propDataBaseJapanese);\n                        this.initialDrawer.callCore(this.createDataBase.propDataBaseCityChecked);\n                        this.visualizationsDrawer.callDrawerPC(this.createDataBase.propDataBaseJapanese, this.createDataBase.propDataBaseTourists);\n                        this.visualizationsDrawer.callDrawerSP(this.createDataBase.propDataBaseJapanese, this.createDataBase.propDataBaseTourists);\n                        return [2 /*return*/];\n                }\n            });\n        });\n    };\n    App.prototype.initialize = function () {\n        this.asyncInitialize();\n        this.sliderClicked.callSliderClicked();\n        this.syncSlider.callSyncSlider();\n        this.syncSliderStyles.callSyncStyles();\n        this.initialTriangleGraph.branches();\n    };\n    App.prototype.domContentLoaded = function () {\n        // Add DOM Content Loaded Method.\n    };\n    App.prototype.load = function (getWidthState) {\n        this.forIE.branches();\n        this.addFlag.branches(getWidthState);\n        this.initialTriangleGraph.branches();\n    };\n    App.prototype.resize = function (getWidthState) {\n        this.addFlag.branches(getWidthState);\n        this.initialTriangleGraph.branches();\n    };\n    App.prototype.scroll = function () {\n        // Add Scroll Method.\n    };\n    return App;\n}());\n/* harmony default export */ __webpack_exports__["default"] = (App);\n\n\n//# sourceURL=webpack:///./base/modules/App.ts?'
+        )
+
+        /***/
       },
-      symbol: d
-    };
-  }
-  function d3_locale_numberFormat(locale) {
-    var locale_decimal = locale.decimal, locale_thousands = locale.thousands, locale_grouping = locale.grouping, locale_currency = locale.currency, formatGroup = locale_grouping && locale_thousands ? function(value, width) {
-      var i = value.length, t = [], j = 0, g = locale_grouping[0], length = 0;
-      while (i > 0 && g > 0) {
-        if (length + g + 1 > width) g = Math.max(1, width - length);
-        t.push(value.substring(i -= g, i + g));
-        if ((length += g + 1) > width) break;
-        g = locale_grouping[j = (j + 1) % locale_grouping.length];
-      }
-      return t.reverse().join(locale_thousands);
-    } : d3_identity;
-    return function(specifier) {
-      var match = d3_format_re.exec(specifier), fill = match[1] || " ", align = match[2] || ">", sign = match[3] || "-", symbol = match[4] || "", zfill = match[5], width = +match[6], comma = match[7], precision = match[8], type = match[9], scale = 1, prefix = "", suffix = "", integer = false, exponent = true;
-      if (precision) precision = +precision.substring(1);
-      if (zfill || fill === "0" && align === "=") {
-        zfill = fill = "0";
-        align = "=";
-      }
-      switch (type) {
-       case "n":
-        comma = true;
-        type = "g";
-        break;
 
-       case "%":
-        scale = 100;
-        suffix = "%";
-        type = "f";
-        break;
+    /***/ './base/modules/database/CreateDataBase.ts':
+      /*!*************************************************!*\
+  !*** ./base/modules/database/CreateDataBase.ts ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-fetch */ "./node_modules/d3-fetch/src/index.js");\n/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! node-fetch */ "./node_modules/node-fetch/browser.js");\n/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_1__);\n/*\n\n CreateDataBase.ts\n\n*/\nvar __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (undefined && undefined.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError("Generator is already executing.");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\n// Import D3 Fetch\n\n// Import Node Fetch.\n\n// Import InterFace.\n// import { TimeAlignmentTypes, CityCheckedTypes, CountryNameTypes } from \'@/types/interface\'\nvar CreateDataBase = /** @class */ (function () {\n    function CreateDataBase() {\n        this.url = window.location.origin;\n        this.dataCSV = this.url + "/csv/data.csv";\n        this.foreignTouristsCSV = this.url + "/csv/foreignTourists.csv";\n        this.dataBaseJapanese = [];\n        this.dataBaseTourists = [];\n        this.dataBaseTimeAlignment = [];\n        this.dataBaseCityChecked = [];\n        this.dataBaseCountryName = [];\n    }\n    CreateDataBase.prototype.createDataBaseJapanese = function () {\n        var _this = this;\n        d3_fetch__WEBPACK_IMPORTED_MODULE_0__["csv"](this.dataCSV).then(function (csv) {\n            csv.map(function (csvInfo) {\n                var addCity = csvInfo.city;\n                var addGender = csvInfo.gender;\n                var addPopulation = csvInfo.population;\n                var addMridiem;\n                var addTime;\n                var addCityJP;\n                var addCityEN;\n                var addCityLowerEN;\n                var addButtonPC;\n                var addButtonSP;\n                _this.dataBaseTimeAlignment.map(function (timeInfo) {\n                    if (csvInfo.time === timeInfo.militaryTime) {\n                        addMridiem = timeInfo.meridiem;\n                        addTime = timeInfo.time;\n                    }\n                });\n                _this.dataBaseCityChecked.map(function (cityInfo) {\n                    if (csvInfo.city === cityInfo.searchWord) {\n                        addCityJP = cityInfo.cityJP;\n                        addCityEN = cityInfo.cityEN;\n                        addCityLowerEN = cityInfo.cityLowerEN;\n                        addButtonPC = cityInfo.buttonPC;\n                        addButtonSP = cityInfo.buttonSP;\n                    }\n                });\n                var thisDataBaseDetail = {\n                    meridiem: addMridiem,\n                    time: addTime,\n                    city: addCity,\n                    cityJP: addCityJP,\n                    cityEN: addCityEN,\n                    cityLowerEN: addCityLowerEN,\n                    buttonPC: addButtonPC,\n                    buttonSP: addButtonSP,\n                    gender: addGender,\n                    population: addPopulation\n                };\n                _this.dataBaseJapanese.push(thisDataBaseDetail);\n            });\n        });\n    };\n    CreateDataBase.prototype.createDataBaseTourists = function () {\n        var _this = this;\n        d3_fetch__WEBPACK_IMPORTED_MODULE_0__["csv"](this.foreignTouristsCSV).then(function (csv) {\n            csv.map(function (csvInfo) {\n                var addCity = csvInfo.city;\n                var addPopulation = csvInfo.population;\n                var addMridiem;\n                var addTime;\n                var addCityJP;\n                var addCityEN;\n                var addCityLowerEN;\n                var addButtonPC;\n                var addButtonSP;\n                var addCountryNameJP;\n                var addCountryNameEN;\n                var addFlagPath;\n                _this.dataBaseTimeAlignment.map(function (timeInfo) {\n                    if (csvInfo.time === timeInfo.militaryTime) {\n                        addMridiem = timeInfo.meridiem;\n                        addTime = timeInfo.time;\n                    }\n                });\n                _this.dataBaseCityChecked.map(function (cityInfo) {\n                    if (csvInfo.city === cityInfo.searchWord) {\n                        addCityJP = cityInfo.cityJP;\n                        addCityEN = cityInfo.cityEN;\n                        addCityLowerEN = cityInfo.cityLowerEN;\n                        addButtonPC = cityInfo.buttonPC;\n                        addButtonSP = cityInfo.buttonSP;\n                    }\n                });\n                _this.dataBaseCountryName.map(function (countryInfo) {\n                    if (csvInfo.country === countryInfo.countryNameJP) {\n                        addCountryNameJP = countryInfo.countryNameJP;\n                        addCountryNameEN = countryInfo.countryNameEN;\n                        addFlagPath = countryInfo.flagPath;\n                    }\n                });\n                var thisDataBaseDetail = {\n                    meridiem: addMridiem,\n                    time: addTime,\n                    city: addCity,\n                    cityJP: addCityJP,\n                    cityEN: addCityEN,\n                    cityLowerEN: addCityLowerEN,\n                    buttonPC: addButtonPC,\n                    buttonSP: addButtonSP,\n                    countryNameJP: addCountryNameJP,\n                    countryNameEN: addCountryNameEN,\n                    flagPath: addFlagPath,\n                    population: addPopulation\n                };\n                _this.dataBaseTourists.push(thisDataBaseDetail);\n            });\n        });\n    };\n    // Async.\n    CreateDataBase.prototype.callDataBase = function () {\n        return __awaiter(this, void 0, void 0, function () {\n            var responseTimeAlignment, responseCityChecked, responseCountryName, _a, _b, _c, error_1;\n            return __generator(this, function (_d) {\n                switch (_d.label) {\n                    case 0:\n                        _d.trys.push([0, 7, , 8]);\n                        return [4 /*yield*/, node_fetch__WEBPACK_IMPORTED_MODULE_1___default()(this.url + "/json/timeAlignment.json")];\n                    case 1:\n                        responseTimeAlignment = _d.sent();\n                        return [4 /*yield*/, node_fetch__WEBPACK_IMPORTED_MODULE_1___default()(this.url + "/json/cityChecked.json")];\n                    case 2:\n                        responseCityChecked = _d.sent();\n                        return [4 /*yield*/, node_fetch__WEBPACK_IMPORTED_MODULE_1___default()(this.url + "/json/countryName.json")];\n                    case 3:\n                        responseCountryName = _d.sent();\n                        _a = this;\n                        return [4 /*yield*/, responseTimeAlignment.json()];\n                    case 4:\n                        _a.dataBaseTimeAlignment = _d.sent();\n                        _b = this;\n                        return [4 /*yield*/, responseCityChecked.json()];\n                    case 5:\n                        _b.dataBaseCityChecked = _d.sent();\n                        _c = this;\n                        return [4 /*yield*/, responseCountryName.json()];\n                    case 6:\n                        _c.dataBaseCountryName = _d.sent();\n                        this.createDataBaseJapanese();\n                        this.createDataBaseTourists();\n                        return [3 /*break*/, 8];\n                    case 7:\n                        error_1 = _d.sent();\n                        console.log(error_1);\n                        return [3 /*break*/, 8];\n                    case 8: return [2 /*return*/];\n                }\n            });\n        });\n    };\n    // Promise Resolve.\n    CreateDataBase.prototype.resolveDataBase = function () {\n        var _this = this;\n        return new Promise(function (resolve) {\n            resolve(_this.callDataBase());\n        });\n    };\n    Object.defineProperty(CreateDataBase.prototype, "propDataBaseJapanese", {\n        get: function () {\n            return this.dataBaseJapanese;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(CreateDataBase.prototype, "propDataBaseTourists", {\n        get: function () {\n            return this.dataBaseTourists;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(CreateDataBase.prototype, "propDataBaseTimeAlignment", {\n        get: function () {\n            return this.dataBaseTimeAlignment;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(CreateDataBase.prototype, "propDataBaseCityChecked", {\n        get: function () {\n            return this.dataBaseCityChecked;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(CreateDataBase.prototype, "propDataBaseCountryName", {\n        get: function () {\n            return this.dataBaseCountryName;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    return CreateDataBase;\n}());\n/* harmony default export */ __webpack_exports__["default"] = (CreateDataBase);\n\n\n//# sourceURL=webpack:///./base/modules/database/CreateDataBase.ts?'
+        )
 
-       case "p":
-        scale = 100;
-        suffix = "%";
-        type = "r";
-        break;
-
-       case "b":
-       case "o":
-       case "x":
-       case "X":
-        if (symbol === "#") prefix = "0" + type.toLowerCase();
-
-       case "c":
-        exponent = false;
-
-       case "d":
-        integer = true;
-        precision = 0;
-        break;
-
-       case "s":
-        scale = -1;
-        type = "r";
-        break;
-      }
-      if (symbol === "$") prefix = locale_currency[0], suffix = locale_currency[1];
-      if (type == "r" && !precision) type = "g";
-      if (precision != null) {
-        if (type == "g") precision = Math.max(1, Math.min(21, precision)); else if (type == "e" || type == "f") precision = Math.max(0, Math.min(20, precision));
-      }
-      type = d3_format_types.get(type) || d3_format_typeDefault;
-      var zcomma = zfill && comma;
-      return function(value) {
-        var fullSuffix = suffix;
-        if (integer && value % 1) return "";
-        var negative = value < 0 || value === 0 && 1 / value < 0 ? (value = -value, "-") : sign === "-" ? "" : sign;
-        if (scale < 0) {
-          var unit = d3.formatPrefix(value, precision);
-          value = unit.scale(value);
-          fullSuffix = unit.symbol + suffix;
-        } else {
-          value *= scale;
-        }
-        value = type(value, precision);
-        var i = value.lastIndexOf("."), before, after;
-        if (i < 0) {
-          var j = exponent ? value.lastIndexOf("e") : -1;
-          if (j < 0) before = value, after = ""; else before = value.substring(0, j), after = value.substring(j);
-        } else {
-          before = value.substring(0, i);
-          after = locale_decimal + value.substring(i + 1);
-        }
-        if (!zfill && comma) before = formatGroup(before, Infinity);
-        var length = prefix.length + before.length + after.length + (zcomma ? 0 : negative.length), padding = length < width ? new Array(length = width - length + 1).join(fill) : "";
-        if (zcomma) before = formatGroup(padding + before, padding.length ? width - after.length : Infinity);
-        negative += prefix;
-        value = before + after;
-        return (align === "<" ? negative + value + padding : align === ">" ? padding + negative + value : align === "^" ? padding.substring(0, length >>= 1) + negative + value + padding.substring(length) : negative + (zcomma ? value : padding + value)) + fullSuffix;
-      };
-    };
-  }
-  var d3_format_re = /(?:([^{])?([<>=^]))?([+\- ])?([$#])?(0)?(\d+)?(,)?(\.-?\d+)?([a-z%])?/i;
-  var d3_format_types = d3.map({
-    b: function(x) {
-      return x.toString(2);
-    },
-    c: function(x) {
-      return String.fromCharCode(x);
-    },
-    o: function(x) {
-      return x.toString(8);
-    },
-    x: function(x) {
-      return x.toString(16);
-    },
-    X: function(x) {
-      return x.toString(16).toUpperCase();
-    },
-    g: function(x, p) {
-      return x.toPrecision(p);
-    },
-    e: function(x, p) {
-      return x.toExponential(p);
-    },
-    f: function(x, p) {
-      return x.toFixed(p);
-    },
-    r: function(x, p) {
-      return (x = d3.round(x, d3_format_precision(x, p))).toFixed(Math.max(0, Math.min(20, d3_format_precision(x * (1 + 1e-15), p))));
-    }
-  });
-  function d3_format_typeDefault(x) {
-    return x + "";
-  }
-  var d3_time = d3.time = {}, d3_date = Date;
-  function d3_date_utc() {
-    this._ = new Date(arguments.length > 1 ? Date.UTC.apply(this, arguments) : arguments[0]);
-  }
-  d3_date_utc.prototype = {
-    getDate: function() {
-      return this._.getUTCDate();
-    },
-    getDay: function() {
-      return this._.getUTCDay();
-    },
-    getFullYear: function() {
-      return this._.getUTCFullYear();
-    },
-    getHours: function() {
-      return this._.getUTCHours();
-    },
-    getMilliseconds: function() {
-      return this._.getUTCMilliseconds();
-    },
-    getMinutes: function() {
-      return this._.getUTCMinutes();
-    },
-    getMonth: function() {
-      return this._.getUTCMonth();
-    },
-    getSeconds: function() {
-      return this._.getUTCSeconds();
-    },
-    getTime: function() {
-      return this._.getTime();
-    },
-    getTimezoneOffset: function() {
-      return 0;
-    },
-    valueOf: function() {
-      return this._.valueOf();
-    },
-    setDate: function() {
-      d3_time_prototype.setUTCDate.apply(this._, arguments);
-    },
-    setDay: function() {
-      d3_time_prototype.setUTCDay.apply(this._, arguments);
-    },
-    setFullYear: function() {
-      d3_time_prototype.setUTCFullYear.apply(this._, arguments);
-    },
-    setHours: function() {
-      d3_time_prototype.setUTCHours.apply(this._, arguments);
-    },
-    setMilliseconds: function() {
-      d3_time_prototype.setUTCMilliseconds.apply(this._, arguments);
-    },
-    setMinutes: function() {
-      d3_time_prototype.setUTCMinutes.apply(this._, arguments);
-    },
-    setMonth: function() {
-      d3_time_prototype.setUTCMonth.apply(this._, arguments);
-    },
-    setSeconds: function() {
-      d3_time_prototype.setUTCSeconds.apply(this._, arguments);
-    },
-    setTime: function() {
-      d3_time_prototype.setTime.apply(this._, arguments);
-    }
-  };
-  var d3_time_prototype = Date.prototype;
-  function d3_time_interval(local, step, number) {
-    function round(date) {
-      var d0 = local(date), d1 = offset(d0, 1);
-      return date - d0 < d1 - date ? d0 : d1;
-    }
-    function ceil(date) {
-      step(date = local(new d3_date(date - 1)), 1);
-      return date;
-    }
-    function offset(date, k) {
-      step(date = new d3_date(+date), k);
-      return date;
-    }
-    function range(t0, t1, dt) {
-      var time = ceil(t0), times = [];
-      if (dt > 1) {
-        while (time < t1) {
-          if (!(number(time) % dt)) times.push(new Date(+time));
-          step(time, 1);
-        }
-      } else {
-        while (time < t1) times.push(new Date(+time)), step(time, 1);
-      }
-      return times;
-    }
-    function range_utc(t0, t1, dt) {
-      try {
-        d3_date = d3_date_utc;
-        var utc = new d3_date_utc();
-        utc._ = t0;
-        return range(utc, t1, dt);
-      } finally {
-        d3_date = Date;
-      }
-    }
-    local.floor = local;
-    local.round = round;
-    local.ceil = ceil;
-    local.offset = offset;
-    local.range = range;
-    var utc = local.utc = d3_time_interval_utc(local);
-    utc.floor = utc;
-    utc.round = d3_time_interval_utc(round);
-    utc.ceil = d3_time_interval_utc(ceil);
-    utc.offset = d3_time_interval_utc(offset);
-    utc.range = range_utc;
-    return local;
-  }
-  function d3_time_interval_utc(method) {
-    return function(date, k) {
-      try {
-        d3_date = d3_date_utc;
-        var utc = new d3_date_utc();
-        utc._ = date;
-        return method(utc, k)._;
-      } finally {
-        d3_date = Date;
-      }
-    };
-  }
-  d3_time.year = d3_time_interval(function(date) {
-    date = d3_time.day(date);
-    date.setMonth(0, 1);
-    return date;
-  }, function(date, offset) {
-    date.setFullYear(date.getFullYear() + offset);
-  }, function(date) {
-    return date.getFullYear();
-  });
-  d3_time.years = d3_time.year.range;
-  d3_time.years.utc = d3_time.year.utc.range;
-  d3_time.day = d3_time_interval(function(date) {
-    var day = new d3_date(2e3, 0);
-    day.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
-    return day;
-  }, function(date, offset) {
-    date.setDate(date.getDate() + offset);
-  }, function(date) {
-    return date.getDate() - 1;
-  });
-  d3_time.days = d3_time.day.range;
-  d3_time.days.utc = d3_time.day.utc.range;
-  d3_time.dayOfYear = function(date) {
-    var year = d3_time.year(date);
-    return Math.floor((date - year - (date.getTimezoneOffset() - year.getTimezoneOffset()) * 6e4) / 864e5);
-  };
-  [ "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" ].forEach(function(day, i) {
-    i = 7 - i;
-    var interval = d3_time[day] = d3_time_interval(function(date) {
-      (date = d3_time.day(date)).setDate(date.getDate() - (date.getDay() + i) % 7);
-      return date;
-    }, function(date, offset) {
-      date.setDate(date.getDate() + Math.floor(offset) * 7);
-    }, function(date) {
-      var day = d3_time.year(date).getDay();
-      return Math.floor((d3_time.dayOfYear(date) + (day + i) % 7) / 7) - (day !== i);
-    });
-    d3_time[day + "s"] = interval.range;
-    d3_time[day + "s"].utc = interval.utc.range;
-    d3_time[day + "OfYear"] = function(date) {
-      var day = d3_time.year(date).getDay();
-      return Math.floor((d3_time.dayOfYear(date) + (day + i) % 7) / 7);
-    };
-  });
-  d3_time.week = d3_time.sunday;
-  d3_time.weeks = d3_time.sunday.range;
-  d3_time.weeks.utc = d3_time.sunday.utc.range;
-  d3_time.weekOfYear = d3_time.sundayOfYear;
-  function d3_locale_timeFormat(locale) {
-    var locale_dateTime = locale.dateTime, locale_date = locale.date, locale_time = locale.time, locale_periods = locale.periods, locale_days = locale.days, locale_shortDays = locale.shortDays, locale_months = locale.months, locale_shortMonths = locale.shortMonths;
-    function d3_time_format(template) {
-      var n = template.length;
-      function format(date) {
-        var string = [], i = -1, j = 0, c, p, f;
-        while (++i < n) {
-          if (template.charCodeAt(i) === 37) {
-            string.push(template.slice(j, i));
-            if ((p = d3_time_formatPads[c = template.charAt(++i)]) != null) c = template.charAt(++i);
-            if (f = d3_time_formats[c]) c = f(date, p == null ? c === "e" ? " " : "0" : p);
-            string.push(c);
-            j = i + 1;
-          }
-        }
-        string.push(template.slice(j, i));
-        return string.join("");
-      }
-      format.parse = function(string) {
-        var d = {
-          y: 1900,
-          m: 0,
-          d: 1,
-          H: 0,
-          M: 0,
-          S: 0,
-          L: 0,
-          Z: null
-        }, i = d3_time_parse(d, template, string, 0);
-        if (i != string.length) return null;
-        if ("p" in d) d.H = d.H % 12 + d.p * 12;
-        var localZ = d.Z != null && d3_date !== d3_date_utc, date = new (localZ ? d3_date_utc : d3_date)();
-        if ("j" in d) date.setFullYear(d.y, 0, d.j); else if ("W" in d || "U" in d) {
-          if (!("w" in d)) d.w = "W" in d ? 1 : 0;
-          date.setFullYear(d.y, 0, 1);
-          date.setFullYear(d.y, 0, "W" in d ? (d.w + 6) % 7 + d.W * 7 - (date.getDay() + 5) % 7 : d.w + d.U * 7 - (date.getDay() + 6) % 7);
-        } else date.setFullYear(d.y, d.m, d.d);
-        date.setHours(d.H + (d.Z / 100 | 0), d.M + d.Z % 100, d.S, d.L);
-        return localZ ? date._ : date;
-      };
-      format.toString = function() {
-        return template;
-      };
-      return format;
-    }
-    function d3_time_parse(date, template, string, j) {
-      var c, p, t, i = 0, n = template.length, m = string.length;
-      while (i < n) {
-        if (j >= m) return -1;
-        c = template.charCodeAt(i++);
-        if (c === 37) {
-          t = template.charAt(i++);
-          p = d3_time_parsers[t in d3_time_formatPads ? template.charAt(i++) : t];
-          if (!p || (j = p(date, string, j)) < 0) return -1;
-        } else if (c != string.charCodeAt(j++)) {
-          return -1;
-        }
-      }
-      return j;
-    }
-    d3_time_format.utc = function(template) {
-      var local = d3_time_format(template);
-      function format(date) {
-        try {
-          d3_date = d3_date_utc;
-          var utc = new d3_date();
-          utc._ = date;
-          return local(utc);
-        } finally {
-          d3_date = Date;
-        }
-      }
-      format.parse = function(string) {
-        try {
-          d3_date = d3_date_utc;
-          var date = local.parse(string);
-          return date && date._;
-        } finally {
-          d3_date = Date;
-        }
-      };
-      format.toString = local.toString;
-      return format;
-    };
-    d3_time_format.multi = d3_time_format.utc.multi = d3_time_formatMulti;
-    var d3_time_periodLookup = d3.map(), d3_time_dayRe = d3_time_formatRe(locale_days), d3_time_dayLookup = d3_time_formatLookup(locale_days), d3_time_dayAbbrevRe = d3_time_formatRe(locale_shortDays), d3_time_dayAbbrevLookup = d3_time_formatLookup(locale_shortDays), d3_time_monthRe = d3_time_formatRe(locale_months), d3_time_monthLookup = d3_time_formatLookup(locale_months), d3_time_monthAbbrevRe = d3_time_formatRe(locale_shortMonths), d3_time_monthAbbrevLookup = d3_time_formatLookup(locale_shortMonths);
-    locale_periods.forEach(function(p, i) {
-      d3_time_periodLookup.set(p.toLowerCase(), i);
-    });
-    var d3_time_formats = {
-      a: function(d) {
-        return locale_shortDays[d.getDay()];
+        /***/
       },
-      A: function(d) {
-        return locale_days[d.getDay()];
+
+    /***/ './base/modules/settings/AddFlag.ts':
+      /*!******************************************!*\
+  !*** ./base/modules/settings/AddFlag.ts ***!
+  \******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/*\n\n AddFlag.ts\n\n */\nvar AddFlag = /** @class */ (function () {\n    function AddFlag() {\n        this.target = document.querySelector('.first-view');\n        this.SP = 768;\n        this.PCTB = 1280;\n        this.PC = 1920;\n    }\n    AddFlag.prototype.branches = function (getWidthState) {\n        if (getWidthState < this.SP) {\n            this.target.classList.add('sp');\n            this.target.classList.remove('pctb');\n            this.target.classList.remove('pc');\n        }\n        else if (getWidthState >= this.SP && getWidthState < this.PCTB) {\n            this.target.classList.add('pctb');\n            this.target.classList.remove('sp');\n            this.target.classList.remove('pc');\n        }\n        else if (getWidthState >= this.PCTB) {\n            this.target.classList.add('pc');\n            this.target.classList.remove('sp');\n            this.target.classList.remove('pctb');\n        }\n    };\n    return AddFlag;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (AddFlag);\n\n\n//# sourceURL=webpack:///./base/modules/settings/AddFlag.ts?"
+        )
+
+        /***/
       },
-      b: function(d) {
-        return locale_shortMonths[d.getMonth()];
+
+    /***/ './base/modules/settings/ForIE.ts':
+      /*!****************************************!*\
+  !*** ./base/modules/settings/ForIE.ts ***!
+  \****************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/*\n\n ForIE.ts\n\n*/\nvar ForIE = /** @class */ (function () {\n    function ForIE() {\n        this.showTarget = document.querySelectorAll('.fn-IE-triangle-graph');\n        this.hideTarget = document.querySelectorAll('.fn-svg-graph');\n        this.ua = navigator.userAgent;\n    }\n    ForIE.prototype.branches = function () {\n        if (this.ua.indexOf('MSIE') > -1 ||\n            this.ua.indexOf('Trident') > -1 ||\n            this.ua.indexOf('Edge') > -1) {\n            Array.from(this.showTarget).map(function (info) {\n                info.classList.add('is-IE');\n            });\n            Array.from(this.hideTarget).map(function (info) {\n                info.classList.add('is-IE');\n            });\n        }\n    };\n    return ForIE;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (ForIE);\n\n\n//# sourceURL=webpack:///./base/modules/settings/ForIE.ts?"
+        )
+
+        /***/
       },
-      B: function(d) {
-        return locale_months[d.getMonth()];
+
+    /***/ './base/modules/settings/InitialDrawer.ts':
+      /*!************************************************!*\
+  !*** ./base/modules/settings/InitialDrawer.ts ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/*\n\n InitialDrawer.ts\n\n*/\n// Import InterFace.\n// import { CityCheckedTypes } from '@/types/interface'\nvar DrawerClosed = /** @class */ (function () {\n    function DrawerClosed() {\n        this.closeBTN = document.querySelector('.fn-button-back-to-map');\n        this.movie = document.getElementById('fn-movie');\n        this.drawer = document.querySelector('.fn-drawer-city');\n        this.totalPop = document.querySelector('.fn-app-population');\n        this.malePop = document.querySelector('.fn-app-male-population');\n        this.femalePop = document.querySelector('.fn-app-female-population');\n        this.foreignTotalPop = document.querySelector('.fn-app-visited-population');\n        this.maleWrap = document.querySelector('.fn-gender-male-wrapper');\n        this.femaleWrap = document.querySelector('.fn-gender-female-wrapper');\n        this.maleGraph = document.querySelector('.fn-app-female-graph-inner');\n        this.femaleGraph = document.querySelector('.fn-app-male-graph-inner');\n        this.drawerHeatGraphWrap = document.querySelector('.fn-add-heat-graph');\n        this.countriesPop = document.querySelectorAll('.fn-countries-population');\n        this.countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');\n        this.countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');\n        this.drawerCityBG = document.querySelector('.fn-city-map');\n    }\n    DrawerClosed.prototype.callCore = function (propDataBaseCityChecked) {\n        var _this = this;\n        this.closeBTN.addEventListener('click', function () {\n            _this.movie.play();\n            _this.drawer.classList.remove('is-active');\n            _this.totalPop.textContent = \"\\u30FC\\u30FC\\u30FC\\u30FC\\u30FC\";\n            _this.malePop.textContent = \"\\u30FC\\u30FC\\u30FC\\u30FC\\u30FC\";\n            _this.femalePop.textContent = \"\\u30FC\\u30FC\\u30FC\\u30FC\\u30FC\";\n            _this.foreignTotalPop.textContent = \"\\u30FC\\u30FC\\u30FC\\u30FC\";\n            _this.maleWrap.removeAttribute('style');\n            _this.femaleWrap.removeAttribute('style');\n            _this.maleGraph.removeAttribute('style');\n            _this.femaleGraph.removeAttribute('style');\n            _this.drawerHeatGraphWrap.textContent = null;\n            Array.from(_this.countriesPop).map(function (info, index) {\n                info.textContent = \"\\u30FC\\u30FC\\u30FC\";\n                _this.countriesGraphWrap[index].removeAttribute('style');\n                _this.countriesGraph[index].removeAttribute('style');\n            });\n            propDataBaseCityChecked.map(function (info) {\n                _this.drawerCityBG.classList.remove(info.cityLowerEN);\n            });\n            _this.closeBTN.disabled = true;\n        });\n    };\n    return DrawerClosed;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (DrawerClosed);\n\n\n//# sourceURL=webpack:///./base/modules/settings/InitialDrawer.ts?"
+        )
+
+        /***/
       },
-      c: d3_time_format(locale_dateTime),
-      d: function(d, p) {
-        return d3_time_formatPad(d.getDate(), p, 2);
+
+    /***/ './base/modules/settings/InitialTriangleGraph.ts':
+      /*!*******************************************************!*\
+  !*** ./base/modules/settings/InitialTriangleGraph.ts ***!
+  \*******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ \"./node_modules/d3-selection/src/index.js\");\n/*\n\n InitialTriangleGraph.ts\n\n*/\n// Import D3 Selection\n\nvar InitialTriangleGraph = /** @class */ (function () {\n    function InitialTriangleGraph() {\n        this.target = document.querySelectorAll('.fn-triangle-graph-polygon');\n        this.checkFlag = document.querySelector('.first-view');\n    }\n    InitialTriangleGraph.prototype.branches = function () {\n        var flagSP = this.checkFlag.classList.contains('sp');\n        var flagPCTB = this.checkFlag.classList.contains('pctb');\n        var flagPC = this.checkFlag.classList.contains('pc');\n        var addSizePoint = flagSP ? \"62\" : flagPCTB ? \"107\" : \"162\";\n        if (flagSP) {\n            Array.from(this.target).map(function (info) {\n                info.setAttribute('points', '11,0 23,62 0,62');\n            });\n        }\n        if (flagPCTB) {\n            Array.from(this.target).map(function (info) {\n                info.setAttribute('points', '20,0 40,107 0,107');\n            });\n        }\n        if (flagPC) {\n            Array.from(this.target).map(function (info) {\n                info.setAttribute('points', '30,0 60,160 0,160');\n            });\n        }\n        d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"selectAll\"](this.target)\n            .classed('is-init', false)\n            .attr('transform', \"translate(0, \" + addSizePoint + \")\");\n    };\n    return InitialTriangleGraph;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (InitialTriangleGraph);\n\n\n//# sourceURL=webpack:///./base/modules/settings/InitialTriangleGraph.ts?"
+        )
+
+        /***/
       },
-      e: function(d, p) {
-        return d3_time_formatPad(d.getDate(), p, 2);
+
+    /***/ './base/modules/sliders/Sliders.ts':
+      /*!*****************************************!*\
+  !*** ./base/modules/sliders/Sliders.ts ***!
+  \*****************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/*\n\n Sliders.ts\n\n*/\nvar Sliders = /** @class */ (function () {\n    function Sliders() {\n        this.movie = document.getElementById(\'fn-movie\');\n        this.slider = document.querySelector(\'.fn-slider\');\n        this.totalHour = 18;\n        this.sliderMaxVal = null;\n        this.setCalculation = null;\n        this.setHourPoints = null;\n        this.callMetaData();\n    }\n    Sliders.prototype.callMetaData = function () {\n        var _this = this;\n        this.movie.addEventListener(\'loadedmetadata\', function () {\n            var movieTotalTime = Math.round(_this.movie.duration);\n            _this.sliderMaxVal = Number(_this.slider.max);\n            _this.setCalculation = Math.round(Number(_this.sliderMaxVal) / movieTotalTime);\n            _this.setHourPoints =\n                (movieTotalTime * _this.setCalculation) / _this.totalHour;\n        });\n    };\n    Object.defineProperty(Sliders.prototype, "propMaxVal", {\n        get: function () {\n            return this.sliderMaxVal;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(Sliders.prototype, "propCalc", {\n        get: function () {\n            return this.setCalculation;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(Sliders.prototype, "propHourPoints", {\n        get: function () {\n            return this.setHourPoints;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    return Sliders;\n}());\n/* harmony default export */ __webpack_exports__["default"] = (Sliders);\n\n\n//# sourceURL=webpack:///./base/modules/sliders/Sliders.ts?'
+        )
+
+        /***/
       },
-      H: function(d, p) {
-        return d3_time_formatPad(d.getHours(), p, 2);
+
+    /***/ './base/modules/sliders/modules/SliderClicked.ts':
+      /*!*******************************************************!*\
+  !*** ./base/modules/sliders/modules/SliderClicked.ts ***!
+  \*******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/base/modules/sliders/Sliders */ \"./base/modules/sliders/Sliders.ts\");\n/*\n\n SliderClicked.ts\n\n*/\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n// Import Sliders.ts\n\nvar SliderClicked = /** @class */ (function (_super) {\n    __extends(SliderClicked, _super);\n    function SliderClicked() {\n        var _this = _super.call(this) || this;\n        _this.playButtonSP = document.querySelector('.fn-button-play');\n        return _this;\n    }\n    SliderClicked.prototype.callSliderClicked = function () {\n        var _this = this;\n        this.playButtonSP.addEventListener('click', function () {\n            if (_this.movie.paused === true) {\n                _this.playButtonSP.classList.remove('is-stop');\n                _this.slider.classList.remove('is-stop');\n                _this.movie.play();\n            }\n            else {\n                _this.playButtonSP.classList.add('is-stop');\n                _this.slider.classList.add('is-stop');\n                _this.movie.pause();\n            }\n        });\n    };\n    return SliderClicked;\n}(_base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (SliderClicked);\n\n\n//# sourceURL=webpack:///./base/modules/sliders/modules/SliderClicked.ts?"
+        )
+
+        /***/
       },
-      I: function(d, p) {
-        return d3_time_formatPad(d.getHours() % 12 || 12, p, 2);
+
+    /***/ './base/modules/sliders/modules/SyncPlayMovie.ts':
+      /*!*******************************************************!*\
+  !*** ./base/modules/sliders/modules/SyncPlayMovie.ts ***!
+  \*******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/base/modules/sliders/Sliders */ \"./base/modules/sliders/Sliders.ts\");\n/*\n\n SyncPlayMovie.ts\n\n*/\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n// Import Sliders.ts\n\n// Import InterFace.\n// import { TimeAlignmentTypes } from '@/types/interface'\nvar SyncPlayMovie = /** @class */ (function (_super) {\n    __extends(SyncPlayMovie, _super);\n    function SyncPlayMovie() {\n        var _this = _super.call(this) || this;\n        _this.addTimeTarget = document.querySelector('.fn-time');\n        _this.addMeridiemTarget = document.querySelector('.fn-meridiem');\n        _this.addHour = document.querySelector('.fn-hour');\n        _this.addMinute = document.querySelector('.fn-minute');\n        return _this;\n    }\n    SyncPlayMovie.prototype.callSyncMovie = function (timeAlignment) {\n        var _this = this;\n        var timeAlignmentLen = timeAlignment.length;\n        this.movie.addEventListener('timeupdate', function () {\n            var val = _this.movie.currentTime * _this.propCalc;\n            _this.slider.value = String(val);\n            for (var i = 0; i < timeAlignmentLen; i++) {\n                if (val > _this.propHourPoints * i &&\n                    val <= _this.propHourPoints * (i + 1)) {\n                    _this.addTimeTarget.innerText = timeAlignment[i].time;\n                    _this.addMeridiemTarget.innerText = timeAlignment[i].meridiem;\n                }\n            }\n            var getColonPosition = _this.addTimeTarget.innerText.indexOf(':');\n            var getHour = _this.addTimeTarget.innerText.slice(0, getColonPosition);\n            var getNumber = Math.floor(_this.movie.currentTime);\n            var getMinute = getNumber % 2 !== 0 ? 30 : 0;\n            _this.addHour.innerText = getHour;\n            _this.addMinute.innerText = (\"0\" + getMinute).slice(-2);\n        });\n    };\n    return SyncPlayMovie;\n}(_base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (SyncPlayMovie);\n\n\n//# sourceURL=webpack:///./base/modules/sliders/modules/SyncPlayMovie.ts?"
+        )
+
+        /***/
       },
-      j: function(d, p) {
-        return d3_time_formatPad(1 + d3_time.dayOfYear(d), p, 3);
+
+    /***/ './base/modules/sliders/modules/SyncSlider.ts':
+      /*!****************************************************!*\
+  !*** ./base/modules/sliders/modules/SyncSlider.ts ***!
+  \****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/base/modules/sliders/Sliders */ "./base/modules/sliders/Sliders.ts");\n/*\n\n SyncSlider.ts\n\n*/\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n// Import Sliders.ts\n\nvar SyncSlider = /** @class */ (function (_super) {\n    __extends(SyncSlider, _super);\n    // Types.\n    // None.\n    function SyncSlider() {\n        return _super.call(this) || this;\n        // None.\n    }\n    SyncSlider.prototype.callSyncSlider = function () {\n        var _this = this;\n        this.slider.addEventListener(\'input\', function () {\n            var time = Number(_this.slider.value) / _this.propCalc;\n            _this.movie.currentTime = time;\n        });\n    };\n    return SyncSlider;\n}(_base_modules_sliders_Sliders__WEBPACK_IMPORTED_MODULE_0__["default"]));\n/* harmony default export */ __webpack_exports__["default"] = (SyncSlider);\n\n\n//# sourceURL=webpack:///./base/modules/sliders/modules/SyncSlider.ts?'
+        )
+
+        /***/
       },
-      L: function(d, p) {
-        return d3_time_formatPad(d.getMilliseconds(), p, 3);
+
+    /***/ './base/modules/sliders/modules/SyncSliderStyles.ts':
+      /*!**********************************************************!*\
+  !*** ./base/modules/sliders/modules/SyncSliderStyles.ts ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _base_modules_sliders_modules_SyncPlayMovie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/base/modules/sliders/modules/SyncPlayMovie */ \"./base/modules/sliders/modules/SyncPlayMovie.ts\");\n/*\n\n SliderStyles.ts\n\n*/\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n// Import Sliders.ts\n\nvar SyncSliderStyles = /** @class */ (function (_super) {\n    __extends(SyncSliderStyles, _super);\n    function SyncSliderStyles() {\n        var _this = _super.call(this) || this;\n        _this.target = document.querySelector('.fn-range-active');\n        _this.rangePoint = document.querySelectorAll('.fn-range-point');\n        _this.pointLen = _this.rangePoint.length;\n        _this.sliderTime = document.querySelectorAll('.fn-slider-time');\n        return _this;\n    }\n    SyncSliderStyles.prototype.callSyncStyles = function () {\n        var _this = this;\n        this.movie.addEventListener('timeupdate', function () {\n            var pointVal = _this.propMaxVal / (_this.pointLen - 1);\n            if (Number(_this.slider.value) < _this.propMaxVal / 2) {\n                ;\n                _this.target.style.width = (Number(_this.slider.value) /\n                    _this.propMaxVal) *\n                    100 +\n                    1 + \"%\";\n            }\n            if (Number(_this.slider.value) >= _this.propMaxVal / 2) {\n                ;\n                _this.target.style.width = (Number(_this.slider.value) /\n                    _this.propMaxVal) *\n                    100 + \"%\";\n            }\n            for (var i = 0; i < _this.pointLen; i++) {\n                if (Number(_this.slider.value) >= pointVal * i) {\n                    _this.rangePoint[i].classList.add('is-active');\n                    _this.sliderTime[i].classList.add('is-active');\n                }\n                else {\n                    _this.rangePoint[i].classList.remove('is-active');\n                    _this.sliderTime[i].classList.remove('is-active');\n                }\n            }\n        });\n    };\n    return SyncSliderStyles;\n}(_base_modules_sliders_modules_SyncPlayMovie__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (SyncSliderStyles);\n\n\n//# sourceURL=webpack:///./base/modules/sliders/modules/SyncSliderStyles.ts?"
+        )
+
+        /***/
       },
-      m: function(d, p) {
-        return d3_time_formatPad(d.getMonth() + 1, p, 2);
+
+    /***/ './base/modules/state/SetStates.ts':
+      /*!*****************************************!*\
+  !*** ./base/modules/state/SetStates.ts ***!
+  \*****************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/*\n\n SetStates.ts\n\n*/\nvar SetStates = /** @class */ (function () {\n    function SetStates() {\n        this.BW = document.body.clientWidth;\n    }\n    Object.defineProperty(SetStates.prototype, "setWidth", {\n        set: function (setWidthState) {\n            this.BW = setWidthState;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(SetStates.prototype, "getWidth", {\n        get: function () {\n            return this.BW;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    return SetStates;\n}());\n/* harmony default export */ __webpack_exports__["default"] = (SetStates);\n\n\n//# sourceURL=webpack:///./base/modules/state/SetStates.ts?'
+        )
+
+        /***/
       },
-      M: function(d, p) {
-        return d3_time_formatPad(d.getMinutes(), p, 2);
+
+    /***/ './base/modules/visualizations/VisualizationsDrawer.ts':
+      /*!*************************************************************!*\
+  !*** ./base/modules/visualizations/VisualizationsDrawer.ts ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ \"./node_modules/d3-selection/src/index.js\");\n/*\n\n VisualizationsDrawer.ts\n\n*/\n// Import D3 Selection & Transition.\n\nvar VisualizationsDrawer = /** @class */ (function () {\n    function VisualizationsDrawer() {\n        var _this = this;\n        this.totalPopArry = [];\n        this.totalForeignArry = [];\n        this.countriesArry = [];\n        this.countriesFlagArry = [];\n        this.getCityLower = '';\n        this.cityBTNPC = document.querySelectorAll('.fn-tag');\n        this.cityBTNSP = document.querySelectorAll('.fn-button-city');\n        this.movie = document.getElementById('fn-movie');\n        this.drawer = document.querySelector('.fn-drawer-city');\n        this.drawerCityBG = document.querySelector('.fn-city-map');\n        this.checkMeridiem = document.querySelector('.fn-meridiem');\n        this.checkHour = document.querySelector('.fn-time');\n        this.cityEN = document.querySelector('.fn-app-city-en');\n        this.cityJP = document.querySelector('.fn-app-city-ja');\n        this.malePop = document.querySelector('.fn-app-male-population');\n        this.femalePop = document.querySelector('.fn-app-female-population');\n        this.totalPop = document.querySelector('.fn-app-population');\n        this.maleGraph = document.querySelector('.fn-app-male-graph-inner');\n        this.femaleGraph = document.querySelector('.fn-app-female-graph-inner');\n        this.maleWrap = document.querySelector('.fn-gender-male-wrapper');\n        this.femaleWrap = document.querySelector('.fn-gender-female-wrapper');\n        this.addCountries = document.querySelectorAll('.fn-countries-name');\n        this.countriesPop = document.querySelectorAll('.fn-countries-population');\n        this.countriesFlag = document.querySelectorAll('.fn-icon-flag');\n        this.countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');\n        this.countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');\n        this.foreignTotalPop = document.querySelector('.fn-app-visited-population');\n        this.triangleGraph = document.querySelector('.fn-add-heat-graph');\n        this.closeBTN = document.querySelector('.fn-button-back-to-map');\n        this.graphCallBackCore = function (transition, callback) {\n            // TODO.\n            var index = 0;\n            transition\n                .each(function () {\n                ++index;\n            })\n                .each('end', function () {\n                var args = [];\n                for (var _i = 0; _i < arguments.length; _i++) {\n                    args[_i] = arguments[_i];\n                }\n                if (!--index) {\n                    callback.apply(_this, args);\n                }\n            });\n        };\n    }\n    VisualizationsDrawer.prototype.genderPopCountUp = function (dataBaseInfo) {\n        var _this = this;\n        // Core Functions.\n        var coreFunction = function (setPop, setGraph) {\n            _this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\\,/g, '')));\n            var getPop = Number(dataBaseInfo.population.replace(/\\,/g, ''));\n            var startPop = getPop - 100;\n            var duration = 10;\n            setTimeout(function () {\n                setInterval(function () {\n                    if (startPop <= getPop) {\n                        setPop.textContent = startPop.toLocaleString();\n                        startPop++;\n                    }\n                }, duration);\n                d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"select\"](setGraph)\n                    .transition()\n                    .duration(1500)\n                    .style('width', '100%');\n            }, 500);\n        };\n        // Branches.\n        if (dataBaseInfo.gender === '男') {\n            var setPop = this.malePop;\n            var setGraph = this.maleGraph;\n            coreFunction(setPop, setGraph);\n        }\n        if (dataBaseInfo.gender === '女') {\n            var setPop = this.femalePop;\n            var setGraph = this.femaleGraph;\n            coreFunction(setPop, setGraph);\n        }\n    };\n    VisualizationsDrawer.prototype.totalPopCountUp = function () {\n        var _this = this;\n        var addTotalPop = this.totalPopArry.reduce(function (prev, current) { return (prev += current); }, 0);\n        var startTotalPop = addTotalPop - 100;\n        var getTotalPop = addTotalPop;\n        var getMalePop = this.totalPopArry[0];\n        var getFemalePop = this.totalPopArry[1];\n        var getMaleWidth = (getMalePop / getTotalPop) * 100;\n        var getFemaleWidth = (getFemalePop / getTotalPop) * 100;\n        var duration = 10;\n        this.maleWrap.style.width = getMaleWidth + \"%\";\n        this.femaleWrap.style.width = getFemaleWidth + \"%\";\n        this.totalPopArry.length = 0;\n        setTimeout(function () {\n            setInterval(function () {\n                if (startTotalPop <= getTotalPop) {\n                    _this.totalPop.textContent = startTotalPop.toLocaleString();\n                    startTotalPop++;\n                }\n            }, duration);\n        }, 500);\n    };\n    VisualizationsDrawer.prototype.foreignTourists = function () {\n        var _this = this;\n        Array.from(this.addCountries).map(function (countriesInfo, index) {\n            var getGraphWidth = (_this.totalForeignArry[index] / _this.totalForeignArry[0]) * 100;\n            var startPop = _this.totalForeignArry[index] - 100 >= 0\n                ? _this.totalForeignArry[index] - 100\n                : 0;\n            var getPop = _this.totalForeignArry[index];\n            var duration = 10;\n            countriesInfo.textContent = _this.countriesArry[index];\n            _this.countriesFlag[index].setAttribute('src', \"images/icon_\" + _this.countriesFlagArry[index] + \".svg\");\n            _this.countriesGraphWrap[index].style.width = getGraphWidth + \"%\";\n            setTimeout(function () {\n                setInterval(function () {\n                    if (startPop <= getPop) {\n                        _this.countriesPop[index].textContent = startPop.toLocaleString();\n                        startPop++;\n                    }\n                }, duration);\n                d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"select\"](_this.countriesGraph[index])\n                    .transition()\n                    .duration(1500)\n                    .style('width', '100%');\n                // .call(this.graphCallBackCore, () => { // TODO.\n                //   this.closeBTN!.disabled = false\n                // })\n                _this.closeBTN.disabled = false;\n            }, 500);\n        });\n    };\n    VisualizationsDrawer.prototype.foreignTotalPopCountUp = function () {\n        var _this = this;\n        var addTotalPop = this.totalForeignArry.reduce(function (prev, current) { return (prev += current); }, 0);\n        var startTotalPop = addTotalPop - 100;\n        var getTotalPop = addTotalPop;\n        var duration = 10;\n        this.totalForeignArry.length = 0;\n        setTimeout(function () {\n            setInterval(function () {\n                if (startTotalPop <= getTotalPop) {\n                    _this.foreignTotalPop.textContent = startTotalPop.toLocaleString();\n                    startTotalPop++;\n                }\n            }, duration);\n        }, 500);\n    };\n    VisualizationsDrawer.prototype.drawerHeatGraph = function (getCityLower) {\n        var getHeatGraph = document.querySelector(\".fn-triangle-graph-\" + getCityLower);\n        var cloneHeatGraph = getHeatGraph.cloneNode(true);\n        // const getSVG = cloneHeatGraph.firstElementChild\n        // const setClsSVG = getSVG!.classList.add('clone-svg-graph')\n        // const getDefs = getSVG!.lastElementChild\n        // const getClipPath = getDefs!.lastElementChild\n        // const repID = getClipPath!.setAttribute('id', 'clone-svg-clip')\n        this.triangleGraph.appendChild(cloneHeatGraph);\n    };\n    VisualizationsDrawer.prototype.callDrawerSP = function (propDataBaseJapanese, propDataBaseTourists) {\n        var _this = this;\n        Array.from(this.cityBTNSP).map(function (info) {\n            info.addEventListener('click', function () {\n                var getMeridiem = _this.checkMeridiem.textContent;\n                var getHour = _this.checkHour.textContent;\n                var getID = info.getAttribute('id');\n                _this.movie.pause();\n                _this.drawer.classList.add('is-active');\n                propDataBaseJapanese.map(function (dataBaseInfo) {\n                    if (getMeridiem === dataBaseInfo.meridiem &&\n                        getHour === dataBaseInfo.time &&\n                        getID === dataBaseInfo.buttonSP) {\n                        _this.getCityLower = dataBaseInfo.cityLowerEN;\n                        _this.cityEN.textContent = dataBaseInfo.cityEN;\n                        _this.cityJP.textContent = dataBaseInfo.cityJP;\n                        _this.drawerCityBG.classList.add(_this.getCityLower);\n                        _this.genderPopCountUp(dataBaseInfo);\n                    }\n                });\n                propDataBaseTourists.map(function (dataBaseInfo) {\n                    if (getMeridiem === dataBaseInfo.meridiem &&\n                        getHour === dataBaseInfo.time &&\n                        getID === dataBaseInfo.buttonSP) {\n                        _this.totalForeignArry.push(Number(dataBaseInfo.population));\n                        _this.countriesArry.push(dataBaseInfo.countryNameEN);\n                        _this.countriesFlagArry.push(dataBaseInfo.flagPath);\n                    }\n                });\n                _this.totalPopCountUp();\n                _this.foreignTourists();\n                _this.foreignTotalPopCountUp();\n                _this.drawerHeatGraph(_this.getCityLower);\n            });\n        });\n    };\n    VisualizationsDrawer.prototype.callDrawerPC = function (propDataBaseJapanese, propDataBaseTourists) {\n        var _this = this;\n        Array.from(this.cityBTNPC).map(function (info) {\n            info.addEventListener('click', function () {\n                var getMeridiem = _this.checkMeridiem.textContent;\n                var getHour = _this.checkHour.textContent;\n                var getID = info.getAttribute('id');\n                _this.movie.pause();\n                _this.drawer.classList.add('is-active');\n                propDataBaseJapanese.map(function (dataBaseInfo) {\n                    if (getMeridiem === dataBaseInfo.meridiem &&\n                        getHour === dataBaseInfo.time &&\n                        getID === dataBaseInfo.buttonPC) {\n                        _this.getCityLower = dataBaseInfo.cityLowerEN;\n                        _this.cityEN.textContent = dataBaseInfo.cityEN;\n                        _this.cityJP.textContent = dataBaseInfo.cityJP;\n                        _this.drawerCityBG.classList.add(_this.getCityLower);\n                        _this.genderPopCountUp(dataBaseInfo);\n                    }\n                });\n                propDataBaseTourists.map(function (dataBaseInfo) {\n                    if (getMeridiem === dataBaseInfo.meridiem &&\n                        getHour === dataBaseInfo.time &&\n                        getID === dataBaseInfo.buttonPC) {\n                        _this.totalForeignArry.push(Number(dataBaseInfo.population));\n                        _this.countriesArry.push(dataBaseInfo.countryNameEN);\n                        _this.countriesFlagArry.push(dataBaseInfo.flagPath);\n                        console.log(dataBaseInfo.countryNameJP);\n                    }\n                });\n                _this.totalPopCountUp();\n                _this.foreignTourists();\n                _this.foreignTotalPopCountUp();\n                _this.drawerHeatGraph(_this.getCityLower);\n            });\n        });\n    };\n    return VisualizationsDrawer;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (VisualizationsDrawer);\n\n\n//# sourceURL=webpack:///./base/modules/visualizations/VisualizationsDrawer.ts?"
+        )
+
+        /***/
       },
-      p: function(d) {
-        return locale_periods[+(d.getHours() >= 12)];
+
+    /***/ './base/modules/visualizations/VisualizationsFV.ts':
+      /*!*********************************************************!*\
+  !*** ./base/modules/visualizations/VisualizationsFV.ts ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ \"./node_modules/d3-selection/src/index.js\");\n/* harmony import */ var d3_transition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-transition */ \"./node_modules/d3-transition/src/index.js\");\n/*\n\n VisualizationsFV.ts\n\n*/\n// Import D3 Selection & Transition.\n\n\n// Import InterFace.\n// import { DataBaseJapanese } from '@/types/interface'\nvar VisualizationsFV = /** @class */ (function () {\n    function VisualizationsFV() {\n        this.totalPopArry = [];\n        this.changeFlag = '';\n        this.checkMeridiem = document.querySelector('.fn-meridiem');\n        this.checkHour = document.querySelector('.fn-time');\n        this.deviceFlag = document.querySelector('.first-view');\n        this.movie = document.getElementById('fn-movie');\n        this.cityBTNPC = document.querySelectorAll('.fn-tag');\n    }\n    VisualizationsFV.prototype.callVisualizations = function (propDataBaseJapanese) {\n        var _this = this;\n        this.movie.addEventListener('timeupdate', function () {\n            var toCheck = document.querySelector('.fn-hour').textContent;\n            if (_this.changeFlag !== toCheck) {\n                var getMeridiem_1 = _this.checkMeridiem.textContent;\n                var getHour_1 = _this.checkHour.textContent;\n                Array.from(_this.cityBTNPC).map(function (cityInfo) {\n                    var getID = cityInfo.getAttribute('id');\n                    propDataBaseJapanese.map(function (dataBaseInfo) {\n                        if (getMeridiem_1 === dataBaseInfo.meridiem &&\n                            getHour_1 === dataBaseInfo.time &&\n                            getID === dataBaseInfo.buttonPC) {\n                            _this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\\,/g, '')));\n                        }\n                    });\n                    // Sum All Population.\n                    var addTotalPop = _this.totalPopArry.reduce(function (prev, current) { return (prev += current); }, 0);\n                    var startTotalPop = addTotalPop - 40;\n                    var getTotalPop = addTotalPop;\n                    var duration = 1;\n                    _this.totalPopArry.length = 0;\n                    var getTags = document.getElementById(getID);\n                    var dummyChild = getTags.firstElementChild;\n                    var addPop = getTags.lastElementChild;\n                    if (dummyChild.textContent !== String(getTotalPop)) {\n                        dummyChild.textContent = String(getTotalPop);\n                        // Display Population on Tags.\n                        setInterval(function () {\n                            if (startTotalPop <= getTotalPop) {\n                                addPop.textContent = startTotalPop.toLocaleString();\n                                startTotalPop++;\n                            }\n                        }, duration);\n                        // Display Triangle Graph ( D3.js ).\n                        setTimeout(function () {\n                            var flagSP = _this.deviceFlag.classList.contains('sp');\n                            var flagPCTB = _this.deviceFlag.classList.contains('pctb');\n                            var addSizePoint = Number(flagSP ? \"62\" : flagPCTB ? \"107\" : \"162\");\n                            var addBasisRatio = Number(flagSP ? \"1\" : \"0.8\");\n                            var setBasisCity = document.getElementById('fn-tag-osaka')\n                                .firstElementChild;\n                            var getBasisPop = Number(setBasisCity.textContent);\n                            var getCityPopRatio = addSizePoint -\n                                addSizePoint *\n                                    ((Number(dummyChild.textContent) / getBasisPop) *\n                                        addBasisRatio);\n                            var getCityPopRatioNaha = addSizePoint -\n                                addSizePoint *\n                                    ((Number(dummyChild.textContent) / getBasisPop) * 2.5);\n                            d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"select\"](\"#\" + getID + \"-sync-polygon\")\n                                .transition()\n                                .duration(750)\n                                .attr('transform', \"translate(0, \" + getCityPopRatio + \")\");\n                            d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('#fn-tag-tokyo-sync-polygon')\n                                .transition()\n                                .duration(750)\n                                .attr('transform', 'translate(0, 0)');\n                            d3_selection__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('#fn-tag-naha-sync-polygon')\n                                .transition()\n                                .duration(750)\n                                .attr('transform', \"translate(0, \" + getCityPopRatioNaha + \")\");\n                        }, 10);\n                    }\n                });\n                _this.changeFlag = toCheck;\n            }\n        });\n    };\n    return VisualizationsFV;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (VisualizationsFV);\n\n\n//# sourceURL=webpack:///./base/modules/visualizations/VisualizationsFV.ts?"
+        )
+
+        /***/
       },
-      S: function(d, p) {
-        return d3_time_formatPad(d.getSeconds(), p, 2);
+
+    /***/ './node_modules/d3-color/src/color.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-color/src/color.js ***!
+  \********************************************/
+      /*! exports provided: Color, darker, brighter, default, rgbConvert, rgb, Rgb, hslConvert, hsl */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "darker", function() { return darker; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "brighter", function() { return brighter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return color; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rgbConvert", function() { return rgbConvert; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rgb", function() { return rgb; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Rgb", function() { return Rgb; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hslConvert", function() { return hslConvert; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hsl", function() { return hsl; });\n/* harmony import */ var _define__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./define */ "./node_modules/d3-color/src/define.js");\n\n\nfunction Color() {}\n\nvar darker = 0.7;\nvar brighter = 1 / darker;\n\nvar reI = "\\\\s*([+-]?\\\\d+)\\\\s*",\n    reN = "\\\\s*([+-]?\\\\d*\\\\.?\\\\d+(?:[eE][+-]?\\\\d+)?)\\\\s*",\n    reP = "\\\\s*([+-]?\\\\d*\\\\.?\\\\d+(?:[eE][+-]?\\\\d+)?)%\\\\s*",\n    reHex3 = /^#([0-9a-f]{3})$/,\n    reHex6 = /^#([0-9a-f]{6})$/,\n    reRgbInteger = new RegExp("^rgb\\\\(" + [reI, reI, reI] + "\\\\)$"),\n    reRgbPercent = new RegExp("^rgb\\\\(" + [reP, reP, reP] + "\\\\)$"),\n    reRgbaInteger = new RegExp("^rgba\\\\(" + [reI, reI, reI, reN] + "\\\\)$"),\n    reRgbaPercent = new RegExp("^rgba\\\\(" + [reP, reP, reP, reN] + "\\\\)$"),\n    reHslPercent = new RegExp("^hsl\\\\(" + [reN, reP, reP] + "\\\\)$"),\n    reHslaPercent = new RegExp("^hsla\\\\(" + [reN, reP, reP, reN] + "\\\\)$");\n\nvar named = {\n  aliceblue: 0xf0f8ff,\n  antiquewhite: 0xfaebd7,\n  aqua: 0x00ffff,\n  aquamarine: 0x7fffd4,\n  azure: 0xf0ffff,\n  beige: 0xf5f5dc,\n  bisque: 0xffe4c4,\n  black: 0x000000,\n  blanchedalmond: 0xffebcd,\n  blue: 0x0000ff,\n  blueviolet: 0x8a2be2,\n  brown: 0xa52a2a,\n  burlywood: 0xdeb887,\n  cadetblue: 0x5f9ea0,\n  chartreuse: 0x7fff00,\n  chocolate: 0xd2691e,\n  coral: 0xff7f50,\n  cornflowerblue: 0x6495ed,\n  cornsilk: 0xfff8dc,\n  crimson: 0xdc143c,\n  cyan: 0x00ffff,\n  darkblue: 0x00008b,\n  darkcyan: 0x008b8b,\n  darkgoldenrod: 0xb8860b,\n  darkgray: 0xa9a9a9,\n  darkgreen: 0x006400,\n  darkgrey: 0xa9a9a9,\n  darkkhaki: 0xbdb76b,\n  darkmagenta: 0x8b008b,\n  darkolivegreen: 0x556b2f,\n  darkorange: 0xff8c00,\n  darkorchid: 0x9932cc,\n  darkred: 0x8b0000,\n  darksalmon: 0xe9967a,\n  darkseagreen: 0x8fbc8f,\n  darkslateblue: 0x483d8b,\n  darkslategray: 0x2f4f4f,\n  darkslategrey: 0x2f4f4f,\n  darkturquoise: 0x00ced1,\n  darkviolet: 0x9400d3,\n  deeppink: 0xff1493,\n  deepskyblue: 0x00bfff,\n  dimgray: 0x696969,\n  dimgrey: 0x696969,\n  dodgerblue: 0x1e90ff,\n  firebrick: 0xb22222,\n  floralwhite: 0xfffaf0,\n  forestgreen: 0x228b22,\n  fuchsia: 0xff00ff,\n  gainsboro: 0xdcdcdc,\n  ghostwhite: 0xf8f8ff,\n  gold: 0xffd700,\n  goldenrod: 0xdaa520,\n  gray: 0x808080,\n  green: 0x008000,\n  greenyellow: 0xadff2f,\n  grey: 0x808080,\n  honeydew: 0xf0fff0,\n  hotpink: 0xff69b4,\n  indianred: 0xcd5c5c,\n  indigo: 0x4b0082,\n  ivory: 0xfffff0,\n  khaki: 0xf0e68c,\n  lavender: 0xe6e6fa,\n  lavenderblush: 0xfff0f5,\n  lawngreen: 0x7cfc00,\n  lemonchiffon: 0xfffacd,\n  lightblue: 0xadd8e6,\n  lightcoral: 0xf08080,\n  lightcyan: 0xe0ffff,\n  lightgoldenrodyellow: 0xfafad2,\n  lightgray: 0xd3d3d3,\n  lightgreen: 0x90ee90,\n  lightgrey: 0xd3d3d3,\n  lightpink: 0xffb6c1,\n  lightsalmon: 0xffa07a,\n  lightseagreen: 0x20b2aa,\n  lightskyblue: 0x87cefa,\n  lightslategray: 0x778899,\n  lightslategrey: 0x778899,\n  lightsteelblue: 0xb0c4de,\n  lightyellow: 0xffffe0,\n  lime: 0x00ff00,\n  limegreen: 0x32cd32,\n  linen: 0xfaf0e6,\n  magenta: 0xff00ff,\n  maroon: 0x800000,\n  mediumaquamarine: 0x66cdaa,\n  mediumblue: 0x0000cd,\n  mediumorchid: 0xba55d3,\n  mediumpurple: 0x9370db,\n  mediumseagreen: 0x3cb371,\n  mediumslateblue: 0x7b68ee,\n  mediumspringgreen: 0x00fa9a,\n  mediumturquoise: 0x48d1cc,\n  mediumvioletred: 0xc71585,\n  midnightblue: 0x191970,\n  mintcream: 0xf5fffa,\n  mistyrose: 0xffe4e1,\n  moccasin: 0xffe4b5,\n  navajowhite: 0xffdead,\n  navy: 0x000080,\n  oldlace: 0xfdf5e6,\n  olive: 0x808000,\n  olivedrab: 0x6b8e23,\n  orange: 0xffa500,\n  orangered: 0xff4500,\n  orchid: 0xda70d6,\n  palegoldenrod: 0xeee8aa,\n  palegreen: 0x98fb98,\n  paleturquoise: 0xafeeee,\n  palevioletred: 0xdb7093,\n  papayawhip: 0xffefd5,\n  peachpuff: 0xffdab9,\n  peru: 0xcd853f,\n  pink: 0xffc0cb,\n  plum: 0xdda0dd,\n  powderblue: 0xb0e0e6,\n  purple: 0x800080,\n  rebeccapurple: 0x663399,\n  red: 0xff0000,\n  rosybrown: 0xbc8f8f,\n  royalblue: 0x4169e1,\n  saddlebrown: 0x8b4513,\n  salmon: 0xfa8072,\n  sandybrown: 0xf4a460,\n  seagreen: 0x2e8b57,\n  seashell: 0xfff5ee,\n  sienna: 0xa0522d,\n  silver: 0xc0c0c0,\n  skyblue: 0x87ceeb,\n  slateblue: 0x6a5acd,\n  slategray: 0x708090,\n  slategrey: 0x708090,\n  snow: 0xfffafa,\n  springgreen: 0x00ff7f,\n  steelblue: 0x4682b4,\n  tan: 0xd2b48c,\n  teal: 0x008080,\n  thistle: 0xd8bfd8,\n  tomato: 0xff6347,\n  turquoise: 0x40e0d0,\n  violet: 0xee82ee,\n  wheat: 0xf5deb3,\n  white: 0xffffff,\n  whitesmoke: 0xf5f5f5,\n  yellow: 0xffff00,\n  yellowgreen: 0x9acd32\n};\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Color, color, {\n  displayable: function() {\n    return this.rgb().displayable();\n  },\n  hex: function() {\n    return this.rgb().hex();\n  },\n  toString: function() {\n    return this.rgb() + "";\n  }\n});\n\nfunction color(format) {\n  var m;\n  format = (format + "").trim().toLowerCase();\n  return (m = reHex3.exec(format)) ? (m = parseInt(m[1], 16), new Rgb((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00\n      : (m = reHex6.exec(format)) ? rgbn(parseInt(m[1], 16)) // #ff0000\n      : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)\n      : (m = reRgbPercent.exec(format)) ? new Rgb(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)\n      : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)\n      : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)\n      : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)\n      : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)\n      : named.hasOwnProperty(format) ? rgbn(named[format])\n      : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)\n      : null;\n}\n\nfunction rgbn(n) {\n  return new Rgb(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);\n}\n\nfunction rgba(r, g, b, a) {\n  if (a <= 0) r = g = b = NaN;\n  return new Rgb(r, g, b, a);\n}\n\nfunction rgbConvert(o) {\n  if (!(o instanceof Color)) o = color(o);\n  if (!o) return new Rgb;\n  o = o.rgb();\n  return new Rgb(o.r, o.g, o.b, o.opacity);\n}\n\nfunction rgb(r, g, b, opacity) {\n  return arguments.length === 1 ? rgbConvert(r) : new Rgb(r, g, b, opacity == null ? 1 : opacity);\n}\n\nfunction Rgb(r, g, b, opacity) {\n  this.r = +r;\n  this.g = +g;\n  this.b = +b;\n  this.opacity = +opacity;\n}\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Rgb, rgb, Object(_define__WEBPACK_IMPORTED_MODULE_0__["extend"])(Color, {\n  brighter: function(k) {\n    k = k == null ? brighter : Math.pow(brighter, k);\n    return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);\n  },\n  darker: function(k) {\n    k = k == null ? darker : Math.pow(darker, k);\n    return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);\n  },\n  rgb: function() {\n    return this;\n  },\n  displayable: function() {\n    return (0 <= this.r && this.r <= 255)\n        && (0 <= this.g && this.g <= 255)\n        && (0 <= this.b && this.b <= 255)\n        && (0 <= this.opacity && this.opacity <= 1);\n  },\n  hex: function() {\n    return "#" + hex(this.r) + hex(this.g) + hex(this.b);\n  },\n  toString: function() {\n    var a = this.opacity; a = isNaN(a) ? 1 : Math.max(0, Math.min(1, a));\n    return (a === 1 ? "rgb(" : "rgba(")\n        + Math.max(0, Math.min(255, Math.round(this.r) || 0)) + ", "\n        + Math.max(0, Math.min(255, Math.round(this.g) || 0)) + ", "\n        + Math.max(0, Math.min(255, Math.round(this.b) || 0))\n        + (a === 1 ? ")" : ", " + a + ")");\n  }\n}));\n\nfunction hex(value) {\n  value = Math.max(0, Math.min(255, Math.round(value) || 0));\n  return (value < 16 ? "0" : "") + value.toString(16);\n}\n\nfunction hsla(h, s, l, a) {\n  if (a <= 0) h = s = l = NaN;\n  else if (l <= 0 || l >= 1) h = s = NaN;\n  else if (s <= 0) h = NaN;\n  return new Hsl(h, s, l, a);\n}\n\nfunction hslConvert(o) {\n  if (o instanceof Hsl) return new Hsl(o.h, o.s, o.l, o.opacity);\n  if (!(o instanceof Color)) o = color(o);\n  if (!o) return new Hsl;\n  if (o instanceof Hsl) return o;\n  o = o.rgb();\n  var r = o.r / 255,\n      g = o.g / 255,\n      b = o.b / 255,\n      min = Math.min(r, g, b),\n      max = Math.max(r, g, b),\n      h = NaN,\n      s = max - min,\n      l = (max + min) / 2;\n  if (s) {\n    if (r === max) h = (g - b) / s + (g < b) * 6;\n    else if (g === max) h = (b - r) / s + 2;\n    else h = (r - g) / s + 4;\n    s /= l < 0.5 ? max + min : 2 - max - min;\n    h *= 60;\n  } else {\n    s = l > 0 && l < 1 ? 0 : h;\n  }\n  return new Hsl(h, s, l, o.opacity);\n}\n\nfunction hsl(h, s, l, opacity) {\n  return arguments.length === 1 ? hslConvert(h) : new Hsl(h, s, l, opacity == null ? 1 : opacity);\n}\n\nfunction Hsl(h, s, l, opacity) {\n  this.h = +h;\n  this.s = +s;\n  this.l = +l;\n  this.opacity = +opacity;\n}\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Hsl, hsl, Object(_define__WEBPACK_IMPORTED_MODULE_0__["extend"])(Color, {\n  brighter: function(k) {\n    k = k == null ? brighter : Math.pow(brighter, k);\n    return new Hsl(this.h, this.s, this.l * k, this.opacity);\n  },\n  darker: function(k) {\n    k = k == null ? darker : Math.pow(darker, k);\n    return new Hsl(this.h, this.s, this.l * k, this.opacity);\n  },\n  rgb: function() {\n    var h = this.h % 360 + (this.h < 0) * 360,\n        s = isNaN(h) || isNaN(this.s) ? 0 : this.s,\n        l = this.l,\n        m2 = l + (l < 0.5 ? l : 1 - l) * s,\n        m1 = 2 * l - m2;\n    return new Rgb(\n      hsl2rgb(h >= 240 ? h - 240 : h + 120, m1, m2),\n      hsl2rgb(h, m1, m2),\n      hsl2rgb(h < 120 ? h + 240 : h - 120, m1, m2),\n      this.opacity\n    );\n  },\n  displayable: function() {\n    return (0 <= this.s && this.s <= 1 || isNaN(this.s))\n        && (0 <= this.l && this.l <= 1)\n        && (0 <= this.opacity && this.opacity <= 1);\n  }\n}));\n\n/* From FvD 13.37, CSS Color Module Level 3 */\nfunction hsl2rgb(h, m1, m2) {\n  return (h < 60 ? m1 + (m2 - m1) * h / 60\n      : h < 180 ? m2\n      : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60\n      : m1) * 255;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/color.js?'
+        )
+
+        /***/
       },
-      U: function(d, p) {
-        return d3_time_formatPad(d3_time.sundayOfYear(d), p, 2);
+
+    /***/ './node_modules/d3-color/src/cubehelix.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-color/src/cubehelix.js ***!
+  \************************************************/
+      /*! exports provided: default, Cubehelix */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cubehelix; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cubehelix", function() { return Cubehelix; });\n/* harmony import */ var _define__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./define */ "./node_modules/d3-color/src/define.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-color/src/color.js");\n/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./math */ "./node_modules/d3-color/src/math.js");\n\n\n\n\nvar A = -0.14861,\n    B = +1.78277,\n    C = -0.29227,\n    D = -0.90649,\n    E = +1.97294,\n    ED = E * D,\n    EB = E * B,\n    BC_DA = B * C - D * A;\n\nfunction cubehelixConvert(o) {\n  if (o instanceof Cubehelix) return new Cubehelix(o.h, o.s, o.l, o.opacity);\n  if (!(o instanceof _color__WEBPACK_IMPORTED_MODULE_1__["Rgb"])) o = Object(_color__WEBPACK_IMPORTED_MODULE_1__["rgbConvert"])(o);\n  var r = o.r / 255,\n      g = o.g / 255,\n      b = o.b / 255,\n      l = (BC_DA * b + ED * r - EB * g) / (BC_DA + ED - EB),\n      bl = b - l,\n      k = (E * (g - l) - C * bl) / D,\n      s = Math.sqrt(k * k + bl * bl) / (E * l * (1 - l)), // NaN if l=0 or l=1\n      h = s ? Math.atan2(k, bl) * _math__WEBPACK_IMPORTED_MODULE_2__["rad2deg"] - 120 : NaN;\n  return new Cubehelix(h < 0 ? h + 360 : h, s, l, o.opacity);\n}\n\nfunction cubehelix(h, s, l, opacity) {\n  return arguments.length === 1 ? cubehelixConvert(h) : new Cubehelix(h, s, l, opacity == null ? 1 : opacity);\n}\n\nfunction Cubehelix(h, s, l, opacity) {\n  this.h = +h;\n  this.s = +s;\n  this.l = +l;\n  this.opacity = +opacity;\n}\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Cubehelix, cubehelix, Object(_define__WEBPACK_IMPORTED_MODULE_0__["extend"])(_color__WEBPACK_IMPORTED_MODULE_1__["Color"], {\n  brighter: function(k) {\n    k = k == null ? _color__WEBPACK_IMPORTED_MODULE_1__["brighter"] : Math.pow(_color__WEBPACK_IMPORTED_MODULE_1__["brighter"], k);\n    return new Cubehelix(this.h, this.s, this.l * k, this.opacity);\n  },\n  darker: function(k) {\n    k = k == null ? _color__WEBPACK_IMPORTED_MODULE_1__["darker"] : Math.pow(_color__WEBPACK_IMPORTED_MODULE_1__["darker"], k);\n    return new Cubehelix(this.h, this.s, this.l * k, this.opacity);\n  },\n  rgb: function() {\n    var h = isNaN(this.h) ? 0 : (this.h + 120) * _math__WEBPACK_IMPORTED_MODULE_2__["deg2rad"],\n        l = +this.l,\n        a = isNaN(this.s) ? 0 : this.s * l * (1 - l),\n        cosh = Math.cos(h),\n        sinh = Math.sin(h);\n    return new _color__WEBPACK_IMPORTED_MODULE_1__["Rgb"](\n      255 * (l + a * (A * cosh + B * sinh)),\n      255 * (l + a * (C * cosh + D * sinh)),\n      255 * (l + a * (E * cosh)),\n      this.opacity\n    );\n  }\n}));\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/cubehelix.js?'
+        )
+
+        /***/
       },
-      w: function(d) {
-        return d.getDay();
+
+    /***/ './node_modules/d3-color/src/define.js':
+      /*!*********************************************!*\
+  !*** ./node_modules/d3-color/src/define.js ***!
+  \*********************************************/
+      /*! exports provided: default, extend */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extend", function() { return extend; });\n/* harmony default export */ __webpack_exports__["default"] = (function(constructor, factory, prototype) {\n  constructor.prototype = factory.prototype = prototype;\n  prototype.constructor = constructor;\n});\n\nfunction extend(parent, definition) {\n  var prototype = Object.create(parent.prototype);\n  for (var key in definition) prototype[key] = definition[key];\n  return prototype;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/define.js?'
+        )
+
+        /***/
       },
-      W: function(d, p) {
-        return d3_time_formatPad(d3_time.mondayOfYear(d), p, 2);
+
+    /***/ './node_modules/d3-color/src/index.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-color/src/index.js ***!
+  \********************************************/
+      /*! exports provided: color, rgb, hsl, lab, hcl, lch, gray, cubehelix */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./color */ "./node_modules/d3-color/src/color.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "color", function() { return _color__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rgb", function() { return _color__WEBPACK_IMPORTED_MODULE_0__["rgb"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hsl", function() { return _color__WEBPACK_IMPORTED_MODULE_0__["hsl"]; });\n\n/* harmony import */ var _lab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lab */ "./node_modules/d3-color/src/lab.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lab", function() { return _lab__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hcl", function() { return _lab__WEBPACK_IMPORTED_MODULE_1__["hcl"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lch", function() { return _lab__WEBPACK_IMPORTED_MODULE_1__["lch"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gray", function() { return _lab__WEBPACK_IMPORTED_MODULE_1__["gray"]; });\n\n/* harmony import */ var _cubehelix__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cubehelix */ "./node_modules/d3-color/src/cubehelix.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cubehelix", function() { return _cubehelix__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/index.js?'
+        )
+
+        /***/
       },
-      x: d3_time_format(locale_date),
-      X: d3_time_format(locale_time),
-      y: function(d, p) {
-        return d3_time_formatPad(d.getFullYear() % 100, p, 2);
+
+    /***/ './node_modules/d3-color/src/lab.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-color/src/lab.js ***!
+  \******************************************/
+      /*! exports provided: gray, default, Lab, lch, hcl, Hcl */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gray", function() { return gray; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lab; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Lab", function() { return Lab; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lch", function() { return lch; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hcl", function() { return hcl; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hcl", function() { return Hcl; });\n/* harmony import */ var _define__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./define */ "./node_modules/d3-color/src/define.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-color/src/color.js");\n/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./math */ "./node_modules/d3-color/src/math.js");\n\n\n\n\n// https://beta.observablehq.com/@mbostock/lab-and-rgb\nvar K = 18,\n    Xn = 0.96422,\n    Yn = 1,\n    Zn = 0.82521,\n    t0 = 4 / 29,\n    t1 = 6 / 29,\n    t2 = 3 * t1 * t1,\n    t3 = t1 * t1 * t1;\n\nfunction labConvert(o) {\n  if (o instanceof Lab) return new Lab(o.l, o.a, o.b, o.opacity);\n  if (o instanceof Hcl) {\n    if (isNaN(o.h)) return new Lab(o.l, 0, 0, o.opacity);\n    var h = o.h * _math__WEBPACK_IMPORTED_MODULE_2__["deg2rad"];\n    return new Lab(o.l, Math.cos(h) * o.c, Math.sin(h) * o.c, o.opacity);\n  }\n  if (!(o instanceof _color__WEBPACK_IMPORTED_MODULE_1__["Rgb"])) o = Object(_color__WEBPACK_IMPORTED_MODULE_1__["rgbConvert"])(o);\n  var r = rgb2lrgb(o.r),\n      g = rgb2lrgb(o.g),\n      b = rgb2lrgb(o.b),\n      y = xyz2lab((0.2225045 * r + 0.7168786 * g + 0.0606169 * b) / Yn), x, z;\n  if (r === g && g === b) x = z = y; else {\n    x = xyz2lab((0.4360747 * r + 0.3850649 * g + 0.1430804 * b) / Xn);\n    z = xyz2lab((0.0139322 * r + 0.0971045 * g + 0.7141733 * b) / Zn);\n  }\n  return new Lab(116 * y - 16, 500 * (x - y), 200 * (y - z), o.opacity);\n}\n\nfunction gray(l, opacity) {\n  return new Lab(l, 0, 0, opacity == null ? 1 : opacity);\n}\n\nfunction lab(l, a, b, opacity) {\n  return arguments.length === 1 ? labConvert(l) : new Lab(l, a, b, opacity == null ? 1 : opacity);\n}\n\nfunction Lab(l, a, b, opacity) {\n  this.l = +l;\n  this.a = +a;\n  this.b = +b;\n  this.opacity = +opacity;\n}\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Lab, lab, Object(_define__WEBPACK_IMPORTED_MODULE_0__["extend"])(_color__WEBPACK_IMPORTED_MODULE_1__["Color"], {\n  brighter: function(k) {\n    return new Lab(this.l + K * (k == null ? 1 : k), this.a, this.b, this.opacity);\n  },\n  darker: function(k) {\n    return new Lab(this.l - K * (k == null ? 1 : k), this.a, this.b, this.opacity);\n  },\n  rgb: function() {\n    var y = (this.l + 16) / 116,\n        x = isNaN(this.a) ? y : y + this.a / 500,\n        z = isNaN(this.b) ? y : y - this.b / 200;\n    x = Xn * lab2xyz(x);\n    y = Yn * lab2xyz(y);\n    z = Zn * lab2xyz(z);\n    return new _color__WEBPACK_IMPORTED_MODULE_1__["Rgb"](\n      lrgb2rgb( 3.1338561 * x - 1.6168667 * y - 0.4906146 * z),\n      lrgb2rgb(-0.9787684 * x + 1.9161415 * y + 0.0334540 * z),\n      lrgb2rgb( 0.0719453 * x - 0.2289914 * y + 1.4052427 * z),\n      this.opacity\n    );\n  }\n}));\n\nfunction xyz2lab(t) {\n  return t > t3 ? Math.pow(t, 1 / 3) : t / t2 + t0;\n}\n\nfunction lab2xyz(t) {\n  return t > t1 ? t * t * t : t2 * (t - t0);\n}\n\nfunction lrgb2rgb(x) {\n  return 255 * (x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055);\n}\n\nfunction rgb2lrgb(x) {\n  return (x /= 255) <= 0.04045 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);\n}\n\nfunction hclConvert(o) {\n  if (o instanceof Hcl) return new Hcl(o.h, o.c, o.l, o.opacity);\n  if (!(o instanceof Lab)) o = labConvert(o);\n  if (o.a === 0 && o.b === 0) return new Hcl(NaN, 0, o.l, o.opacity);\n  var h = Math.atan2(o.b, o.a) * _math__WEBPACK_IMPORTED_MODULE_2__["rad2deg"];\n  return new Hcl(h < 0 ? h + 360 : h, Math.sqrt(o.a * o.a + o.b * o.b), o.l, o.opacity);\n}\n\nfunction lch(l, c, h, opacity) {\n  return arguments.length === 1 ? hclConvert(l) : new Hcl(h, c, l, opacity == null ? 1 : opacity);\n}\n\nfunction hcl(h, c, l, opacity) {\n  return arguments.length === 1 ? hclConvert(h) : new Hcl(h, c, l, opacity == null ? 1 : opacity);\n}\n\nfunction Hcl(h, c, l, opacity) {\n  this.h = +h;\n  this.c = +c;\n  this.l = +l;\n  this.opacity = +opacity;\n}\n\nObject(_define__WEBPACK_IMPORTED_MODULE_0__["default"])(Hcl, hcl, Object(_define__WEBPACK_IMPORTED_MODULE_0__["extend"])(_color__WEBPACK_IMPORTED_MODULE_1__["Color"], {\n  brighter: function(k) {\n    return new Hcl(this.h, this.c, this.l + K * (k == null ? 1 : k), this.opacity);\n  },\n  darker: function(k) {\n    return new Hcl(this.h, this.c, this.l - K * (k == null ? 1 : k), this.opacity);\n  },\n  rgb: function() {\n    return labConvert(this).rgb();\n  }\n}));\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/lab.js?'
+        )
+
+        /***/
       },
-      Y: function(d, p) {
-        return d3_time_formatPad(d.getFullYear() % 1e4, p, 4);
+
+    /***/ './node_modules/d3-color/src/math.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-color/src/math.js ***!
+  \*******************************************/
+      /*! exports provided: deg2rad, rad2deg */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deg2rad", function() { return deg2rad; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rad2deg", function() { return rad2deg; });\nvar deg2rad = Math.PI / 180;\nvar rad2deg = 180 / Math.PI;\n\n\n//# sourceURL=webpack:///./node_modules/d3-color/src/math.js?'
+        )
+
+        /***/
       },
-      Z: d3_time_zone,
-      "%": function() {
-        return "%";
-      }
-    };
-    var d3_time_parsers = {
-      a: d3_time_parseWeekdayAbbrev,
-      A: d3_time_parseWeekday,
-      b: d3_time_parseMonthAbbrev,
-      B: d3_time_parseMonth,
-      c: d3_time_parseLocaleFull,
-      d: d3_time_parseDay,
-      e: d3_time_parseDay,
-      H: d3_time_parseHour24,
-      I: d3_time_parseHour24,
-      j: d3_time_parseDayOfYear,
-      L: d3_time_parseMilliseconds,
-      m: d3_time_parseMonthNumber,
-      M: d3_time_parseMinutes,
-      p: d3_time_parseAmPm,
-      S: d3_time_parseSeconds,
-      U: d3_time_parseWeekNumberSunday,
-      w: d3_time_parseWeekdayNumber,
-      W: d3_time_parseWeekNumberMonday,
-      x: d3_time_parseLocaleDate,
-      X: d3_time_parseLocaleTime,
-      y: d3_time_parseYear,
-      Y: d3_time_parseFullYear,
-      Z: d3_time_parseZone,
-      "%": d3_time_parseLiteralPercent
-    };
-    function d3_time_parseWeekdayAbbrev(date, string, i) {
-      d3_time_dayAbbrevRe.lastIndex = 0;
-      var n = d3_time_dayAbbrevRe.exec(string.slice(i));
-      return n ? (date.w = d3_time_dayAbbrevLookup.get(n[0].toLowerCase()), i + n[0].length) : -1;
-    }
-    function d3_time_parseWeekday(date, string, i) {
-      d3_time_dayRe.lastIndex = 0;
-      var n = d3_time_dayRe.exec(string.slice(i));
-      return n ? (date.w = d3_time_dayLookup.get(n[0].toLowerCase()), i + n[0].length) : -1;
-    }
-    function d3_time_parseMonthAbbrev(date, string, i) {
-      d3_time_monthAbbrevRe.lastIndex = 0;
-      var n = d3_time_monthAbbrevRe.exec(string.slice(i));
-      return n ? (date.m = d3_time_monthAbbrevLookup.get(n[0].toLowerCase()), i + n[0].length) : -1;
-    }
-    function d3_time_parseMonth(date, string, i) {
-      d3_time_monthRe.lastIndex = 0;
-      var n = d3_time_monthRe.exec(string.slice(i));
-      return n ? (date.m = d3_time_monthLookup.get(n[0].toLowerCase()), i + n[0].length) : -1;
-    }
-    function d3_time_parseLocaleFull(date, string, i) {
-      return d3_time_parse(date, d3_time_formats.c.toString(), string, i);
-    }
-    function d3_time_parseLocaleDate(date, string, i) {
-      return d3_time_parse(date, d3_time_formats.x.toString(), string, i);
-    }
-    function d3_time_parseLocaleTime(date, string, i) {
-      return d3_time_parse(date, d3_time_formats.X.toString(), string, i);
-    }
-    function d3_time_parseAmPm(date, string, i) {
-      var n = d3_time_periodLookup.get(string.slice(i, i += 2).toLowerCase());
-      return n == null ? -1 : (date.p = n, i);
-    }
-    return d3_time_format;
-  }
-  var d3_time_formatPads = {
-    "-": "",
-    _: " ",
-    "0": "0"
-  }, d3_time_numberRe = /^\s*\d+/, d3_time_percentRe = /^%/;
-  function d3_time_formatPad(value, fill, width) {
-    var sign = value < 0 ? "-" : "", string = (sign ? -value : value) + "", length = string.length;
-    return sign + (length < width ? new Array(width - length + 1).join(fill) + string : string);
-  }
-  function d3_time_formatRe(names) {
-    return new RegExp("^(?:" + names.map(d3.requote).join("|") + ")", "i");
-  }
-  function d3_time_formatLookup(names) {
-    var map = new d3_Map(), i = -1, n = names.length;
-    while (++i < n) map.set(names[i].toLowerCase(), i);
-    return map;
-  }
-  function d3_time_parseWeekdayNumber(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 1));
-    return n ? (date.w = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseWeekNumberSunday(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i));
-    return n ? (date.U = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseWeekNumberMonday(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i));
-    return n ? (date.W = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseFullYear(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 4));
-    return n ? (date.y = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseYear(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.y = d3_time_expandYear(+n[0]), i + n[0].length) : -1;
-  }
-  function d3_time_parseZone(date, string, i) {
-    return /^[+-]\d{4}$/.test(string = string.slice(i, i + 5)) ? (date.Z = -string, 
-    i + 5) : -1;
-  }
-  function d3_time_expandYear(d) {
-    return d + (d > 68 ? 1900 : 2e3);
-  }
-  function d3_time_parseMonthNumber(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.m = n[0] - 1, i + n[0].length) : -1;
-  }
-  function d3_time_parseDay(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.d = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseDayOfYear(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 3));
-    return n ? (date.j = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseHour24(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.H = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseMinutes(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.M = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseSeconds(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 2));
-    return n ? (date.S = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_parseMilliseconds(date, string, i) {
-    d3_time_numberRe.lastIndex = 0;
-    var n = d3_time_numberRe.exec(string.slice(i, i + 3));
-    return n ? (date.L = +n[0], i + n[0].length) : -1;
-  }
-  function d3_time_zone(d) {
-    var z = d.getTimezoneOffset(), zs = z > 0 ? "-" : "+", zh = abs(z) / 60 | 0, zm = abs(z) % 60;
-    return zs + d3_time_formatPad(zh, "0", 2) + d3_time_formatPad(zm, "0", 2);
-  }
-  function d3_time_parseLiteralPercent(date, string, i) {
-    d3_time_percentRe.lastIndex = 0;
-    var n = d3_time_percentRe.exec(string.slice(i, i + 1));
-    return n ? i + n[0].length : -1;
-  }
-  function d3_time_formatMulti(formats) {
-    var n = formats.length, i = -1;
-    while (++i < n) formats[i][0] = this(formats[i][0]);
-    return function(date) {
-      var i = 0, f = formats[i];
-      while (!f[1](date)) f = formats[++i];
-      return f[0](date);
-    };
-  }
-  d3.locale = function(locale) {
-    return {
-      numberFormat: d3_locale_numberFormat(locale),
-      timeFormat: d3_locale_timeFormat(locale)
-    };
-  };
-  var d3_locale_enUS = d3.locale({
-    decimal: ".",
-    thousands: ",",
-    grouping: [ 3 ],
-    currency: [ "$", "" ],
-    dateTime: "%a %b %e %X %Y",
-    date: "%m/%d/%Y",
-    time: "%H:%M:%S",
-    periods: [ "AM", "PM" ],
-    days: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
-    shortDays: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
-    months: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
-    shortMonths: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-  });
-  d3.format = d3_locale_enUS.numberFormat;
-  d3.geo = {};
-  function d3_adder() {}
-  d3_adder.prototype = {
-    s: 0,
-    t: 0,
-    add: function(y) {
-      d3_adderSum(y, this.t, d3_adderTemp);
-      d3_adderSum(d3_adderTemp.s, this.s, this);
-      if (this.s) this.t += d3_adderTemp.t; else this.s = d3_adderTemp.t;
-    },
-    reset: function() {
-      this.s = this.t = 0;
-    },
-    valueOf: function() {
-      return this.s;
-    }
-  };
-  var d3_adderTemp = new d3_adder();
-  function d3_adderSum(a, b, o) {
-    var x = o.s = a + b, bv = x - a, av = x - bv;
-    o.t = a - av + (b - bv);
-  }
-  d3.geo.stream = function(object, listener) {
-    if (object && d3_geo_streamObjectType.hasOwnProperty(object.type)) {
-      d3_geo_streamObjectType[object.type](object, listener);
-    } else {
-      d3_geo_streamGeometry(object, listener);
-    }
-  };
-  function d3_geo_streamGeometry(geometry, listener) {
-    if (geometry && d3_geo_streamGeometryType.hasOwnProperty(geometry.type)) {
-      d3_geo_streamGeometryType[geometry.type](geometry, listener);
-    }
-  }
-  var d3_geo_streamObjectType = {
-    Feature: function(feature, listener) {
-      d3_geo_streamGeometry(feature.geometry, listener);
-    },
-    FeatureCollection: function(object, listener) {
-      var features = object.features, i = -1, n = features.length;
-      while (++i < n) d3_geo_streamGeometry(features[i].geometry, listener);
-    }
-  };
-  var d3_geo_streamGeometryType = {
-    Sphere: function(object, listener) {
-      listener.sphere();
-    },
-    Point: function(object, listener) {
-      object = object.coordinates;
-      listener.point(object[0], object[1], object[2]);
-    },
-    MultiPoint: function(object, listener) {
-      var coordinates = object.coordinates, i = -1, n = coordinates.length;
-      while (++i < n) object = coordinates[i], listener.point(object[0], object[1], object[2]);
-    },
-    LineString: function(object, listener) {
-      d3_geo_streamLine(object.coordinates, listener, 0);
-    },
-    MultiLineString: function(object, listener) {
-      var coordinates = object.coordinates, i = -1, n = coordinates.length;
-      while (++i < n) d3_geo_streamLine(coordinates[i], listener, 0);
-    },
-    Polygon: function(object, listener) {
-      d3_geo_streamPolygon(object.coordinates, listener);
-    },
-    MultiPolygon: function(object, listener) {
-      var coordinates = object.coordinates, i = -1, n = coordinates.length;
-      while (++i < n) d3_geo_streamPolygon(coordinates[i], listener);
-    },
-    GeometryCollection: function(object, listener) {
-      var geometries = object.geometries, i = -1, n = geometries.length;
-      while (++i < n) d3_geo_streamGeometry(geometries[i], listener);
-    }
-  };
-  function d3_geo_streamLine(coordinates, listener, closed) {
-    var i = -1, n = coordinates.length - closed, coordinate;
-    listener.lineStart();
-    while (++i < n) coordinate = coordinates[i], listener.point(coordinate[0], coordinate[1], coordinate[2]);
-    listener.lineEnd();
-  }
-  function d3_geo_streamPolygon(coordinates, listener) {
-    var i = -1, n = coordinates.length;
-    listener.polygonStart();
-    while (++i < n) d3_geo_streamLine(coordinates[i], listener, 1);
-    listener.polygonEnd();
-  }
-  d3.geo.area = function(object) {
-    d3_geo_areaSum = 0;
-    d3.geo.stream(object, d3_geo_area);
-    return d3_geo_areaSum;
-  };
-  var d3_geo_areaSum, d3_geo_areaRingSum = new d3_adder();
-  var d3_geo_area = {
-    sphere: function() {
-      d3_geo_areaSum += 4 * π;
-    },
-    point: d3_noop,
-    lineStart: d3_noop,
-    lineEnd: d3_noop,
-    polygonStart: function() {
-      d3_geo_areaRingSum.reset();
-      d3_geo_area.lineStart = d3_geo_areaRingStart;
-    },
-    polygonEnd: function() {
-      var area = 2 * d3_geo_areaRingSum;
-      d3_geo_areaSum += area < 0 ? 4 * π + area : area;
-      d3_geo_area.lineStart = d3_geo_area.lineEnd = d3_geo_area.point = d3_noop;
-    }
-  };
-  function d3_geo_areaRingStart() {
-    var λ00, φ00, λ0, cosφ0, sinφ0;
-    d3_geo_area.point = function(λ, φ) {
-      d3_geo_area.point = nextPoint;
-      λ0 = (λ00 = λ) * d3_radians, cosφ0 = Math.cos(φ = (φ00 = φ) * d3_radians / 2 + π / 4), 
-      sinφ0 = Math.sin(φ);
-    };
-    function nextPoint(λ, φ) {
-      λ *= d3_radians;
-      φ = φ * d3_radians / 2 + π / 4;
-      var dλ = λ - λ0, sdλ = dλ >= 0 ? 1 : -1, adλ = sdλ * dλ, cosφ = Math.cos(φ), sinφ = Math.sin(φ), k = sinφ0 * sinφ, u = cosφ0 * cosφ + k * Math.cos(adλ), v = k * sdλ * Math.sin(adλ);
-      d3_geo_areaRingSum.add(Math.atan2(v, u));
-      λ0 = λ, cosφ0 = cosφ, sinφ0 = sinφ;
-    }
-    d3_geo_area.lineEnd = function() {
-      nextPoint(λ00, φ00);
-    };
-  }
-  function d3_geo_cartesian(spherical) {
-    var λ = spherical[0], φ = spherical[1], cosφ = Math.cos(φ);
-    return [ cosφ * Math.cos(λ), cosφ * Math.sin(λ), Math.sin(φ) ];
-  }
-  function d3_geo_cartesianDot(a, b) {
-    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
-  }
-  function d3_geo_cartesianCross(a, b) {
-    return [ a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0] ];
-  }
-  function d3_geo_cartesianAdd(a, b) {
-    a[0] += b[0];
-    a[1] += b[1];
-    a[2] += b[2];
-  }
-  function d3_geo_cartesianScale(vector, k) {
-    return [ vector[0] * k, vector[1] * k, vector[2] * k ];
-  }
-  function d3_geo_cartesianNormalize(d) {
-    var l = Math.sqrt(d[0] * d[0] + d[1] * d[1] + d[2] * d[2]);
-    d[0] /= l;
-    d[1] /= l;
-    d[2] /= l;
-  }
-  function d3_geo_spherical(cartesian) {
-    return [ Math.atan2(cartesian[1], cartesian[0]), d3_asin(cartesian[2]) ];
-  }
-  function d3_geo_sphericalEqual(a, b) {
-    return abs(a[0] - b[0]) < ε && abs(a[1] - b[1]) < ε;
-  }
-  d3.geo.bounds = function() {
-    var λ0, φ0, λ1, φ1, λ_, λ__, φ__, p0, dλSum, ranges, range;
-    var bound = {
-      point: point,
-      lineStart: lineStart,
-      lineEnd: lineEnd,
-      polygonStart: function() {
-        bound.point = ringPoint;
-        bound.lineStart = ringStart;
-        bound.lineEnd = ringEnd;
-        dλSum = 0;
-        d3_geo_area.polygonStart();
+
+    /***/ './node_modules/d3-dispatch/src/dispatch.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-dispatch/src/dispatch.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nvar noop = {value: function() {}};\n\nfunction dispatch() {\n  for (var i = 0, n = arguments.length, _ = {}, t; i < n; ++i) {\n    if (!(t = arguments[i] + "") || (t in _)) throw new Error("illegal type: " + t);\n    _[t] = [];\n  }\n  return new Dispatch(_);\n}\n\nfunction Dispatch(_) {\n  this._ = _;\n}\n\nfunction parseTypenames(typenames, types) {\n  return typenames.trim().split(/^|\\s+/).map(function(t) {\n    var name = "", i = t.indexOf(".");\n    if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);\n    if (t && !types.hasOwnProperty(t)) throw new Error("unknown type: " + t);\n    return {type: t, name: name};\n  });\n}\n\nDispatch.prototype = dispatch.prototype = {\n  constructor: Dispatch,\n  on: function(typename, callback) {\n    var _ = this._,\n        T = parseTypenames(typename + "", _),\n        t,\n        i = -1,\n        n = T.length;\n\n    // If no callback was specified, return the callback of the given type and name.\n    if (arguments.length < 2) {\n      while (++i < n) if ((t = (typename = T[i]).type) && (t = get(_[t], typename.name))) return t;\n      return;\n    }\n\n    // If a type was specified, set the callback for the given type and name.\n    // Otherwise, if a null callback was specified, remove callbacks of the given name.\n    if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);\n    while (++i < n) {\n      if (t = (typename = T[i]).type) _[t] = set(_[t], typename.name, callback);\n      else if (callback == null) for (t in _) _[t] = set(_[t], typename.name, null);\n    }\n\n    return this;\n  },\n  copy: function() {\n    var copy = {}, _ = this._;\n    for (var t in _) copy[t] = _[t].slice();\n    return new Dispatch(copy);\n  },\n  call: function(type, that) {\n    if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t; i < n; ++i) args[i] = arguments[i + 2];\n    if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);\n    for (t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);\n  },\n  apply: function(type, that, args) {\n    if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);\n    for (var t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);\n  }\n};\n\nfunction get(type, name) {\n  for (var i = 0, n = type.length, c; i < n; ++i) {\n    if ((c = type[i]).name === name) {\n      return c.value;\n    }\n  }\n}\n\nfunction set(type, name, callback) {\n  for (var i = 0, n = type.length; i < n; ++i) {\n    if (type[i].name === name) {\n      type[i] = noop, type = type.slice(0, i).concat(type.slice(i + 1));\n      break;\n    }\n  }\n  if (callback != null) type.push({name: name, value: callback});\n  return type;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (dispatch);\n\n\n//# sourceURL=webpack:///./node_modules/d3-dispatch/src/dispatch.js?'
+        )
+
+        /***/
       },
-      polygonEnd: function() {
-        d3_geo_area.polygonEnd();
-        bound.point = point;
-        bound.lineStart = lineStart;
-        bound.lineEnd = lineEnd;
-        if (d3_geo_areaRingSum < 0) λ0 = -(λ1 = 180), φ0 = -(φ1 = 90); else if (dλSum > ε) φ1 = 90; else if (dλSum < -ε) φ0 = -90;
-        range[0] = λ0, range[1] = λ1;
-      }
-    };
-    function point(λ, φ) {
-      ranges.push(range = [ λ0 = λ, λ1 = λ ]);
-      if (φ < φ0) φ0 = φ;
-      if (φ > φ1) φ1 = φ;
-    }
-    function linePoint(λ, φ) {
-      var p = d3_geo_cartesian([ λ * d3_radians, φ * d3_radians ]);
-      if (p0) {
-        var normal = d3_geo_cartesianCross(p0, p), equatorial = [ normal[1], -normal[0], 0 ], inflection = d3_geo_cartesianCross(equatorial, normal);
-        d3_geo_cartesianNormalize(inflection);
-        inflection = d3_geo_spherical(inflection);
-        var dλ = λ - λ_, s = dλ > 0 ? 1 : -1, λi = inflection[0] * d3_degrees * s, antimeridian = abs(dλ) > 180;
-        if (antimeridian ^ (s * λ_ < λi && λi < s * λ)) {
-          var φi = inflection[1] * d3_degrees;
-          if (φi > φ1) φ1 = φi;
-        } else if (λi = (λi + 360) % 360 - 180, antimeridian ^ (s * λ_ < λi && λi < s * λ)) {
-          var φi = -inflection[1] * d3_degrees;
-          if (φi < φ0) φ0 = φi;
-        } else {
-          if (φ < φ0) φ0 = φ;
-          if (φ > φ1) φ1 = φ;
-        }
-        if (antimeridian) {
-          if (λ < λ_) {
-            if (angle(λ0, λ) > angle(λ0, λ1)) λ1 = λ;
-          } else {
-            if (angle(λ, λ1) > angle(λ0, λ1)) λ0 = λ;
-          }
-        } else {
-          if (λ1 >= λ0) {
-            if (λ < λ0) λ0 = λ;
-            if (λ > λ1) λ1 = λ;
-          } else {
-            if (λ > λ_) {
-              if (angle(λ0, λ) > angle(λ0, λ1)) λ1 = λ;
-            } else {
-              if (angle(λ, λ1) > angle(λ0, λ1)) λ0 = λ;
-            }
-          }
-        }
-      } else {
-        point(λ, φ);
-      }
-      p0 = p, λ_ = λ;
-    }
-    function lineStart() {
-      bound.point = linePoint;
-    }
-    function lineEnd() {
-      range[0] = λ0, range[1] = λ1;
-      bound.point = point;
-      p0 = null;
-    }
-    function ringPoint(λ, φ) {
-      if (p0) {
-        var dλ = λ - λ_;
-        dλSum += abs(dλ) > 180 ? dλ + (dλ > 0 ? 360 : -360) : dλ;
-      } else λ__ = λ, φ__ = φ;
-      d3_geo_area.point(λ, φ);
-      linePoint(λ, φ);
-    }
-    function ringStart() {
-      d3_geo_area.lineStart();
-    }
-    function ringEnd() {
-      ringPoint(λ__, φ__);
-      d3_geo_area.lineEnd();
-      if (abs(dλSum) > ε) λ0 = -(λ1 = 180);
-      range[0] = λ0, range[1] = λ1;
-      p0 = null;
-    }
-    function angle(λ0, λ1) {
-      return (λ1 -= λ0) < 0 ? λ1 + 360 : λ1;
-    }
-    function compareRanges(a, b) {
-      return a[0] - b[0];
-    }
-    function withinRange(x, range) {
-      return range[0] <= range[1] ? range[0] <= x && x <= range[1] : x < range[0] || range[1] < x;
-    }
-    return function(feature) {
-      φ1 = λ1 = -(λ0 = φ0 = Infinity);
-      ranges = [];
-      d3.geo.stream(feature, bound);
-      var n = ranges.length;
-      if (n) {
-        ranges.sort(compareRanges);
-        for (var i = 1, a = ranges[0], b, merged = [ a ]; i < n; ++i) {
-          b = ranges[i];
-          if (withinRange(b[0], a) || withinRange(b[1], a)) {
-            if (angle(a[0], b[1]) > angle(a[0], a[1])) a[1] = b[1];
-            if (angle(b[0], a[1]) > angle(a[0], a[1])) a[0] = b[0];
-          } else {
-            merged.push(a = b);
-          }
-        }
-        var best = -Infinity, dλ;
-        for (var n = merged.length - 1, i = 0, a = merged[n], b; i <= n; a = b, ++i) {
-          b = merged[i];
-          if ((dλ = angle(a[1], b[0])) > best) best = dλ, λ0 = b[0], λ1 = a[1];
-        }
-      }
-      ranges = range = null;
-      return λ0 === Infinity || φ0 === Infinity ? [ [ NaN, NaN ], [ NaN, NaN ] ] : [ [ λ0, φ0 ], [ λ1, φ1 ] ];
-    };
-  }();
-  d3.geo.centroid = function(object) {
-    d3_geo_centroidW0 = d3_geo_centroidW1 = d3_geo_centroidX0 = d3_geo_centroidY0 = d3_geo_centroidZ0 = d3_geo_centroidX1 = d3_geo_centroidY1 = d3_geo_centroidZ1 = d3_geo_centroidX2 = d3_geo_centroidY2 = d3_geo_centroidZ2 = 0;
-    d3.geo.stream(object, d3_geo_centroid);
-    var x = d3_geo_centroidX2, y = d3_geo_centroidY2, z = d3_geo_centroidZ2, m = x * x + y * y + z * z;
-    if (m < ε2) {
-      x = d3_geo_centroidX1, y = d3_geo_centroidY1, z = d3_geo_centroidZ1;
-      if (d3_geo_centroidW1 < ε) x = d3_geo_centroidX0, y = d3_geo_centroidY0, z = d3_geo_centroidZ0;
-      m = x * x + y * y + z * z;
-      if (m < ε2) return [ NaN, NaN ];
-    }
-    return [ Math.atan2(y, x) * d3_degrees, d3_asin(z / Math.sqrt(m)) * d3_degrees ];
-  };
-  var d3_geo_centroidW0, d3_geo_centroidW1, d3_geo_centroidX0, d3_geo_centroidY0, d3_geo_centroidZ0, d3_geo_centroidX1, d3_geo_centroidY1, d3_geo_centroidZ1, d3_geo_centroidX2, d3_geo_centroidY2, d3_geo_centroidZ2;
-  var d3_geo_centroid = {
-    sphere: d3_noop,
-    point: d3_geo_centroidPoint,
-    lineStart: d3_geo_centroidLineStart,
-    lineEnd: d3_geo_centroidLineEnd,
-    polygonStart: function() {
-      d3_geo_centroid.lineStart = d3_geo_centroidRingStart;
-    },
-    polygonEnd: function() {
-      d3_geo_centroid.lineStart = d3_geo_centroidLineStart;
-    }
-  };
-  function d3_geo_centroidPoint(λ, φ) {
-    λ *= d3_radians;
-    var cosφ = Math.cos(φ *= d3_radians);
-    d3_geo_centroidPointXYZ(cosφ * Math.cos(λ), cosφ * Math.sin(λ), Math.sin(φ));
-  }
-  function d3_geo_centroidPointXYZ(x, y, z) {
-    ++d3_geo_centroidW0;
-    d3_geo_centroidX0 += (x - d3_geo_centroidX0) / d3_geo_centroidW0;
-    d3_geo_centroidY0 += (y - d3_geo_centroidY0) / d3_geo_centroidW0;
-    d3_geo_centroidZ0 += (z - d3_geo_centroidZ0) / d3_geo_centroidW0;
-  }
-  function d3_geo_centroidLineStart() {
-    var x0, y0, z0;
-    d3_geo_centroid.point = function(λ, φ) {
-      λ *= d3_radians;
-      var cosφ = Math.cos(φ *= d3_radians);
-      x0 = cosφ * Math.cos(λ);
-      y0 = cosφ * Math.sin(λ);
-      z0 = Math.sin(φ);
-      d3_geo_centroid.point = nextPoint;
-      d3_geo_centroidPointXYZ(x0, y0, z0);
-    };
-    function nextPoint(λ, φ) {
-      λ *= d3_radians;
-      var cosφ = Math.cos(φ *= d3_radians), x = cosφ * Math.cos(λ), y = cosφ * Math.sin(λ), z = Math.sin(φ), w = Math.atan2(Math.sqrt((w = y0 * z - z0 * y) * w + (w = z0 * x - x0 * z) * w + (w = x0 * y - y0 * x) * w), x0 * x + y0 * y + z0 * z);
-      d3_geo_centroidW1 += w;
-      d3_geo_centroidX1 += w * (x0 + (x0 = x));
-      d3_geo_centroidY1 += w * (y0 + (y0 = y));
-      d3_geo_centroidZ1 += w * (z0 + (z0 = z));
-      d3_geo_centroidPointXYZ(x0, y0, z0);
-    }
-  }
-  function d3_geo_centroidLineEnd() {
-    d3_geo_centroid.point = d3_geo_centroidPoint;
-  }
-  function d3_geo_centroidRingStart() {
-    var λ00, φ00, x0, y0, z0;
-    d3_geo_centroid.point = function(λ, φ) {
-      λ00 = λ, φ00 = φ;
-      d3_geo_centroid.point = nextPoint;
-      λ *= d3_radians;
-      var cosφ = Math.cos(φ *= d3_radians);
-      x0 = cosφ * Math.cos(λ);
-      y0 = cosφ * Math.sin(λ);
-      z0 = Math.sin(φ);
-      d3_geo_centroidPointXYZ(x0, y0, z0);
-    };
-    d3_geo_centroid.lineEnd = function() {
-      nextPoint(λ00, φ00);
-      d3_geo_centroid.lineEnd = d3_geo_centroidLineEnd;
-      d3_geo_centroid.point = d3_geo_centroidPoint;
-    };
-    function nextPoint(λ, φ) {
-      λ *= d3_radians;
-      var cosφ = Math.cos(φ *= d3_radians), x = cosφ * Math.cos(λ), y = cosφ * Math.sin(λ), z = Math.sin(φ), cx = y0 * z - z0 * y, cy = z0 * x - x0 * z, cz = x0 * y - y0 * x, m = Math.sqrt(cx * cx + cy * cy + cz * cz), u = x0 * x + y0 * y + z0 * z, v = m && -d3_acos(u) / m, w = Math.atan2(m, u);
-      d3_geo_centroidX2 += v * cx;
-      d3_geo_centroidY2 += v * cy;
-      d3_geo_centroidZ2 += v * cz;
-      d3_geo_centroidW1 += w;
-      d3_geo_centroidX1 += w * (x0 + (x0 = x));
-      d3_geo_centroidY1 += w * (y0 + (y0 = y));
-      d3_geo_centroidZ1 += w * (z0 + (z0 = z));
-      d3_geo_centroidPointXYZ(x0, y0, z0);
-    }
-  }
-  function d3_geo_compose(a, b) {
-    function compose(x, y) {
-      return x = a(x, y), b(x[0], x[1]);
-    }
-    if (a.invert && b.invert) compose.invert = function(x, y) {
-      return x = b.invert(x, y), x && a.invert(x[0], x[1]);
-    };
-    return compose;
-  }
-  function d3_true() {
-    return true;
-  }
-  function d3_geo_clipPolygon(segments, compare, clipStartInside, interpolate, listener) {
-    var subject = [], clip = [];
-    segments.forEach(function(segment) {
-      if ((n = segment.length - 1) <= 0) return;
-      var n, p0 = segment[0], p1 = segment[n];
-      if (d3_geo_sphericalEqual(p0, p1)) {
-        listener.lineStart();
-        for (var i = 0; i < n; ++i) listener.point((p0 = segment[i])[0], p0[1]);
-        listener.lineEnd();
-        return;
-      }
-      var a = new d3_geo_clipPolygonIntersection(p0, segment, null, true), b = new d3_geo_clipPolygonIntersection(p0, null, a, false);
-      a.o = b;
-      subject.push(a);
-      clip.push(b);
-      a = new d3_geo_clipPolygonIntersection(p1, segment, null, false);
-      b = new d3_geo_clipPolygonIntersection(p1, null, a, true);
-      a.o = b;
-      subject.push(a);
-      clip.push(b);
-    });
-    clip.sort(compare);
-    d3_geo_clipPolygonLinkCircular(subject);
-    d3_geo_clipPolygonLinkCircular(clip);
-    if (!subject.length) return;
-    for (var i = 0, entry = clipStartInside, n = clip.length; i < n; ++i) {
-      clip[i].e = entry = !entry;
-    }
-    var start = subject[0], points, point;
-    while (1) {
-      var current = start, isSubject = true;
-      while (current.v) if ((current = current.n) === start) return;
-      points = current.z;
-      listener.lineStart();
-      do {
-        current.v = current.o.v = true;
-        if (current.e) {
-          if (isSubject) {
-            for (var i = 0, n = points.length; i < n; ++i) listener.point((point = points[i])[0], point[1]);
-          } else {
-            interpolate(current.x, current.n.x, 1, listener);
-          }
-          current = current.n;
-        } else {
-          if (isSubject) {
-            points = current.p.z;
-            for (var i = points.length - 1; i >= 0; --i) listener.point((point = points[i])[0], point[1]);
-          } else {
-            interpolate(current.x, current.p.x, -1, listener);
-          }
-          current = current.p;
-        }
-        current = current.o;
-        points = current.z;
-        isSubject = !isSubject;
-      } while (!current.v);
-      listener.lineEnd();
-    }
-  }
-  function d3_geo_clipPolygonLinkCircular(array) {
-    if (!(n = array.length)) return;
-    var n, i = 0, a = array[0], b;
-    while (++i < n) {
-      a.n = b = array[i];
-      b.p = a;
-      a = b;
-    }
-    a.n = b = array[0];
-    b.p = a;
-  }
-  function d3_geo_clipPolygonIntersection(point, points, other, entry) {
-    this.x = point;
-    this.z = points;
-    this.o = other;
-    this.e = entry;
-    this.v = false;
-    this.n = this.p = null;
-  }
-  function d3_geo_clip(pointVisible, clipLine, interpolate, clipStart) {
-    return function(rotate, listener) {
-      var line = clipLine(listener), rotatedClipStart = rotate.invert(clipStart[0], clipStart[1]);
-      var clip = {
-        point: point,
-        lineStart: lineStart,
-        lineEnd: lineEnd,
-        polygonStart: function() {
-          clip.point = pointRing;
-          clip.lineStart = ringStart;
-          clip.lineEnd = ringEnd;
-          segments = [];
-          polygon = [];
-        },
-        polygonEnd: function() {
-          clip.point = point;
-          clip.lineStart = lineStart;
-          clip.lineEnd = lineEnd;
-          segments = d3.merge(segments);
-          var clipStartInside = d3_geo_pointInPolygon(rotatedClipStart, polygon);
-          if (segments.length) {
-            if (!polygonStarted) listener.polygonStart(), polygonStarted = true;
-            d3_geo_clipPolygon(segments, d3_geo_clipSort, clipStartInside, interpolate, listener);
-          } else if (clipStartInside) {
-            if (!polygonStarted) listener.polygonStart(), polygonStarted = true;
-            listener.lineStart();
-            interpolate(null, null, 1, listener);
-            listener.lineEnd();
-          }
-          if (polygonStarted) listener.polygonEnd(), polygonStarted = false;
-          segments = polygon = null;
-        },
-        sphere: function() {
-          listener.polygonStart();
-          listener.lineStart();
-          interpolate(null, null, 1, listener);
-          listener.lineEnd();
-          listener.polygonEnd();
-        }
-      };
-      function point(λ, φ) {
-        var point = rotate(λ, φ);
-        if (pointVisible(λ = point[0], φ = point[1])) listener.point(λ, φ);
-      }
-      function pointLine(λ, φ) {
-        var point = rotate(λ, φ);
-        line.point(point[0], point[1]);
-      }
-      function lineStart() {
-        clip.point = pointLine;
-        line.lineStart();
-      }
-      function lineEnd() {
-        clip.point = point;
-        line.lineEnd();
-      }
-      var segments;
-      var buffer = d3_geo_clipBufferListener(), ringListener = clipLine(buffer), polygonStarted = false, polygon, ring;
-      function pointRing(λ, φ) {
-        ring.push([ λ, φ ]);
-        var point = rotate(λ, φ);
-        ringListener.point(point[0], point[1]);
-      }
-      function ringStart() {
-        ringListener.lineStart();
-        ring = [];
-      }
-      function ringEnd() {
-        pointRing(ring[0][0], ring[0][1]);
-        ringListener.lineEnd();
-        var clean = ringListener.clean(), ringSegments = buffer.buffer(), segment, n = ringSegments.length;
-        ring.pop();
-        polygon.push(ring);
-        ring = null;
-        if (!n) return;
-        if (clean & 1) {
-          segment = ringSegments[0];
-          var n = segment.length - 1, i = -1, point;
-          if (n > 0) {
-            if (!polygonStarted) listener.polygonStart(), polygonStarted = true;
-            listener.lineStart();
-            while (++i < n) listener.point((point = segment[i])[0], point[1]);
-            listener.lineEnd();
-          }
-          return;
-        }
-        if (n > 1 && clean & 2) ringSegments.push(ringSegments.pop().concat(ringSegments.shift()));
-        segments.push(ringSegments.filter(d3_geo_clipSegmentLength1));
-      }
-      return clip;
-    };
-  }
-  function d3_geo_clipSegmentLength1(segment) {
-    return segment.length > 1;
-  }
-  function d3_geo_clipBufferListener() {
-    var lines = [], line;
-    return {
-      lineStart: function() {
-        lines.push(line = []);
+
+    /***/ './node_modules/d3-dispatch/src/index.js':
+      /*!***********************************************!*\
+  !*** ./node_modules/d3-dispatch/src/index.js ***!
+  \***********************************************/
+      /*! exports provided: dispatch */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dispatch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dispatch */ "./node_modules/d3-dispatch/src/dispatch.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dispatch", function() { return _dispatch__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-dispatch/src/index.js?'
+        )
+
+        /***/
       },
-      point: function(λ, φ) {
-        line.push([ λ, φ ]);
+
+    /***/ './node_modules/d3-dsv/src/csv.js':
+      /*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/csv.js ***!
+  \****************************************/
+      /*! exports provided: csvParse, csvParseRows, csvFormat, csvFormatRows */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csvParse", function() { return csvParse; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csvParseRows", function() { return csvParseRows; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csvFormat", function() { return csvFormat; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csvFormatRows", function() { return csvFormatRows; });\n/* harmony import */ var _dsv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dsv */ "./node_modules/d3-dsv/src/dsv.js");\n\n\nvar csv = Object(_dsv__WEBPACK_IMPORTED_MODULE_0__["default"])(",");\n\nvar csvParse = csv.parse;\nvar csvParseRows = csv.parseRows;\nvar csvFormat = csv.format;\nvar csvFormatRows = csv.formatRows;\n\n\n//# sourceURL=webpack:///./node_modules/d3-dsv/src/csv.js?'
+        )
+
+        /***/
       },
-      lineEnd: d3_noop,
-      buffer: function() {
-        var buffer = lines;
-        lines = [];
-        line = null;
-        return buffer;
+
+    /***/ './node_modules/d3-dsv/src/dsv.js':
+      /*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/dsv.js ***!
+  \****************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nvar EOL = {},\n    EOF = {},\n    QUOTE = 34,\n    NEWLINE = 10,\n    RETURN = 13;\n\nfunction objectConverter(columns) {\n  return new Function("d", "return {" + columns.map(function(name, i) {\n    return JSON.stringify(name) + ": d[" + i + "]";\n  }).join(",") + "}");\n}\n\nfunction customConverter(columns, f) {\n  var object = objectConverter(columns);\n  return function(row, i) {\n    return f(object(row), i, columns);\n  };\n}\n\n// Compute unique columns in order of discovery.\nfunction inferColumns(rows) {\n  var columnSet = Object.create(null),\n      columns = [];\n\n  rows.forEach(function(row) {\n    for (var column in row) {\n      if (!(column in columnSet)) {\n        columns.push(columnSet[column] = column);\n      }\n    }\n  });\n\n  return columns;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(delimiter) {\n  var reFormat = new RegExp("[\\"" + delimiter + "\\n\\r]"),\n      DELIMITER = delimiter.charCodeAt(0);\n\n  function parse(text, f) {\n    var convert, columns, rows = parseRows(text, function(row, i) {\n      if (convert) return convert(row, i - 1);\n      columns = row, convert = f ? customConverter(row, f) : objectConverter(row);\n    });\n    rows.columns = columns || [];\n    return rows;\n  }\n\n  function parseRows(text, f) {\n    var rows = [], // output rows\n        N = text.length,\n        I = 0, // current character index\n        n = 0, // current line number\n        t, // current token\n        eof = N <= 0, // current token followed by EOF?\n        eol = false; // current token followed by EOL?\n\n    // Strip the trailing newline.\n    if (text.charCodeAt(N - 1) === NEWLINE) --N;\n    if (text.charCodeAt(N - 1) === RETURN) --N;\n\n    function token() {\n      if (eof) return EOF;\n      if (eol) return eol = false, EOL;\n\n      // Unescape quotes.\n      var i, j = I, c;\n      if (text.charCodeAt(j) === QUOTE) {\n        while (I++ < N && text.charCodeAt(I) !== QUOTE || text.charCodeAt(++I) === QUOTE);\n        if ((i = I) >= N) eof = true;\n        else if ((c = text.charCodeAt(I++)) === NEWLINE) eol = true;\n        else if (c === RETURN) { eol = true; if (text.charCodeAt(I) === NEWLINE) ++I; }\n        return text.slice(j + 1, i - 1).replace(/""/g, "\\"");\n      }\n\n      // Find next delimiter or newline.\n      while (I < N) {\n        if ((c = text.charCodeAt(i = I++)) === NEWLINE) eol = true;\n        else if (c === RETURN) { eol = true; if (text.charCodeAt(I) === NEWLINE) ++I; }\n        else if (c !== DELIMITER) continue;\n        return text.slice(j, i);\n      }\n\n      // Return last token before EOF.\n      return eof = true, text.slice(j, N);\n    }\n\n    while ((t = token()) !== EOF) {\n      var row = [];\n      while (t !== EOL && t !== EOF) row.push(t), t = token();\n      if (f && (row = f(row, n++)) == null) continue;\n      rows.push(row);\n    }\n\n    return rows;\n  }\n\n  function format(rows, columns) {\n    if (columns == null) columns = inferColumns(rows);\n    return [columns.map(formatValue).join(delimiter)].concat(rows.map(function(row) {\n      return columns.map(function(column) {\n        return formatValue(row[column]);\n      }).join(delimiter);\n    })).join("\\n");\n  }\n\n  function formatRows(rows) {\n    return rows.map(formatRow).join("\\n");\n  }\n\n  function formatRow(row) {\n    return row.map(formatValue).join(delimiter);\n  }\n\n  function formatValue(text) {\n    return text == null ? ""\n        : reFormat.test(text += "") ? "\\"" + text.replace(/"/g, "\\"\\"") + "\\""\n        : text;\n  }\n\n  return {\n    parse: parse,\n    parseRows: parseRows,\n    format: format,\n    formatRows: formatRows\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-dsv/src/dsv.js?'
+        )
+
+        /***/
       },
-      rejoin: function() {
-        if (lines.length > 1) lines.push(lines.pop().concat(lines.shift()));
-      }
-    };
-  }
-  function d3_geo_clipSort(a, b) {
-    return ((a = a.x)[0] < 0 ? a[1] - halfπ - ε : halfπ - a[1]) - ((b = b.x)[0] < 0 ? b[1] - halfπ - ε : halfπ - b[1]);
-  }
-  var d3_geo_clipAntimeridian = d3_geo_clip(d3_true, d3_geo_clipAntimeridianLine, d3_geo_clipAntimeridianInterpolate, [ -π, -π / 2 ]);
-  function d3_geo_clipAntimeridianLine(listener) {
-    var λ0 = NaN, φ0 = NaN, sλ0 = NaN, clean;
-    return {
-      lineStart: function() {
-        listener.lineStart();
-        clean = 1;
+
+    /***/ './node_modules/d3-dsv/src/index.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-dsv/src/index.js ***!
+  \******************************************/
+      /*! exports provided: dsvFormat, csvParse, csvParseRows, csvFormat, csvFormatRows, tsvParse, tsvParseRows, tsvFormat, tsvFormatRows */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dsv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dsv */ "./node_modules/d3-dsv/src/dsv.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dsvFormat", function() { return _dsv__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n/* harmony import */ var _csv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./csv */ "./node_modules/d3-dsv/src/csv.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csvParse", function() { return _csv__WEBPACK_IMPORTED_MODULE_1__["csvParse"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csvParseRows", function() { return _csv__WEBPACK_IMPORTED_MODULE_1__["csvParseRows"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csvFormat", function() { return _csv__WEBPACK_IMPORTED_MODULE_1__["csvFormat"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csvFormatRows", function() { return _csv__WEBPACK_IMPORTED_MODULE_1__["csvFormatRows"]; });\n\n/* harmony import */ var _tsv__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tsv */ "./node_modules/d3-dsv/src/tsv.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsvParse", function() { return _tsv__WEBPACK_IMPORTED_MODULE_2__["tsvParse"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsvParseRows", function() { return _tsv__WEBPACK_IMPORTED_MODULE_2__["tsvParseRows"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsvFormat", function() { return _tsv__WEBPACK_IMPORTED_MODULE_2__["tsvFormat"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsvFormatRows", function() { return _tsv__WEBPACK_IMPORTED_MODULE_2__["tsvFormatRows"]; });\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-dsv/src/index.js?'
+        )
+
+        /***/
       },
-      point: function(λ1, φ1) {
-        var sλ1 = λ1 > 0 ? π : -π, dλ = abs(λ1 - λ0);
-        if (abs(dλ - π) < ε) {
-          listener.point(λ0, φ0 = (φ0 + φ1) / 2 > 0 ? halfπ : -halfπ);
-          listener.point(sλ0, φ0);
-          listener.lineEnd();
-          listener.lineStart();
-          listener.point(sλ1, φ0);
-          listener.point(λ1, φ0);
-          clean = 0;
-        } else if (sλ0 !== sλ1 && dλ >= π) {
-          if (abs(λ0 - sλ0) < ε) λ0 -= sλ0 * ε;
-          if (abs(λ1 - sλ1) < ε) λ1 -= sλ1 * ε;
-          φ0 = d3_geo_clipAntimeridianIntersect(λ0, φ0, λ1, φ1);
-          listener.point(sλ0, φ0);
-          listener.lineEnd();
-          listener.lineStart();
-          listener.point(sλ1, φ0);
-          clean = 0;
-        }
-        listener.point(λ0 = λ1, φ0 = φ1);
-        sλ0 = sλ1;
+
+    /***/ './node_modules/d3-dsv/src/tsv.js':
+      /*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/tsv.js ***!
+  \****************************************/
+      /*! exports provided: tsvParse, tsvParseRows, tsvFormat, tsvFormatRows */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsvParse", function() { return tsvParse; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsvParseRows", function() { return tsvParseRows; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsvFormat", function() { return tsvFormat; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsvFormatRows", function() { return tsvFormatRows; });\n/* harmony import */ var _dsv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dsv */ "./node_modules/d3-dsv/src/dsv.js");\n\n\nvar tsv = Object(_dsv__WEBPACK_IMPORTED_MODULE_0__["default"])("\\t");\n\nvar tsvParse = tsv.parse;\nvar tsvParseRows = tsv.parseRows;\nvar tsvFormat = tsv.format;\nvar tsvFormatRows = tsv.formatRows;\n\n\n//# sourceURL=webpack:///./node_modules/d3-dsv/src/tsv.js?'
+        )
+
+        /***/
       },
-      lineEnd: function() {
-        listener.lineEnd();
-        λ0 = φ0 = NaN;
+
+    /***/ './node_modules/d3-ease/src/back.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-ease/src/back.js ***!
+  \******************************************/
+      /*! exports provided: backIn, backOut, backInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backIn", function() { return backIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backOut", function() { return backOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backInOut", function() { return backInOut; });\nvar overshoot = 1.70158;\n\nvar backIn = (function custom(s) {\n  s = +s;\n\n  function backIn(t) {\n    return t * t * ((s + 1) * t - s);\n  }\n\n  backIn.overshoot = custom;\n\n  return backIn;\n})(overshoot);\n\nvar backOut = (function custom(s) {\n  s = +s;\n\n  function backOut(t) {\n    return --t * t * ((s + 1) * t + s) + 1;\n  }\n\n  backOut.overshoot = custom;\n\n  return backOut;\n})(overshoot);\n\nvar backInOut = (function custom(s) {\n  s = +s;\n\n  function backInOut(t) {\n    return ((t *= 2) < 1 ? t * t * ((s + 1) * t - s) : (t -= 2) * t * ((s + 1) * t + s) + 2) / 2;\n  }\n\n  backInOut.overshoot = custom;\n\n  return backInOut;\n})(overshoot);\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/back.js?'
+        )
+
+        /***/
       },
-      clean: function() {
-        return 2 - clean;
-      }
-    };
-  }
-  function d3_geo_clipAntimeridianIntersect(λ0, φ0, λ1, φ1) {
-    var cosφ0, cosφ1, sinλ0_λ1 = Math.sin(λ0 - λ1);
-    return abs(sinλ0_λ1) > ε ? Math.atan((Math.sin(φ0) * (cosφ1 = Math.cos(φ1)) * Math.sin(λ1) - Math.sin(φ1) * (cosφ0 = Math.cos(φ0)) * Math.sin(λ0)) / (cosφ0 * cosφ1 * sinλ0_λ1)) : (φ0 + φ1) / 2;
-  }
-  function d3_geo_clipAntimeridianInterpolate(from, to, direction, listener) {
-    var φ;
-    if (from == null) {
-      φ = direction * halfπ;
-      listener.point(-π, φ);
-      listener.point(0, φ);
-      listener.point(π, φ);
-      listener.point(π, 0);
-      listener.point(π, -φ);
-      listener.point(0, -φ);
-      listener.point(-π, -φ);
-      listener.point(-π, 0);
-      listener.point(-π, φ);
-    } else if (abs(from[0] - to[0]) > ε) {
-      var s = from[0] < to[0] ? π : -π;
-      φ = direction * s / 2;
-      listener.point(-s, φ);
-      listener.point(0, φ);
-      listener.point(s, φ);
-    } else {
-      listener.point(to[0], to[1]);
-    }
-  }
-  function d3_geo_pointInPolygon(point, polygon) {
-    var meridian = point[0], parallel = point[1], meridianNormal = [ Math.sin(meridian), -Math.cos(meridian), 0 ], polarAngle = 0, winding = 0;
-    d3_geo_areaRingSum.reset();
-    for (var i = 0, n = polygon.length; i < n; ++i) {
-      var ring = polygon[i], m = ring.length;
-      if (!m) continue;
-      var point0 = ring[0], λ0 = point0[0], φ0 = point0[1] / 2 + π / 4, sinφ0 = Math.sin(φ0), cosφ0 = Math.cos(φ0), j = 1;
-      while (true) {
-        if (j === m) j = 0;
-        point = ring[j];
-        var λ = point[0], φ = point[1] / 2 + π / 4, sinφ = Math.sin(φ), cosφ = Math.cos(φ), dλ = λ - λ0, sdλ = dλ >= 0 ? 1 : -1, adλ = sdλ * dλ, antimeridian = adλ > π, k = sinφ0 * sinφ;
-        d3_geo_areaRingSum.add(Math.atan2(k * sdλ * Math.sin(adλ), cosφ0 * cosφ + k * Math.cos(adλ)));
-        polarAngle += antimeridian ? dλ + sdλ * τ : dλ;
-        if (antimeridian ^ λ0 >= meridian ^ λ >= meridian) {
-          var arc = d3_geo_cartesianCross(d3_geo_cartesian(point0), d3_geo_cartesian(point));
-          d3_geo_cartesianNormalize(arc);
-          var intersection = d3_geo_cartesianCross(meridianNormal, arc);
-          d3_geo_cartesianNormalize(intersection);
-          var φarc = (antimeridian ^ dλ >= 0 ? -1 : 1) * d3_asin(intersection[2]);
-          if (parallel > φarc || parallel === φarc && (arc[0] || arc[1])) {
-            winding += antimeridian ^ dλ >= 0 ? 1 : -1;
-          }
-        }
-        if (!j++) break;
-        λ0 = λ, sinφ0 = sinφ, cosφ0 = cosφ, point0 = point;
-      }
-    }
-    return (polarAngle < -ε || polarAngle < ε && d3_geo_areaRingSum < -ε) ^ winding & 1;
-  }
-  function d3_geo_clipCircle(radius) {
-    var cr = Math.cos(radius), smallRadius = cr > 0, notHemisphere = abs(cr) > ε, interpolate = d3_geo_circleInterpolate(radius, 6 * d3_radians);
-    return d3_geo_clip(visible, clipLine, interpolate, smallRadius ? [ 0, -radius ] : [ -π, radius - π ]);
-    function visible(λ, φ) {
-      return Math.cos(λ) * Math.cos(φ) > cr;
-    }
-    function clipLine(listener) {
-      var point0, c0, v0, v00, clean;
-      return {
-        lineStart: function() {
-          v00 = v0 = false;
-          clean = 1;
-        },
-        point: function(λ, φ) {
-          var point1 = [ λ, φ ], point2, v = visible(λ, φ), c = smallRadius ? v ? 0 : code(λ, φ) : v ? code(λ + (λ < 0 ? π : -π), φ) : 0;
-          if (!point0 && (v00 = v0 = v)) listener.lineStart();
-          if (v !== v0) {
-            point2 = intersect(point0, point1);
-            if (d3_geo_sphericalEqual(point0, point2) || d3_geo_sphericalEqual(point1, point2)) {
-              point1[0] += ε;
-              point1[1] += ε;
-              v = visible(point1[0], point1[1]);
-            }
-          }
-          if (v !== v0) {
-            clean = 0;
-            if (v) {
-              listener.lineStart();
-              point2 = intersect(point1, point0);
-              listener.point(point2[0], point2[1]);
-            } else {
-              point2 = intersect(point0, point1);
-              listener.point(point2[0], point2[1]);
-              listener.lineEnd();
-            }
-            point0 = point2;
-          } else if (notHemisphere && point0 && smallRadius ^ v) {
-            var t;
-            if (!(c & c0) && (t = intersect(point1, point0, true))) {
-              clean = 0;
-              if (smallRadius) {
-                listener.lineStart();
-                listener.point(t[0][0], t[0][1]);
-                listener.point(t[1][0], t[1][1]);
-                listener.lineEnd();
-              } else {
-                listener.point(t[1][0], t[1][1]);
-                listener.lineEnd();
-                listener.lineStart();
-                listener.point(t[0][0], t[0][1]);
-              }
-            }
-          }
-          if (v && (!point0 || !d3_geo_sphericalEqual(point0, point1))) {
-            listener.point(point1[0], point1[1]);
-          }
-          point0 = point1, v0 = v, c0 = c;
-        },
-        lineEnd: function() {
-          if (v0) listener.lineEnd();
-          point0 = null;
-        },
-        clean: function() {
-          return clean | (v00 && v0) << 1;
-        }
-      };
-    }
-    function intersect(a, b, two) {
-      var pa = d3_geo_cartesian(a), pb = d3_geo_cartesian(b);
-      var n1 = [ 1, 0, 0 ], n2 = d3_geo_cartesianCross(pa, pb), n2n2 = d3_geo_cartesianDot(n2, n2), n1n2 = n2[0], determinant = n2n2 - n1n2 * n1n2;
-      if (!determinant) return !two && a;
-      var c1 = cr * n2n2 / determinant, c2 = -cr * n1n2 / determinant, n1xn2 = d3_geo_cartesianCross(n1, n2), A = d3_geo_cartesianScale(n1, c1), B = d3_geo_cartesianScale(n2, c2);
-      d3_geo_cartesianAdd(A, B);
-      var u = n1xn2, w = d3_geo_cartesianDot(A, u), uu = d3_geo_cartesianDot(u, u), t2 = w * w - uu * (d3_geo_cartesianDot(A, A) - 1);
-      if (t2 < 0) return;
-      var t = Math.sqrt(t2), q = d3_geo_cartesianScale(u, (-w - t) / uu);
-      d3_geo_cartesianAdd(q, A);
-      q = d3_geo_spherical(q);
-      if (!two) return q;
-      var λ0 = a[0], λ1 = b[0], φ0 = a[1], φ1 = b[1], z;
-      if (λ1 < λ0) z = λ0, λ0 = λ1, λ1 = z;
-      var δλ = λ1 - λ0, polar = abs(δλ - π) < ε, meridian = polar || δλ < ε;
-      if (!polar && φ1 < φ0) z = φ0, φ0 = φ1, φ1 = z;
-      if (meridian ? polar ? φ0 + φ1 > 0 ^ q[1] < (abs(q[0] - λ0) < ε ? φ0 : φ1) : φ0 <= q[1] && q[1] <= φ1 : δλ > π ^ (λ0 <= q[0] && q[0] <= λ1)) {
-        var q1 = d3_geo_cartesianScale(u, (-w + t) / uu);
-        d3_geo_cartesianAdd(q1, A);
-        return [ q, d3_geo_spherical(q1) ];
-      }
-    }
-    function code(λ, φ) {
-      var r = smallRadius ? radius : π - radius, code = 0;
-      if (λ < -r) code |= 1; else if (λ > r) code |= 2;
-      if (φ < -r) code |= 4; else if (φ > r) code |= 8;
-      return code;
-    }
-  }
-  function d3_geom_clipLine(x0, y0, x1, y1) {
-    return function(line) {
-      var a = line.a, b = line.b, ax = a.x, ay = a.y, bx = b.x, by = b.y, t0 = 0, t1 = 1, dx = bx - ax, dy = by - ay, r;
-      r = x0 - ax;
-      if (!dx && r > 0) return;
-      r /= dx;
-      if (dx < 0) {
-        if (r < t0) return;
-        if (r < t1) t1 = r;
-      } else if (dx > 0) {
-        if (r > t1) return;
-        if (r > t0) t0 = r;
-      }
-      r = x1 - ax;
-      if (!dx && r < 0) return;
-      r /= dx;
-      if (dx < 0) {
-        if (r > t1) return;
-        if (r > t0) t0 = r;
-      } else if (dx > 0) {
-        if (r < t0) return;
-        if (r < t1) t1 = r;
-      }
-      r = y0 - ay;
-      if (!dy && r > 0) return;
-      r /= dy;
-      if (dy < 0) {
-        if (r < t0) return;
-        if (r < t1) t1 = r;
-      } else if (dy > 0) {
-        if (r > t1) return;
-        if (r > t0) t0 = r;
-      }
-      r = y1 - ay;
-      if (!dy && r < 0) return;
-      r /= dy;
-      if (dy < 0) {
-        if (r > t1) return;
-        if (r > t0) t0 = r;
-      } else if (dy > 0) {
-        if (r < t0) return;
-        if (r < t1) t1 = r;
-      }
-      if (t0 > 0) line.a = {
-        x: ax + t0 * dx,
-        y: ay + t0 * dy
-      };
-      if (t1 < 1) line.b = {
-        x: ax + t1 * dx,
-        y: ay + t1 * dy
-      };
-      return line;
-    };
-  }
-  var d3_geo_clipExtentMAX = 1e9;
-  d3.geo.clipExtent = function() {
-    var x0, y0, x1, y1, stream, clip, clipExtent = {
-      stream: function(output) {
-        if (stream) stream.valid = false;
-        stream = clip(output);
-        stream.valid = true;
-        return stream;
+
+    /***/ './node_modules/d3-ease/src/bounce.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-ease/src/bounce.js ***!
+  \********************************************/
+      /*! exports provided: bounceIn, bounceOut, bounceInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bounceIn", function() { return bounceIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bounceOut", function() { return bounceOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bounceInOut", function() { return bounceInOut; });\nvar b1 = 4 / 11,\n    b2 = 6 / 11,\n    b3 = 8 / 11,\n    b4 = 3 / 4,\n    b5 = 9 / 11,\n    b6 = 10 / 11,\n    b7 = 15 / 16,\n    b8 = 21 / 22,\n    b9 = 63 / 64,\n    b0 = 1 / b1 / b1;\n\nfunction bounceIn(t) {\n  return 1 - bounceOut(1 - t);\n}\n\nfunction bounceOut(t) {\n  return (t = +t) < b1 ? b0 * t * t : t < b3 ? b0 * (t -= b2) * t + b4 : t < b6 ? b0 * (t -= b5) * t + b7 : b0 * (t -= b8) * t + b9;\n}\n\nfunction bounceInOut(t) {\n  return ((t *= 2) <= 1 ? 1 - bounceOut(1 - t) : bounceOut(t - 1) + 1) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/bounce.js?'
+        )
+
+        /***/
       },
-      extent: function(_) {
-        if (!arguments.length) return [ [ x0, y0 ], [ x1, y1 ] ];
-        clip = d3_geo_clipExtent(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]);
-        if (stream) stream.valid = false, stream = null;
-        return clipExtent;
-      }
-    };
-    return clipExtent.extent([ [ 0, 0 ], [ 960, 500 ] ]);
-  };
-  function d3_geo_clipExtent(x0, y0, x1, y1) {
-    return function(listener) {
-      var listener_ = listener, bufferListener = d3_geo_clipBufferListener(), clipLine = d3_geom_clipLine(x0, y0, x1, y1), segments, polygon, ring;
-      var clip = {
-        point: point,
-        lineStart: lineStart,
-        lineEnd: lineEnd,
-        polygonStart: function() {
-          listener = bufferListener;
-          segments = [];
-          polygon = [];
-          clean = true;
-        },
-        polygonEnd: function() {
-          listener = listener_;
-          segments = d3.merge(segments);
-          var clipStartInside = insidePolygon([ x0, y1 ]), inside = clean && clipStartInside, visible = segments.length;
-          if (inside || visible) {
-            listener.polygonStart();
-            if (inside) {
-              listener.lineStart();
-              interpolate(null, null, 1, listener);
-              listener.lineEnd();
-            }
-            if (visible) {
-              d3_geo_clipPolygon(segments, compare, clipStartInside, interpolate, listener);
-            }
-            listener.polygonEnd();
-          }
-          segments = polygon = ring = null;
-        }
-      };
-      function insidePolygon(p) {
-        var wn = 0, n = polygon.length, y = p[1];
-        for (var i = 0; i < n; ++i) {
-          for (var j = 1, v = polygon[i], m = v.length, a = v[0], b; j < m; ++j) {
-            b = v[j];
-            if (a[1] <= y) {
-              if (b[1] > y && d3_cross2d(a, b, p) > 0) ++wn;
-            } else {
-              if (b[1] <= y && d3_cross2d(a, b, p) < 0) --wn;
-            }
-            a = b;
-          }
-        }
-        return wn !== 0;
-      }
-      function interpolate(from, to, direction, listener) {
-        var a = 0, a1 = 0;
-        if (from == null || (a = corner(from, direction)) !== (a1 = corner(to, direction)) || comparePoints(from, to) < 0 ^ direction > 0) {
-          do {
-            listener.point(a === 0 || a === 3 ? x0 : x1, a > 1 ? y1 : y0);
-          } while ((a = (a + direction + 4) % 4) !== a1);
-        } else {
-          listener.point(to[0], to[1]);
-        }
-      }
-      function pointVisible(x, y) {
-        return x0 <= x && x <= x1 && y0 <= y && y <= y1;
-      }
-      function point(x, y) {
-        if (pointVisible(x, y)) listener.point(x, y);
-      }
-      var x__, y__, v__, x_, y_, v_, first, clean;
-      function lineStart() {
-        clip.point = linePoint;
-        if (polygon) polygon.push(ring = []);
-        first = true;
-        v_ = false;
-        x_ = y_ = NaN;
-      }
-      function lineEnd() {
-        if (segments) {
-          linePoint(x__, y__);
-          if (v__ && v_) bufferListener.rejoin();
-          segments.push(bufferListener.buffer());
-        }
-        clip.point = point;
-        if (v_) listener.lineEnd();
-      }
-      function linePoint(x, y) {
-        x = Math.max(-d3_geo_clipExtentMAX, Math.min(d3_geo_clipExtentMAX, x));
-        y = Math.max(-d3_geo_clipExtentMAX, Math.min(d3_geo_clipExtentMAX, y));
-        var v = pointVisible(x, y);
-        if (polygon) ring.push([ x, y ]);
-        if (first) {
-          x__ = x, y__ = y, v__ = v;
-          first = false;
-          if (v) {
-            listener.lineStart();
-            listener.point(x, y);
-          }
-        } else {
-          if (v && v_) listener.point(x, y); else {
-            var l = {
-              a: {
-                x: x_,
-                y: y_
-              },
-              b: {
-                x: x,
-                y: y
-              }
-            };
-            if (clipLine(l)) {
-              if (!v_) {
-                listener.lineStart();
-                listener.point(l.a.x, l.a.y);
-              }
-              listener.point(l.b.x, l.b.y);
-              if (!v) listener.lineEnd();
-              clean = false;
-            } else if (v) {
-              listener.lineStart();
-              listener.point(x, y);
-              clean = false;
-            }
-          }
-        }
-        x_ = x, y_ = y, v_ = v;
-      }
-      return clip;
-    };
-    function corner(p, direction) {
-      return abs(p[0] - x0) < ε ? direction > 0 ? 0 : 3 : abs(p[0] - x1) < ε ? direction > 0 ? 2 : 1 : abs(p[1] - y0) < ε ? direction > 0 ? 1 : 0 : direction > 0 ? 3 : 2;
-    }
-    function compare(a, b) {
-      return comparePoints(a.x, b.x);
-    }
-    function comparePoints(a, b) {
-      var ca = corner(a, 1), cb = corner(b, 1);
-      return ca !== cb ? ca - cb : ca === 0 ? b[1] - a[1] : ca === 1 ? a[0] - b[0] : ca === 2 ? a[1] - b[1] : b[0] - a[0];
-    }
-  }
-  function d3_geo_conic(projectAt) {
-    var φ0 = 0, φ1 = π / 3, m = d3_geo_projectionMutator(projectAt), p = m(φ0, φ1);
-    p.parallels = function(_) {
-      if (!arguments.length) return [ φ0 / π * 180, φ1 / π * 180 ];
-      return m(φ0 = _[0] * π / 180, φ1 = _[1] * π / 180);
-    };
-    return p;
-  }
-  function d3_geo_conicEqualArea(φ0, φ1) {
-    var sinφ0 = Math.sin(φ0), n = (sinφ0 + Math.sin(φ1)) / 2, C = 1 + sinφ0 * (2 * n - sinφ0), ρ0 = Math.sqrt(C) / n;
-    function forward(λ, φ) {
-      var ρ = Math.sqrt(C - 2 * n * Math.sin(φ)) / n;
-      return [ ρ * Math.sin(λ *= n), ρ0 - ρ * Math.cos(λ) ];
-    }
-    forward.invert = function(x, y) {
-      var ρ0_y = ρ0 - y;
-      return [ Math.atan2(x, ρ0_y) / n, d3_asin((C - (x * x + ρ0_y * ρ0_y) * n * n) / (2 * n)) ];
-    };
-    return forward;
-  }
-  (d3.geo.conicEqualArea = function() {
-    return d3_geo_conic(d3_geo_conicEqualArea);
-  }).raw = d3_geo_conicEqualArea;
-  d3.geo.albers = function() {
-    return d3.geo.conicEqualArea().rotate([ 96, 0 ]).center([ -.6, 38.7 ]).parallels([ 29.5, 45.5 ]).scale(1070);
-  };
-  d3.geo.albersUsa = function() {
-    var lower48 = d3.geo.albers();
-    var alaska = d3.geo.conicEqualArea().rotate([ 154, 0 ]).center([ -2, 58.5 ]).parallels([ 55, 65 ]);
-    var hawaii = d3.geo.conicEqualArea().rotate([ 157, 0 ]).center([ -3, 19.9 ]).parallels([ 8, 18 ]);
-    var point, pointStream = {
-      point: function(x, y) {
-        point = [ x, y ];
-      }
-    }, lower48Point, alaskaPoint, hawaiiPoint;
-    function albersUsa(coordinates) {
-      var x = coordinates[0], y = coordinates[1];
-      point = null;
-      (lower48Point(x, y), point) || (alaskaPoint(x, y), point) || hawaiiPoint(x, y);
-      return point;
-    }
-    albersUsa.invert = function(coordinates) {
-      var k = lower48.scale(), t = lower48.translate(), x = (coordinates[0] - t[0]) / k, y = (coordinates[1] - t[1]) / k;
-      return (y >= .12 && y < .234 && x >= -.425 && x < -.214 ? alaska : y >= .166 && y < .234 && x >= -.214 && x < -.115 ? hawaii : lower48).invert(coordinates);
-    };
-    albersUsa.stream = function(stream) {
-      var lower48Stream = lower48.stream(stream), alaskaStream = alaska.stream(stream), hawaiiStream = hawaii.stream(stream);
-      return {
-        point: function(x, y) {
-          lower48Stream.point(x, y);
-          alaskaStream.point(x, y);
-          hawaiiStream.point(x, y);
-        },
-        sphere: function() {
-          lower48Stream.sphere();
-          alaskaStream.sphere();
-          hawaiiStream.sphere();
-        },
-        lineStart: function() {
-          lower48Stream.lineStart();
-          alaskaStream.lineStart();
-          hawaiiStream.lineStart();
-        },
-        lineEnd: function() {
-          lower48Stream.lineEnd();
-          alaskaStream.lineEnd();
-          hawaiiStream.lineEnd();
-        },
-        polygonStart: function() {
-          lower48Stream.polygonStart();
-          alaskaStream.polygonStart();
-          hawaiiStream.polygonStart();
-        },
-        polygonEnd: function() {
-          lower48Stream.polygonEnd();
-          alaskaStream.polygonEnd();
-          hawaiiStream.polygonEnd();
-        }
-      };
-    };
-    albersUsa.precision = function(_) {
-      if (!arguments.length) return lower48.precision();
-      lower48.precision(_);
-      alaska.precision(_);
-      hawaii.precision(_);
-      return albersUsa;
-    };
-    albersUsa.scale = function(_) {
-      if (!arguments.length) return lower48.scale();
-      lower48.scale(_);
-      alaska.scale(_ * .35);
-      hawaii.scale(_);
-      return albersUsa.translate(lower48.translate());
-    };
-    albersUsa.translate = function(_) {
-      if (!arguments.length) return lower48.translate();
-      var k = lower48.scale(), x = +_[0], y = +_[1];
-      lower48Point = lower48.translate(_).clipExtent([ [ x - .455 * k, y - .238 * k ], [ x + .455 * k, y + .238 * k ] ]).stream(pointStream).point;
-      alaskaPoint = alaska.translate([ x - .307 * k, y + .201 * k ]).clipExtent([ [ x - .425 * k + ε, y + .12 * k + ε ], [ x - .214 * k - ε, y + .234 * k - ε ] ]).stream(pointStream).point;
-      hawaiiPoint = hawaii.translate([ x - .205 * k, y + .212 * k ]).clipExtent([ [ x - .214 * k + ε, y + .166 * k + ε ], [ x - .115 * k - ε, y + .234 * k - ε ] ]).stream(pointStream).point;
-      return albersUsa;
-    };
-    return albersUsa.scale(1070);
-  };
-  var d3_geo_pathAreaSum, d3_geo_pathAreaPolygon, d3_geo_pathArea = {
-    point: d3_noop,
-    lineStart: d3_noop,
-    lineEnd: d3_noop,
-    polygonStart: function() {
-      d3_geo_pathAreaPolygon = 0;
-      d3_geo_pathArea.lineStart = d3_geo_pathAreaRingStart;
-    },
-    polygonEnd: function() {
-      d3_geo_pathArea.lineStart = d3_geo_pathArea.lineEnd = d3_geo_pathArea.point = d3_noop;
-      d3_geo_pathAreaSum += abs(d3_geo_pathAreaPolygon / 2);
-    }
-  };
-  function d3_geo_pathAreaRingStart() {
-    var x00, y00, x0, y0;
-    d3_geo_pathArea.point = function(x, y) {
-      d3_geo_pathArea.point = nextPoint;
-      x00 = x0 = x, y00 = y0 = y;
-    };
-    function nextPoint(x, y) {
-      d3_geo_pathAreaPolygon += y0 * x - x0 * y;
-      x0 = x, y0 = y;
-    }
-    d3_geo_pathArea.lineEnd = function() {
-      nextPoint(x00, y00);
-    };
-  }
-  var d3_geo_pathBoundsX0, d3_geo_pathBoundsY0, d3_geo_pathBoundsX1, d3_geo_pathBoundsY1;
-  var d3_geo_pathBounds = {
-    point: d3_geo_pathBoundsPoint,
-    lineStart: d3_noop,
-    lineEnd: d3_noop,
-    polygonStart: d3_noop,
-    polygonEnd: d3_noop
-  };
-  function d3_geo_pathBoundsPoint(x, y) {
-    if (x < d3_geo_pathBoundsX0) d3_geo_pathBoundsX0 = x;
-    if (x > d3_geo_pathBoundsX1) d3_geo_pathBoundsX1 = x;
-    if (y < d3_geo_pathBoundsY0) d3_geo_pathBoundsY0 = y;
-    if (y > d3_geo_pathBoundsY1) d3_geo_pathBoundsY1 = y;
-  }
-  function d3_geo_pathBuffer() {
-    var pointCircle = d3_geo_pathBufferCircle(4.5), buffer = [];
-    var stream = {
-      point: point,
-      lineStart: function() {
-        stream.point = pointLineStart;
+
+    /***/ './node_modules/d3-ease/src/circle.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-ease/src/circle.js ***!
+  \********************************************/
+      /*! exports provided: circleIn, circleOut, circleInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "circleIn", function() { return circleIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "circleOut", function() { return circleOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "circleInOut", function() { return circleInOut; });\nfunction circleIn(t) {\n  return 1 - Math.sqrt(1 - t * t);\n}\n\nfunction circleOut(t) {\n  return Math.sqrt(1 - --t * t);\n}\n\nfunction circleInOut(t) {\n  return ((t *= 2) <= 1 ? 1 - Math.sqrt(1 - t * t) : Math.sqrt(1 - (t -= 2) * t) + 1) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/circle.js?'
+        )
+
+        /***/
       },
-      lineEnd: lineEnd,
-      polygonStart: function() {
-        stream.lineEnd = lineEndPolygon;
+
+    /***/ './node_modules/d3-ease/src/cubic.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-ease/src/cubic.js ***!
+  \*******************************************/
+      /*! exports provided: cubicIn, cubicOut, cubicInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cubicIn", function() { return cubicIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cubicOut", function() { return cubicOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cubicInOut", function() { return cubicInOut; });\nfunction cubicIn(t) {\n  return t * t * t;\n}\n\nfunction cubicOut(t) {\n  return --t * t * t + 1;\n}\n\nfunction cubicInOut(t) {\n  return ((t *= 2) <= 1 ? t * t * t : (t -= 2) * t * t + 2) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/cubic.js?'
+        )
+
+        /***/
       },
-      polygonEnd: function() {
-        stream.lineEnd = lineEnd;
-        stream.point = point;
+
+    /***/ './node_modules/d3-ease/src/elastic.js':
+      /*!*********************************************!*\
+  !*** ./node_modules/d3-ease/src/elastic.js ***!
+  \*********************************************/
+      /*! exports provided: elasticIn, elasticOut, elasticInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elasticIn", function() { return elasticIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elasticOut", function() { return elasticOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elasticInOut", function() { return elasticInOut; });\nvar tau = 2 * Math.PI,\n    amplitude = 1,\n    period = 0.3;\n\nvar elasticIn = (function custom(a, p) {\n  var s = Math.asin(1 / (a = Math.max(1, a))) * (p /= tau);\n\n  function elasticIn(t) {\n    return a * Math.pow(2, 10 * --t) * Math.sin((s - t) / p);\n  }\n\n  elasticIn.amplitude = function(a) { return custom(a, p * tau); };\n  elasticIn.period = function(p) { return custom(a, p); };\n\n  return elasticIn;\n})(amplitude, period);\n\nvar elasticOut = (function custom(a, p) {\n  var s = Math.asin(1 / (a = Math.max(1, a))) * (p /= tau);\n\n  function elasticOut(t) {\n    return 1 - a * Math.pow(2, -10 * (t = +t)) * Math.sin((t + s) / p);\n  }\n\n  elasticOut.amplitude = function(a) { return custom(a, p * tau); };\n  elasticOut.period = function(p) { return custom(a, p); };\n\n  return elasticOut;\n})(amplitude, period);\n\nvar elasticInOut = (function custom(a, p) {\n  var s = Math.asin(1 / (a = Math.max(1, a))) * (p /= tau);\n\n  function elasticInOut(t) {\n    return ((t = t * 2 - 1) < 0\n        ? a * Math.pow(2, 10 * t) * Math.sin((s - t) / p)\n        : 2 - a * Math.pow(2, -10 * t) * Math.sin((s + t) / p)) / 2;\n  }\n\n  elasticInOut.amplitude = function(a) { return custom(a, p * tau); };\n  elasticInOut.period = function(p) { return custom(a, p); };\n\n  return elasticInOut;\n})(amplitude, period);\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/elastic.js?'
+        )
+
+        /***/
       },
-      pointRadius: function(_) {
-        pointCircle = d3_geo_pathBufferCircle(_);
-        return stream;
+
+    /***/ './node_modules/d3-ease/src/exp.js':
+      /*!*****************************************!*\
+  !*** ./node_modules/d3-ease/src/exp.js ***!
+  \*****************************************/
+      /*! exports provided: expIn, expOut, expInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "expIn", function() { return expIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "expOut", function() { return expOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "expInOut", function() { return expInOut; });\nfunction expIn(t) {\n  return Math.pow(2, 10 * t - 10);\n}\n\nfunction expOut(t) {\n  return 1 - Math.pow(2, -10 * t);\n}\n\nfunction expInOut(t) {\n  return ((t *= 2) <= 1 ? Math.pow(2, 10 * t - 10) : 2 - Math.pow(2, 10 - 10 * t)) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/exp.js?'
+        )
+
+        /***/
       },
-      result: function() {
-        if (buffer.length) {
-          var result = buffer.join("");
-          buffer = [];
-          return result;
-        }
-      }
-    };
-    function point(x, y) {
-      buffer.push("M", x, ",", y, pointCircle);
-    }
-    function pointLineStart(x, y) {
-      buffer.push("M", x, ",", y);
-      stream.point = pointLine;
-    }
-    function pointLine(x, y) {
-      buffer.push("L", x, ",", y);
-    }
-    function lineEnd() {
-      stream.point = point;
-    }
-    function lineEndPolygon() {
-      buffer.push("Z");
-    }
-    return stream;
-  }
-  function d3_geo_pathBufferCircle(radius) {
-    return "m0," + radius + "a" + radius + "," + radius + " 0 1,1 0," + -2 * radius + "a" + radius + "," + radius + " 0 1,1 0," + 2 * radius + "z";
-  }
-  var d3_geo_pathCentroid = {
-    point: d3_geo_pathCentroidPoint,
-    lineStart: d3_geo_pathCentroidLineStart,
-    lineEnd: d3_geo_pathCentroidLineEnd,
-    polygonStart: function() {
-      d3_geo_pathCentroid.lineStart = d3_geo_pathCentroidRingStart;
-    },
-    polygonEnd: function() {
-      d3_geo_pathCentroid.point = d3_geo_pathCentroidPoint;
-      d3_geo_pathCentroid.lineStart = d3_geo_pathCentroidLineStart;
-      d3_geo_pathCentroid.lineEnd = d3_geo_pathCentroidLineEnd;
-    }
-  };
-  function d3_geo_pathCentroidPoint(x, y) {
-    d3_geo_centroidX0 += x;
-    d3_geo_centroidY0 += y;
-    ++d3_geo_centroidZ0;
-  }
-  function d3_geo_pathCentroidLineStart() {
-    var x0, y0;
-    d3_geo_pathCentroid.point = function(x, y) {
-      d3_geo_pathCentroid.point = nextPoint;
-      d3_geo_pathCentroidPoint(x0 = x, y0 = y);
-    };
-    function nextPoint(x, y) {
-      var dx = x - x0, dy = y - y0, z = Math.sqrt(dx * dx + dy * dy);
-      d3_geo_centroidX1 += z * (x0 + x) / 2;
-      d3_geo_centroidY1 += z * (y0 + y) / 2;
-      d3_geo_centroidZ1 += z;
-      d3_geo_pathCentroidPoint(x0 = x, y0 = y);
-    }
-  }
-  function d3_geo_pathCentroidLineEnd() {
-    d3_geo_pathCentroid.point = d3_geo_pathCentroidPoint;
-  }
-  function d3_geo_pathCentroidRingStart() {
-    var x00, y00, x0, y0;
-    d3_geo_pathCentroid.point = function(x, y) {
-      d3_geo_pathCentroid.point = nextPoint;
-      d3_geo_pathCentroidPoint(x00 = x0 = x, y00 = y0 = y);
-    };
-    function nextPoint(x, y) {
-      var dx = x - x0, dy = y - y0, z = Math.sqrt(dx * dx + dy * dy);
-      d3_geo_centroidX1 += z * (x0 + x) / 2;
-      d3_geo_centroidY1 += z * (y0 + y) / 2;
-      d3_geo_centroidZ1 += z;
-      z = y0 * x - x0 * y;
-      d3_geo_centroidX2 += z * (x0 + x);
-      d3_geo_centroidY2 += z * (y0 + y);
-      d3_geo_centroidZ2 += z * 3;
-      d3_geo_pathCentroidPoint(x0 = x, y0 = y);
-    }
-    d3_geo_pathCentroid.lineEnd = function() {
-      nextPoint(x00, y00);
-    };
-  }
-  function d3_geo_pathContext(context) {
-    var pointRadius = 4.5;
-    var stream = {
-      point: point,
-      lineStart: function() {
-        stream.point = pointLineStart;
+
+    /***/ './node_modules/d3-ease/src/index.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-ease/src/index.js ***!
+  \*******************************************/
+      /*! exports provided: easeLinear, easeQuad, easeQuadIn, easeQuadOut, easeQuadInOut, easeCubic, easeCubicIn, easeCubicOut, easeCubicInOut, easePoly, easePolyIn, easePolyOut, easePolyInOut, easeSin, easeSinIn, easeSinOut, easeSinInOut, easeExp, easeExpIn, easeExpOut, easeExpInOut, easeCircle, easeCircleIn, easeCircleOut, easeCircleInOut, easeBounce, easeBounceIn, easeBounceOut, easeBounceInOut, easeBack, easeBackIn, easeBackOut, easeBackInOut, easeElastic, easeElasticIn, easeElasticOut, easeElasticInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _linear__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./linear */ "./node_modules/d3-ease/src/linear.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeLinear", function() { return _linear__WEBPACK_IMPORTED_MODULE_0__["linear"]; });\n\n/* harmony import */ var _quad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./quad */ "./node_modules/d3-ease/src/quad.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeQuad", function() { return _quad__WEBPACK_IMPORTED_MODULE_1__["quadInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeQuadIn", function() { return _quad__WEBPACK_IMPORTED_MODULE_1__["quadIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeQuadOut", function() { return _quad__WEBPACK_IMPORTED_MODULE_1__["quadOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeQuadInOut", function() { return _quad__WEBPACK_IMPORTED_MODULE_1__["quadInOut"]; });\n\n/* harmony import */ var _cubic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cubic */ "./node_modules/d3-ease/src/cubic.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCubic", function() { return _cubic__WEBPACK_IMPORTED_MODULE_2__["cubicInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCubicIn", function() { return _cubic__WEBPACK_IMPORTED_MODULE_2__["cubicIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCubicOut", function() { return _cubic__WEBPACK_IMPORTED_MODULE_2__["cubicOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCubicInOut", function() { return _cubic__WEBPACK_IMPORTED_MODULE_2__["cubicInOut"]; });\n\n/* harmony import */ var _poly__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./poly */ "./node_modules/d3-ease/src/poly.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easePoly", function() { return _poly__WEBPACK_IMPORTED_MODULE_3__["polyInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easePolyIn", function() { return _poly__WEBPACK_IMPORTED_MODULE_3__["polyIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easePolyOut", function() { return _poly__WEBPACK_IMPORTED_MODULE_3__["polyOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easePolyInOut", function() { return _poly__WEBPACK_IMPORTED_MODULE_3__["polyInOut"]; });\n\n/* harmony import */ var _sin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sin */ "./node_modules/d3-ease/src/sin.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeSin", function() { return _sin__WEBPACK_IMPORTED_MODULE_4__["sinInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeSinIn", function() { return _sin__WEBPACK_IMPORTED_MODULE_4__["sinIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeSinOut", function() { return _sin__WEBPACK_IMPORTED_MODULE_4__["sinOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeSinInOut", function() { return _sin__WEBPACK_IMPORTED_MODULE_4__["sinInOut"]; });\n\n/* harmony import */ var _exp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./exp */ "./node_modules/d3-ease/src/exp.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeExp", function() { return _exp__WEBPACK_IMPORTED_MODULE_5__["expInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeExpIn", function() { return _exp__WEBPACK_IMPORTED_MODULE_5__["expIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeExpOut", function() { return _exp__WEBPACK_IMPORTED_MODULE_5__["expOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeExpInOut", function() { return _exp__WEBPACK_IMPORTED_MODULE_5__["expInOut"]; });\n\n/* harmony import */ var _circle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./circle */ "./node_modules/d3-ease/src/circle.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCircle", function() { return _circle__WEBPACK_IMPORTED_MODULE_6__["circleInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCircleIn", function() { return _circle__WEBPACK_IMPORTED_MODULE_6__["circleIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCircleOut", function() { return _circle__WEBPACK_IMPORTED_MODULE_6__["circleOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeCircleInOut", function() { return _circle__WEBPACK_IMPORTED_MODULE_6__["circleInOut"]; });\n\n/* harmony import */ var _bounce__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./bounce */ "./node_modules/d3-ease/src/bounce.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBounce", function() { return _bounce__WEBPACK_IMPORTED_MODULE_7__["bounceOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBounceIn", function() { return _bounce__WEBPACK_IMPORTED_MODULE_7__["bounceIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBounceOut", function() { return _bounce__WEBPACK_IMPORTED_MODULE_7__["bounceOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBounceInOut", function() { return _bounce__WEBPACK_IMPORTED_MODULE_7__["bounceInOut"]; });\n\n/* harmony import */ var _back__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./back */ "./node_modules/d3-ease/src/back.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBack", function() { return _back__WEBPACK_IMPORTED_MODULE_8__["backInOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBackIn", function() { return _back__WEBPACK_IMPORTED_MODULE_8__["backIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBackOut", function() { return _back__WEBPACK_IMPORTED_MODULE_8__["backOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeBackInOut", function() { return _back__WEBPACK_IMPORTED_MODULE_8__["backInOut"]; });\n\n/* harmony import */ var _elastic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./elastic */ "./node_modules/d3-ease/src/elastic.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeElastic", function() { return _elastic__WEBPACK_IMPORTED_MODULE_9__["elasticOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeElasticIn", function() { return _elastic__WEBPACK_IMPORTED_MODULE_9__["elasticIn"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeElasticOut", function() { return _elastic__WEBPACK_IMPORTED_MODULE_9__["elasticOut"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easeElasticInOut", function() { return _elastic__WEBPACK_IMPORTED_MODULE_9__["elasticInOut"]; });\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/index.js?'
+        )
+
+        /***/
       },
-      lineEnd: lineEnd,
-      polygonStart: function() {
-        stream.lineEnd = lineEndPolygon;
+
+    /***/ './node_modules/d3-ease/src/linear.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-ease/src/linear.js ***!
+  \********************************************/
+      /*! exports provided: linear */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "linear", function() { return linear; });\nfunction linear(t) {\n  return +t;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/linear.js?'
+        )
+
+        /***/
       },
-      polygonEnd: function() {
-        stream.lineEnd = lineEnd;
-        stream.point = point;
+
+    /***/ './node_modules/d3-ease/src/poly.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-ease/src/poly.js ***!
+  \******************************************/
+      /*! exports provided: polyIn, polyOut, polyInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "polyIn", function() { return polyIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "polyOut", function() { return polyOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "polyInOut", function() { return polyInOut; });\nvar exponent = 3;\n\nvar polyIn = (function custom(e) {\n  e = +e;\n\n  function polyIn(t) {\n    return Math.pow(t, e);\n  }\n\n  polyIn.exponent = custom;\n\n  return polyIn;\n})(exponent);\n\nvar polyOut = (function custom(e) {\n  e = +e;\n\n  function polyOut(t) {\n    return 1 - Math.pow(1 - t, e);\n  }\n\n  polyOut.exponent = custom;\n\n  return polyOut;\n})(exponent);\n\nvar polyInOut = (function custom(e) {\n  e = +e;\n\n  function polyInOut(t) {\n    return ((t *= 2) <= 1 ? Math.pow(t, e) : 2 - Math.pow(2 - t, e)) / 2;\n  }\n\n  polyInOut.exponent = custom;\n\n  return polyInOut;\n})(exponent);\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/poly.js?'
+        )
+
+        /***/
       },
-      pointRadius: function(_) {
-        pointRadius = _;
-        return stream;
+
+    /***/ './node_modules/d3-ease/src/quad.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-ease/src/quad.js ***!
+  \******************************************/
+      /*! exports provided: quadIn, quadOut, quadInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quadIn", function() { return quadIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quadOut", function() { return quadOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quadInOut", function() { return quadInOut; });\nfunction quadIn(t) {\n  return t * t;\n}\n\nfunction quadOut(t) {\n  return t * (2 - t);\n}\n\nfunction quadInOut(t) {\n  return ((t *= 2) <= 1 ? t * t : --t * (2 - t) + 1) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/quad.js?'
+        )
+
+        /***/
       },
-      result: d3_noop
-    };
-    function point(x, y) {
-      context.moveTo(x + pointRadius, y);
-      context.arc(x, y, pointRadius, 0, τ);
-    }
-    function pointLineStart(x, y) {
-      context.moveTo(x, y);
-      stream.point = pointLine;
-    }
-    function pointLine(x, y) {
-      context.lineTo(x, y);
-    }
-    function lineEnd() {
-      stream.point = point;
-    }
-    function lineEndPolygon() {
-      context.closePath();
-    }
-    return stream;
-  }
-  function d3_geo_resample(project) {
-    var δ2 = .5, cosMinDistance = Math.cos(30 * d3_radians), maxDepth = 16;
-    function resample(stream) {
-      return (maxDepth ? resampleRecursive : resampleNone)(stream);
-    }
-    function resampleNone(stream) {
-      return d3_geo_transformPoint(stream, function(x, y) {
-        x = project(x, y);
-        stream.point(x[0], x[1]);
-      });
-    }
-    function resampleRecursive(stream) {
-      var λ00, φ00, x00, y00, a00, b00, c00, λ0, x0, y0, a0, b0, c0;
-      var resample = {
-        point: point,
-        lineStart: lineStart,
-        lineEnd: lineEnd,
-        polygonStart: function() {
-          stream.polygonStart();
-          resample.lineStart = ringStart;
-        },
-        polygonEnd: function() {
-          stream.polygonEnd();
-          resample.lineStart = lineStart;
-        }
-      };
-      function point(x, y) {
-        x = project(x, y);
-        stream.point(x[0], x[1]);
-      }
-      function lineStart() {
-        x0 = NaN;
-        resample.point = linePoint;
-        stream.lineStart();
-      }
-      function linePoint(λ, φ) {
-        var c = d3_geo_cartesian([ λ, φ ]), p = project(λ, φ);
-        resampleLineTo(x0, y0, λ0, a0, b0, c0, x0 = p[0], y0 = p[1], λ0 = λ, a0 = c[0], b0 = c[1], c0 = c[2], maxDepth, stream);
-        stream.point(x0, y0);
-      }
-      function lineEnd() {
-        resample.point = point;
-        stream.lineEnd();
-      }
-      function ringStart() {
-        lineStart();
-        resample.point = ringPoint;
-        resample.lineEnd = ringEnd;
-      }
-      function ringPoint(λ, φ) {
-        linePoint(λ00 = λ, φ00 = φ), x00 = x0, y00 = y0, a00 = a0, b00 = b0, c00 = c0;
-        resample.point = linePoint;
-      }
-      function ringEnd() {
-        resampleLineTo(x0, y0, λ0, a0, b0, c0, x00, y00, λ00, a00, b00, c00, maxDepth, stream);
-        resample.lineEnd = lineEnd;
-        lineEnd();
-      }
-      return resample;
-    }
-    function resampleLineTo(x0, y0, λ0, a0, b0, c0, x1, y1, λ1, a1, b1, c1, depth, stream) {
-      var dx = x1 - x0, dy = y1 - y0, d2 = dx * dx + dy * dy;
-      if (d2 > 4 * δ2 && depth--) {
-        var a = a0 + a1, b = b0 + b1, c = c0 + c1, m = Math.sqrt(a * a + b * b + c * c), φ2 = Math.asin(c /= m), λ2 = abs(abs(c) - 1) < ε || abs(λ0 - λ1) < ε ? (λ0 + λ1) / 2 : Math.atan2(b, a), p = project(λ2, φ2), x2 = p[0], y2 = p[1], dx2 = x2 - x0, dy2 = y2 - y0, dz = dy * dx2 - dx * dy2;
-        if (dz * dz / d2 > δ2 || abs((dx * dx2 + dy * dy2) / d2 - .5) > .3 || a0 * a1 + b0 * b1 + c0 * c1 < cosMinDistance) {
-          resampleLineTo(x0, y0, λ0, a0, b0, c0, x2, y2, λ2, a /= m, b /= m, c, depth, stream);
-          stream.point(x2, y2);
-          resampleLineTo(x2, y2, λ2, a, b, c, x1, y1, λ1, a1, b1, c1, depth, stream);
-        }
-      }
-    }
-    resample.precision = function(_) {
-      if (!arguments.length) return Math.sqrt(δ2);
-      maxDepth = (δ2 = _ * _) > 0 && 16;
-      return resample;
-    };
-    return resample;
-  }
-  d3.geo.path = function() {
-    var pointRadius = 4.5, projection, context, projectStream, contextStream, cacheStream;
-    function path(object) {
-      if (object) {
-        if (typeof pointRadius === "function") contextStream.pointRadius(+pointRadius.apply(this, arguments));
-        if (!cacheStream || !cacheStream.valid) cacheStream = projectStream(contextStream);
-        d3.geo.stream(object, cacheStream);
-      }
-      return contextStream.result();
-    }
-    path.area = function(object) {
-      d3_geo_pathAreaSum = 0;
-      d3.geo.stream(object, projectStream(d3_geo_pathArea));
-      return d3_geo_pathAreaSum;
-    };
-    path.centroid = function(object) {
-      d3_geo_centroidX0 = d3_geo_centroidY0 = d3_geo_centroidZ0 = d3_geo_centroidX1 = d3_geo_centroidY1 = d3_geo_centroidZ1 = d3_geo_centroidX2 = d3_geo_centroidY2 = d3_geo_centroidZ2 = 0;
-      d3.geo.stream(object, projectStream(d3_geo_pathCentroid));
-      return d3_geo_centroidZ2 ? [ d3_geo_centroidX2 / d3_geo_centroidZ2, d3_geo_centroidY2 / d3_geo_centroidZ2 ] : d3_geo_centroidZ1 ? [ d3_geo_centroidX1 / d3_geo_centroidZ1, d3_geo_centroidY1 / d3_geo_centroidZ1 ] : d3_geo_centroidZ0 ? [ d3_geo_centroidX0 / d3_geo_centroidZ0, d3_geo_centroidY0 / d3_geo_centroidZ0 ] : [ NaN, NaN ];
-    };
-    path.bounds = function(object) {
-      d3_geo_pathBoundsX1 = d3_geo_pathBoundsY1 = -(d3_geo_pathBoundsX0 = d3_geo_pathBoundsY0 = Infinity);
-      d3.geo.stream(object, projectStream(d3_geo_pathBounds));
-      return [ [ d3_geo_pathBoundsX0, d3_geo_pathBoundsY0 ], [ d3_geo_pathBoundsX1, d3_geo_pathBoundsY1 ] ];
-    };
-    path.projection = function(_) {
-      if (!arguments.length) return projection;
-      projectStream = (projection = _) ? _.stream || d3_geo_pathProjectStream(_) : d3_identity;
-      return reset();
-    };
-    path.context = function(_) {
-      if (!arguments.length) return context;
-      contextStream = (context = _) == null ? new d3_geo_pathBuffer() : new d3_geo_pathContext(_);
-      if (typeof pointRadius !== "function") contextStream.pointRadius(pointRadius);
-      return reset();
-    };
-    path.pointRadius = function(_) {
-      if (!arguments.length) return pointRadius;
-      pointRadius = typeof _ === "function" ? _ : (contextStream.pointRadius(+_), +_);
-      return path;
-    };
-    function reset() {
-      cacheStream = null;
-      return path;
-    }
-    return path.projection(d3.geo.albersUsa()).context(null);
-  };
-  function d3_geo_pathProjectStream(project) {
-    var resample = d3_geo_resample(function(x, y) {
-      return project([ x * d3_degrees, y * d3_degrees ]);
-    });
-    return function(stream) {
-      return d3_geo_projectionRadians(resample(stream));
-    };
-  }
-  d3.geo.transform = function(methods) {
-    return {
-      stream: function(stream) {
-        var transform = new d3_geo_transform(stream);
-        for (var k in methods) transform[k] = methods[k];
-        return transform;
-      }
-    };
-  };
-  function d3_geo_transform(stream) {
-    this.stream = stream;
-  }
-  d3_geo_transform.prototype = {
-    point: function(x, y) {
-      this.stream.point(x, y);
-    },
-    sphere: function() {
-      this.stream.sphere();
-    },
-    lineStart: function() {
-      this.stream.lineStart();
-    },
-    lineEnd: function() {
-      this.stream.lineEnd();
-    },
-    polygonStart: function() {
-      this.stream.polygonStart();
-    },
-    polygonEnd: function() {
-      this.stream.polygonEnd();
-    }
-  };
-  function d3_geo_transformPoint(stream, point) {
-    return {
-      point: point,
-      sphere: function() {
-        stream.sphere();
+
+    /***/ './node_modules/d3-ease/src/sin.js':
+      /*!*****************************************!*\
+  !*** ./node_modules/d3-ease/src/sin.js ***!
+  \*****************************************/
+      /*! exports provided: sinIn, sinOut, sinInOut */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sinIn", function() { return sinIn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sinOut", function() { return sinOut; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sinInOut", function() { return sinInOut; });\nvar pi = Math.PI,\n    halfPi = pi / 2;\n\nfunction sinIn(t) {\n  return 1 - Math.cos(t * halfPi);\n}\n\nfunction sinOut(t) {\n  return Math.sin(t * halfPi);\n}\n\nfunction sinInOut(t) {\n  return (1 - Math.cos(pi * t)) / 2;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-ease/src/sin.js?'
+        )
+
+        /***/
       },
-      lineStart: function() {
-        stream.lineStart();
+
+    /***/ './node_modules/d3-fetch/src/blob.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-fetch/src/blob.js ***!
+  \*******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction responseBlob(response) {\n  if (!response.ok) throw new Error(response.status + " " + response.statusText);\n  return response.blob();\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(input, init) {\n  return fetch(input, init).then(responseBlob);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/blob.js?'
+        )
+
+        /***/
       },
-      lineEnd: function() {
-        stream.lineEnd();
+
+    /***/ './node_modules/d3-fetch/src/buffer.js':
+      /*!*********************************************!*\
+  !*** ./node_modules/d3-fetch/src/buffer.js ***!
+  \*********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction responseArrayBuffer(response) {\n  if (!response.ok) throw new Error(response.status + " " + response.statusText);\n  return response.arrayBuffer();\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(input, init) {\n  return fetch(input, init).then(responseArrayBuffer);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/buffer.js?'
+        )
+
+        /***/
       },
-      polygonStart: function() {
-        stream.polygonStart();
+
+    /***/ './node_modules/d3-fetch/src/dsv.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-fetch/src/dsv.js ***!
+  \******************************************/
+      /*! exports provided: default, csv, tsv */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dsv; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csv", function() { return csv; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tsv", function() { return tsv; });\n/* harmony import */ var d3_dsv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-dsv */ "./node_modules/d3-dsv/src/index.js");\n/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text */ "./node_modules/d3-fetch/src/text.js");\n\n\n\nfunction dsvParse(parse) {\n  return function(input, init, row) {\n    if (arguments.length === 2 && typeof init === "function") row = init, init = undefined;\n    return Object(_text__WEBPACK_IMPORTED_MODULE_1__["default"])(input, init).then(function(response) {\n      return parse(response, row);\n    });\n  };\n}\n\nfunction dsv(delimiter, input, init, row) {\n  if (arguments.length === 3 && typeof init === "function") row = init, init = undefined;\n  var format = Object(d3_dsv__WEBPACK_IMPORTED_MODULE_0__["dsvFormat"])(delimiter);\n  return Object(_text__WEBPACK_IMPORTED_MODULE_1__["default"])(input, init).then(function(response) {\n    return format.parse(response, row);\n  });\n}\n\nvar csv = dsvParse(d3_dsv__WEBPACK_IMPORTED_MODULE_0__["csvParse"]);\nvar tsv = dsvParse(d3_dsv__WEBPACK_IMPORTED_MODULE_0__["tsvParse"]);\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/dsv.js?'
+        )
+
+        /***/
       },
-      polygonEnd: function() {
-        stream.polygonEnd();
-      }
-    };
-  }
-  d3.geo.projection = d3_geo_projection;
-  d3.geo.projectionMutator = d3_geo_projectionMutator;
-  function d3_geo_projection(project) {
-    return d3_geo_projectionMutator(function() {
-      return project;
-    })();
-  }
-  function d3_geo_projectionMutator(projectAt) {
-    var project, rotate, projectRotate, projectResample = d3_geo_resample(function(x, y) {
-      x = project(x, y);
-      return [ x[0] * k + δx, δy - x[1] * k ];
-    }), k = 150, x = 480, y = 250, λ = 0, φ = 0, δλ = 0, δφ = 0, δγ = 0, δx, δy, preclip = d3_geo_clipAntimeridian, postclip = d3_identity, clipAngle = null, clipExtent = null, stream;
-    function projection(point) {
-      point = projectRotate(point[0] * d3_radians, point[1] * d3_radians);
-      return [ point[0] * k + δx, δy - point[1] * k ];
-    }
-    function invert(point) {
-      point = projectRotate.invert((point[0] - δx) / k, (δy - point[1]) / k);
-      return point && [ point[0] * d3_degrees, point[1] * d3_degrees ];
-    }
-    projection.stream = function(output) {
-      if (stream) stream.valid = false;
-      stream = d3_geo_projectionRadians(preclip(rotate, projectResample(postclip(output))));
-      stream.valid = true;
-      return stream;
-    };
-    projection.clipAngle = function(_) {
-      if (!arguments.length) return clipAngle;
-      preclip = _ == null ? (clipAngle = _, d3_geo_clipAntimeridian) : d3_geo_clipCircle((clipAngle = +_) * d3_radians);
-      return invalidate();
-    };
-    projection.clipExtent = function(_) {
-      if (!arguments.length) return clipExtent;
-      clipExtent = _;
-      postclip = _ ? d3_geo_clipExtent(_[0][0], _[0][1], _[1][0], _[1][1]) : d3_identity;
-      return invalidate();
-    };
-    projection.scale = function(_) {
-      if (!arguments.length) return k;
-      k = +_;
-      return reset();
-    };
-    projection.translate = function(_) {
-      if (!arguments.length) return [ x, y ];
-      x = +_[0];
-      y = +_[1];
-      return reset();
-    };
-    projection.center = function(_) {
-      if (!arguments.length) return [ λ * d3_degrees, φ * d3_degrees ];
-      λ = _[0] % 360 * d3_radians;
-      φ = _[1] % 360 * d3_radians;
-      return reset();
-    };
-    projection.rotate = function(_) {
-      if (!arguments.length) return [ δλ * d3_degrees, δφ * d3_degrees, δγ * d3_degrees ];
-      δλ = _[0] % 360 * d3_radians;
-      δφ = _[1] % 360 * d3_radians;
-      δγ = _.length > 2 ? _[2] % 360 * d3_radians : 0;
-      return reset();
-    };
-    d3.rebind(projection, projectResample, "precision");
-    function reset() {
-      projectRotate = d3_geo_compose(rotate = d3_geo_rotation(δλ, δφ, δγ), project);
-      var center = project(λ, φ);
-      δx = x - center[0] * k;
-      δy = y + center[1] * k;
-      return invalidate();
-    }
-    function invalidate() {
-      if (stream) stream.valid = false, stream = null;
-      return projection;
-    }
-    return function() {
-      project = projectAt.apply(this, arguments);
-      projection.invert = project.invert && invert;
-      return reset();
-    };
-  }
-  function d3_geo_projectionRadians(stream) {
-    return d3_geo_transformPoint(stream, function(x, y) {
-      stream.point(x * d3_radians, y * d3_radians);
-    });
-  }
-  function d3_geo_equirectangular(λ, φ) {
-    return [ λ, φ ];
-  }
-  (d3.geo.equirectangular = function() {
-    return d3_geo_projection(d3_geo_equirectangular);
-  }).raw = d3_geo_equirectangular.invert = d3_geo_equirectangular;
-  d3.geo.rotation = function(rotate) {
-    rotate = d3_geo_rotation(rotate[0] % 360 * d3_radians, rotate[1] * d3_radians, rotate.length > 2 ? rotate[2] * d3_radians : 0);
-    function forward(coordinates) {
-      coordinates = rotate(coordinates[0] * d3_radians, coordinates[1] * d3_radians);
-      return coordinates[0] *= d3_degrees, coordinates[1] *= d3_degrees, coordinates;
-    }
-    forward.invert = function(coordinates) {
-      coordinates = rotate.invert(coordinates[0] * d3_radians, coordinates[1] * d3_radians);
-      return coordinates[0] *= d3_degrees, coordinates[1] *= d3_degrees, coordinates;
-    };
-    return forward;
-  };
-  function d3_geo_identityRotation(λ, φ) {
-    return [ λ > π ? λ - τ : λ < -π ? λ + τ : λ, φ ];
-  }
-  d3_geo_identityRotation.invert = d3_geo_equirectangular;
-  function d3_geo_rotation(δλ, δφ, δγ) {
-    return δλ ? δφ || δγ ? d3_geo_compose(d3_geo_rotationλ(δλ), d3_geo_rotationφγ(δφ, δγ)) : d3_geo_rotationλ(δλ) : δφ || δγ ? d3_geo_rotationφγ(δφ, δγ) : d3_geo_identityRotation;
-  }
-  function d3_geo_forwardRotationλ(δλ) {
-    return function(λ, φ) {
-      return λ += δλ, [ λ > π ? λ - τ : λ < -π ? λ + τ : λ, φ ];
-    };
-  }
-  function d3_geo_rotationλ(δλ) {
-    var rotation = d3_geo_forwardRotationλ(δλ);
-    rotation.invert = d3_geo_forwardRotationλ(-δλ);
-    return rotation;
-  }
-  function d3_geo_rotationφγ(δφ, δγ) {
-    var cosδφ = Math.cos(δφ), sinδφ = Math.sin(δφ), cosδγ = Math.cos(δγ), sinδγ = Math.sin(δγ);
-    function rotation(λ, φ) {
-      var cosφ = Math.cos(φ), x = Math.cos(λ) * cosφ, y = Math.sin(λ) * cosφ, z = Math.sin(φ), k = z * cosδφ + x * sinδφ;
-      return [ Math.atan2(y * cosδγ - k * sinδγ, x * cosδφ - z * sinδφ), d3_asin(k * cosδγ + y * sinδγ) ];
-    }
-    rotation.invert = function(λ, φ) {
-      var cosφ = Math.cos(φ), x = Math.cos(λ) * cosφ, y = Math.sin(λ) * cosφ, z = Math.sin(φ), k = z * cosδγ - y * sinδγ;
-      return [ Math.atan2(y * cosδγ + z * sinδγ, x * cosδφ + k * sinδφ), d3_asin(k * cosδφ - x * sinδφ) ];
-    };
-    return rotation;
-  }
-  d3.geo.circle = function() {
-    var origin = [ 0, 0 ], angle, precision = 6, interpolate;
-    function circle() {
-      var center = typeof origin === "function" ? origin.apply(this, arguments) : origin, rotate = d3_geo_rotation(-center[0] * d3_radians, -center[1] * d3_radians, 0).invert, ring = [];
-      interpolate(null, null, 1, {
-        point: function(x, y) {
-          ring.push(x = rotate(x, y));
-          x[0] *= d3_degrees, x[1] *= d3_degrees;
-        }
-      });
-      return {
-        type: "Polygon",
-        coordinates: [ ring ]
-      };
-    }
-    circle.origin = function(x) {
-      if (!arguments.length) return origin;
-      origin = x;
-      return circle;
-    };
-    circle.angle = function(x) {
-      if (!arguments.length) return angle;
-      interpolate = d3_geo_circleInterpolate((angle = +x) * d3_radians, precision * d3_radians);
-      return circle;
-    };
-    circle.precision = function(_) {
-      if (!arguments.length) return precision;
-      interpolate = d3_geo_circleInterpolate(angle * d3_radians, (precision = +_) * d3_radians);
-      return circle;
-    };
-    return circle.angle(90);
-  };
-  function d3_geo_circleInterpolate(radius, precision) {
-    var cr = Math.cos(radius), sr = Math.sin(radius);
-    return function(from, to, direction, listener) {
-      var step = direction * precision;
-      if (from != null) {
-        from = d3_geo_circleAngle(cr, from);
-        to = d3_geo_circleAngle(cr, to);
-        if (direction > 0 ? from < to : from > to) from += direction * τ;
-      } else {
-        from = radius + direction * τ;
-        to = radius - .5 * step;
-      }
-      for (var point, t = from; direction > 0 ? t > to : t < to; t -= step) {
-        listener.point((point = d3_geo_spherical([ cr, -sr * Math.cos(t), -sr * Math.sin(t) ]))[0], point[1]);
-      }
-    };
-  }
-  function d3_geo_circleAngle(cr, point) {
-    var a = d3_geo_cartesian(point);
-    a[0] -= cr;
-    d3_geo_cartesianNormalize(a);
-    var angle = d3_acos(-a[1]);
-    return ((-a[2] < 0 ? -angle : angle) + 2 * Math.PI - ε) % (2 * Math.PI);
-  }
-  d3.geo.distance = function(a, b) {
-    var Δλ = (b[0] - a[0]) * d3_radians, φ0 = a[1] * d3_radians, φ1 = b[1] * d3_radians, sinΔλ = Math.sin(Δλ), cosΔλ = Math.cos(Δλ), sinφ0 = Math.sin(φ0), cosφ0 = Math.cos(φ0), sinφ1 = Math.sin(φ1), cosφ1 = Math.cos(φ1), t;
-    return Math.atan2(Math.sqrt((t = cosφ1 * sinΔλ) * t + (t = cosφ0 * sinφ1 - sinφ0 * cosφ1 * cosΔλ) * t), sinφ0 * sinφ1 + cosφ0 * cosφ1 * cosΔλ);
-  };
-  d3.geo.graticule = function() {
-    var x1, x0, X1, X0, y1, y0, Y1, Y0, dx = 10, dy = dx, DX = 90, DY = 360, x, y, X, Y, precision = 2.5;
-    function graticule() {
-      return {
-        type: "MultiLineString",
-        coordinates: lines()
-      };
-    }
-    function lines() {
-      return d3.range(Math.ceil(X0 / DX) * DX, X1, DX).map(X).concat(d3.range(Math.ceil(Y0 / DY) * DY, Y1, DY).map(Y)).concat(d3.range(Math.ceil(x0 / dx) * dx, x1, dx).filter(function(x) {
-        return abs(x % DX) > ε;
-      }).map(x)).concat(d3.range(Math.ceil(y0 / dy) * dy, y1, dy).filter(function(y) {
-        return abs(y % DY) > ε;
-      }).map(y));
-    }
-    graticule.lines = function() {
-      return lines().map(function(coordinates) {
-        return {
-          type: "LineString",
-          coordinates: coordinates
-        };
-      });
-    };
-    graticule.outline = function() {
-      return {
-        type: "Polygon",
-        coordinates: [ X(X0).concat(Y(Y1).slice(1), X(X1).reverse().slice(1), Y(Y0).reverse().slice(1)) ]
-      };
-    };
-    graticule.extent = function(_) {
-      if (!arguments.length) return graticule.minorExtent();
-      return graticule.majorExtent(_).minorExtent(_);
-    };
-    graticule.majorExtent = function(_) {
-      if (!arguments.length) return [ [ X0, Y0 ], [ X1, Y1 ] ];
-      X0 = +_[0][0], X1 = +_[1][0];
-      Y0 = +_[0][1], Y1 = +_[1][1];
-      if (X0 > X1) _ = X0, X0 = X1, X1 = _;
-      if (Y0 > Y1) _ = Y0, Y0 = Y1, Y1 = _;
-      return graticule.precision(precision);
-    };
-    graticule.minorExtent = function(_) {
-      if (!arguments.length) return [ [ x0, y0 ], [ x1, y1 ] ];
-      x0 = +_[0][0], x1 = +_[1][0];
-      y0 = +_[0][1], y1 = +_[1][1];
-      if (x0 > x1) _ = x0, x0 = x1, x1 = _;
-      if (y0 > y1) _ = y0, y0 = y1, y1 = _;
-      return graticule.precision(precision);
-    };
-    graticule.step = function(_) {
-      if (!arguments.length) return graticule.minorStep();
-      return graticule.majorStep(_).minorStep(_);
-    };
-    graticule.majorStep = function(_) {
-      if (!arguments.length) return [ DX, DY ];
-      DX = +_[0], DY = +_[1];
-      return graticule;
-    };
-    graticule.minorStep = function(_) {
-      if (!arguments.length) return [ dx, dy ];
-      dx = +_[0], dy = +_[1];
-      return graticule;
-    };
-    graticule.precision = function(_) {
-      if (!arguments.length) return precision;
-      precision = +_;
-      x = d3_geo_graticuleX(y0, y1, 90);
-      y = d3_geo_graticuleY(x0, x1, precision);
-      X = d3_geo_graticuleX(Y0, Y1, 90);
-      Y = d3_geo_graticuleY(X0, X1, precision);
-      return graticule;
-    };
-    return graticule.majorExtent([ [ -180, -90 + ε ], [ 180, 90 - ε ] ]).minorExtent([ [ -180, -80 - ε ], [ 180, 80 + ε ] ]);
-  };
-  function d3_geo_graticuleX(y0, y1, dy) {
-    var y = d3.range(y0, y1 - ε, dy).concat(y1);
-    return function(x) {
-      return y.map(function(y) {
-        return [ x, y ];
-      });
-    };
-  }
-  function d3_geo_graticuleY(x0, x1, dx) {
-    var x = d3.range(x0, x1 - ε, dx).concat(x1);
-    return function(y) {
-      return x.map(function(x) {
-        return [ x, y ];
-      });
-    };
-  }
-  function d3_source(d) {
-    return d.source;
-  }
-  function d3_target(d) {
-    return d.target;
-  }
-  d3.geo.greatArc = function() {
-    var source = d3_source, source_, target = d3_target, target_;
-    function greatArc() {
-      return {
-        type: "LineString",
-        coordinates: [ source_ || source.apply(this, arguments), target_ || target.apply(this, arguments) ]
-      };
-    }
-    greatArc.distance = function() {
-      return d3.geo.distance(source_ || source.apply(this, arguments), target_ || target.apply(this, arguments));
-    };
-    greatArc.source = function(_) {
-      if (!arguments.length) return source;
-      source = _, source_ = typeof _ === "function" ? null : _;
-      return greatArc;
-    };
-    greatArc.target = function(_) {
-      if (!arguments.length) return target;
-      target = _, target_ = typeof _ === "function" ? null : _;
-      return greatArc;
-    };
-    greatArc.precision = function() {
-      return arguments.length ? greatArc : 0;
-    };
-    return greatArc;
-  };
-  d3.geo.interpolate = function(source, target) {
-    return d3_geo_interpolate(source[0] * d3_radians, source[1] * d3_radians, target[0] * d3_radians, target[1] * d3_radians);
-  };
-  function d3_geo_interpolate(x0, y0, x1, y1) {
-    var cy0 = Math.cos(y0), sy0 = Math.sin(y0), cy1 = Math.cos(y1), sy1 = Math.sin(y1), kx0 = cy0 * Math.cos(x0), ky0 = cy0 * Math.sin(x0), kx1 = cy1 * Math.cos(x1), ky1 = cy1 * Math.sin(x1), d = 2 * Math.asin(Math.sqrt(d3_haversin(y1 - y0) + cy0 * cy1 * d3_haversin(x1 - x0))), k = 1 / Math.sin(d);
-    var interpolate = d ? function(t) {
-      var B = Math.sin(t *= d) * k, A = Math.sin(d - t) * k, x = A * kx0 + B * kx1, y = A * ky0 + B * ky1, z = A * sy0 + B * sy1;
-      return [ Math.atan2(y, x) * d3_degrees, Math.atan2(z, Math.sqrt(x * x + y * y)) * d3_degrees ];
-    } : function() {
-      return [ x0 * d3_degrees, y0 * d3_degrees ];
-    };
-    interpolate.distance = d;
-    return interpolate;
-  }
-  d3.geo.length = function(object) {
-    d3_geo_lengthSum = 0;
-    d3.geo.stream(object, d3_geo_length);
-    return d3_geo_lengthSum;
-  };
-  var d3_geo_lengthSum;
-  var d3_geo_length = {
-    sphere: d3_noop,
-    point: d3_noop,
-    lineStart: d3_geo_lengthLineStart,
-    lineEnd: d3_noop,
-    polygonStart: d3_noop,
-    polygonEnd: d3_noop
-  };
-  function d3_geo_lengthLineStart() {
-    var λ0, sinφ0, cosφ0;
-    d3_geo_length.point = function(λ, φ) {
-      λ0 = λ * d3_radians, sinφ0 = Math.sin(φ *= d3_radians), cosφ0 = Math.cos(φ);
-      d3_geo_length.point = nextPoint;
-    };
-    d3_geo_length.lineEnd = function() {
-      d3_geo_length.point = d3_geo_length.lineEnd = d3_noop;
-    };
-    function nextPoint(λ, φ) {
-      var sinφ = Math.sin(φ *= d3_radians), cosφ = Math.cos(φ), t = abs((λ *= d3_radians) - λ0), cosΔλ = Math.cos(t);
-      d3_geo_lengthSum += Math.atan2(Math.sqrt((t = cosφ * Math.sin(t)) * t + (t = cosφ0 * sinφ - sinφ0 * cosφ * cosΔλ) * t), sinφ0 * sinφ + cosφ0 * cosφ * cosΔλ);
-      λ0 = λ, sinφ0 = sinφ, cosφ0 = cosφ;
-    }
-  }
-  function d3_geo_azimuthal(scale, angle) {
-    function azimuthal(λ, φ) {
-      var cosλ = Math.cos(λ), cosφ = Math.cos(φ), k = scale(cosλ * cosφ);
-      return [ k * cosφ * Math.sin(λ), k * Math.sin(φ) ];
-    }
-    azimuthal.invert = function(x, y) {
-      var ρ = Math.sqrt(x * x + y * y), c = angle(ρ), sinc = Math.sin(c), cosc = Math.cos(c);
-      return [ Math.atan2(x * sinc, ρ * cosc), Math.asin(ρ && y * sinc / ρ) ];
-    };
-    return azimuthal;
-  }
-  var d3_geo_azimuthalEqualArea = d3_geo_azimuthal(function(cosλcosφ) {
-    return Math.sqrt(2 / (1 + cosλcosφ));
-  }, function(ρ) {
-    return 2 * Math.asin(ρ / 2);
-  });
-  (d3.geo.azimuthalEqualArea = function() {
-    return d3_geo_projection(d3_geo_azimuthalEqualArea);
-  }).raw = d3_geo_azimuthalEqualArea;
-  var d3_geo_azimuthalEquidistant = d3_geo_azimuthal(function(cosλcosφ) {
-    var c = Math.acos(cosλcosφ);
-    return c && c / Math.sin(c);
-  }, d3_identity);
-  (d3.geo.azimuthalEquidistant = function() {
-    return d3_geo_projection(d3_geo_azimuthalEquidistant);
-  }).raw = d3_geo_azimuthalEquidistant;
-  function d3_geo_conicConformal(φ0, φ1) {
-    var cosφ0 = Math.cos(φ0), t = function(φ) {
-      return Math.tan(π / 4 + φ / 2);
-    }, n = φ0 === φ1 ? Math.sin(φ0) : Math.log(cosφ0 / Math.cos(φ1)) / Math.log(t(φ1) / t(φ0)), F = cosφ0 * Math.pow(t(φ0), n) / n;
-    if (!n) return d3_geo_mercator;
-    function forward(λ, φ) {
-      if (F > 0) {
-        if (φ < -halfπ + ε) φ = -halfπ + ε;
-      } else {
-        if (φ > halfπ - ε) φ = halfπ - ε;
-      }
-      var ρ = F / Math.pow(t(φ), n);
-      return [ ρ * Math.sin(n * λ), F - ρ * Math.cos(n * λ) ];
-    }
-    forward.invert = function(x, y) {
-      var ρ0_y = F - y, ρ = d3_sgn(n) * Math.sqrt(x * x + ρ0_y * ρ0_y);
-      return [ Math.atan2(x, ρ0_y) / n, 2 * Math.atan(Math.pow(F / ρ, 1 / n)) - halfπ ];
-    };
-    return forward;
-  }
-  (d3.geo.conicConformal = function() {
-    return d3_geo_conic(d3_geo_conicConformal);
-  }).raw = d3_geo_conicConformal;
-  function d3_geo_conicEquidistant(φ0, φ1) {
-    var cosφ0 = Math.cos(φ0), n = φ0 === φ1 ? Math.sin(φ0) : (cosφ0 - Math.cos(φ1)) / (φ1 - φ0), G = cosφ0 / n + φ0;
-    if (abs(n) < ε) return d3_geo_equirectangular;
-    function forward(λ, φ) {
-      var ρ = G - φ;
-      return [ ρ * Math.sin(n * λ), G - ρ * Math.cos(n * λ) ];
-    }
-    forward.invert = function(x, y) {
-      var ρ0_y = G - y;
-      return [ Math.atan2(x, ρ0_y) / n, G - d3_sgn(n) * Math.sqrt(x * x + ρ0_y * ρ0_y) ];
-    };
-    return forward;
-  }
-  (d3.geo.conicEquidistant = function() {
-    return d3_geo_conic(d3_geo_conicEquidistant);
-  }).raw = d3_geo_conicEquidistant;
-  var d3_geo_gnomonic = d3_geo_azimuthal(function(cosλcosφ) {
-    return 1 / cosλcosφ;
-  }, Math.atan);
-  (d3.geo.gnomonic = function() {
-    return d3_geo_projection(d3_geo_gnomonic);
-  }).raw = d3_geo_gnomonic;
-  function d3_geo_mercator(λ, φ) {
-    return [ λ, Math.log(Math.tan(π / 4 + φ / 2)) ];
-  }
-  d3_geo_mercator.invert = function(x, y) {
-    return [ x, 2 * Math.atan(Math.exp(y)) - halfπ ];
-  };
-  function d3_geo_mercatorProjection(project) {
-    var m = d3_geo_projection(project), scale = m.scale, translate = m.translate, clipExtent = m.clipExtent, clipAuto;
-    m.scale = function() {
-      var v = scale.apply(m, arguments);
-      return v === m ? clipAuto ? m.clipExtent(null) : m : v;
-    };
-    m.translate = function() {
-      var v = translate.apply(m, arguments);
-      return v === m ? clipAuto ? m.clipExtent(null) : m : v;
-    };
-    m.clipExtent = function(_) {
-      var v = clipExtent.apply(m, arguments);
-      if (v === m) {
-        if (clipAuto = _ == null) {
-          var k = π * scale(), t = translate();
-          clipExtent([ [ t[0] - k, t[1] - k ], [ t[0] + k, t[1] + k ] ]);
-        }
-      } else if (clipAuto) {
-        v = null;
-      }
-      return v;
-    };
-    return m.clipExtent(null);
-  }
-  (d3.geo.mercator = function() {
-    return d3_geo_mercatorProjection(d3_geo_mercator);
-  }).raw = d3_geo_mercator;
-  var d3_geo_orthographic = d3_geo_azimuthal(function() {
-    return 1;
-  }, Math.asin);
-  (d3.geo.orthographic = function() {
-    return d3_geo_projection(d3_geo_orthographic);
-  }).raw = d3_geo_orthographic;
-  var d3_geo_stereographic = d3_geo_azimuthal(function(cosλcosφ) {
-    return 1 / (1 + cosλcosφ);
-  }, function(ρ) {
-    return 2 * Math.atan(ρ);
-  });
-  (d3.geo.stereographic = function() {
-    return d3_geo_projection(d3_geo_stereographic);
-  }).raw = d3_geo_stereographic;
-  function d3_geo_transverseMercator(λ, φ) {
-    return [ Math.log(Math.tan(π / 4 + φ / 2)), -λ ];
-  }
-  d3_geo_transverseMercator.invert = function(x, y) {
-    return [ -y, 2 * Math.atan(Math.exp(x)) - halfπ ];
-  };
-  (d3.geo.transverseMercator = function() {
-    var projection = d3_geo_mercatorProjection(d3_geo_transverseMercator), center = projection.center, rotate = projection.rotate;
-    projection.center = function(_) {
-      return _ ? center([ -_[1], _[0] ]) : (_ = center(), [ _[1], -_[0] ]);
-    };
-    projection.rotate = function(_) {
-      return _ ? rotate([ _[0], _[1], _.length > 2 ? _[2] + 90 : 90 ]) : (_ = rotate(), 
-      [ _[0], _[1], _[2] - 90 ]);
-    };
-    return rotate([ 0, 0, 90 ]);
-  }).raw = d3_geo_transverseMercator;
-  d3.geom = {};
-  function d3_geom_pointX(d) {
-    return d[0];
-  }
-  function d3_geom_pointY(d) {
-    return d[1];
-  }
-  d3.geom.hull = function(vertices) {
-    var x = d3_geom_pointX, y = d3_geom_pointY;
-    if (arguments.length) return hull(vertices);
-    function hull(data) {
-      if (data.length < 3) return [];
-      var fx = d3_functor(x), fy = d3_functor(y), i, n = data.length, points = [], flippedPoints = [];
-      for (i = 0; i < n; i++) {
-        points.push([ +fx.call(this, data[i], i), +fy.call(this, data[i], i), i ]);
-      }
-      points.sort(d3_geom_hullOrder);
-      for (i = 0; i < n; i++) flippedPoints.push([ points[i][0], -points[i][1] ]);
-      var upper = d3_geom_hullUpper(points), lower = d3_geom_hullUpper(flippedPoints);
-      var skipLeft = lower[0] === upper[0], skipRight = lower[lower.length - 1] === upper[upper.length - 1], polygon = [];
-      for (i = upper.length - 1; i >= 0; --i) polygon.push(data[points[upper[i]][2]]);
-      for (i = +skipLeft; i < lower.length - skipRight; ++i) polygon.push(data[points[lower[i]][2]]);
-      return polygon;
-    }
-    hull.x = function(_) {
-      return arguments.length ? (x = _, hull) : x;
-    };
-    hull.y = function(_) {
-      return arguments.length ? (y = _, hull) : y;
-    };
-    return hull;
-  };
-  function d3_geom_hullUpper(points) {
-    var n = points.length, hull = [ 0, 1 ], hs = 2;
-    for (var i = 2; i < n; i++) {
-      while (hs > 1 && d3_cross2d(points[hull[hs - 2]], points[hull[hs - 1]], points[i]) <= 0) --hs;
-      hull[hs++] = i;
-    }
-    return hull.slice(0, hs);
-  }
-  function d3_geom_hullOrder(a, b) {
-    return a[0] - b[0] || a[1] - b[1];
-  }
-  d3.geom.polygon = function(coordinates) {
-    d3_subclass(coordinates, d3_geom_polygonPrototype);
-    return coordinates;
-  };
-  var d3_geom_polygonPrototype = d3.geom.polygon.prototype = [];
-  d3_geom_polygonPrototype.area = function() {
-    var i = -1, n = this.length, a, b = this[n - 1], area = 0;
-    while (++i < n) {
-      a = b;
-      b = this[i];
-      area += a[1] * b[0] - a[0] * b[1];
-    }
-    return area * .5;
-  };
-  d3_geom_polygonPrototype.centroid = function(k) {
-    var i = -1, n = this.length, x = 0, y = 0, a, b = this[n - 1], c;
-    if (!arguments.length) k = -1 / (6 * this.area());
-    while (++i < n) {
-      a = b;
-      b = this[i];
-      c = a[0] * b[1] - b[0] * a[1];
-      x += (a[0] + b[0]) * c;
-      y += (a[1] + b[1]) * c;
-    }
-    return [ x * k, y * k ];
-  };
-  d3_geom_polygonPrototype.clip = function(subject) {
-    var input, closed = d3_geom_polygonClosed(subject), i = -1, n = this.length - d3_geom_polygonClosed(this), j, m, a = this[n - 1], b, c, d;
-    while (++i < n) {
-      input = subject.slice();
-      subject.length = 0;
-      b = this[i];
-      c = input[(m = input.length - closed) - 1];
-      j = -1;
-      while (++j < m) {
-        d = input[j];
-        if (d3_geom_polygonInside(d, a, b)) {
-          if (!d3_geom_polygonInside(c, a, b)) {
-            subject.push(d3_geom_polygonIntersect(c, d, a, b));
-          }
-          subject.push(d);
-        } else if (d3_geom_polygonInside(c, a, b)) {
-          subject.push(d3_geom_polygonIntersect(c, d, a, b));
-        }
-        c = d;
-      }
-      if (closed) subject.push(subject[0]);
-      a = b;
-    }
-    return subject;
-  };
-  function d3_geom_polygonInside(p, a, b) {
-    return (b[0] - a[0]) * (p[1] - a[1]) < (b[1] - a[1]) * (p[0] - a[0]);
-  }
-  function d3_geom_polygonIntersect(c, d, a, b) {
-    var x1 = c[0], x3 = a[0], x21 = d[0] - x1, x43 = b[0] - x3, y1 = c[1], y3 = a[1], y21 = d[1] - y1, y43 = b[1] - y3, ua = (x43 * (y1 - y3) - y43 * (x1 - x3)) / (y43 * x21 - x43 * y21);
-    return [ x1 + ua * x21, y1 + ua * y21 ];
-  }
-  function d3_geom_polygonClosed(coordinates) {
-    var a = coordinates[0], b = coordinates[coordinates.length - 1];
-    return !(a[0] - b[0] || a[1] - b[1]);
-  }
-  var d3_geom_voronoiEdges, d3_geom_voronoiCells, d3_geom_voronoiBeaches, d3_geom_voronoiBeachPool = [], d3_geom_voronoiFirstCircle, d3_geom_voronoiCircles, d3_geom_voronoiCirclePool = [];
-  function d3_geom_voronoiBeach() {
-    d3_geom_voronoiRedBlackNode(this);
-    this.edge = this.site = this.circle = null;
-  }
-  function d3_geom_voronoiCreateBeach(site) {
-    var beach = d3_geom_voronoiBeachPool.pop() || new d3_geom_voronoiBeach();
-    beach.site = site;
-    return beach;
-  }
-  function d3_geom_voronoiDetachBeach(beach) {
-    d3_geom_voronoiDetachCircle(beach);
-    d3_geom_voronoiBeaches.remove(beach);
-    d3_geom_voronoiBeachPool.push(beach);
-    d3_geom_voronoiRedBlackNode(beach);
-  }
-  function d3_geom_voronoiRemoveBeach(beach) {
-    var circle = beach.circle, x = circle.x, y = circle.cy, vertex = {
-      x: x,
-      y: y
-    }, previous = beach.P, next = beach.N, disappearing = [ beach ];
-    d3_geom_voronoiDetachBeach(beach);
-    var lArc = previous;
-    while (lArc.circle && abs(x - lArc.circle.x) < ε && abs(y - lArc.circle.cy) < ε) {
-      previous = lArc.P;
-      disappearing.unshift(lArc);
-      d3_geom_voronoiDetachBeach(lArc);
-      lArc = previous;
-    }
-    disappearing.unshift(lArc);
-    d3_geom_voronoiDetachCircle(lArc);
-    var rArc = next;
-    while (rArc.circle && abs(x - rArc.circle.x) < ε && abs(y - rArc.circle.cy) < ε) {
-      next = rArc.N;
-      disappearing.push(rArc);
-      d3_geom_voronoiDetachBeach(rArc);
-      rArc = next;
-    }
-    disappearing.push(rArc);
-    d3_geom_voronoiDetachCircle(rArc);
-    var nArcs = disappearing.length, iArc;
-    for (iArc = 1; iArc < nArcs; ++iArc) {
-      rArc = disappearing[iArc];
-      lArc = disappearing[iArc - 1];
-      d3_geom_voronoiSetEdgeEnd(rArc.edge, lArc.site, rArc.site, vertex);
-    }
-    lArc = disappearing[0];
-    rArc = disappearing[nArcs - 1];
-    rArc.edge = d3_geom_voronoiCreateEdge(lArc.site, rArc.site, null, vertex);
-    d3_geom_voronoiAttachCircle(lArc);
-    d3_geom_voronoiAttachCircle(rArc);
-  }
-  function d3_geom_voronoiAddBeach(site) {
-    var x = site.x, directrix = site.y, lArc, rArc, dxl, dxr, node = d3_geom_voronoiBeaches._;
-    while (node) {
-      dxl = d3_geom_voronoiLeftBreakPoint(node, directrix) - x;
-      if (dxl > ε) node = node.L; else {
-        dxr = x - d3_geom_voronoiRightBreakPoint(node, directrix);
-        if (dxr > ε) {
-          if (!node.R) {
-            lArc = node;
-            break;
-          }
-          node = node.R;
-        } else {
-          if (dxl > -ε) {
-            lArc = node.P;
-            rArc = node;
-          } else if (dxr > -ε) {
-            lArc = node;
-            rArc = node.N;
-          } else {
-            lArc = rArc = node;
-          }
-          break;
-        }
-      }
-    }
-    var newArc = d3_geom_voronoiCreateBeach(site);
-    d3_geom_voronoiBeaches.insert(lArc, newArc);
-    if (!lArc && !rArc) return;
-    if (lArc === rArc) {
-      d3_geom_voronoiDetachCircle(lArc);
-      rArc = d3_geom_voronoiCreateBeach(lArc.site);
-      d3_geom_voronoiBeaches.insert(newArc, rArc);
-      newArc.edge = rArc.edge = d3_geom_voronoiCreateEdge(lArc.site, newArc.site);
-      d3_geom_voronoiAttachCircle(lArc);
-      d3_geom_voronoiAttachCircle(rArc);
-      return;
-    }
-    if (!rArc) {
-      newArc.edge = d3_geom_voronoiCreateEdge(lArc.site, newArc.site);
-      return;
-    }
-    d3_geom_voronoiDetachCircle(lArc);
-    d3_geom_voronoiDetachCircle(rArc);
-    var lSite = lArc.site, ax = lSite.x, ay = lSite.y, bx = site.x - ax, by = site.y - ay, rSite = rArc.site, cx = rSite.x - ax, cy = rSite.y - ay, d = 2 * (bx * cy - by * cx), hb = bx * bx + by * by, hc = cx * cx + cy * cy, vertex = {
-      x: (cy * hb - by * hc) / d + ax,
-      y: (bx * hc - cx * hb) / d + ay
-    };
-    d3_geom_voronoiSetEdgeEnd(rArc.edge, lSite, rSite, vertex);
-    newArc.edge = d3_geom_voronoiCreateEdge(lSite, site, null, vertex);
-    rArc.edge = d3_geom_voronoiCreateEdge(site, rSite, null, vertex);
-    d3_geom_voronoiAttachCircle(lArc);
-    d3_geom_voronoiAttachCircle(rArc);
-  }
-  function d3_geom_voronoiLeftBreakPoint(arc, directrix) {
-    var site = arc.site, rfocx = site.x, rfocy = site.y, pby2 = rfocy - directrix;
-    if (!pby2) return rfocx;
-    var lArc = arc.P;
-    if (!lArc) return -Infinity;
-    site = lArc.site;
-    var lfocx = site.x, lfocy = site.y, plby2 = lfocy - directrix;
-    if (!plby2) return lfocx;
-    var hl = lfocx - rfocx, aby2 = 1 / pby2 - 1 / plby2, b = hl / plby2;
-    if (aby2) return (-b + Math.sqrt(b * b - 2 * aby2 * (hl * hl / (-2 * plby2) - lfocy + plby2 / 2 + rfocy - pby2 / 2))) / aby2 + rfocx;
-    return (rfocx + lfocx) / 2;
-  }
-  function d3_geom_voronoiRightBreakPoint(arc, directrix) {
-    var rArc = arc.N;
-    if (rArc) return d3_geom_voronoiLeftBreakPoint(rArc, directrix);
-    var site = arc.site;
-    return site.y === directrix ? site.x : Infinity;
-  }
-  function d3_geom_voronoiCell(site) {
-    this.site = site;
-    this.edges = [];
-  }
-  d3_geom_voronoiCell.prototype.prepare = function() {
-    var halfEdges = this.edges, iHalfEdge = halfEdges.length, edge;
-    while (iHalfEdge--) {
-      edge = halfEdges[iHalfEdge].edge;
-      if (!edge.b || !edge.a) halfEdges.splice(iHalfEdge, 1);
-    }
-    halfEdges.sort(d3_geom_voronoiHalfEdgeOrder);
-    return halfEdges.length;
-  };
-  function d3_geom_voronoiCloseCells(extent) {
-    var x0 = extent[0][0], x1 = extent[1][0], y0 = extent[0][1], y1 = extent[1][1], x2, y2, x3, y3, cells = d3_geom_voronoiCells, iCell = cells.length, cell, iHalfEdge, halfEdges, nHalfEdges, start, end;
-    while (iCell--) {
-      cell = cells[iCell];
-      if (!cell || !cell.prepare()) continue;
-      halfEdges = cell.edges;
-      nHalfEdges = halfEdges.length;
-      iHalfEdge = 0;
-      while (iHalfEdge < nHalfEdges) {
-        end = halfEdges[iHalfEdge].end(), x3 = end.x, y3 = end.y;
-        start = halfEdges[++iHalfEdge % nHalfEdges].start(), x2 = start.x, y2 = start.y;
-        if (abs(x3 - x2) > ε || abs(y3 - y2) > ε) {
-          halfEdges.splice(iHalfEdge, 0, new d3_geom_voronoiHalfEdge(d3_geom_voronoiCreateBorderEdge(cell.site, end, abs(x3 - x0) < ε && y1 - y3 > ε ? {
-            x: x0,
-            y: abs(x2 - x0) < ε ? y2 : y1
-          } : abs(y3 - y1) < ε && x1 - x3 > ε ? {
-            x: abs(y2 - y1) < ε ? x2 : x1,
-            y: y1
-          } : abs(x3 - x1) < ε && y3 - y0 > ε ? {
-            x: x1,
-            y: abs(x2 - x1) < ε ? y2 : y0
-          } : abs(y3 - y0) < ε && x3 - x0 > ε ? {
-            x: abs(y2 - y0) < ε ? x2 : x0,
-            y: y0
-          } : null), cell.site, null));
-          ++nHalfEdges;
-        }
-      }
-    }
-  }
-  function d3_geom_voronoiHalfEdgeOrder(a, b) {
-    return b.angle - a.angle;
-  }
-  function d3_geom_voronoiCircle() {
-    d3_geom_voronoiRedBlackNode(this);
-    this.x = this.y = this.arc = this.site = this.cy = null;
-  }
-  function d3_geom_voronoiAttachCircle(arc) {
-    var lArc = arc.P, rArc = arc.N;
-    if (!lArc || !rArc) return;
-    var lSite = lArc.site, cSite = arc.site, rSite = rArc.site;
-    if (lSite === rSite) return;
-    var bx = cSite.x, by = cSite.y, ax = lSite.x - bx, ay = lSite.y - by, cx = rSite.x - bx, cy = rSite.y - by;
-    var d = 2 * (ax * cy - ay * cx);
-    if (d >= -ε2) return;
-    var ha = ax * ax + ay * ay, hc = cx * cx + cy * cy, x = (cy * ha - ay * hc) / d, y = (ax * hc - cx * ha) / d, cy = y + by;
-    var circle = d3_geom_voronoiCirclePool.pop() || new d3_geom_voronoiCircle();
-    circle.arc = arc;
-    circle.site = cSite;
-    circle.x = x + bx;
-    circle.y = cy + Math.sqrt(x * x + y * y);
-    circle.cy = cy;
-    arc.circle = circle;
-    var before = null, node = d3_geom_voronoiCircles._;
-    while (node) {
-      if (circle.y < node.y || circle.y === node.y && circle.x <= node.x) {
-        if (node.L) node = node.L; else {
-          before = node.P;
-          break;
-        }
-      } else {
-        if (node.R) node = node.R; else {
-          before = node;
-          break;
-        }
-      }
-    }
-    d3_geom_voronoiCircles.insert(before, circle);
-    if (!before) d3_geom_voronoiFirstCircle = circle;
-  }
-  function d3_geom_voronoiDetachCircle(arc) {
-    var circle = arc.circle;
-    if (circle) {
-      if (!circle.P) d3_geom_voronoiFirstCircle = circle.N;
-      d3_geom_voronoiCircles.remove(circle);
-      d3_geom_voronoiCirclePool.push(circle);
-      d3_geom_voronoiRedBlackNode(circle);
-      arc.circle = null;
-    }
-  }
-  function d3_geom_voronoiClipEdges(extent) {
-    var edges = d3_geom_voronoiEdges, clip = d3_geom_clipLine(extent[0][0], extent[0][1], extent[1][0], extent[1][1]), i = edges.length, e;
-    while (i--) {
-      e = edges[i];
-      if (!d3_geom_voronoiConnectEdge(e, extent) || !clip(e) || abs(e.a.x - e.b.x) < ε && abs(e.a.y - e.b.y) < ε) {
-        e.a = e.b = null;
-        edges.splice(i, 1);
-      }
-    }
-  }
-  function d3_geom_voronoiConnectEdge(edge, extent) {
-    var vb = edge.b;
-    if (vb) return true;
-    var va = edge.a, x0 = extent[0][0], x1 = extent[1][0], y0 = extent[0][1], y1 = extent[1][1], lSite = edge.l, rSite = edge.r, lx = lSite.x, ly = lSite.y, rx = rSite.x, ry = rSite.y, fx = (lx + rx) / 2, fy = (ly + ry) / 2, fm, fb;
-    if (ry === ly) {
-      if (fx < x0 || fx >= x1) return;
-      if (lx > rx) {
-        if (!va) va = {
-          x: fx,
-          y: y0
-        }; else if (va.y >= y1) return;
-        vb = {
-          x: fx,
-          y: y1
-        };
-      } else {
-        if (!va) va = {
-          x: fx,
-          y: y1
-        }; else if (va.y < y0) return;
-        vb = {
-          x: fx,
-          y: y0
-        };
-      }
-    } else {
-      fm = (lx - rx) / (ry - ly);
-      fb = fy - fm * fx;
-      if (fm < -1 || fm > 1) {
-        if (lx > rx) {
-          if (!va) va = {
-            x: (y0 - fb) / fm,
-            y: y0
-          }; else if (va.y >= y1) return;
-          vb = {
-            x: (y1 - fb) / fm,
-            y: y1
-          };
-        } else {
-          if (!va) va = {
-            x: (y1 - fb) / fm,
-            y: y1
-          }; else if (va.y < y0) return;
-          vb = {
-            x: (y0 - fb) / fm,
-            y: y0
-          };
-        }
-      } else {
-        if (ly < ry) {
-          if (!va) va = {
-            x: x0,
-            y: fm * x0 + fb
-          }; else if (va.x >= x1) return;
-          vb = {
-            x: x1,
-            y: fm * x1 + fb
-          };
-        } else {
-          if (!va) va = {
-            x: x1,
-            y: fm * x1 + fb
-          }; else if (va.x < x0) return;
-          vb = {
-            x: x0,
-            y: fm * x0 + fb
-          };
-        }
-      }
-    }
-    edge.a = va;
-    edge.b = vb;
-    return true;
-  }
-  function d3_geom_voronoiEdge(lSite, rSite) {
-    this.l = lSite;
-    this.r = rSite;
-    this.a = this.b = null;
-  }
-  function d3_geom_voronoiCreateEdge(lSite, rSite, va, vb) {
-    var edge = new d3_geom_voronoiEdge(lSite, rSite);
-    d3_geom_voronoiEdges.push(edge);
-    if (va) d3_geom_voronoiSetEdgeEnd(edge, lSite, rSite, va);
-    if (vb) d3_geom_voronoiSetEdgeEnd(edge, rSite, lSite, vb);
-    d3_geom_voronoiCells[lSite.i].edges.push(new d3_geom_voronoiHalfEdge(edge, lSite, rSite));
-    d3_geom_voronoiCells[rSite.i].edges.push(new d3_geom_voronoiHalfEdge(edge, rSite, lSite));
-    return edge;
-  }
-  function d3_geom_voronoiCreateBorderEdge(lSite, va, vb) {
-    var edge = new d3_geom_voronoiEdge(lSite, null);
-    edge.a = va;
-    edge.b = vb;
-    d3_geom_voronoiEdges.push(edge);
-    return edge;
-  }
-  function d3_geom_voronoiSetEdgeEnd(edge, lSite, rSite, vertex) {
-    if (!edge.a && !edge.b) {
-      edge.a = vertex;
-      edge.l = lSite;
-      edge.r = rSite;
-    } else if (edge.l === rSite) {
-      edge.b = vertex;
-    } else {
-      edge.a = vertex;
-    }
-  }
-  function d3_geom_voronoiHalfEdge(edge, lSite, rSite) {
-    var va = edge.a, vb = edge.b;
-    this.edge = edge;
-    this.site = lSite;
-    this.angle = rSite ? Math.atan2(rSite.y - lSite.y, rSite.x - lSite.x) : edge.l === lSite ? Math.atan2(vb.x - va.x, va.y - vb.y) : Math.atan2(va.x - vb.x, vb.y - va.y);
-  }
-  d3_geom_voronoiHalfEdge.prototype = {
-    start: function() {
-      return this.edge.l === this.site ? this.edge.a : this.edge.b;
-    },
-    end: function() {
-      return this.edge.l === this.site ? this.edge.b : this.edge.a;
-    }
-  };
-  function d3_geom_voronoiRedBlackTree() {
-    this._ = null;
-  }
-  function d3_geom_voronoiRedBlackNode(node) {
-    node.U = node.C = node.L = node.R = node.P = node.N = null;
-  }
-  d3_geom_voronoiRedBlackTree.prototype = {
-    insert: function(after, node) {
-      var parent, grandpa, uncle;
-      if (after) {
-        node.P = after;
-        node.N = after.N;
-        if (after.N) after.N.P = node;
-        after.N = node;
-        if (after.R) {
-          after = after.R;
-          while (after.L) after = after.L;
-          after.L = node;
-        } else {
-          after.R = node;
-        }
-        parent = after;
-      } else if (this._) {
-        after = d3_geom_voronoiRedBlackFirst(this._);
-        node.P = null;
-        node.N = after;
-        after.P = after.L = node;
-        parent = after;
-      } else {
-        node.P = node.N = null;
-        this._ = node;
-        parent = null;
-      }
-      node.L = node.R = null;
-      node.U = parent;
-      node.C = true;
-      after = node;
-      while (parent && parent.C) {
-        grandpa = parent.U;
-        if (parent === grandpa.L) {
-          uncle = grandpa.R;
-          if (uncle && uncle.C) {
-            parent.C = uncle.C = false;
-            grandpa.C = true;
-            after = grandpa;
-          } else {
-            if (after === parent.R) {
-              d3_geom_voronoiRedBlackRotateLeft(this, parent);
-              after = parent;
-              parent = after.U;
-            }
-            parent.C = false;
-            grandpa.C = true;
-            d3_geom_voronoiRedBlackRotateRight(this, grandpa);
-          }
-        } else {
-          uncle = grandpa.L;
-          if (uncle && uncle.C) {
-            parent.C = uncle.C = false;
-            grandpa.C = true;
-            after = grandpa;
-          } else {
-            if (after === parent.L) {
-              d3_geom_voronoiRedBlackRotateRight(this, parent);
-              after = parent;
-              parent = after.U;
-            }
-            parent.C = false;
-            grandpa.C = true;
-            d3_geom_voronoiRedBlackRotateLeft(this, grandpa);
-          }
-        }
-        parent = after.U;
-      }
-      this._.C = false;
-    },
-    remove: function(node) {
-      if (node.N) node.N.P = node.P;
-      if (node.P) node.P.N = node.N;
-      node.N = node.P = null;
-      var parent = node.U, sibling, left = node.L, right = node.R, next, red;
-      if (!left) next = right; else if (!right) next = left; else next = d3_geom_voronoiRedBlackFirst(right);
-      if (parent) {
-        if (parent.L === node) parent.L = next; else parent.R = next;
-      } else {
-        this._ = next;
-      }
-      if (left && right) {
-        red = next.C;
-        next.C = node.C;
-        next.L = left;
-        left.U = next;
-        if (next !== right) {
-          parent = next.U;
-          next.U = node.U;
-          node = next.R;
-          parent.L = node;
-          next.R = right;
-          right.U = next;
-        } else {
-          next.U = parent;
-          parent = next;
-          node = next.R;
-        }
-      } else {
-        red = node.C;
-        node = next;
-      }
-      if (node) node.U = parent;
-      if (red) return;
-      if (node && node.C) {
-        node.C = false;
-        return;
-      }
-      do {
-        if (node === this._) break;
-        if (node === parent.L) {
-          sibling = parent.R;
-          if (sibling.C) {
-            sibling.C = false;
-            parent.C = true;
-            d3_geom_voronoiRedBlackRotateLeft(this, parent);
-            sibling = parent.R;
-          }
-          if (sibling.L && sibling.L.C || sibling.R && sibling.R.C) {
-            if (!sibling.R || !sibling.R.C) {
-              sibling.L.C = false;
-              sibling.C = true;
-              d3_geom_voronoiRedBlackRotateRight(this, sibling);
-              sibling = parent.R;
-            }
-            sibling.C = parent.C;
-            parent.C = sibling.R.C = false;
-            d3_geom_voronoiRedBlackRotateLeft(this, parent);
-            node = this._;
-            break;
-          }
-        } else {
-          sibling = parent.L;
-          if (sibling.C) {
-            sibling.C = false;
-            parent.C = true;
-            d3_geom_voronoiRedBlackRotateRight(this, parent);
-            sibling = parent.L;
-          }
-          if (sibling.L && sibling.L.C || sibling.R && sibling.R.C) {
-            if (!sibling.L || !sibling.L.C) {
-              sibling.R.C = false;
-              sibling.C = true;
-              d3_geom_voronoiRedBlackRotateLeft(this, sibling);
-              sibling = parent.L;
-            }
-            sibling.C = parent.C;
-            parent.C = sibling.L.C = false;
-            d3_geom_voronoiRedBlackRotateRight(this, parent);
-            node = this._;
-            break;
-          }
-        }
-        sibling.C = true;
-        node = parent;
-        parent = parent.U;
-      } while (!node.C);
-      if (node) node.C = false;
-    }
-  };
-  function d3_geom_voronoiRedBlackRotateLeft(tree, node) {
-    var p = node, q = node.R, parent = p.U;
-    if (parent) {
-      if (parent.L === p) parent.L = q; else parent.R = q;
-    } else {
-      tree._ = q;
-    }
-    q.U = parent;
-    p.U = q;
-    p.R = q.L;
-    if (p.R) p.R.U = p;
-    q.L = p;
-  }
-  function d3_geom_voronoiRedBlackRotateRight(tree, node) {
-    var p = node, q = node.L, parent = p.U;
-    if (parent) {
-      if (parent.L === p) parent.L = q; else parent.R = q;
-    } else {
-      tree._ = q;
-    }
-    q.U = parent;
-    p.U = q;
-    p.L = q.R;
-    if (p.L) p.L.U = p;
-    q.R = p;
-  }
-  function d3_geom_voronoiRedBlackFirst(node) {
-    while (node.L) node = node.L;
-    return node;
-  }
-  function d3_geom_voronoi(sites, bbox) {
-    var site = sites.sort(d3_geom_voronoiVertexOrder).pop(), x0, y0, circle;
-    d3_geom_voronoiEdges = [];
-    d3_geom_voronoiCells = new Array(sites.length);
-    d3_geom_voronoiBeaches = new d3_geom_voronoiRedBlackTree();
-    d3_geom_voronoiCircles = new d3_geom_voronoiRedBlackTree();
-    while (true) {
-      circle = d3_geom_voronoiFirstCircle;
-      if (site && (!circle || site.y < circle.y || site.y === circle.y && site.x < circle.x)) {
-        if (site.x !== x0 || site.y !== y0) {
-          d3_geom_voronoiCells[site.i] = new d3_geom_voronoiCell(site);
-          d3_geom_voronoiAddBeach(site);
-          x0 = site.x, y0 = site.y;
-        }
-        site = sites.pop();
-      } else if (circle) {
-        d3_geom_voronoiRemoveBeach(circle.arc);
-      } else {
-        break;
-      }
-    }
-    if (bbox) d3_geom_voronoiClipEdges(bbox), d3_geom_voronoiCloseCells(bbox);
-    var diagram = {
-      cells: d3_geom_voronoiCells,
-      edges: d3_geom_voronoiEdges
-    };
-    d3_geom_voronoiBeaches = d3_geom_voronoiCircles = d3_geom_voronoiEdges = d3_geom_voronoiCells = null;
-    return diagram;
-  }
-  function d3_geom_voronoiVertexOrder(a, b) {
-    return b.y - a.y || b.x - a.x;
-  }
-  d3.geom.voronoi = function(points) {
-    var x = d3_geom_pointX, y = d3_geom_pointY, fx = x, fy = y, clipExtent = d3_geom_voronoiClipExtent;
-    if (points) return voronoi(points);
-    function voronoi(data) {
-      var polygons = new Array(data.length), x0 = clipExtent[0][0], y0 = clipExtent[0][1], x1 = clipExtent[1][0], y1 = clipExtent[1][1];
-      d3_geom_voronoi(sites(data), clipExtent).cells.forEach(function(cell, i) {
-        var edges = cell.edges, site = cell.site, polygon = polygons[i] = edges.length ? edges.map(function(e) {
-          var s = e.start();
-          return [ s.x, s.y ];
-        }) : site.x >= x0 && site.x <= x1 && site.y >= y0 && site.y <= y1 ? [ [ x0, y1 ], [ x1, y1 ], [ x1, y0 ], [ x0, y0 ] ] : [];
-        polygon.point = data[i];
-      });
-      return polygons;
-    }
-    function sites(data) {
-      return data.map(function(d, i) {
-        return {
-          x: Math.round(fx(d, i) / ε) * ε,
-          y: Math.round(fy(d, i) / ε) * ε,
-          i: i
-        };
-      });
-    }
-    voronoi.links = function(data) {
-      return d3_geom_voronoi(sites(data)).edges.filter(function(edge) {
-        return edge.l && edge.r;
-      }).map(function(edge) {
-        return {
-          source: data[edge.l.i],
-          target: data[edge.r.i]
-        };
-      });
-    };
-    voronoi.triangles = function(data) {
-      var triangles = [];
-      d3_geom_voronoi(sites(data)).cells.forEach(function(cell, i) {
-        var site = cell.site, edges = cell.edges.sort(d3_geom_voronoiHalfEdgeOrder), j = -1, m = edges.length, e0, s0, e1 = edges[m - 1].edge, s1 = e1.l === site ? e1.r : e1.l;
-        while (++j < m) {
-          e0 = e1;
-          s0 = s1;
-          e1 = edges[j].edge;
-          s1 = e1.l === site ? e1.r : e1.l;
-          if (i < s0.i && i < s1.i && d3_geom_voronoiTriangleArea(site, s0, s1) < 0) {
-            triangles.push([ data[i], data[s0.i], data[s1.i] ]);
-          }
-        }
-      });
-      return triangles;
-    };
-    voronoi.x = function(_) {
-      return arguments.length ? (fx = d3_functor(x = _), voronoi) : x;
-    };
-    voronoi.y = function(_) {
-      return arguments.length ? (fy = d3_functor(y = _), voronoi) : y;
-    };
-    voronoi.clipExtent = function(_) {
-      if (!arguments.length) return clipExtent === d3_geom_voronoiClipExtent ? null : clipExtent;
-      clipExtent = _ == null ? d3_geom_voronoiClipExtent : _;
-      return voronoi;
-    };
-    voronoi.size = function(_) {
-      if (!arguments.length) return clipExtent === d3_geom_voronoiClipExtent ? null : clipExtent && clipExtent[1];
-      return voronoi.clipExtent(_ && [ [ 0, 0 ], _ ]);
-    };
-    return voronoi;
-  };
-  var d3_geom_voronoiClipExtent = [ [ -1e6, -1e6 ], [ 1e6, 1e6 ] ];
-  function d3_geom_voronoiTriangleArea(a, b, c) {
-    return (a.x - c.x) * (b.y - a.y) - (a.x - b.x) * (c.y - a.y);
-  }
-  d3.geom.delaunay = function(vertices) {
-    return d3.geom.voronoi().triangles(vertices);
-  };
-  d3.geom.quadtree = function(points, x1, y1, x2, y2) {
-    var x = d3_geom_pointX, y = d3_geom_pointY, compat;
-    if (compat = arguments.length) {
-      x = d3_geom_quadtreeCompatX;
-      y = d3_geom_quadtreeCompatY;
-      if (compat === 3) {
-        y2 = y1;
-        x2 = x1;
-        y1 = x1 = 0;
-      }
-      return quadtree(points);
-    }
-    function quadtree(data) {
-      var d, fx = d3_functor(x), fy = d3_functor(y), xs, ys, i, n, x1_, y1_, x2_, y2_;
-      if (x1 != null) {
-        x1_ = x1, y1_ = y1, x2_ = x2, y2_ = y2;
-      } else {
-        x2_ = y2_ = -(x1_ = y1_ = Infinity);
-        xs = [], ys = [];
-        n = data.length;
-        if (compat) for (i = 0; i < n; ++i) {
-          d = data[i];
-          if (d.x < x1_) x1_ = d.x;
-          if (d.y < y1_) y1_ = d.y;
-          if (d.x > x2_) x2_ = d.x;
-          if (d.y > y2_) y2_ = d.y;
-          xs.push(d.x);
-          ys.push(d.y);
-        } else for (i = 0; i < n; ++i) {
-          var x_ = +fx(d = data[i], i), y_ = +fy(d, i);
-          if (x_ < x1_) x1_ = x_;
-          if (y_ < y1_) y1_ = y_;
-          if (x_ > x2_) x2_ = x_;
-          if (y_ > y2_) y2_ = y_;
-          xs.push(x_);
-          ys.push(y_);
-        }
-      }
-      var dx = x2_ - x1_, dy = y2_ - y1_;
-      if (dx > dy) y2_ = y1_ + dx; else x2_ = x1_ + dy;
-      function insert(n, d, x, y, x1, y1, x2, y2) {
-        if (isNaN(x) || isNaN(y)) return;
-        if (n.leaf) {
-          var nx = n.x, ny = n.y;
-          if (nx != null) {
-            if (abs(nx - x) + abs(ny - y) < .01) {
-              insertChild(n, d, x, y, x1, y1, x2, y2);
-            } else {
-              var nPoint = n.point;
-              n.x = n.y = n.point = null;
-              insertChild(n, nPoint, nx, ny, x1, y1, x2, y2);
-              insertChild(n, d, x, y, x1, y1, x2, y2);
-            }
-          } else {
-            n.x = x, n.y = y, n.point = d;
-          }
-        } else {
-          insertChild(n, d, x, y, x1, y1, x2, y2);
-        }
-      }
-      function insertChild(n, d, x, y, x1, y1, x2, y2) {
-        var xm = (x1 + x2) * .5, ym = (y1 + y2) * .5, right = x >= xm, below = y >= ym, i = below << 1 | right;
-        n.leaf = false;
-        n = n.nodes[i] || (n.nodes[i] = d3_geom_quadtreeNode());
-        if (right) x1 = xm; else x2 = xm;
-        if (below) y1 = ym; else y2 = ym;
-        insert(n, d, x, y, x1, y1, x2, y2);
-      }
-      var root = d3_geom_quadtreeNode();
-      root.add = function(d) {
-        insert(root, d, +fx(d, ++i), +fy(d, i), x1_, y1_, x2_, y2_);
-      };
-      root.visit = function(f) {
-        d3_geom_quadtreeVisit(f, root, x1_, y1_, x2_, y2_);
-      };
-      root.find = function(point) {
-        return d3_geom_quadtreeFind(root, point[0], point[1], x1_, y1_, x2_, y2_);
-      };
-      i = -1;
-      if (x1 == null) {
-        while (++i < n) {
-          insert(root, data[i], xs[i], ys[i], x1_, y1_, x2_, y2_);
-        }
-        --i;
-      } else data.forEach(root.add);
-      xs = ys = data = d = null;
-      return root;
-    }
-    quadtree.x = function(_) {
-      return arguments.length ? (x = _, quadtree) : x;
-    };
-    quadtree.y = function(_) {
-      return arguments.length ? (y = _, quadtree) : y;
-    };
-    quadtree.extent = function(_) {
-      if (!arguments.length) return x1 == null ? null : [ [ x1, y1 ], [ x2, y2 ] ];
-      if (_ == null) x1 = y1 = x2 = y2 = null; else x1 = +_[0][0], y1 = +_[0][1], x2 = +_[1][0], 
-      y2 = +_[1][1];
-      return quadtree;
-    };
-    quadtree.size = function(_) {
-      if (!arguments.length) return x1 == null ? null : [ x2 - x1, y2 - y1 ];
-      if (_ == null) x1 = y1 = x2 = y2 = null; else x1 = y1 = 0, x2 = +_[0], y2 = +_[1];
-      return quadtree;
-    };
-    return quadtree;
-  };
-  function d3_geom_quadtreeCompatX(d) {
-    return d.x;
-  }
-  function d3_geom_quadtreeCompatY(d) {
-    return d.y;
-  }
-  function d3_geom_quadtreeNode() {
-    return {
-      leaf: true,
-      nodes: [],
-      point: null,
-      x: null,
-      y: null
-    };
-  }
-  function d3_geom_quadtreeVisit(f, node, x1, y1, x2, y2) {
-    if (!f(node, x1, y1, x2, y2)) {
-      var sx = (x1 + x2) * .5, sy = (y1 + y2) * .5, children = node.nodes;
-      if (children[0]) d3_geom_quadtreeVisit(f, children[0], x1, y1, sx, sy);
-      if (children[1]) d3_geom_quadtreeVisit(f, children[1], sx, y1, x2, sy);
-      if (children[2]) d3_geom_quadtreeVisit(f, children[2], x1, sy, sx, y2);
-      if (children[3]) d3_geom_quadtreeVisit(f, children[3], sx, sy, x2, y2);
-    }
-  }
-  function d3_geom_quadtreeFind(root, x, y, x0, y0, x3, y3) {
-    var minDistance2 = Infinity, closestPoint;
-    (function find(node, x1, y1, x2, y2) {
-      if (x1 > x3 || y1 > y3 || x2 < x0 || y2 < y0) return;
-      if (point = node.point) {
-        var point, dx = x - node.x, dy = y - node.y, distance2 = dx * dx + dy * dy;
-        if (distance2 < minDistance2) {
-          var distance = Math.sqrt(minDistance2 = distance2);
-          x0 = x - distance, y0 = y - distance;
-          x3 = x + distance, y3 = y + distance;
-          closestPoint = point;
-        }
-      }
-      var children = node.nodes, xm = (x1 + x2) * .5, ym = (y1 + y2) * .5, right = x >= xm, below = y >= ym;
-      for (var i = below << 1 | right, j = i + 4; i < j; ++i) {
-        if (node = children[i & 3]) switch (i & 3) {
-         case 0:
-          find(node, x1, y1, xm, ym);
-          break;
 
-         case 1:
-          find(node, xm, y1, x2, ym);
-          break;
+    /***/ './node_modules/d3-fetch/src/image.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-fetch/src/image.js ***!
+  \********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(input, init) {\n  return new Promise(function(resolve, reject) {\n    var image = new Image;\n    for (var key in init) image[key] = init[key];\n    image.onerror = reject;\n    image.onload = function() { resolve(image); };\n    image.src = input;\n  });\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/image.js?'
+        )
 
-         case 2:
-          find(node, x1, ym, xm, y2);
-          break;
-
-         case 3:
-          find(node, xm, ym, x2, y2);
-          break;
-        }
-      }
-    })(root, x0, y0, x3, y3);
-    return closestPoint;
-  }
-  d3.interpolateRgb = d3_interpolateRgb;
-  function d3_interpolateRgb(a, b) {
-    a = d3.rgb(a);
-    b = d3.rgb(b);
-    var ar = a.r, ag = a.g, ab = a.b, br = b.r - ar, bg = b.g - ag, bb = b.b - ab;
-    return function(t) {
-      return "#" + d3_rgb_hex(Math.round(ar + br * t)) + d3_rgb_hex(Math.round(ag + bg * t)) + d3_rgb_hex(Math.round(ab + bb * t));
-    };
-  }
-  d3.interpolateObject = d3_interpolateObject;
-  function d3_interpolateObject(a, b) {
-    var i = {}, c = {}, k;
-    for (k in a) {
-      if (k in b) {
-        i[k] = d3_interpolate(a[k], b[k]);
-      } else {
-        c[k] = a[k];
-      }
-    }
-    for (k in b) {
-      if (!(k in a)) {
-        c[k] = b[k];
-      }
-    }
-    return function(t) {
-      for (k in i) c[k] = i[k](t);
-      return c;
-    };
-  }
-  d3.interpolateNumber = d3_interpolateNumber;
-  function d3_interpolateNumber(a, b) {
-    a = +a, b = +b;
-    return function(t) {
-      return a * (1 - t) + b * t;
-    };
-  }
-  d3.interpolateString = d3_interpolateString;
-  function d3_interpolateString(a, b) {
-    var bi = d3_interpolate_numberA.lastIndex = d3_interpolate_numberB.lastIndex = 0, am, bm, bs, i = -1, s = [], q = [];
-    a = a + "", b = b + "";
-    while ((am = d3_interpolate_numberA.exec(a)) && (bm = d3_interpolate_numberB.exec(b))) {
-      if ((bs = bm.index) > bi) {
-        bs = b.slice(bi, bs);
-        if (s[i]) s[i] += bs; else s[++i] = bs;
-      }
-      if ((am = am[0]) === (bm = bm[0])) {
-        if (s[i]) s[i] += bm; else s[++i] = bm;
-      } else {
-        s[++i] = null;
-        q.push({
-          i: i,
-          x: d3_interpolateNumber(am, bm)
-        });
-      }
-      bi = d3_interpolate_numberB.lastIndex;
-    }
-    if (bi < b.length) {
-      bs = b.slice(bi);
-      if (s[i]) s[i] += bs; else s[++i] = bs;
-    }
-    return s.length < 2 ? q[0] ? (b = q[0].x, function(t) {
-      return b(t) + "";
-    }) : function() {
-      return b;
-    } : (b = q.length, function(t) {
-      for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
-      return s.join("");
-    });
-  }
-  var d3_interpolate_numberA = /[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g, d3_interpolate_numberB = new RegExp(d3_interpolate_numberA.source, "g");
-  d3.interpolate = d3_interpolate;
-  function d3_interpolate(a, b) {
-    var i = d3.interpolators.length, f;
-    while (--i >= 0 && !(f = d3.interpolators[i](a, b))) ;
-    return f;
-  }
-  d3.interpolators = [ function(a, b) {
-    var t = typeof b;
-    return (t === "string" ? d3_rgb_names.has(b.toLowerCase()) || /^(#|rgb\(|hsl\()/i.test(b) ? d3_interpolateRgb : d3_interpolateString : b instanceof d3_color ? d3_interpolateRgb : Array.isArray(b) ? d3_interpolateArray : t === "object" && isNaN(b) ? d3_interpolateObject : d3_interpolateNumber)(a, b);
-  } ];
-  d3.interpolateArray = d3_interpolateArray;
-  function d3_interpolateArray(a, b) {
-    var x = [], c = [], na = a.length, nb = b.length, n0 = Math.min(a.length, b.length), i;
-    for (i = 0; i < n0; ++i) x.push(d3_interpolate(a[i], b[i]));
-    for (;i < na; ++i) c[i] = a[i];
-    for (;i < nb; ++i) c[i] = b[i];
-    return function(t) {
-      for (i = 0; i < n0; ++i) c[i] = x[i](t);
-      return c;
-    };
-  }
-  var d3_ease_default = function() {
-    return d3_identity;
-  };
-  var d3_ease = d3.map({
-    linear: d3_ease_default,
-    poly: d3_ease_poly,
-    quad: function() {
-      return d3_ease_quad;
-    },
-    cubic: function() {
-      return d3_ease_cubic;
-    },
-    sin: function() {
-      return d3_ease_sin;
-    },
-    exp: function() {
-      return d3_ease_exp;
-    },
-    circle: function() {
-      return d3_ease_circle;
-    },
-    elastic: d3_ease_elastic,
-    back: d3_ease_back,
-    bounce: function() {
-      return d3_ease_bounce;
-    }
-  });
-  var d3_ease_mode = d3.map({
-    "in": d3_identity,
-    out: d3_ease_reverse,
-    "in-out": d3_ease_reflect,
-    "out-in": function(f) {
-      return d3_ease_reflect(d3_ease_reverse(f));
-    }
-  });
-  d3.ease = function(name) {
-    var i = name.indexOf("-"), t = i >= 0 ? name.slice(0, i) : name, m = i >= 0 ? name.slice(i + 1) : "in";
-    t = d3_ease.get(t) || d3_ease_default;
-    m = d3_ease_mode.get(m) || d3_identity;
-    return d3_ease_clamp(m(t.apply(null, d3_arraySlice.call(arguments, 1))));
-  };
-  function d3_ease_clamp(f) {
-    return function(t) {
-      return t <= 0 ? 0 : t >= 1 ? 1 : f(t);
-    };
-  }
-  function d3_ease_reverse(f) {
-    return function(t) {
-      return 1 - f(1 - t);
-    };
-  }
-  function d3_ease_reflect(f) {
-    return function(t) {
-      return .5 * (t < .5 ? f(2 * t) : 2 - f(2 - 2 * t));
-    };
-  }
-  function d3_ease_quad(t) {
-    return t * t;
-  }
-  function d3_ease_cubic(t) {
-    return t * t * t;
-  }
-  function d3_ease_cubicInOut(t) {
-    if (t <= 0) return 0;
-    if (t >= 1) return 1;
-    var t2 = t * t, t3 = t2 * t;
-    return 4 * (t < .5 ? t3 : 3 * (t - t2) + t3 - .75);
-  }
-  function d3_ease_poly(e) {
-    return function(t) {
-      return Math.pow(t, e);
-    };
-  }
-  function d3_ease_sin(t) {
-    return 1 - Math.cos(t * halfπ);
-  }
-  function d3_ease_exp(t) {
-    return Math.pow(2, 10 * (t - 1));
-  }
-  function d3_ease_circle(t) {
-    return 1 - Math.sqrt(1 - t * t);
-  }
-  function d3_ease_elastic(a, p) {
-    var s;
-    if (arguments.length < 2) p = .45;
-    if (arguments.length) s = p / τ * Math.asin(1 / a); else a = 1, s = p / 4;
-    return function(t) {
-      return 1 + a * Math.pow(2, -10 * t) * Math.sin((t - s) * τ / p);
-    };
-  }
-  function d3_ease_back(s) {
-    if (!s) s = 1.70158;
-    return function(t) {
-      return t * t * ((s + 1) * t - s);
-    };
-  }
-  function d3_ease_bounce(t) {
-    return t < 1 / 2.75 ? 7.5625 * t * t : t < 2 / 2.75 ? 7.5625 * (t -= 1.5 / 2.75) * t + .75 : t < 2.5 / 2.75 ? 7.5625 * (t -= 2.25 / 2.75) * t + .9375 : 7.5625 * (t -= 2.625 / 2.75) * t + .984375;
-  }
-  d3.interpolateHcl = d3_interpolateHcl;
-  function d3_interpolateHcl(a, b) {
-    a = d3.hcl(a);
-    b = d3.hcl(b);
-    var ah = a.h, ac = a.c, al = a.l, bh = b.h - ah, bc = b.c - ac, bl = b.l - al;
-    if (isNaN(bc)) bc = 0, ac = isNaN(ac) ? b.c : ac;
-    if (isNaN(bh)) bh = 0, ah = isNaN(ah) ? b.h : ah; else if (bh > 180) bh -= 360; else if (bh < -180) bh += 360;
-    return function(t) {
-      return d3_hcl_lab(ah + bh * t, ac + bc * t, al + bl * t) + "";
-    };
-  }
-  d3.interpolateHsl = d3_interpolateHsl;
-  function d3_interpolateHsl(a, b) {
-    a = d3.hsl(a);
-    b = d3.hsl(b);
-    var ah = a.h, as = a.s, al = a.l, bh = b.h - ah, bs = b.s - as, bl = b.l - al;
-    if (isNaN(bs)) bs = 0, as = isNaN(as) ? b.s : as;
-    if (isNaN(bh)) bh = 0, ah = isNaN(ah) ? b.h : ah; else if (bh > 180) bh -= 360; else if (bh < -180) bh += 360;
-    return function(t) {
-      return d3_hsl_rgb(ah + bh * t, as + bs * t, al + bl * t) + "";
-    };
-  }
-  d3.interpolateLab = d3_interpolateLab;
-  function d3_interpolateLab(a, b) {
-    a = d3.lab(a);
-    b = d3.lab(b);
-    var al = a.l, aa = a.a, ab = a.b, bl = b.l - al, ba = b.a - aa, bb = b.b - ab;
-    return function(t) {
-      return d3_lab_rgb(al + bl * t, aa + ba * t, ab + bb * t) + "";
-    };
-  }
-  d3.interpolateRound = d3_interpolateRound;
-  function d3_interpolateRound(a, b) {
-    b -= a;
-    return function(t) {
-      return Math.round(a + b * t);
-    };
-  }
-  d3.transform = function(string) {
-    var g = d3_document.createElementNS(d3.ns.prefix.svg, "g");
-    return (d3.transform = function(string) {
-      if (string != null) {
-        g.setAttribute("transform", string);
-        var t = g.transform.baseVal.consolidate();
-      }
-      return new d3_transform(t ? t.matrix : d3_transformIdentity);
-    })(string);
-  };
-  function d3_transform(m) {
-    var r0 = [ m.a, m.b ], r1 = [ m.c, m.d ], kx = d3_transformNormalize(r0), kz = d3_transformDot(r0, r1), ky = d3_transformNormalize(d3_transformCombine(r1, r0, -kz)) || 0;
-    if (r0[0] * r1[1] < r1[0] * r0[1]) {
-      r0[0] *= -1;
-      r0[1] *= -1;
-      kx *= -1;
-      kz *= -1;
-    }
-    this.rotate = (kx ? Math.atan2(r0[1], r0[0]) : Math.atan2(-r1[0], r1[1])) * d3_degrees;
-    this.translate = [ m.e, m.f ];
-    this.scale = [ kx, ky ];
-    this.skew = ky ? Math.atan2(kz, ky) * d3_degrees : 0;
-  }
-  d3_transform.prototype.toString = function() {
-    return "translate(" + this.translate + ")rotate(" + this.rotate + ")skewX(" + this.skew + ")scale(" + this.scale + ")";
-  };
-  function d3_transformDot(a, b) {
-    return a[0] * b[0] + a[1] * b[1];
-  }
-  function d3_transformNormalize(a) {
-    var k = Math.sqrt(d3_transformDot(a, a));
-    if (k) {
-      a[0] /= k;
-      a[1] /= k;
-    }
-    return k;
-  }
-  function d3_transformCombine(a, b, k) {
-    a[0] += k * b[0];
-    a[1] += k * b[1];
-    return a;
-  }
-  var d3_transformIdentity = {
-    a: 1,
-    b: 0,
-    c: 0,
-    d: 1,
-    e: 0,
-    f: 0
-  };
-  d3.interpolateTransform = d3_interpolateTransform;
-  function d3_interpolateTransformPop(s) {
-    return s.length ? s.pop() + "," : "";
-  }
-  function d3_interpolateTranslate(ta, tb, s, q) {
-    if (ta[0] !== tb[0] || ta[1] !== tb[1]) {
-      var i = s.push("translate(", null, ",", null, ")");
-      q.push({
-        i: i - 4,
-        x: d3_interpolateNumber(ta[0], tb[0])
-      }, {
-        i: i - 2,
-        x: d3_interpolateNumber(ta[1], tb[1])
-      });
-    } else if (tb[0] || tb[1]) {
-      s.push("translate(" + tb + ")");
-    }
-  }
-  function d3_interpolateRotate(ra, rb, s, q) {
-    if (ra !== rb) {
-      if (ra - rb > 180) rb += 360; else if (rb - ra > 180) ra += 360;
-      q.push({
-        i: s.push(d3_interpolateTransformPop(s) + "rotate(", null, ")") - 2,
-        x: d3_interpolateNumber(ra, rb)
-      });
-    } else if (rb) {
-      s.push(d3_interpolateTransformPop(s) + "rotate(" + rb + ")");
-    }
-  }
-  function d3_interpolateSkew(wa, wb, s, q) {
-    if (wa !== wb) {
-      q.push({
-        i: s.push(d3_interpolateTransformPop(s) + "skewX(", null, ")") - 2,
-        x: d3_interpolateNumber(wa, wb)
-      });
-    } else if (wb) {
-      s.push(d3_interpolateTransformPop(s) + "skewX(" + wb + ")");
-    }
-  }
-  function d3_interpolateScale(ka, kb, s, q) {
-    if (ka[0] !== kb[0] || ka[1] !== kb[1]) {
-      var i = s.push(d3_interpolateTransformPop(s) + "scale(", null, ",", null, ")");
-      q.push({
-        i: i - 4,
-        x: d3_interpolateNumber(ka[0], kb[0])
-      }, {
-        i: i - 2,
-        x: d3_interpolateNumber(ka[1], kb[1])
-      });
-    } else if (kb[0] !== 1 || kb[1] !== 1) {
-      s.push(d3_interpolateTransformPop(s) + "scale(" + kb + ")");
-    }
-  }
-  function d3_interpolateTransform(a, b) {
-    var s = [], q = [];
-    a = d3.transform(a), b = d3.transform(b);
-    d3_interpolateTranslate(a.translate, b.translate, s, q);
-    d3_interpolateRotate(a.rotate, b.rotate, s, q);
-    d3_interpolateSkew(a.skew, b.skew, s, q);
-    d3_interpolateScale(a.scale, b.scale, s, q);
-    a = b = null;
-    return function(t) {
-      var i = -1, n = q.length, o;
-      while (++i < n) s[(o = q[i]).i] = o.x(t);
-      return s.join("");
-    };
-  }
-  function d3_uninterpolateNumber(a, b) {
-    b = (b -= a = +a) || 1 / b;
-    return function(x) {
-      return (x - a) / b;
-    };
-  }
-  function d3_uninterpolateClamp(a, b) {
-    b = (b -= a = +a) || 1 / b;
-    return function(x) {
-      return Math.max(0, Math.min(1, (x - a) / b));
-    };
-  }
-  d3.layout = {};
-  d3.layout.bundle = function() {
-    return function(links) {
-      var paths = [], i = -1, n = links.length;
-      while (++i < n) paths.push(d3_layout_bundlePath(links[i]));
-      return paths;
-    };
-  };
-  function d3_layout_bundlePath(link) {
-    var start = link.source, end = link.target, lca = d3_layout_bundleLeastCommonAncestor(start, end), points = [ start ];
-    while (start !== lca) {
-      start = start.parent;
-      points.push(start);
-    }
-    var k = points.length;
-    while (end !== lca) {
-      points.splice(k, 0, end);
-      end = end.parent;
-    }
-    return points;
-  }
-  function d3_layout_bundleAncestors(node) {
-    var ancestors = [], parent = node.parent;
-    while (parent != null) {
-      ancestors.push(node);
-      node = parent;
-      parent = parent.parent;
-    }
-    ancestors.push(node);
-    return ancestors;
-  }
-  function d3_layout_bundleLeastCommonAncestor(a, b) {
-    if (a === b) return a;
-    var aNodes = d3_layout_bundleAncestors(a), bNodes = d3_layout_bundleAncestors(b), aNode = aNodes.pop(), bNode = bNodes.pop(), sharedNode = null;
-    while (aNode === bNode) {
-      sharedNode = aNode;
-      aNode = aNodes.pop();
-      bNode = bNodes.pop();
-    }
-    return sharedNode;
-  }
-  d3.layout.chord = function() {
-    var chord = {}, chords, groups, matrix, n, padding = 0, sortGroups, sortSubgroups, sortChords;
-    function relayout() {
-      var subgroups = {}, groupSums = [], groupIndex = d3.range(n), subgroupIndex = [], k, x, x0, i, j;
-      chords = [];
-      groups = [];
-      k = 0, i = -1;
-      while (++i < n) {
-        x = 0, j = -1;
-        while (++j < n) {
-          x += matrix[i][j];
-        }
-        groupSums.push(x);
-        subgroupIndex.push(d3.range(n));
-        k += x;
-      }
-      if (sortGroups) {
-        groupIndex.sort(function(a, b) {
-          return sortGroups(groupSums[a], groupSums[b]);
-        });
-      }
-      if (sortSubgroups) {
-        subgroupIndex.forEach(function(d, i) {
-          d.sort(function(a, b) {
-            return sortSubgroups(matrix[i][a], matrix[i][b]);
-          });
-        });
-      }
-      k = (τ - padding * n) / k;
-      x = 0, i = -1;
-      while (++i < n) {
-        x0 = x, j = -1;
-        while (++j < n) {
-          var di = groupIndex[i], dj = subgroupIndex[di][j], v = matrix[di][dj], a0 = x, a1 = x += v * k;
-          subgroups[di + "-" + dj] = {
-            index: di,
-            subindex: dj,
-            startAngle: a0,
-            endAngle: a1,
-            value: v
-          };
-        }
-        groups[di] = {
-          index: di,
-          startAngle: x0,
-          endAngle: x,
-          value: groupSums[di]
-        };
-        x += padding;
-      }
-      i = -1;
-      while (++i < n) {
-        j = i - 1;
-        while (++j < n) {
-          var source = subgroups[i + "-" + j], target = subgroups[j + "-" + i];
-          if (source.value || target.value) {
-            chords.push(source.value < target.value ? {
-              source: target,
-              target: source
-            } : {
-              source: source,
-              target: target
-            });
-          }
-        }
-      }
-      if (sortChords) resort();
-    }
-    function resort() {
-      chords.sort(function(a, b) {
-        return sortChords((a.source.value + a.target.value) / 2, (b.source.value + b.target.value) / 2);
-      });
-    }
-    chord.matrix = function(x) {
-      if (!arguments.length) return matrix;
-      n = (matrix = x) && matrix.length;
-      chords = groups = null;
-      return chord;
-    };
-    chord.padding = function(x) {
-      if (!arguments.length) return padding;
-      padding = x;
-      chords = groups = null;
-      return chord;
-    };
-    chord.sortGroups = function(x) {
-      if (!arguments.length) return sortGroups;
-      sortGroups = x;
-      chords = groups = null;
-      return chord;
-    };
-    chord.sortSubgroups = function(x) {
-      if (!arguments.length) return sortSubgroups;
-      sortSubgroups = x;
-      chords = null;
-      return chord;
-    };
-    chord.sortChords = function(x) {
-      if (!arguments.length) return sortChords;
-      sortChords = x;
-      if (chords) resort();
-      return chord;
-    };
-    chord.chords = function() {
-      if (!chords) relayout();
-      return chords;
-    };
-    chord.groups = function() {
-      if (!groups) relayout();
-      return groups;
-    };
-    return chord;
-  };
-  d3.layout.force = function() {
-    var force = {}, event = d3.dispatch("start", "tick", "end"), timer, size = [ 1, 1 ], drag, alpha, friction = .9, linkDistance = d3_layout_forceLinkDistance, linkStrength = d3_layout_forceLinkStrength, charge = -30, chargeDistance2 = d3_layout_forceChargeDistance2, gravity = .1, theta2 = .64, nodes = [], links = [], distances, strengths, charges;
-    function repulse(node) {
-      return function(quad, x1, _, x2) {
-        if (quad.point !== node) {
-          var dx = quad.cx - node.x, dy = quad.cy - node.y, dw = x2 - x1, dn = dx * dx + dy * dy;
-          if (dw * dw / theta2 < dn) {
-            if (dn < chargeDistance2) {
-              var k = quad.charge / dn;
-              node.px -= dx * k;
-              node.py -= dy * k;
-            }
-            return true;
-          }
-          if (quad.point && dn && dn < chargeDistance2) {
-            var k = quad.pointCharge / dn;
-            node.px -= dx * k;
-            node.py -= dy * k;
-          }
-        }
-        return !quad.charge;
-      };
-    }
-    force.tick = function() {
-      if ((alpha *= .99) < .005) {
-        timer = null;
-        event.end({
-          type: "end",
-          alpha: alpha = 0
-        });
-        return true;
-      }
-      var n = nodes.length, m = links.length, q, i, o, s, t, l, k, x, y;
-      for (i = 0; i < m; ++i) {
-        o = links[i];
-        s = o.source;
-        t = o.target;
-        x = t.x - s.x;
-        y = t.y - s.y;
-        if (l = x * x + y * y) {
-          l = alpha * strengths[i] * ((l = Math.sqrt(l)) - distances[i]) / l;
-          x *= l;
-          y *= l;
-          t.x -= x * (k = s.weight + t.weight ? s.weight / (s.weight + t.weight) : .5);
-          t.y -= y * k;
-          s.x += x * (k = 1 - k);
-          s.y += y * k;
-        }
-      }
-      if (k = alpha * gravity) {
-        x = size[0] / 2;
-        y = size[1] / 2;
-        i = -1;
-        if (k) while (++i < n) {
-          o = nodes[i];
-          o.x += (x - o.x) * k;
-          o.y += (y - o.y) * k;
-        }
-      }
-      if (charge) {
-        d3_layout_forceAccumulate(q = d3.geom.quadtree(nodes), alpha, charges);
-        i = -1;
-        while (++i < n) {
-          if (!(o = nodes[i]).fixed) {
-            q.visit(repulse(o));
-          }
-        }
-      }
-      i = -1;
-      while (++i < n) {
-        o = nodes[i];
-        if (o.fixed) {
-          o.x = o.px;
-          o.y = o.py;
-        } else {
-          o.x -= (o.px - (o.px = o.x)) * friction;
-          o.y -= (o.py - (o.py = o.y)) * friction;
-        }
-      }
-      event.tick({
-        type: "tick",
-        alpha: alpha
-      });
-    };
-    force.nodes = function(x) {
-      if (!arguments.length) return nodes;
-      nodes = x;
-      return force;
-    };
-    force.links = function(x) {
-      if (!arguments.length) return links;
-      links = x;
-      return force;
-    };
-    force.size = function(x) {
-      if (!arguments.length) return size;
-      size = x;
-      return force;
-    };
-    force.linkDistance = function(x) {
-      if (!arguments.length) return linkDistance;
-      linkDistance = typeof x === "function" ? x : +x;
-      return force;
-    };
-    force.distance = force.linkDistance;
-    force.linkStrength = function(x) {
-      if (!arguments.length) return linkStrength;
-      linkStrength = typeof x === "function" ? x : +x;
-      return force;
-    };
-    force.friction = function(x) {
-      if (!arguments.length) return friction;
-      friction = +x;
-      return force;
-    };
-    force.charge = function(x) {
-      if (!arguments.length) return charge;
-      charge = typeof x === "function" ? x : +x;
-      return force;
-    };
-    force.chargeDistance = function(x) {
-      if (!arguments.length) return Math.sqrt(chargeDistance2);
-      chargeDistance2 = x * x;
-      return force;
-    };
-    force.gravity = function(x) {
-      if (!arguments.length) return gravity;
-      gravity = +x;
-      return force;
-    };
-    force.theta = function(x) {
-      if (!arguments.length) return Math.sqrt(theta2);
-      theta2 = x * x;
-      return force;
-    };
-    force.alpha = function(x) {
-      if (!arguments.length) return alpha;
-      x = +x;
-      if (alpha) {
-        if (x > 0) {
-          alpha = x;
-        } else {
-          timer.c = null, timer.t = NaN, timer = null;
-          event.end({
-            type: "end",
-            alpha: alpha = 0
-          });
-        }
-      } else if (x > 0) {
-        event.start({
-          type: "start",
-          alpha: alpha = x
-        });
-        timer = d3_timer(force.tick);
-      }
-      return force;
-    };
-    force.start = function() {
-      var i, n = nodes.length, m = links.length, w = size[0], h = size[1], neighbors, o;
-      for (i = 0; i < n; ++i) {
-        (o = nodes[i]).index = i;
-        o.weight = 0;
-      }
-      for (i = 0; i < m; ++i) {
-        o = links[i];
-        if (typeof o.source == "number") o.source = nodes[o.source];
-        if (typeof o.target == "number") o.target = nodes[o.target];
-        ++o.source.weight;
-        ++o.target.weight;
-      }
-      for (i = 0; i < n; ++i) {
-        o = nodes[i];
-        if (isNaN(o.x)) o.x = position("x", w);
-        if (isNaN(o.y)) o.y = position("y", h);
-        if (isNaN(o.px)) o.px = o.x;
-        if (isNaN(o.py)) o.py = o.y;
-      }
-      distances = [];
-      if (typeof linkDistance === "function") for (i = 0; i < m; ++i) distances[i] = +linkDistance.call(this, links[i], i); else for (i = 0; i < m; ++i) distances[i] = linkDistance;
-      strengths = [];
-      if (typeof linkStrength === "function") for (i = 0; i < m; ++i) strengths[i] = +linkStrength.call(this, links[i], i); else for (i = 0; i < m; ++i) strengths[i] = linkStrength;
-      charges = [];
-      if (typeof charge === "function") for (i = 0; i < n; ++i) charges[i] = +charge.call(this, nodes[i], i); else for (i = 0; i < n; ++i) charges[i] = charge;
-      function position(dimension, size) {
-        if (!neighbors) {
-          neighbors = new Array(n);
-          for (j = 0; j < n; ++j) {
-            neighbors[j] = [];
-          }
-          for (j = 0; j < m; ++j) {
-            var o = links[j];
-            neighbors[o.source.index].push(o.target);
-            neighbors[o.target.index].push(o.source);
-          }
-        }
-        var candidates = neighbors[i], j = -1, l = candidates.length, x;
-        while (++j < l) if (!isNaN(x = candidates[j][dimension])) return x;
-        return Math.random() * size;
-      }
-      return force.resume();
-    };
-    force.resume = function() {
-      return force.alpha(.1);
-    };
-    force.stop = function() {
-      return force.alpha(0);
-    };
-    force.drag = function() {
-      if (!drag) drag = d3.behavior.drag().origin(d3_identity).on("dragstart.force", d3_layout_forceDragstart).on("drag.force", dragmove).on("dragend.force", d3_layout_forceDragend);
-      if (!arguments.length) return drag;
-      this.on("mouseover.force", d3_layout_forceMouseover).on("mouseout.force", d3_layout_forceMouseout).call(drag);
-    };
-    function dragmove(d) {
-      d.px = d3.event.x, d.py = d3.event.y;
-      force.resume();
-    }
-    return d3.rebind(force, event, "on");
-  };
-  function d3_layout_forceDragstart(d) {
-    d.fixed |= 2;
-  }
-  function d3_layout_forceDragend(d) {
-    d.fixed &= ~6;
-  }
-  function d3_layout_forceMouseover(d) {
-    d.fixed |= 4;
-    d.px = d.x, d.py = d.y;
-  }
-  function d3_layout_forceMouseout(d) {
-    d.fixed &= ~4;
-  }
-  function d3_layout_forceAccumulate(quad, alpha, charges) {
-    var cx = 0, cy = 0;
-    quad.charge = 0;
-    if (!quad.leaf) {
-      var nodes = quad.nodes, n = nodes.length, i = -1, c;
-      while (++i < n) {
-        c = nodes[i];
-        if (c == null) continue;
-        d3_layout_forceAccumulate(c, alpha, charges);
-        quad.charge += c.charge;
-        cx += c.charge * c.cx;
-        cy += c.charge * c.cy;
-      }
-    }
-    if (quad.point) {
-      if (!quad.leaf) {
-        quad.point.x += Math.random() - .5;
-        quad.point.y += Math.random() - .5;
-      }
-      var k = alpha * charges[quad.point.index];
-      quad.charge += quad.pointCharge = k;
-      cx += k * quad.point.x;
-      cy += k * quad.point.y;
-    }
-    quad.cx = cx / quad.charge;
-    quad.cy = cy / quad.charge;
-  }
-  var d3_layout_forceLinkDistance = 20, d3_layout_forceLinkStrength = 1, d3_layout_forceChargeDistance2 = Infinity;
-  d3.layout.hierarchy = function() {
-    var sort = d3_layout_hierarchySort, children = d3_layout_hierarchyChildren, value = d3_layout_hierarchyValue;
-    function hierarchy(root) {
-      var stack = [ root ], nodes = [], node;
-      root.depth = 0;
-      while ((node = stack.pop()) != null) {
-        nodes.push(node);
-        if ((childs = children.call(hierarchy, node, node.depth)) && (n = childs.length)) {
-          var n, childs, child;
-          while (--n >= 0) {
-            stack.push(child = childs[n]);
-            child.parent = node;
-            child.depth = node.depth + 1;
-          }
-          if (value) node.value = 0;
-          node.children = childs;
-        } else {
-          if (value) node.value = +value.call(hierarchy, node, node.depth) || 0;
-          delete node.children;
-        }
-      }
-      d3_layout_hierarchyVisitAfter(root, function(node) {
-        var childs, parent;
-        if (sort && (childs = node.children)) childs.sort(sort);
-        if (value && (parent = node.parent)) parent.value += node.value;
-      });
-      return nodes;
-    }
-    hierarchy.sort = function(x) {
-      if (!arguments.length) return sort;
-      sort = x;
-      return hierarchy;
-    };
-    hierarchy.children = function(x) {
-      if (!arguments.length) return children;
-      children = x;
-      return hierarchy;
-    };
-    hierarchy.value = function(x) {
-      if (!arguments.length) return value;
-      value = x;
-      return hierarchy;
-    };
-    hierarchy.revalue = function(root) {
-      if (value) {
-        d3_layout_hierarchyVisitBefore(root, function(node) {
-          if (node.children) node.value = 0;
-        });
-        d3_layout_hierarchyVisitAfter(root, function(node) {
-          var parent;
-          if (!node.children) node.value = +value.call(hierarchy, node, node.depth) || 0;
-          if (parent = node.parent) parent.value += node.value;
-        });
-      }
-      return root;
-    };
-    return hierarchy;
-  };
-  function d3_layout_hierarchyRebind(object, hierarchy) {
-    d3.rebind(object, hierarchy, "sort", "children", "value");
-    object.nodes = object;
-    object.links = d3_layout_hierarchyLinks;
-    return object;
-  }
-  function d3_layout_hierarchyVisitBefore(node, callback) {
-    var nodes = [ node ];
-    while ((node = nodes.pop()) != null) {
-      callback(node);
-      if ((children = node.children) && (n = children.length)) {
-        var n, children;
-        while (--n >= 0) nodes.push(children[n]);
-      }
-    }
-  }
-  function d3_layout_hierarchyVisitAfter(node, callback) {
-    var nodes = [ node ], nodes2 = [];
-    while ((node = nodes.pop()) != null) {
-      nodes2.push(node);
-      if ((children = node.children) && (n = children.length)) {
-        var i = -1, n, children;
-        while (++i < n) nodes.push(children[i]);
-      }
-    }
-    while ((node = nodes2.pop()) != null) {
-      callback(node);
-    }
-  }
-  function d3_layout_hierarchyChildren(d) {
-    return d.children;
-  }
-  function d3_layout_hierarchyValue(d) {
-    return d.value;
-  }
-  function d3_layout_hierarchySort(a, b) {
-    return b.value - a.value;
-  }
-  function d3_layout_hierarchyLinks(nodes) {
-    return d3.merge(nodes.map(function(parent) {
-      return (parent.children || []).map(function(child) {
-        return {
-          source: parent,
-          target: child
-        };
-      });
-    }));
-  }
-  d3.layout.partition = function() {
-    var hierarchy = d3.layout.hierarchy(), size = [ 1, 1 ];
-    function position(node, x, dx, dy) {
-      var children = node.children;
-      node.x = x;
-      node.y = node.depth * dy;
-      node.dx = dx;
-      node.dy = dy;
-      if (children && (n = children.length)) {
-        var i = -1, n, c, d;
-        dx = node.value ? dx / node.value : 0;
-        while (++i < n) {
-          position(c = children[i], x, d = c.value * dx, dy);
-          x += d;
-        }
-      }
-    }
-    function depth(node) {
-      var children = node.children, d = 0;
-      if (children && (n = children.length)) {
-        var i = -1, n;
-        while (++i < n) d = Math.max(d, depth(children[i]));
-      }
-      return 1 + d;
-    }
-    function partition(d, i) {
-      var nodes = hierarchy.call(this, d, i);
-      position(nodes[0], 0, size[0], size[1] / depth(nodes[0]));
-      return nodes;
-    }
-    partition.size = function(x) {
-      if (!arguments.length) return size;
-      size = x;
-      return partition;
-    };
-    return d3_layout_hierarchyRebind(partition, hierarchy);
-  };
-  d3.layout.pie = function() {
-    var value = Number, sort = d3_layout_pieSortByValue, startAngle = 0, endAngle = τ, padAngle = 0;
-    function pie(data) {
-      var n = data.length, values = data.map(function(d, i) {
-        return +value.call(pie, d, i);
-      }), a = +(typeof startAngle === "function" ? startAngle.apply(this, arguments) : startAngle), da = (typeof endAngle === "function" ? endAngle.apply(this, arguments) : endAngle) - a, p = Math.min(Math.abs(da) / n, +(typeof padAngle === "function" ? padAngle.apply(this, arguments) : padAngle)), pa = p * (da < 0 ? -1 : 1), sum = d3.sum(values), k = sum ? (da - n * pa) / sum : 0, index = d3.range(n), arcs = [], v;
-      if (sort != null) index.sort(sort === d3_layout_pieSortByValue ? function(i, j) {
-        return values[j] - values[i];
-      } : function(i, j) {
-        return sort(data[i], data[j]);
-      });
-      index.forEach(function(i) {
-        arcs[i] = {
-          data: data[i],
-          value: v = values[i],
-          startAngle: a,
-          endAngle: a += v * k + pa,
-          padAngle: p
-        };
-      });
-      return arcs;
-    }
-    pie.value = function(_) {
-      if (!arguments.length) return value;
-      value = _;
-      return pie;
-    };
-    pie.sort = function(_) {
-      if (!arguments.length) return sort;
-      sort = _;
-      return pie;
-    };
-    pie.startAngle = function(_) {
-      if (!arguments.length) return startAngle;
-      startAngle = _;
-      return pie;
-    };
-    pie.endAngle = function(_) {
-      if (!arguments.length) return endAngle;
-      endAngle = _;
-      return pie;
-    };
-    pie.padAngle = function(_) {
-      if (!arguments.length) return padAngle;
-      padAngle = _;
-      return pie;
-    };
-    return pie;
-  };
-  var d3_layout_pieSortByValue = {};
-  d3.layout.stack = function() {
-    var values = d3_identity, order = d3_layout_stackOrderDefault, offset = d3_layout_stackOffsetZero, out = d3_layout_stackOut, x = d3_layout_stackX, y = d3_layout_stackY;
-    function stack(data, index) {
-      if (!(n = data.length)) return data;
-      var series = data.map(function(d, i) {
-        return values.call(stack, d, i);
-      });
-      var points = series.map(function(d) {
-        return d.map(function(v, i) {
-          return [ x.call(stack, v, i), y.call(stack, v, i) ];
-        });
-      });
-      var orders = order.call(stack, points, index);
-      series = d3.permute(series, orders);
-      points = d3.permute(points, orders);
-      var offsets = offset.call(stack, points, index);
-      var m = series[0].length, n, i, j, o;
-      for (j = 0; j < m; ++j) {
-        out.call(stack, series[0][j], o = offsets[j], points[0][j][1]);
-        for (i = 1; i < n; ++i) {
-          out.call(stack, series[i][j], o += points[i - 1][j][1], points[i][j][1]);
-        }
-      }
-      return data;
-    }
-    stack.values = function(x) {
-      if (!arguments.length) return values;
-      values = x;
-      return stack;
-    };
-    stack.order = function(x) {
-      if (!arguments.length) return order;
-      order = typeof x === "function" ? x : d3_layout_stackOrders.get(x) || d3_layout_stackOrderDefault;
-      return stack;
-    };
-    stack.offset = function(x) {
-      if (!arguments.length) return offset;
-      offset = typeof x === "function" ? x : d3_layout_stackOffsets.get(x) || d3_layout_stackOffsetZero;
-      return stack;
-    };
-    stack.x = function(z) {
-      if (!arguments.length) return x;
-      x = z;
-      return stack;
-    };
-    stack.y = function(z) {
-      if (!arguments.length) return y;
-      y = z;
-      return stack;
-    };
-    stack.out = function(z) {
-      if (!arguments.length) return out;
-      out = z;
-      return stack;
-    };
-    return stack;
-  };
-  function d3_layout_stackX(d) {
-    return d.x;
-  }
-  function d3_layout_stackY(d) {
-    return d.y;
-  }
-  function d3_layout_stackOut(d, y0, y) {
-    d.y0 = y0;
-    d.y = y;
-  }
-  var d3_layout_stackOrders = d3.map({
-    "inside-out": function(data) {
-      var n = data.length, i, j, max = data.map(d3_layout_stackMaxIndex), sums = data.map(d3_layout_stackReduceSum), index = d3.range(n).sort(function(a, b) {
-        return max[a] - max[b];
-      }), top = 0, bottom = 0, tops = [], bottoms = [];
-      for (i = 0; i < n; ++i) {
-        j = index[i];
-        if (top < bottom) {
-          top += sums[j];
-          tops.push(j);
-        } else {
-          bottom += sums[j];
-          bottoms.push(j);
-        }
-      }
-      return bottoms.reverse().concat(tops);
-    },
-    reverse: function(data) {
-      return d3.range(data.length).reverse();
-    },
-    "default": d3_layout_stackOrderDefault
-  });
-  var d3_layout_stackOffsets = d3.map({
-    silhouette: function(data) {
-      var n = data.length, m = data[0].length, sums = [], max = 0, i, j, o, y0 = [];
-      for (j = 0; j < m; ++j) {
-        for (i = 0, o = 0; i < n; i++) o += data[i][j][1];
-        if (o > max) max = o;
-        sums.push(o);
-      }
-      for (j = 0; j < m; ++j) {
-        y0[j] = (max - sums[j]) / 2;
-      }
-      return y0;
-    },
-    wiggle: function(data) {
-      var n = data.length, x = data[0], m = x.length, i, j, k, s1, s2, s3, dx, o, o0, y0 = [];
-      y0[0] = o = o0 = 0;
-      for (j = 1; j < m; ++j) {
-        for (i = 0, s1 = 0; i < n; ++i) s1 += data[i][j][1];
-        for (i = 0, s2 = 0, dx = x[j][0] - x[j - 1][0]; i < n; ++i) {
-          for (k = 0, s3 = (data[i][j][1] - data[i][j - 1][1]) / (2 * dx); k < i; ++k) {
-            s3 += (data[k][j][1] - data[k][j - 1][1]) / dx;
-          }
-          s2 += s3 * data[i][j][1];
-        }
-        y0[j] = o -= s1 ? s2 / s1 * dx : 0;
-        if (o < o0) o0 = o;
-      }
-      for (j = 0; j < m; ++j) y0[j] -= o0;
-      return y0;
-    },
-    expand: function(data) {
-      var n = data.length, m = data[0].length, k = 1 / n, i, j, o, y0 = [];
-      for (j = 0; j < m; ++j) {
-        for (i = 0, o = 0; i < n; i++) o += data[i][j][1];
-        if (o) for (i = 0; i < n; i++) data[i][j][1] /= o; else for (i = 0; i < n; i++) data[i][j][1] = k;
-      }
-      for (j = 0; j < m; ++j) y0[j] = 0;
-      return y0;
-    },
-    zero: d3_layout_stackOffsetZero
-  });
-  function d3_layout_stackOrderDefault(data) {
-    return d3.range(data.length);
-  }
-  function d3_layout_stackOffsetZero(data) {
-    var j = -1, m = data[0].length, y0 = [];
-    while (++j < m) y0[j] = 0;
-    return y0;
-  }
-  function d3_layout_stackMaxIndex(array) {
-    var i = 1, j = 0, v = array[0][1], k, n = array.length;
-    for (;i < n; ++i) {
-      if ((k = array[i][1]) > v) {
-        j = i;
-        v = k;
-      }
-    }
-    return j;
-  }
-  function d3_layout_stackReduceSum(d) {
-    return d.reduce(d3_layout_stackSum, 0);
-  }
-  function d3_layout_stackSum(p, d) {
-    return p + d[1];
-  }
-  d3.layout.histogram = function() {
-    var frequency = true, valuer = Number, ranger = d3_layout_histogramRange, binner = d3_layout_histogramBinSturges;
-    function histogram(data, i) {
-      var bins = [], values = data.map(valuer, this), range = ranger.call(this, values, i), thresholds = binner.call(this, range, values, i), bin, i = -1, n = values.length, m = thresholds.length - 1, k = frequency ? 1 : 1 / n, x;
-      while (++i < m) {
-        bin = bins[i] = [];
-        bin.dx = thresholds[i + 1] - (bin.x = thresholds[i]);
-        bin.y = 0;
-      }
-      if (m > 0) {
-        i = -1;
-        while (++i < n) {
-          x = values[i];
-          if (x >= range[0] && x <= range[1]) {
-            bin = bins[d3.bisect(thresholds, x, 1, m) - 1];
-            bin.y += k;
-            bin.push(data[i]);
-          }
-        }
-      }
-      return bins;
-    }
-    histogram.value = function(x) {
-      if (!arguments.length) return valuer;
-      valuer = x;
-      return histogram;
-    };
-    histogram.range = function(x) {
-      if (!arguments.length) return ranger;
-      ranger = d3_functor(x);
-      return histogram;
-    };
-    histogram.bins = function(x) {
-      if (!arguments.length) return binner;
-      binner = typeof x === "number" ? function(range) {
-        return d3_layout_histogramBinFixed(range, x);
-      } : d3_functor(x);
-      return histogram;
-    };
-    histogram.frequency = function(x) {
-      if (!arguments.length) return frequency;
-      frequency = !!x;
-      return histogram;
-    };
-    return histogram;
-  };
-  function d3_layout_histogramBinSturges(range, values) {
-    return d3_layout_histogramBinFixed(range, Math.ceil(Math.log(values.length) / Math.LN2 + 1));
-  }
-  function d3_layout_histogramBinFixed(range, n) {
-    var x = -1, b = +range[0], m = (range[1] - b) / n, f = [];
-    while (++x <= n) f[x] = m * x + b;
-    return f;
-  }
-  function d3_layout_histogramRange(values) {
-    return [ d3.min(values), d3.max(values) ];
-  }
-  d3.layout.pack = function() {
-    var hierarchy = d3.layout.hierarchy().sort(d3_layout_packSort), padding = 0, size = [ 1, 1 ], radius;
-    function pack(d, i) {
-      var nodes = hierarchy.call(this, d, i), root = nodes[0], w = size[0], h = size[1], r = radius == null ? Math.sqrt : typeof radius === "function" ? radius : function() {
-        return radius;
-      };
-      root.x = root.y = 0;
-      d3_layout_hierarchyVisitAfter(root, function(d) {
-        d.r = +r(d.value);
-      });
-      d3_layout_hierarchyVisitAfter(root, d3_layout_packSiblings);
-      if (padding) {
-        var dr = padding * (radius ? 1 : Math.max(2 * root.r / w, 2 * root.r / h)) / 2;
-        d3_layout_hierarchyVisitAfter(root, function(d) {
-          d.r += dr;
-        });
-        d3_layout_hierarchyVisitAfter(root, d3_layout_packSiblings);
-        d3_layout_hierarchyVisitAfter(root, function(d) {
-          d.r -= dr;
-        });
-      }
-      d3_layout_packTransform(root, w / 2, h / 2, radius ? 1 : 1 / Math.max(2 * root.r / w, 2 * root.r / h));
-      return nodes;
-    }
-    pack.size = function(_) {
-      if (!arguments.length) return size;
-      size = _;
-      return pack;
-    };
-    pack.radius = function(_) {
-      if (!arguments.length) return radius;
-      radius = _ == null || typeof _ === "function" ? _ : +_;
-      return pack;
-    };
-    pack.padding = function(_) {
-      if (!arguments.length) return padding;
-      padding = +_;
-      return pack;
-    };
-    return d3_layout_hierarchyRebind(pack, hierarchy);
-  };
-  function d3_layout_packSort(a, b) {
-    return a.value - b.value;
-  }
-  function d3_layout_packInsert(a, b) {
-    var c = a._pack_next;
-    a._pack_next = b;
-    b._pack_prev = a;
-    b._pack_next = c;
-    c._pack_prev = b;
-  }
-  function d3_layout_packSplice(a, b) {
-    a._pack_next = b;
-    b._pack_prev = a;
-  }
-  function d3_layout_packIntersects(a, b) {
-    var dx = b.x - a.x, dy = b.y - a.y, dr = a.r + b.r;
-    return .999 * dr * dr > dx * dx + dy * dy;
-  }
-  function d3_layout_packSiblings(node) {
-    if (!(nodes = node.children) || !(n = nodes.length)) return;
-    var nodes, xMin = Infinity, xMax = -Infinity, yMin = Infinity, yMax = -Infinity, a, b, c, i, j, k, n;
-    function bound(node) {
-      xMin = Math.min(node.x - node.r, xMin);
-      xMax = Math.max(node.x + node.r, xMax);
-      yMin = Math.min(node.y - node.r, yMin);
-      yMax = Math.max(node.y + node.r, yMax);
-    }
-    nodes.forEach(d3_layout_packLink);
-    a = nodes[0];
-    a.x = -a.r;
-    a.y = 0;
-    bound(a);
-    if (n > 1) {
-      b = nodes[1];
-      b.x = b.r;
-      b.y = 0;
-      bound(b);
-      if (n > 2) {
-        c = nodes[2];
-        d3_layout_packPlace(a, b, c);
-        bound(c);
-        d3_layout_packInsert(a, c);
-        a._pack_prev = c;
-        d3_layout_packInsert(c, b);
-        b = a._pack_next;
-        for (i = 3; i < n; i++) {
-          d3_layout_packPlace(a, b, c = nodes[i]);
-          var isect = 0, s1 = 1, s2 = 1;
-          for (j = b._pack_next; j !== b; j = j._pack_next, s1++) {
-            if (d3_layout_packIntersects(j, c)) {
-              isect = 1;
-              break;
-            }
-          }
-          if (isect == 1) {
-            for (k = a._pack_prev; k !== j._pack_prev; k = k._pack_prev, s2++) {
-              if (d3_layout_packIntersects(k, c)) {
-                break;
-              }
-            }
-          }
-          if (isect) {
-            if (s1 < s2 || s1 == s2 && b.r < a.r) d3_layout_packSplice(a, b = j); else d3_layout_packSplice(a = k, b);
-            i--;
-          } else {
-            d3_layout_packInsert(a, c);
-            b = c;
-            bound(c);
-          }
-        }
-      }
-    }
-    var cx = (xMin + xMax) / 2, cy = (yMin + yMax) / 2, cr = 0;
-    for (i = 0; i < n; i++) {
-      c = nodes[i];
-      c.x -= cx;
-      c.y -= cy;
-      cr = Math.max(cr, c.r + Math.sqrt(c.x * c.x + c.y * c.y));
-    }
-    node.r = cr;
-    nodes.forEach(d3_layout_packUnlink);
-  }
-  function d3_layout_packLink(node) {
-    node._pack_next = node._pack_prev = node;
-  }
-  function d3_layout_packUnlink(node) {
-    delete node._pack_next;
-    delete node._pack_prev;
-  }
-  function d3_layout_packTransform(node, x, y, k) {
-    var children = node.children;
-    node.x = x += k * node.x;
-    node.y = y += k * node.y;
-    node.r *= k;
-    if (children) {
-      var i = -1, n = children.length;
-      while (++i < n) d3_layout_packTransform(children[i], x, y, k);
-    }
-  }
-  function d3_layout_packPlace(a, b, c) {
-    var db = a.r + c.r, dx = b.x - a.x, dy = b.y - a.y;
-    if (db && (dx || dy)) {
-      var da = b.r + c.r, dc = dx * dx + dy * dy;
-      da *= da;
-      db *= db;
-      var x = .5 + (db - da) / (2 * dc), y = Math.sqrt(Math.max(0, 2 * da * (db + dc) - (db -= dc) * db - da * da)) / (2 * dc);
-      c.x = a.x + x * dx + y * dy;
-      c.y = a.y + x * dy - y * dx;
-    } else {
-      c.x = a.x + db;
-      c.y = a.y;
-    }
-  }
-  d3.layout.tree = function() {
-    var hierarchy = d3.layout.hierarchy().sort(null).value(null), separation = d3_layout_treeSeparation, size = [ 1, 1 ], nodeSize = null;
-    function tree(d, i) {
-      var nodes = hierarchy.call(this, d, i), root0 = nodes[0], root1 = wrapTree(root0);
-      d3_layout_hierarchyVisitAfter(root1, firstWalk), root1.parent.m = -root1.z;
-      d3_layout_hierarchyVisitBefore(root1, secondWalk);
-      if (nodeSize) d3_layout_hierarchyVisitBefore(root0, sizeNode); else {
-        var left = root0, right = root0, bottom = root0;
-        d3_layout_hierarchyVisitBefore(root0, function(node) {
-          if (node.x < left.x) left = node;
-          if (node.x > right.x) right = node;
-          if (node.depth > bottom.depth) bottom = node;
-        });
-        var tx = separation(left, right) / 2 - left.x, kx = size[0] / (right.x + separation(right, left) / 2 + tx), ky = size[1] / (bottom.depth || 1);
-        d3_layout_hierarchyVisitBefore(root0, function(node) {
-          node.x = (node.x + tx) * kx;
-          node.y = node.depth * ky;
-        });
-      }
-      return nodes;
-    }
-    function wrapTree(root0) {
-      var root1 = {
-        A: null,
-        children: [ root0 ]
-      }, queue = [ root1 ], node1;
-      while ((node1 = queue.pop()) != null) {
-        for (var children = node1.children, child, i = 0, n = children.length; i < n; ++i) {
-          queue.push((children[i] = child = {
-            _: children[i],
-            parent: node1,
-            children: (child = children[i].children) && child.slice() || [],
-            A: null,
-            a: null,
-            z: 0,
-            m: 0,
-            c: 0,
-            s: 0,
-            t: null,
-            i: i
-          }).a = child);
-        }
-      }
-      return root1.children[0];
-    }
-    function firstWalk(v) {
-      var children = v.children, siblings = v.parent.children, w = v.i ? siblings[v.i - 1] : null;
-      if (children.length) {
-        d3_layout_treeShift(v);
-        var midpoint = (children[0].z + children[children.length - 1].z) / 2;
-        if (w) {
-          v.z = w.z + separation(v._, w._);
-          v.m = v.z - midpoint;
-        } else {
-          v.z = midpoint;
-        }
-      } else if (w) {
-        v.z = w.z + separation(v._, w._);
-      }
-      v.parent.A = apportion(v, w, v.parent.A || siblings[0]);
-    }
-    function secondWalk(v) {
-      v._.x = v.z + v.parent.m;
-      v.m += v.parent.m;
-    }
-    function apportion(v, w, ancestor) {
-      if (w) {
-        var vip = v, vop = v, vim = w, vom = vip.parent.children[0], sip = vip.m, sop = vop.m, sim = vim.m, som = vom.m, shift;
-        while (vim = d3_layout_treeRight(vim), vip = d3_layout_treeLeft(vip), vim && vip) {
-          vom = d3_layout_treeLeft(vom);
-          vop = d3_layout_treeRight(vop);
-          vop.a = v;
-          shift = vim.z + sim - vip.z - sip + separation(vim._, vip._);
-          if (shift > 0) {
-            d3_layout_treeMove(d3_layout_treeAncestor(vim, v, ancestor), v, shift);
-            sip += shift;
-            sop += shift;
-          }
-          sim += vim.m;
-          sip += vip.m;
-          som += vom.m;
-          sop += vop.m;
-        }
-        if (vim && !d3_layout_treeRight(vop)) {
-          vop.t = vim;
-          vop.m += sim - sop;
-        }
-        if (vip && !d3_layout_treeLeft(vom)) {
-          vom.t = vip;
-          vom.m += sip - som;
-          ancestor = v;
-        }
-      }
-      return ancestor;
-    }
-    function sizeNode(node) {
-      node.x *= size[0];
-      node.y = node.depth * size[1];
-    }
-    tree.separation = function(x) {
-      if (!arguments.length) return separation;
-      separation = x;
-      return tree;
-    };
-    tree.size = function(x) {
-      if (!arguments.length) return nodeSize ? null : size;
-      nodeSize = (size = x) == null ? sizeNode : null;
-      return tree;
-    };
-    tree.nodeSize = function(x) {
-      if (!arguments.length) return nodeSize ? size : null;
-      nodeSize = (size = x) == null ? null : sizeNode;
-      return tree;
-    };
-    return d3_layout_hierarchyRebind(tree, hierarchy);
-  };
-  function d3_layout_treeSeparation(a, b) {
-    return a.parent == b.parent ? 1 : 2;
-  }
-  function d3_layout_treeLeft(v) {
-    var children = v.children;
-    return children.length ? children[0] : v.t;
-  }
-  function d3_layout_treeRight(v) {
-    var children = v.children, n;
-    return (n = children.length) ? children[n - 1] : v.t;
-  }
-  function d3_layout_treeMove(wm, wp, shift) {
-    var change = shift / (wp.i - wm.i);
-    wp.c -= change;
-    wp.s += shift;
-    wm.c += change;
-    wp.z += shift;
-    wp.m += shift;
-  }
-  function d3_layout_treeShift(v) {
-    var shift = 0, change = 0, children = v.children, i = children.length, w;
-    while (--i >= 0) {
-      w = children[i];
-      w.z += shift;
-      w.m += shift;
-      shift += w.s + (change += w.c);
-    }
-  }
-  function d3_layout_treeAncestor(vim, v, ancestor) {
-    return vim.a.parent === v.parent ? vim.a : ancestor;
-  }
-  d3.layout.cluster = function() {
-    var hierarchy = d3.layout.hierarchy().sort(null).value(null), separation = d3_layout_treeSeparation, size = [ 1, 1 ], nodeSize = false;
-    function cluster(d, i) {
-      var nodes = hierarchy.call(this, d, i), root = nodes[0], previousNode, x = 0;
-      d3_layout_hierarchyVisitAfter(root, function(node) {
-        var children = node.children;
-        if (children && children.length) {
-          node.x = d3_layout_clusterX(children);
-          node.y = d3_layout_clusterY(children);
-        } else {
-          node.x = previousNode ? x += separation(node, previousNode) : 0;
-          node.y = 0;
-          previousNode = node;
-        }
-      });
-      var left = d3_layout_clusterLeft(root), right = d3_layout_clusterRight(root), x0 = left.x - separation(left, right) / 2, x1 = right.x + separation(right, left) / 2;
-      d3_layout_hierarchyVisitAfter(root, nodeSize ? function(node) {
-        node.x = (node.x - root.x) * size[0];
-        node.y = (root.y - node.y) * size[1];
-      } : function(node) {
-        node.x = (node.x - x0) / (x1 - x0) * size[0];
-        node.y = (1 - (root.y ? node.y / root.y : 1)) * size[1];
-      });
-      return nodes;
-    }
-    cluster.separation = function(x) {
-      if (!arguments.length) return separation;
-      separation = x;
-      return cluster;
-    };
-    cluster.size = function(x) {
-      if (!arguments.length) return nodeSize ? null : size;
-      nodeSize = (size = x) == null;
-      return cluster;
-    };
-    cluster.nodeSize = function(x) {
-      if (!arguments.length) return nodeSize ? size : null;
-      nodeSize = (size = x) != null;
-      return cluster;
-    };
-    return d3_layout_hierarchyRebind(cluster, hierarchy);
-  };
-  function d3_layout_clusterY(children) {
-    return 1 + d3.max(children, function(child) {
-      return child.y;
-    });
-  }
-  function d3_layout_clusterX(children) {
-    return children.reduce(function(x, child) {
-      return x + child.x;
-    }, 0) / children.length;
-  }
-  function d3_layout_clusterLeft(node) {
-    var children = node.children;
-    return children && children.length ? d3_layout_clusterLeft(children[0]) : node;
-  }
-  function d3_layout_clusterRight(node) {
-    var children = node.children, n;
-    return children && (n = children.length) ? d3_layout_clusterRight(children[n - 1]) : node;
-  }
-  d3.layout.treemap = function() {
-    var hierarchy = d3.layout.hierarchy(), round = Math.round, size = [ 1, 1 ], padding = null, pad = d3_layout_treemapPadNull, sticky = false, stickies, mode = "squarify", ratio = .5 * (1 + Math.sqrt(5));
-    function scale(children, k) {
-      var i = -1, n = children.length, child, area;
-      while (++i < n) {
-        area = (child = children[i]).value * (k < 0 ? 0 : k);
-        child.area = isNaN(area) || area <= 0 ? 0 : area;
-      }
-    }
-    function squarify(node) {
-      var children = node.children;
-      if (children && children.length) {
-        var rect = pad(node), row = [], remaining = children.slice(), child, best = Infinity, score, u = mode === "slice" ? rect.dx : mode === "dice" ? rect.dy : mode === "slice-dice" ? node.depth & 1 ? rect.dy : rect.dx : Math.min(rect.dx, rect.dy), n;
-        scale(remaining, rect.dx * rect.dy / node.value);
-        row.area = 0;
-        while ((n = remaining.length) > 0) {
-          row.push(child = remaining[n - 1]);
-          row.area += child.area;
-          if (mode !== "squarify" || (score = worst(row, u)) <= best) {
-            remaining.pop();
-            best = score;
-          } else {
-            row.area -= row.pop().area;
-            position(row, u, rect, false);
-            u = Math.min(rect.dx, rect.dy);
-            row.length = row.area = 0;
-            best = Infinity;
-          }
-        }
-        if (row.length) {
-          position(row, u, rect, true);
-          row.length = row.area = 0;
-        }
-        children.forEach(squarify);
-      }
-    }
-    function stickify(node) {
-      var children = node.children;
-      if (children && children.length) {
-        var rect = pad(node), remaining = children.slice(), child, row = [];
-        scale(remaining, rect.dx * rect.dy / node.value);
-        row.area = 0;
-        while (child = remaining.pop()) {
-          row.push(child);
-          row.area += child.area;
-          if (child.z != null) {
-            position(row, child.z ? rect.dx : rect.dy, rect, !remaining.length);
-            row.length = row.area = 0;
-          }
-        }
-        children.forEach(stickify);
-      }
-    }
-    function worst(row, u) {
-      var s = row.area, r, rmax = 0, rmin = Infinity, i = -1, n = row.length;
-      while (++i < n) {
-        if (!(r = row[i].area)) continue;
-        if (r < rmin) rmin = r;
-        if (r > rmax) rmax = r;
-      }
-      s *= s;
-      u *= u;
-      return s ? Math.max(u * rmax * ratio / s, s / (u * rmin * ratio)) : Infinity;
-    }
-    function position(row, u, rect, flush) {
-      var i = -1, n = row.length, x = rect.x, y = rect.y, v = u ? round(row.area / u) : 0, o;
-      if (u == rect.dx) {
-        if (flush || v > rect.dy) v = rect.dy;
-        while (++i < n) {
-          o = row[i];
-          o.x = x;
-          o.y = y;
-          o.dy = v;
-          x += o.dx = Math.min(rect.x + rect.dx - x, v ? round(o.area / v) : 0);
-        }
-        o.z = true;
-        o.dx += rect.x + rect.dx - x;
-        rect.y += v;
-        rect.dy -= v;
-      } else {
-        if (flush || v > rect.dx) v = rect.dx;
-        while (++i < n) {
-          o = row[i];
-          o.x = x;
-          o.y = y;
-          o.dx = v;
-          y += o.dy = Math.min(rect.y + rect.dy - y, v ? round(o.area / v) : 0);
-        }
-        o.z = false;
-        o.dy += rect.y + rect.dy - y;
-        rect.x += v;
-        rect.dx -= v;
-      }
-    }
-    function treemap(d) {
-      var nodes = stickies || hierarchy(d), root = nodes[0];
-      root.x = root.y = 0;
-      if (root.value) root.dx = size[0], root.dy = size[1]; else root.dx = root.dy = 0;
-      if (stickies) hierarchy.revalue(root);
-      scale([ root ], root.dx * root.dy / root.value);
-      (stickies ? stickify : squarify)(root);
-      if (sticky) stickies = nodes;
-      return nodes;
-    }
-    treemap.size = function(x) {
-      if (!arguments.length) return size;
-      size = x;
-      return treemap;
-    };
-    treemap.padding = function(x) {
-      if (!arguments.length) return padding;
-      function padFunction(node) {
-        var p = x.call(treemap, node, node.depth);
-        return p == null ? d3_layout_treemapPadNull(node) : d3_layout_treemapPad(node, typeof p === "number" ? [ p, p, p, p ] : p);
-      }
-      function padConstant(node) {
-        return d3_layout_treemapPad(node, x);
-      }
-      var type;
-      pad = (padding = x) == null ? d3_layout_treemapPadNull : (type = typeof x) === "function" ? padFunction : type === "number" ? (x = [ x, x, x, x ], 
-      padConstant) : padConstant;
-      return treemap;
-    };
-    treemap.round = function(x) {
-      if (!arguments.length) return round != Number;
-      round = x ? Math.round : Number;
-      return treemap;
-    };
-    treemap.sticky = function(x) {
-      if (!arguments.length) return sticky;
-      sticky = x;
-      stickies = null;
-      return treemap;
-    };
-    treemap.ratio = function(x) {
-      if (!arguments.length) return ratio;
-      ratio = x;
-      return treemap;
-    };
-    treemap.mode = function(x) {
-      if (!arguments.length) return mode;
-      mode = x + "";
-      return treemap;
-    };
-    return d3_layout_hierarchyRebind(treemap, hierarchy);
-  };
-  function d3_layout_treemapPadNull(node) {
-    return {
-      x: node.x,
-      y: node.y,
-      dx: node.dx,
-      dy: node.dy
-    };
-  }
-  function d3_layout_treemapPad(node, padding) {
-    var x = node.x + padding[3], y = node.y + padding[0], dx = node.dx - padding[1] - padding[3], dy = node.dy - padding[0] - padding[2];
-    if (dx < 0) {
-      x += dx / 2;
-      dx = 0;
-    }
-    if (dy < 0) {
-      y += dy / 2;
-      dy = 0;
-    }
-    return {
-      x: x,
-      y: y,
-      dx: dx,
-      dy: dy
-    };
-  }
-  d3.random = {
-    normal: function(µ, σ) {
-      var n = arguments.length;
-      if (n < 2) σ = 1;
-      if (n < 1) µ = 0;
-      return function() {
-        var x, y, r;
-        do {
-          x = Math.random() * 2 - 1;
-          y = Math.random() * 2 - 1;
-          r = x * x + y * y;
-        } while (!r || r > 1);
-        return µ + σ * x * Math.sqrt(-2 * Math.log(r) / r);
-      };
-    },
-    logNormal: function() {
-      var random = d3.random.normal.apply(d3, arguments);
-      return function() {
-        return Math.exp(random());
-      };
-    },
-    bates: function(m) {
-      var random = d3.random.irwinHall(m);
-      return function() {
-        return random() / m;
-      };
-    },
-    irwinHall: function(m) {
-      return function() {
-        for (var s = 0, j = 0; j < m; j++) s += Math.random();
-        return s;
-      };
-    }
-  };
-  d3.scale = {};
-  function d3_scaleExtent(domain) {
-    var start = domain[0], stop = domain[domain.length - 1];
-    return start < stop ? [ start, stop ] : [ stop, start ];
-  }
-  function d3_scaleRange(scale) {
-    return scale.rangeExtent ? scale.rangeExtent() : d3_scaleExtent(scale.range());
-  }
-  function d3_scale_bilinear(domain, range, uninterpolate, interpolate) {
-    var u = uninterpolate(domain[0], domain[1]), i = interpolate(range[0], range[1]);
-    return function(x) {
-      return i(u(x));
-    };
-  }
-  function d3_scale_nice(domain, nice) {
-    var i0 = 0, i1 = domain.length - 1, x0 = domain[i0], x1 = domain[i1], dx;
-    if (x1 < x0) {
-      dx = i0, i0 = i1, i1 = dx;
-      dx = x0, x0 = x1, x1 = dx;
-    }
-    domain[i0] = nice.floor(x0);
-    domain[i1] = nice.ceil(x1);
-    return domain;
-  }
-  function d3_scale_niceStep(step) {
-    return step ? {
-      floor: function(x) {
-        return Math.floor(x / step) * step;
+        /***/
       },
-      ceil: function(x) {
-        return Math.ceil(x / step) * step;
+
+    /***/ './node_modules/d3-fetch/src/index.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-fetch/src/index.js ***!
+  \********************************************/
+      /*! exports provided: blob, buffer, dsv, csv, tsv, image, json, text, xml, html, svg */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blob__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blob */ "./node_modules/d3-fetch/src/blob.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "blob", function() { return _blob__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n/* harmony import */ var _buffer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buffer */ "./node_modules/d3-fetch/src/buffer.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buffer", function() { return _buffer__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony import */ var _dsv__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dsv */ "./node_modules/d3-fetch/src/dsv.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dsv", function() { return _dsv__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csv", function() { return _dsv__WEBPACK_IMPORTED_MODULE_2__["csv"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsv", function() { return _dsv__WEBPACK_IMPORTED_MODULE_2__["tsv"]; });\n\n/* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./image */ "./node_modules/d3-fetch/src/image.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "image", function() { return _image__WEBPACK_IMPORTED_MODULE_3__["default"]; });\n\n/* harmony import */ var _json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./json */ "./node_modules/d3-fetch/src/json.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "json", function() { return _json__WEBPACK_IMPORTED_MODULE_4__["default"]; });\n\n/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./text */ "./node_modules/d3-fetch/src/text.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "text", function() { return _text__WEBPACK_IMPORTED_MODULE_5__["default"]; });\n\n/* harmony import */ var _xml__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./xml */ "./node_modules/d3-fetch/src/xml.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xml", function() { return _xml__WEBPACK_IMPORTED_MODULE_6__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "html", function() { return _xml__WEBPACK_IMPORTED_MODULE_6__["html"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return _xml__WEBPACK_IMPORTED_MODULE_6__["svg"]; });\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-fetch/src/json.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-fetch/src/json.js ***!
+  \*******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction responseJson(response) {\n  if (!response.ok) throw new Error(response.status + " " + response.statusText);\n  return response.json();\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(input, init) {\n  return fetch(input, init).then(responseJson);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/json.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-fetch/src/text.js':
+      /*!*******************************************!*\
+  !*** ./node_modules/d3-fetch/src/text.js ***!
+  \*******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction responseText(response) {\n  if (!response.ok) throw new Error(response.status + " " + response.statusText);\n  return response.text();\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(input, init) {\n  return fetch(input, init).then(responseText);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/text.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-fetch/src/xml.js':
+      /*!******************************************!*\
+  !*** ./node_modules/d3-fetch/src/xml.js ***!
+  \******************************************/
+      /*! exports provided: default, html, svg */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "html", function() { return html; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return svg; });\n/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text */ "./node_modules/d3-fetch/src/text.js");\n\n\nfunction parser(type) {\n  return function(input, init)  {\n    return Object(_text__WEBPACK_IMPORTED_MODULE_0__["default"])(input, init).then(function(text) {\n      return (new DOMParser).parseFromString(text, type);\n    });\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (parser("application/xml"));\n\nvar html = parser("text/html");\n\nvar svg = parser("image/svg+xml");\n\n\n//# sourceURL=webpack:///./node_modules/d3-fetch/src/xml.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/array.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/array.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _value__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./value */ "./node_modules/d3-interpolate/src/value.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var nb = b ? b.length : 0,\n      na = a ? Math.min(nb, a.length) : 0,\n      x = new Array(na),\n      c = new Array(nb),\n      i;\n\n  for (i = 0; i < na; ++i) x[i] = Object(_value__WEBPACK_IMPORTED_MODULE_0__["default"])(a[i], b[i]);\n  for (; i < nb; ++i) c[i] = b[i];\n\n  return function(t) {\n    for (i = 0; i < na; ++i) c[i] = x[i](t);\n    return c;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/array.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/basis.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/basis.js ***!
+  \**************************************************/
+      /*! exports provided: basis, default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "basis", function() { return basis; });\nfunction basis(t1, v0, v1, v2, v3) {\n  var t2 = t1 * t1, t3 = t2 * t1;\n  return ((1 - 3 * t1 + 3 * t2 - t3) * v0\n      + (4 - 6 * t2 + 3 * t3) * v1\n      + (1 + 3 * t1 + 3 * t2 - 3 * t3) * v2\n      + t3 * v3) / 6;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(values) {\n  var n = values.length - 1;\n  return function(t) {\n    var i = t <= 0 ? (t = 0) : t >= 1 ? (t = 1, n - 1) : Math.floor(t * n),\n        v1 = values[i],\n        v2 = values[i + 1],\n        v0 = i > 0 ? values[i - 1] : 2 * v1 - v2,\n        v3 = i < n - 1 ? values[i + 2] : 2 * v2 - v1;\n    return basis((t - i / n) * n, v0, v1, v2, v3);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/basis.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/basisClosed.js':
+      /*!********************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/basisClosed.js ***!
+  \********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _basis__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./basis */ "./node_modules/d3-interpolate/src/basis.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(values) {\n  var n = values.length;\n  return function(t) {\n    var i = Math.floor(((t %= 1) < 0 ? ++t : t) * n),\n        v0 = values[(i + n - 1) % n],\n        v1 = values[i % n],\n        v2 = values[(i + 1) % n],\n        v3 = values[(i + 2) % n];\n    return Object(_basis__WEBPACK_IMPORTED_MODULE_0__["basis"])((t - i / n) * n, v0, v1, v2, v3);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/basisClosed.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/color.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/color.js ***!
+  \**************************************************/
+      /*! exports provided: hue, gamma, default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hue", function() { return hue; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gamma", function() { return gamma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nogamma; });\n/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constant */ "./node_modules/d3-interpolate/src/constant.js");\n\n\nfunction linear(a, d) {\n  return function(t) {\n    return a + t * d;\n  };\n}\n\nfunction exponential(a, b, y) {\n  return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {\n    return Math.pow(a + t * b, y);\n  };\n}\n\nfunction hue(a, b) {\n  var d = b - a;\n  return d ? linear(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : Object(_constant__WEBPACK_IMPORTED_MODULE_0__["default"])(isNaN(a) ? b : a);\n}\n\nfunction gamma(y) {\n  return (y = +y) === 1 ? nogamma : function(a, b) {\n    return b - a ? exponential(a, b, y) : Object(_constant__WEBPACK_IMPORTED_MODULE_0__["default"])(isNaN(a) ? b : a);\n  };\n}\n\nfunction nogamma(a, b) {\n  var d = b - a;\n  return d ? linear(a, d) : Object(_constant__WEBPACK_IMPORTED_MODULE_0__["default"])(isNaN(a) ? b : a);\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/color.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/constant.js':
+      /*!*****************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/constant.js ***!
+  \*****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(x) {\n  return function() {\n    return x;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/constant.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/cubehelix.js':
+      /*!******************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/cubehelix.js ***!
+  \******************************************************/
+      /*! exports provided: default, cubehelixLong */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cubehelixLong", function() { return cubehelixLong; });\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n\nfunction cubehelix(hue) {\n  return (function cubehelixGamma(y) {\n    y = +y;\n\n    function cubehelix(start, end) {\n      var h = hue((start = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["cubehelix"])(start)).h, (end = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["cubehelix"])(end)).h),\n          s = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.s, end.s),\n          l = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.l, end.l),\n          opacity = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.opacity, end.opacity);\n      return function(t) {\n        start.h = h(t);\n        start.s = s(t);\n        start.l = l(Math.pow(t, y));\n        start.opacity = opacity(t);\n        return start + "";\n      };\n    }\n\n    cubehelix.gamma = cubehelixGamma;\n\n    return cubehelix;\n  })(1);\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (cubehelix(_color__WEBPACK_IMPORTED_MODULE_1__["hue"]));\nvar cubehelixLong = cubehelix(_color__WEBPACK_IMPORTED_MODULE_1__["default"]);\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/cubehelix.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/date.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/date.js ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var d = new Date;\n  return a = +a, b -= a, function(t) {\n    return d.setTime(a + b * t), d;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/date.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/discrete.js':
+      /*!*****************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/discrete.js ***!
+  \*****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(range) {\n  var n = range.length;\n  return function(t) {\n    return range[Math.max(0, Math.min(n - 1, Math.floor(t * n)))];\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/discrete.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/hcl.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/hcl.js ***!
+  \************************************************/
+      /*! exports provided: default, hclLong */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hclLong", function() { return hclLong; });\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n\nfunction hcl(hue) {\n  return function(start, end) {\n    var h = hue((start = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["hcl"])(start)).h, (end = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["hcl"])(end)).h),\n        c = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.c, end.c),\n        l = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.l, end.l),\n        opacity = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.opacity, end.opacity);\n    return function(t) {\n      start.h = h(t);\n      start.c = c(t);\n      start.l = l(t);\n      start.opacity = opacity(t);\n      return start + "";\n    };\n  }\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (hcl(_color__WEBPACK_IMPORTED_MODULE_1__["hue"]));\nvar hclLong = hcl(_color__WEBPACK_IMPORTED_MODULE_1__["default"]);\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/hcl.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/hsl.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/hsl.js ***!
+  \************************************************/
+      /*! exports provided: default, hslLong */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hslLong", function() { return hslLong; });\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n\nfunction hsl(hue) {\n  return function(start, end) {\n    var h = hue((start = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["hsl"])(start)).h, (end = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["hsl"])(end)).h),\n        s = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.s, end.s),\n        l = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.l, end.l),\n        opacity = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.opacity, end.opacity);\n    return function(t) {\n      start.h = h(t);\n      start.s = s(t);\n      start.l = l(t);\n      start.opacity = opacity(t);\n      return start + "";\n    };\n  }\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (hsl(_color__WEBPACK_IMPORTED_MODULE_1__["hue"]));\nvar hslLong = hsl(_color__WEBPACK_IMPORTED_MODULE_1__["default"]);\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/hsl.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/hue.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/hue.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var i = Object(_color__WEBPACK_IMPORTED_MODULE_0__["hue"])(+a, +b);\n  return function(t) {\n    var x = i(t);\n    return x - 360 * Math.floor(x / 360);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/hue.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/index.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/index.js ***!
+  \**************************************************/
+      /*! exports provided: interpolate, interpolateArray, interpolateBasis, interpolateBasisClosed, interpolateDate, interpolateDiscrete, interpolateHue, interpolateNumber, interpolateObject, interpolateRound, interpolateString, interpolateTransformCss, interpolateTransformSvg, interpolateZoom, interpolateRgb, interpolateRgbBasis, interpolateRgbBasisClosed, interpolateHsl, interpolateHslLong, interpolateLab, interpolateHcl, interpolateHclLong, interpolateCubehelix, interpolateCubehelixLong, piecewise, quantize */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _value__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./value */ "./node_modules/d3-interpolate/src/value.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolate", function() { return _value__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n/* harmony import */ var _array__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./array */ "./node_modules/d3-interpolate/src/array.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateArray", function() { return _array__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony import */ var _basis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./basis */ "./node_modules/d3-interpolate/src/basis.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateBasis", function() { return _basis__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n/* harmony import */ var _basisClosed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./basisClosed */ "./node_modules/d3-interpolate/src/basisClosed.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateBasisClosed", function() { return _basisClosed__WEBPACK_IMPORTED_MODULE_3__["default"]; });\n\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./date */ "./node_modules/d3-interpolate/src/date.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateDate", function() { return _date__WEBPACK_IMPORTED_MODULE_4__["default"]; });\n\n/* harmony import */ var _discrete__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./discrete */ "./node_modules/d3-interpolate/src/discrete.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateDiscrete", function() { return _discrete__WEBPACK_IMPORTED_MODULE_5__["default"]; });\n\n/* harmony import */ var _hue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./hue */ "./node_modules/d3-interpolate/src/hue.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateHue", function() { return _hue__WEBPACK_IMPORTED_MODULE_6__["default"]; });\n\n/* harmony import */ var _number__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./number */ "./node_modules/d3-interpolate/src/number.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateNumber", function() { return _number__WEBPACK_IMPORTED_MODULE_7__["default"]; });\n\n/* harmony import */ var _object__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./object */ "./node_modules/d3-interpolate/src/object.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateObject", function() { return _object__WEBPACK_IMPORTED_MODULE_8__["default"]; });\n\n/* harmony import */ var _round__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./round */ "./node_modules/d3-interpolate/src/round.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateRound", function() { return _round__WEBPACK_IMPORTED_MODULE_9__["default"]; });\n\n/* harmony import */ var _string__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./string */ "./node_modules/d3-interpolate/src/string.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateString", function() { return _string__WEBPACK_IMPORTED_MODULE_10__["default"]; });\n\n/* harmony import */ var _transform_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./transform/index */ "./node_modules/d3-interpolate/src/transform/index.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateTransformCss", function() { return _transform_index__WEBPACK_IMPORTED_MODULE_11__["interpolateTransformCss"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateTransformSvg", function() { return _transform_index__WEBPACK_IMPORTED_MODULE_11__["interpolateTransformSvg"]; });\n\n/* harmony import */ var _zoom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./zoom */ "./node_modules/d3-interpolate/src/zoom.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateZoom", function() { return _zoom__WEBPACK_IMPORTED_MODULE_12__["default"]; });\n\n/* harmony import */ var _rgb__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./rgb */ "./node_modules/d3-interpolate/src/rgb.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateRgb", function() { return _rgb__WEBPACK_IMPORTED_MODULE_13__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateRgbBasis", function() { return _rgb__WEBPACK_IMPORTED_MODULE_13__["rgbBasis"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateRgbBasisClosed", function() { return _rgb__WEBPACK_IMPORTED_MODULE_13__["rgbBasisClosed"]; });\n\n/* harmony import */ var _hsl__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./hsl */ "./node_modules/d3-interpolate/src/hsl.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateHsl", function() { return _hsl__WEBPACK_IMPORTED_MODULE_14__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateHslLong", function() { return _hsl__WEBPACK_IMPORTED_MODULE_14__["hslLong"]; });\n\n/* harmony import */ var _lab__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lab */ "./node_modules/d3-interpolate/src/lab.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateLab", function() { return _lab__WEBPACK_IMPORTED_MODULE_15__["default"]; });\n\n/* harmony import */ var _hcl__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./hcl */ "./node_modules/d3-interpolate/src/hcl.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateHcl", function() { return _hcl__WEBPACK_IMPORTED_MODULE_16__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateHclLong", function() { return _hcl__WEBPACK_IMPORTED_MODULE_16__["hclLong"]; });\n\n/* harmony import */ var _cubehelix__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./cubehelix */ "./node_modules/d3-interpolate/src/cubehelix.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateCubehelix", function() { return _cubehelix__WEBPACK_IMPORTED_MODULE_17__["default"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interpolateCubehelixLong", function() { return _cubehelix__WEBPACK_IMPORTED_MODULE_17__["cubehelixLong"]; });\n\n/* harmony import */ var _piecewise__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./piecewise */ "./node_modules/d3-interpolate/src/piecewise.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "piecewise", function() { return _piecewise__WEBPACK_IMPORTED_MODULE_18__["default"]; });\n\n/* harmony import */ var _quantize__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./quantize */ "./node_modules/d3-interpolate/src/quantize.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "quantize", function() { return _quantize__WEBPACK_IMPORTED_MODULE_19__["default"]; });\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/lab.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/lab.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lab; });\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n\nfunction lab(start, end) {\n  var l = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])((start = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["lab"])(start)).l, (end = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["lab"])(end)).l),\n      a = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.a, end.a),\n      b = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.b, end.b),\n      opacity = Object(_color__WEBPACK_IMPORTED_MODULE_1__["default"])(start.opacity, end.opacity);\n  return function(t) {\n    start.l = l(t);\n    start.a = a(t);\n    start.b = b(t);\n    start.opacity = opacity(t);\n    return start + "";\n  };\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/lab.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/number.js':
+      /*!***************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/number.js ***!
+  \***************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  return a = +a, b -= a, function(t) {\n    return a + b * t;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/number.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/object.js':
+      /*!***************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/object.js ***!
+  \***************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _value__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./value */ "./node_modules/d3-interpolate/src/value.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var i = {},\n      c = {},\n      k;\n\n  if (a === null || typeof a !== "object") a = {};\n  if (b === null || typeof b !== "object") b = {};\n\n  for (k in b) {\n    if (k in a) {\n      i[k] = Object(_value__WEBPACK_IMPORTED_MODULE_0__["default"])(a[k], b[k]);\n    } else {\n      c[k] = b[k];\n    }\n  }\n\n  return function(t) {\n    for (k in i) c[k] = i[k](t);\n    return c;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/object.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/piecewise.js':
+      /*!******************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/piecewise.js ***!
+  \******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return piecewise; });\nfunction piecewise(interpolate, values) {\n  var i = 0, n = values.length - 1, v = values[0], I = new Array(n < 0 ? 0 : n);\n  while (i < n) I[i] = interpolate(v, v = values[++i]);\n  return function(t) {\n    var i = Math.max(0, Math.min(n - 1, Math.floor(t *= n)));\n    return I[i](t - i);\n  };\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/piecewise.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/quantize.js':
+      /*!*****************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/quantize.js ***!
+  \*****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(interpolator, n) {\n  var samples = new Array(n);\n  for (var i = 0; i < n; ++i) samples[i] = interpolator(i / (n - 1));\n  return samples;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/quantize.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/rgb.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/rgb.js ***!
+  \************************************************/
+      /*! exports provided: default, rgbBasis, rgbBasisClosed */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rgbBasis", function() { return rgbBasis; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rgbBasisClosed", function() { return rgbBasisClosed; });\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _basis__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./basis */ "./node_modules/d3-interpolate/src/basis.js");\n/* harmony import */ var _basisClosed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./basisClosed */ "./node_modules/d3-interpolate/src/basisClosed.js");\n/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./color */ "./node_modules/d3-interpolate/src/color.js");\n\n\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = ((function rgbGamma(y) {\n  var color = Object(_color__WEBPACK_IMPORTED_MODULE_3__["gamma"])(y);\n\n  function rgb(start, end) {\n    var r = color((start = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["rgb"])(start)).r, (end = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["rgb"])(end)).r),\n        g = color(start.g, end.g),\n        b = color(start.b, end.b),\n        opacity = Object(_color__WEBPACK_IMPORTED_MODULE_3__["default"])(start.opacity, end.opacity);\n    return function(t) {\n      start.r = r(t);\n      start.g = g(t);\n      start.b = b(t);\n      start.opacity = opacity(t);\n      return start + "";\n    };\n  }\n\n  rgb.gamma = rgbGamma;\n\n  return rgb;\n})(1));\n\nfunction rgbSpline(spline) {\n  return function(colors) {\n    var n = colors.length,\n        r = new Array(n),\n        g = new Array(n),\n        b = new Array(n),\n        i, color;\n    for (i = 0; i < n; ++i) {\n      color = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["rgb"])(colors[i]);\n      r[i] = color.r || 0;\n      g[i] = color.g || 0;\n      b[i] = color.b || 0;\n    }\n    r = spline(r);\n    g = spline(g);\n    b = spline(b);\n    color.opacity = 1;\n    return function(t) {\n      color.r = r(t);\n      color.g = g(t);\n      color.b = b(t);\n      return color + "";\n    };\n  };\n}\n\nvar rgbBasis = rgbSpline(_basis__WEBPACK_IMPORTED_MODULE_1__["default"]);\nvar rgbBasisClosed = rgbSpline(_basisClosed__WEBPACK_IMPORTED_MODULE_2__["default"]);\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/rgb.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/round.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/round.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  return a = +a, b -= a, function(t) {\n    return Math.round(a + b * t);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/round.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/string.js':
+      /*!***************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/string.js ***!
+  \***************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _number__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./number */ "./node_modules/d3-interpolate/src/number.js");\n\n\nvar reA = /[-+]?(?:\\d+\\.?\\d*|\\.?\\d+)(?:[eE][-+]?\\d+)?/g,\n    reB = new RegExp(reA.source, "g");\n\nfunction zero(b) {\n  return function() {\n    return b;\n  };\n}\n\nfunction one(b) {\n  return function(t) {\n    return b(t) + "";\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var bi = reA.lastIndex = reB.lastIndex = 0, // scan index for next number in b\n      am, // current match in a\n      bm, // current match in b\n      bs, // string preceding current number in b, if any\n      i = -1, // index in s\n      s = [], // string constants and placeholders\n      q = []; // number interpolators\n\n  // Coerce inputs to strings.\n  a = a + "", b = b + "";\n\n  // Interpolate pairs of numbers in a & b.\n  while ((am = reA.exec(a))\n      && (bm = reB.exec(b))) {\n    if ((bs = bm.index) > bi) { // a string precedes the next number in b\n      bs = b.slice(bi, bs);\n      if (s[i]) s[i] += bs; // coalesce with previous string\n      else s[++i] = bs;\n    }\n    if ((am = am[0]) === (bm = bm[0])) { // numbers in a & b match\n      if (s[i]) s[i] += bm; // coalesce with previous string\n      else s[++i] = bm;\n    } else { // interpolate non-matching numbers\n      s[++i] = null;\n      q.push({i: i, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(am, bm)});\n    }\n    bi = reB.lastIndex;\n  }\n\n  // Add remains of b.\n  if (bi < b.length) {\n    bs = b.slice(bi);\n    if (s[i]) s[i] += bs; // coalesce with previous string\n    else s[++i] = bs;\n  }\n\n  // Special optimization for only a single match.\n  // Otherwise, interpolate each of the numbers and rejoin the string.\n  return s.length < 2 ? (q[0]\n      ? one(q[0].x)\n      : zero(b))\n      : (b = q.length, function(t) {\n          for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);\n          return s.join("");\n        });\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/string.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/transform/decompose.js':
+      /*!****************************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/transform/decompose.js ***!
+  \****************************************************************/
+      /*! exports provided: identity, default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return identity; });\nvar degrees = 180 / Math.PI;\n\nvar identity = {\n  translateX: 0,\n  translateY: 0,\n  rotate: 0,\n  skewX: 0,\n  scaleX: 1,\n  scaleY: 1\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b, c, d, e, f) {\n  var scaleX, scaleY, skewX;\n  if (scaleX = Math.sqrt(a * a + b * b)) a /= scaleX, b /= scaleX;\n  if (skewX = a * c + b * d) c -= a * skewX, d -= b * skewX;\n  if (scaleY = Math.sqrt(c * c + d * d)) c /= scaleY, d /= scaleY, skewX /= scaleY;\n  if (a * d < b * c) a = -a, b = -b, skewX = -skewX, scaleX = -scaleX;\n  return {\n    translateX: e,\n    translateY: f,\n    rotate: Math.atan2(b, a) * degrees,\n    skewX: Math.atan(skewX) * degrees,\n    scaleX: scaleX,\n    scaleY: scaleY\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/transform/decompose.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/transform/index.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/transform/index.js ***!
+  \************************************************************/
+      /*! exports provided: interpolateTransformCss, interpolateTransformSvg */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interpolateTransformCss", function() { return interpolateTransformCss; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interpolateTransformSvg", function() { return interpolateTransformSvg; });\n/* harmony import */ var _number__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../number */ "./node_modules/d3-interpolate/src/number.js");\n/* harmony import */ var _parse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parse */ "./node_modules/d3-interpolate/src/transform/parse.js");\n\n\n\nfunction interpolateTransform(parse, pxComma, pxParen, degParen) {\n\n  function pop(s) {\n    return s.length ? s.pop() + " " : "";\n  }\n\n  function translate(xa, ya, xb, yb, s, q) {\n    if (xa !== xb || ya !== yb) {\n      var i = s.push("translate(", null, pxComma, null, pxParen);\n      q.push({i: i - 4, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(xa, xb)}, {i: i - 2, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(ya, yb)});\n    } else if (xb || yb) {\n      s.push("translate(" + xb + pxComma + yb + pxParen);\n    }\n  }\n\n  function rotate(a, b, s, q) {\n    if (a !== b) {\n      if (a - b > 180) b += 360; else if (b - a > 180) a += 360; // shortest path\n      q.push({i: s.push(pop(s) + "rotate(", null, degParen) - 2, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(a, b)});\n    } else if (b) {\n      s.push(pop(s) + "rotate(" + b + degParen);\n    }\n  }\n\n  function skewX(a, b, s, q) {\n    if (a !== b) {\n      q.push({i: s.push(pop(s) + "skewX(", null, degParen) - 2, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(a, b)});\n    } else if (b) {\n      s.push(pop(s) + "skewX(" + b + degParen);\n    }\n  }\n\n  function scale(xa, ya, xb, yb, s, q) {\n    if (xa !== xb || ya !== yb) {\n      var i = s.push(pop(s) + "scale(", null, ",", null, ")");\n      q.push({i: i - 4, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(xa, xb)}, {i: i - 2, x: Object(_number__WEBPACK_IMPORTED_MODULE_0__["default"])(ya, yb)});\n    } else if (xb !== 1 || yb !== 1) {\n      s.push(pop(s) + "scale(" + xb + "," + yb + ")");\n    }\n  }\n\n  return function(a, b) {\n    var s = [], // string constants and placeholders\n        q = []; // number interpolators\n    a = parse(a), b = parse(b);\n    translate(a.translateX, a.translateY, b.translateX, b.translateY, s, q);\n    rotate(a.rotate, b.rotate, s, q);\n    skewX(a.skewX, b.skewX, s, q);\n    scale(a.scaleX, a.scaleY, b.scaleX, b.scaleY, s, q);\n    a = b = null; // gc\n    return function(t) {\n      var i = -1, n = q.length, o;\n      while (++i < n) s[(o = q[i]).i] = o.x(t);\n      return s.join("");\n    };\n  };\n}\n\nvar interpolateTransformCss = interpolateTransform(_parse__WEBPACK_IMPORTED_MODULE_1__["parseCss"], "px, ", "px)", "deg)");\nvar interpolateTransformSvg = interpolateTransform(_parse__WEBPACK_IMPORTED_MODULE_1__["parseSvg"], ", ", ")", ")");\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/transform/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/transform/parse.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/transform/parse.js ***!
+  \************************************************************/
+      /*! exports provided: parseCss, parseSvg */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseCss", function() { return parseCss; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseSvg", function() { return parseSvg; });\n/* harmony import */ var _decompose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./decompose */ "./node_modules/d3-interpolate/src/transform/decompose.js");\n\n\nvar cssNode,\n    cssRoot,\n    cssView,\n    svgNode;\n\nfunction parseCss(value) {\n  if (value === "none") return _decompose__WEBPACK_IMPORTED_MODULE_0__["identity"];\n  if (!cssNode) cssNode = document.createElement("DIV"), cssRoot = document.documentElement, cssView = document.defaultView;\n  cssNode.style.transform = value;\n  value = cssView.getComputedStyle(cssRoot.appendChild(cssNode), null).getPropertyValue("transform");\n  cssRoot.removeChild(cssNode);\n  value = value.slice(7, -1).split(",");\n  return Object(_decompose__WEBPACK_IMPORTED_MODULE_0__["default"])(+value[0], +value[1], +value[2], +value[3], +value[4], +value[5]);\n}\n\nfunction parseSvg(value) {\n  if (value == null) return _decompose__WEBPACK_IMPORTED_MODULE_0__["identity"];\n  if (!svgNode) svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");\n  svgNode.setAttribute("transform", value);\n  if (!(value = svgNode.transform.baseVal.consolidate())) return _decompose__WEBPACK_IMPORTED_MODULE_0__["identity"];\n  value = value.matrix;\n  return Object(_decompose__WEBPACK_IMPORTED_MODULE_0__["default"])(value.a, value.b, value.c, value.d, value.e, value.f);\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/transform/parse.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/value.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/value.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var _rgb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rgb */ "./node_modules/d3-interpolate/src/rgb.js");\n/* harmony import */ var _array__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./array */ "./node_modules/d3-interpolate/src/array.js");\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./date */ "./node_modules/d3-interpolate/src/date.js");\n/* harmony import */ var _number__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./number */ "./node_modules/d3-interpolate/src/number.js");\n/* harmony import */ var _object__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./object */ "./node_modules/d3-interpolate/src/object.js");\n/* harmony import */ var _string__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./string */ "./node_modules/d3-interpolate/src/string.js");\n/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./constant */ "./node_modules/d3-interpolate/src/constant.js");\n\n\n\n\n\n\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var t = typeof b, c;\n  return b == null || t === "boolean" ? Object(_constant__WEBPACK_IMPORTED_MODULE_7__["default"])(b)\n      : (t === "number" ? _number__WEBPACK_IMPORTED_MODULE_4__["default"]\n      : t === "string" ? ((c = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["color"])(b)) ? (b = c, _rgb__WEBPACK_IMPORTED_MODULE_1__["default"]) : _string__WEBPACK_IMPORTED_MODULE_6__["default"])\n      : b instanceof d3_color__WEBPACK_IMPORTED_MODULE_0__["color"] ? _rgb__WEBPACK_IMPORTED_MODULE_1__["default"]\n      : b instanceof Date ? _date__WEBPACK_IMPORTED_MODULE_3__["default"]\n      : Array.isArray(b) ? _array__WEBPACK_IMPORTED_MODULE_2__["default"]\n      : typeof b.valueOf !== "function" && typeof b.toString !== "function" || isNaN(b) ? _object__WEBPACK_IMPORTED_MODULE_5__["default"]\n      : _number__WEBPACK_IMPORTED_MODULE_4__["default"])(a, b);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/value.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-interpolate/src/zoom.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-interpolate/src/zoom.js ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nvar rho = Math.SQRT2,\n    rho2 = 2,\n    rho4 = 4,\n    epsilon2 = 1e-12;\n\nfunction cosh(x) {\n  return ((x = Math.exp(x)) + 1 / x) / 2;\n}\n\nfunction sinh(x) {\n  return ((x = Math.exp(x)) - 1 / x) / 2;\n}\n\nfunction tanh(x) {\n  return ((x = Math.exp(2 * x)) - 1) / (x + 1);\n}\n\n// p0 = [ux0, uy0, w0]\n// p1 = [ux1, uy1, w1]\n/* harmony default export */ __webpack_exports__["default"] = (function(p0, p1) {\n  var ux0 = p0[0], uy0 = p0[1], w0 = p0[2],\n      ux1 = p1[0], uy1 = p1[1], w1 = p1[2],\n      dx = ux1 - ux0,\n      dy = uy1 - uy0,\n      d2 = dx * dx + dy * dy,\n      i,\n      S;\n\n  // Special case for u0 ≅ u1.\n  if (d2 < epsilon2) {\n    S = Math.log(w1 / w0) / rho;\n    i = function(t) {\n      return [\n        ux0 + t * dx,\n        uy0 + t * dy,\n        w0 * Math.exp(rho * t * S)\n      ];\n    }\n  }\n\n  // General case.\n  else {\n    var d1 = Math.sqrt(d2),\n        b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),\n        b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),\n        r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),\n        r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);\n    S = (r1 - r0) / rho;\n    i = function(t) {\n      var s = t * S,\n          coshr0 = cosh(r0),\n          u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));\n      return [\n        ux0 + u * dx,\n        uy0 + u * dy,\n        w0 * coshr0 / cosh(rho * s + r0)\n      ];\n    }\n  }\n\n  i.duration = S * 1000;\n\n  return i;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-interpolate/src/zoom.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/constant.js':
+      /*!***************************************************!*\
+  !*** ./node_modules/d3-selection/src/constant.js ***!
+  \***************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(x) {\n  return function() {\n    return x;\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/constant.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/create.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-selection/src/create.js ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _creator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./creator */ "./node_modules/d3-selection/src/creator.js");\n/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select */ "./node_modules/d3-selection/src/select.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  return Object(_select__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_creator__WEBPACK_IMPORTED_MODULE_0__["default"])(name).call(document.documentElement));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/create.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/creator.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-selection/src/creator.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _namespace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./namespace */ "./node_modules/d3-selection/src/namespace.js");\n/* harmony import */ var _namespaces__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./namespaces */ "./node_modules/d3-selection/src/namespaces.js");\n\n\n\nfunction creatorInherit(name) {\n  return function() {\n    var document = this.ownerDocument,\n        uri = this.namespaceURI;\n    return uri === _namespaces__WEBPACK_IMPORTED_MODULE_1__["xhtml"] && document.documentElement.namespaceURI === _namespaces__WEBPACK_IMPORTED_MODULE_1__["xhtml"]\n        ? document.createElement(name)\n        : document.createElementNS(uri, name);\n  };\n}\n\nfunction creatorFixed(fullname) {\n  return function() {\n    return this.ownerDocument.createElementNS(fullname.space, fullname.local);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  var fullname = Object(_namespace__WEBPACK_IMPORTED_MODULE_0__["default"])(name);\n  return (fullname.local\n      ? creatorFixed\n      : creatorInherit)(fullname);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/creator.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/index.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-selection/src/index.js ***!
+  \************************************************/
+      /*! exports provided: create, creator, local, matcher, mouse, namespace, namespaces, clientPoint, select, selectAll, selection, selector, selectorAll, style, touch, touches, window, event, customEvent */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _create__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create */ "./node_modules/d3-selection/src/create.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "create", function() { return _create__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n/* harmony import */ var _creator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./creator */ "./node_modules/d3-selection/src/creator.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "creator", function() { return _creator__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony import */ var _local__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./local */ "./node_modules/d3-selection/src/local.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "local", function() { return _local__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n/* harmony import */ var _matcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./matcher */ "./node_modules/d3-selection/src/matcher.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matcher", function() { return _matcher__WEBPACK_IMPORTED_MODULE_3__["default"]; });\n\n/* harmony import */ var _mouse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mouse */ "./node_modules/d3-selection/src/mouse.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mouse", function() { return _mouse__WEBPACK_IMPORTED_MODULE_4__["default"]; });\n\n/* harmony import */ var _namespace__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./namespace */ "./node_modules/d3-selection/src/namespace.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "namespace", function() { return _namespace__WEBPACK_IMPORTED_MODULE_5__["default"]; });\n\n/* harmony import */ var _namespaces__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./namespaces */ "./node_modules/d3-selection/src/namespaces.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "namespaces", function() { return _namespaces__WEBPACK_IMPORTED_MODULE_6__["default"]; });\n\n/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./point */ "./node_modules/d3-selection/src/point.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clientPoint", function() { return _point__WEBPACK_IMPORTED_MODULE_7__["default"]; });\n\n/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./select */ "./node_modules/d3-selection/src/select.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "select", function() { return _select__WEBPACK_IMPORTED_MODULE_8__["default"]; });\n\n/* harmony import */ var _selectAll__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./selectAll */ "./node_modules/d3-selection/src/selectAll.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selectAll", function() { return _selectAll__WEBPACK_IMPORTED_MODULE_9__["default"]; });\n\n/* harmony import */ var _selection_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./selection/index */ "./node_modules/d3-selection/src/selection/index.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selection", function() { return _selection_index__WEBPACK_IMPORTED_MODULE_10__["default"]; });\n\n/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./selector */ "./node_modules/d3-selection/src/selector.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selector", function() { return _selector__WEBPACK_IMPORTED_MODULE_11__["default"]; });\n\n/* harmony import */ var _selectorAll__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./selectorAll */ "./node_modules/d3-selection/src/selectorAll.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selectorAll", function() { return _selectorAll__WEBPACK_IMPORTED_MODULE_12__["default"]; });\n\n/* harmony import */ var _selection_style__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./selection/style */ "./node_modules/d3-selection/src/selection/style.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "style", function() { return _selection_style__WEBPACK_IMPORTED_MODULE_13__["styleValue"]; });\n\n/* harmony import */ var _touch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./touch */ "./node_modules/d3-selection/src/touch.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "touch", function() { return _touch__WEBPACK_IMPORTED_MODULE_14__["default"]; });\n\n/* harmony import */ var _touches__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./touches */ "./node_modules/d3-selection/src/touches.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "touches", function() { return _touches__WEBPACK_IMPORTED_MODULE_15__["default"]; });\n\n/* harmony import */ var _window__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./window */ "./node_modules/d3-selection/src/window.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "window", function() { return _window__WEBPACK_IMPORTED_MODULE_16__["default"]; });\n\n/* harmony import */ var _selection_on__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./selection/on */ "./node_modules/d3-selection/src/selection/on.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "event", function() { return _selection_on__WEBPACK_IMPORTED_MODULE_17__["event"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "customEvent", function() { return _selection_on__WEBPACK_IMPORTED_MODULE_17__["customEvent"]; });\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/local.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-selection/src/local.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return local; });\nvar nextId = 0;\n\nfunction local() {\n  return new Local;\n}\n\nfunction Local() {\n  this._ = "@" + (++nextId).toString(36);\n}\n\nLocal.prototype = local.prototype = {\n  constructor: Local,\n  get: function(node) {\n    var id = this._;\n    while (!(id in node)) if (!(node = node.parentNode)) return;\n    return node[id];\n  },\n  set: function(node, value) {\n    return node[this._] = value;\n  },\n  remove: function(node) {\n    return this._ in node && delete node[this._];\n  },\n  toString: function() {\n    return this._;\n  }\n};\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/local.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/matcher.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-selection/src/matcher.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nvar matcher = function(selector) {\n  return function() {\n    return this.matches(selector);\n  };\n};\n\nif (typeof document !== "undefined") {\n  var element = document.documentElement;\n  if (!element.matches) {\n    var vendorMatches = element.webkitMatchesSelector\n        || element.msMatchesSelector\n        || element.mozMatchesSelector\n        || element.oMatchesSelector;\n    matcher = function(selector) {\n      return function() {\n        return vendorMatches.call(this, selector);\n      };\n    };\n  }\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (matcher);\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/matcher.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/mouse.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-selection/src/mouse.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sourceEvent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sourceEvent */ "./node_modules/d3-selection/src/sourceEvent.js");\n/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./point */ "./node_modules/d3-selection/src/point.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node) {\n  var event = Object(_sourceEvent__WEBPACK_IMPORTED_MODULE_0__["default"])();\n  if (event.changedTouches) event = event.changedTouches[0];\n  return Object(_point__WEBPACK_IMPORTED_MODULE_1__["default"])(node, event);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/mouse.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/namespace.js':
+      /*!****************************************************!*\
+  !*** ./node_modules/d3-selection/src/namespace.js ***!
+  \****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _namespaces__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./namespaces */ "./node_modules/d3-selection/src/namespaces.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  var prefix = name += "", i = prefix.indexOf(":");\n  if (i >= 0 && (prefix = name.slice(0, i)) !== "xmlns") name = name.slice(i + 1);\n  return _namespaces__WEBPACK_IMPORTED_MODULE_0__["default"].hasOwnProperty(prefix) ? {space: _namespaces__WEBPACK_IMPORTED_MODULE_0__["default"][prefix], local: name} : name;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/namespace.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/namespaces.js':
+      /*!*****************************************************!*\
+  !*** ./node_modules/d3-selection/src/namespaces.js ***!
+  \*****************************************************/
+      /*! exports provided: xhtml, default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xhtml", function() { return xhtml; });\nvar xhtml = "http://www.w3.org/1999/xhtml";\n\n/* harmony default export */ __webpack_exports__["default"] = ({\n  svg: "http://www.w3.org/2000/svg",\n  xhtml: xhtml,\n  xlink: "http://www.w3.org/1999/xlink",\n  xml: "http://www.w3.org/XML/1998/namespace",\n  xmlns: "http://www.w3.org/2000/xmlns/"\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/namespaces.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/point.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-selection/src/point.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(node, event) {\n  var svg = node.ownerSVGElement || node;\n\n  if (svg.createSVGPoint) {\n    var point = svg.createSVGPoint();\n    point.x = event.clientX, point.y = event.clientY;\n    point = point.matrixTransform(node.getScreenCTM().inverse());\n    return [point.x, point.y];\n  }\n\n  var rect = node.getBoundingClientRect();\n  return [event.clientX - rect.left - node.clientLeft, event.clientY - rect.top - node.clientTop];\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/point.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/select.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-selection/src/select.js ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _selection_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selection/index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(selector) {\n  return typeof selector === "string"\n      ? new _selection_index__WEBPACK_IMPORTED_MODULE_0__["Selection"]([[document.querySelector(selector)]], [document.documentElement])\n      : new _selection_index__WEBPACK_IMPORTED_MODULE_0__["Selection"]([[selector]], _selection_index__WEBPACK_IMPORTED_MODULE_0__["root"]);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/select.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selectAll.js':
+      /*!****************************************************!*\
+  !*** ./node_modules/d3-selection/src/selectAll.js ***!
+  \****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _selection_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selection/index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(selector) {\n  return typeof selector === "string"\n      ? new _selection_index__WEBPACK_IMPORTED_MODULE_0__["Selection"]([document.querySelectorAll(selector)], [document.documentElement])\n      : new _selection_index__WEBPACK_IMPORTED_MODULE_0__["Selection"]([selector == null ? [] : selector], _selection_index__WEBPACK_IMPORTED_MODULE_0__["root"]);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selectAll.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/append.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/append.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _creator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../creator */ "./node_modules/d3-selection/src/creator.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  var create = typeof name === "function" ? name : Object(_creator__WEBPACK_IMPORTED_MODULE_0__["default"])(name);\n  return this.select(function() {\n    return this.appendChild(create.apply(this, arguments));\n  });\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/append.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/attr.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/attr.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _namespace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../namespace */ "./node_modules/d3-selection/src/namespace.js");\n\n\nfunction attrRemove(name) {\n  return function() {\n    this.removeAttribute(name);\n  };\n}\n\nfunction attrRemoveNS(fullname) {\n  return function() {\n    this.removeAttributeNS(fullname.space, fullname.local);\n  };\n}\n\nfunction attrConstant(name, value) {\n  return function() {\n    this.setAttribute(name, value);\n  };\n}\n\nfunction attrConstantNS(fullname, value) {\n  return function() {\n    this.setAttributeNS(fullname.space, fullname.local, value);\n  };\n}\n\nfunction attrFunction(name, value) {\n  return function() {\n    var v = value.apply(this, arguments);\n    if (v == null) this.removeAttribute(name);\n    else this.setAttribute(name, v);\n  };\n}\n\nfunction attrFunctionNS(fullname, value) {\n  return function() {\n    var v = value.apply(this, arguments);\n    if (v == null) this.removeAttributeNS(fullname.space, fullname.local);\n    else this.setAttributeNS(fullname.space, fullname.local, v);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  var fullname = Object(_namespace__WEBPACK_IMPORTED_MODULE_0__["default"])(name);\n\n  if (arguments.length < 2) {\n    var node = this.node();\n    return fullname.local\n        ? node.getAttributeNS(fullname.space, fullname.local)\n        : node.getAttribute(fullname);\n  }\n\n  return this.each((value == null\n      ? (fullname.local ? attrRemoveNS : attrRemove) : (typeof value === "function"\n      ? (fullname.local ? attrFunctionNS : attrFunction)\n      : (fullname.local ? attrConstantNS : attrConstant)))(fullname, value));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/attr.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/call.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/call.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  var callback = arguments[0];\n  arguments[0] = this;\n  callback.apply(null, arguments);\n  return this;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/call.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/classed.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/classed.js ***!
+  \************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction classArray(string) {\n  return string.trim().split(/^|\\s+/);\n}\n\nfunction classList(node) {\n  return node.classList || new ClassList(node);\n}\n\nfunction ClassList(node) {\n  this._node = node;\n  this._names = classArray(node.getAttribute("class") || "");\n}\n\nClassList.prototype = {\n  add: function(name) {\n    var i = this._names.indexOf(name);\n    if (i < 0) {\n      this._names.push(name);\n      this._node.setAttribute("class", this._names.join(" "));\n    }\n  },\n  remove: function(name) {\n    var i = this._names.indexOf(name);\n    if (i >= 0) {\n      this._names.splice(i, 1);\n      this._node.setAttribute("class", this._names.join(" "));\n    }\n  },\n  contains: function(name) {\n    return this._names.indexOf(name) >= 0;\n  }\n};\n\nfunction classedAdd(node, names) {\n  var list = classList(node), i = -1, n = names.length;\n  while (++i < n) list.add(names[i]);\n}\n\nfunction classedRemove(node, names) {\n  var list = classList(node), i = -1, n = names.length;\n  while (++i < n) list.remove(names[i]);\n}\n\nfunction classedTrue(names) {\n  return function() {\n    classedAdd(this, names);\n  };\n}\n\nfunction classedFalse(names) {\n  return function() {\n    classedRemove(this, names);\n  };\n}\n\nfunction classedFunction(names, value) {\n  return function() {\n    (value.apply(this, arguments) ? classedAdd : classedRemove)(this, names);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  var names = classArray(name + "");\n\n  if (arguments.length < 2) {\n    var list = classList(this.node()), i = -1, n = names.length;\n    while (++i < n) if (!list.contains(names[i])) return false;\n    return true;\n  }\n\n  return this.each((typeof value === "function"\n      ? classedFunction : value\n      ? classedTrue\n      : classedFalse)(names, value));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/classed.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/clone.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/clone.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction selection_cloneShallow() {\n  return this.parentNode.insertBefore(this.cloneNode(false), this.nextSibling);\n}\n\nfunction selection_cloneDeep() {\n  return this.parentNode.insertBefore(this.cloneNode(true), this.nextSibling);\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(deep) {\n  return this.select(deep ? selection_cloneDeep : selection_cloneShallow);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/clone.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/data.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/data.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n/* harmony import */ var _enter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enter */ "./node_modules/d3-selection/src/selection/enter.js");\n/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constant */ "./node_modules/d3-selection/src/constant.js");\n\n\n\n\nvar keyPrefix = "$"; // Protect against keys like “__proto__”.\n\nfunction bindIndex(parent, group, enter, update, exit, data) {\n  var i = 0,\n      node,\n      groupLength = group.length,\n      dataLength = data.length;\n\n  // Put any non-null nodes that fit into update.\n  // Put any null nodes into enter.\n  // Put any remaining data into enter.\n  for (; i < dataLength; ++i) {\n    if (node = group[i]) {\n      node.__data__ = data[i];\n      update[i] = node;\n    } else {\n      enter[i] = new _enter__WEBPACK_IMPORTED_MODULE_1__["EnterNode"](parent, data[i]);\n    }\n  }\n\n  // Put any non-null nodes that don’t fit into exit.\n  for (; i < groupLength; ++i) {\n    if (node = group[i]) {\n      exit[i] = node;\n    }\n  }\n}\n\nfunction bindKey(parent, group, enter, update, exit, data, key) {\n  var i,\n      node,\n      nodeByKeyValue = {},\n      groupLength = group.length,\n      dataLength = data.length,\n      keyValues = new Array(groupLength),\n      keyValue;\n\n  // Compute the key for each node.\n  // If multiple nodes have the same key, the duplicates are added to exit.\n  for (i = 0; i < groupLength; ++i) {\n    if (node = group[i]) {\n      keyValues[i] = keyValue = keyPrefix + key.call(node, node.__data__, i, group);\n      if (keyValue in nodeByKeyValue) {\n        exit[i] = node;\n      } else {\n        nodeByKeyValue[keyValue] = node;\n      }\n    }\n  }\n\n  // Compute the key for each datum.\n  // If there a node associated with this key, join and add it to update.\n  // If there is not (or the key is a duplicate), add it to enter.\n  for (i = 0; i < dataLength; ++i) {\n    keyValue = keyPrefix + key.call(parent, data[i], i, data);\n    if (node = nodeByKeyValue[keyValue]) {\n      update[i] = node;\n      node.__data__ = data[i];\n      nodeByKeyValue[keyValue] = null;\n    } else {\n      enter[i] = new _enter__WEBPACK_IMPORTED_MODULE_1__["EnterNode"](parent, data[i]);\n    }\n  }\n\n  // Add any remaining nodes that were not bound to data to exit.\n  for (i = 0; i < groupLength; ++i) {\n    if ((node = group[i]) && (nodeByKeyValue[keyValues[i]] === node)) {\n      exit[i] = node;\n    }\n  }\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value, key) {\n  if (!value) {\n    data = new Array(this.size()), j = -1;\n    this.each(function(d) { data[++j] = d; });\n    return data;\n  }\n\n  var bind = key ? bindKey : bindIndex,\n      parents = this._parents,\n      groups = this._groups;\n\n  if (typeof value !== "function") value = Object(_constant__WEBPACK_IMPORTED_MODULE_2__["default"])(value);\n\n  for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {\n    var parent = parents[j],\n        group = groups[j],\n        groupLength = group.length,\n        data = value.call(parent, parent && parent.__data__, j, parents),\n        dataLength = data.length,\n        enterGroup = enter[j] = new Array(dataLength),\n        updateGroup = update[j] = new Array(dataLength),\n        exitGroup = exit[j] = new Array(groupLength);\n\n    bind(parent, group, enterGroup, updateGroup, exitGroup, data, key);\n\n    // Now connect the enter nodes to their following update node, such that\n    // appendChild can insert the materialized enter node before this node,\n    // rather than at the end of the parent node.\n    for (var i0 = 0, i1 = 0, previous, next; i0 < dataLength; ++i0) {\n      if (previous = enterGroup[i0]) {\n        if (i0 >= i1) i1 = i0 + 1;\n        while (!(next = updateGroup[i1]) && ++i1 < dataLength);\n        previous._next = next || null;\n      }\n    }\n  }\n\n  update = new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](update, parents);\n  update._enter = enter;\n  update._exit = exit;\n  return update;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/data.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/datum.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/datum.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  return arguments.length\n      ? this.property("__data__", value)\n      : this.node().__data__;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/datum.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/dispatch.js':
+      /*!*************************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/dispatch.js ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../window */ "./node_modules/d3-selection/src/window.js");\n\n\nfunction dispatchEvent(node, type, params) {\n  var window = Object(_window__WEBPACK_IMPORTED_MODULE_0__["default"])(node),\n      event = window.CustomEvent;\n\n  if (typeof event === "function") {\n    event = new event(type, params);\n  } else {\n    event = window.document.createEvent("Event");\n    if (params) event.initEvent(type, params.bubbles, params.cancelable), event.detail = params.detail;\n    else event.initEvent(type, false, false);\n  }\n\n  node.dispatchEvent(event);\n}\n\nfunction dispatchConstant(type, params) {\n  return function() {\n    return dispatchEvent(this, type, params);\n  };\n}\n\nfunction dispatchFunction(type, params) {\n  return function() {\n    return dispatchEvent(this, type, params.apply(this, arguments));\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(type, params) {\n  return this.each((typeof params === "function"\n      ? dispatchFunction\n      : dispatchConstant)(type, params));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/dispatch.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/each.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/each.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(callback) {\n\n  for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {\n    for (var group = groups[j], i = 0, n = group.length, node; i < n; ++i) {\n      if (node = group[i]) callback.call(node, node.__data__, i, group);\n    }\n  }\n\n  return this;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/each.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/empty.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/empty.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return !this.node();\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/empty.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/enter.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/enter.js ***!
+  \**********************************************************/
+      /*! exports provided: default, EnterNode */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnterNode", function() { return EnterNode; });\n/* harmony import */ var _sparse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sparse */ "./node_modules/d3-selection/src/selection/sparse.js");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return new _index__WEBPACK_IMPORTED_MODULE_1__["Selection"](this._enter || this._groups.map(_sparse__WEBPACK_IMPORTED_MODULE_0__["default"]), this._parents);\n});\n\nfunction EnterNode(parent, datum) {\n  this.ownerDocument = parent.ownerDocument;\n  this.namespaceURI = parent.namespaceURI;\n  this._next = null;\n  this._parent = parent;\n  this.__data__ = datum;\n}\n\nEnterNode.prototype = {\n  constructor: EnterNode,\n  appendChild: function(child) { return this._parent.insertBefore(child, this._next); },\n  insertBefore: function(child, next) { return this._parent.insertBefore(child, next); },\n  querySelector: function(selector) { return this._parent.querySelector(selector); },\n  querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }\n};\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/enter.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/exit.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/exit.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sparse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sparse */ "./node_modules/d3-selection/src/selection/sparse.js");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return new _index__WEBPACK_IMPORTED_MODULE_1__["Selection"](this._exit || this._groups.map(_sparse__WEBPACK_IMPORTED_MODULE_0__["default"]), this._parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/exit.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/filter.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/filter.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n/* harmony import */ var _matcher__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../matcher */ "./node_modules/d3-selection/src/matcher.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(match) {\n  if (typeof match !== "function") match = Object(_matcher__WEBPACK_IMPORTED_MODULE_1__["default"])(match);\n\n  for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {\n      if ((node = group[i]) && match.call(node, node.__data__, i, group)) {\n        subgroup.push(node);\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](subgroups, this._parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/filter.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/html.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/html.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction htmlRemove() {\n  this.innerHTML = "";\n}\n\nfunction htmlConstant(value) {\n  return function() {\n    this.innerHTML = value;\n  };\n}\n\nfunction htmlFunction(value) {\n  return function() {\n    var v = value.apply(this, arguments);\n    this.innerHTML = v == null ? "" : v;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  return arguments.length\n      ? this.each(value == null\n          ? htmlRemove : (typeof value === "function"\n          ? htmlFunction\n          : htmlConstant)(value))\n      : this.node().innerHTML;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/html.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/index.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/index.js ***!
+  \**********************************************************/
+      /*! exports provided: root, Selection, default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "root", function() { return root; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Selection", function() { return Selection; });\n/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select */ "./node_modules/d3-selection/src/selection/select.js");\n/* harmony import */ var _selectAll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./selectAll */ "./node_modules/d3-selection/src/selection/selectAll.js");\n/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filter */ "./node_modules/d3-selection/src/selection/filter.js");\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data */ "./node_modules/d3-selection/src/selection/data.js");\n/* harmony import */ var _enter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./enter */ "./node_modules/d3-selection/src/selection/enter.js");\n/* harmony import */ var _exit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./exit */ "./node_modules/d3-selection/src/selection/exit.js");\n/* harmony import */ var _merge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./merge */ "./node_modules/d3-selection/src/selection/merge.js");\n/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./order */ "./node_modules/d3-selection/src/selection/order.js");\n/* harmony import */ var _sort__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sort */ "./node_modules/d3-selection/src/selection/sort.js");\n/* harmony import */ var _call__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./call */ "./node_modules/d3-selection/src/selection/call.js");\n/* harmony import */ var _nodes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./nodes */ "./node_modules/d3-selection/src/selection/nodes.js");\n/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./node */ "./node_modules/d3-selection/src/selection/node.js");\n/* harmony import */ var _size__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./size */ "./node_modules/d3-selection/src/selection/size.js");\n/* harmony import */ var _empty__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./empty */ "./node_modules/d3-selection/src/selection/empty.js");\n/* harmony import */ var _each__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./each */ "./node_modules/d3-selection/src/selection/each.js");\n/* harmony import */ var _attr__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./attr */ "./node_modules/d3-selection/src/selection/attr.js");\n/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./style */ "./node_modules/d3-selection/src/selection/style.js");\n/* harmony import */ var _property__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./property */ "./node_modules/d3-selection/src/selection/property.js");\n/* harmony import */ var _classed__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./classed */ "./node_modules/d3-selection/src/selection/classed.js");\n/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./text */ "./node_modules/d3-selection/src/selection/text.js");\n/* harmony import */ var _html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./html */ "./node_modules/d3-selection/src/selection/html.js");\n/* harmony import */ var _raise__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./raise */ "./node_modules/d3-selection/src/selection/raise.js");\n/* harmony import */ var _lower__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./lower */ "./node_modules/d3-selection/src/selection/lower.js");\n/* harmony import */ var _append__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./append */ "./node_modules/d3-selection/src/selection/append.js");\n/* harmony import */ var _insert__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./insert */ "./node_modules/d3-selection/src/selection/insert.js");\n/* harmony import */ var _remove__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./remove */ "./node_modules/d3-selection/src/selection/remove.js");\n/* harmony import */ var _clone__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./clone */ "./node_modules/d3-selection/src/selection/clone.js");\n/* harmony import */ var _datum__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./datum */ "./node_modules/d3-selection/src/selection/datum.js");\n/* harmony import */ var _on__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./on */ "./node_modules/d3-selection/src/selection/on.js");\n/* harmony import */ var _dispatch__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./dispatch */ "./node_modules/d3-selection/src/selection/dispatch.js");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar root = [null];\n\nfunction Selection(groups, parents) {\n  this._groups = groups;\n  this._parents = parents;\n}\n\nfunction selection() {\n  return new Selection([[document.documentElement]], root);\n}\n\nSelection.prototype = selection.prototype = {\n  constructor: Selection,\n  select: _select__WEBPACK_IMPORTED_MODULE_0__["default"],\n  selectAll: _selectAll__WEBPACK_IMPORTED_MODULE_1__["default"],\n  filter: _filter__WEBPACK_IMPORTED_MODULE_2__["default"],\n  data: _data__WEBPACK_IMPORTED_MODULE_3__["default"],\n  enter: _enter__WEBPACK_IMPORTED_MODULE_4__["default"],\n  exit: _exit__WEBPACK_IMPORTED_MODULE_5__["default"],\n  merge: _merge__WEBPACK_IMPORTED_MODULE_6__["default"],\n  order: _order__WEBPACK_IMPORTED_MODULE_7__["default"],\n  sort: _sort__WEBPACK_IMPORTED_MODULE_8__["default"],\n  call: _call__WEBPACK_IMPORTED_MODULE_9__["default"],\n  nodes: _nodes__WEBPACK_IMPORTED_MODULE_10__["default"],\n  node: _node__WEBPACK_IMPORTED_MODULE_11__["default"],\n  size: _size__WEBPACK_IMPORTED_MODULE_12__["default"],\n  empty: _empty__WEBPACK_IMPORTED_MODULE_13__["default"],\n  each: _each__WEBPACK_IMPORTED_MODULE_14__["default"],\n  attr: _attr__WEBPACK_IMPORTED_MODULE_15__["default"],\n  style: _style__WEBPACK_IMPORTED_MODULE_16__["default"],\n  property: _property__WEBPACK_IMPORTED_MODULE_17__["default"],\n  classed: _classed__WEBPACK_IMPORTED_MODULE_18__["default"],\n  text: _text__WEBPACK_IMPORTED_MODULE_19__["default"],\n  html: _html__WEBPACK_IMPORTED_MODULE_20__["default"],\n  raise: _raise__WEBPACK_IMPORTED_MODULE_21__["default"],\n  lower: _lower__WEBPACK_IMPORTED_MODULE_22__["default"],\n  append: _append__WEBPACK_IMPORTED_MODULE_23__["default"],\n  insert: _insert__WEBPACK_IMPORTED_MODULE_24__["default"],\n  remove: _remove__WEBPACK_IMPORTED_MODULE_25__["default"],\n  clone: _clone__WEBPACK_IMPORTED_MODULE_26__["default"],\n  datum: _datum__WEBPACK_IMPORTED_MODULE_27__["default"],\n  on: _on__WEBPACK_IMPORTED_MODULE_28__["default"],\n  dispatch: _dispatch__WEBPACK_IMPORTED_MODULE_29__["default"]\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (selection);\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/insert.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/insert.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _creator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../creator */ "./node_modules/d3-selection/src/creator.js");\n/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../selector */ "./node_modules/d3-selection/src/selector.js");\n\n\n\nfunction constantNull() {\n  return null;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, before) {\n  var create = typeof name === "function" ? name : Object(_creator__WEBPACK_IMPORTED_MODULE_0__["default"])(name),\n      select = before == null ? constantNull : typeof before === "function" ? before : Object(_selector__WEBPACK_IMPORTED_MODULE_1__["default"])(before);\n  return this.select(function() {\n    return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);\n  });\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/insert.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/lower.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/lower.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction lower() {\n  if (this.previousSibling) this.parentNode.insertBefore(this, this.parentNode.firstChild);\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return this.each(lower);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/lower.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/merge.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/merge.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(selection) {\n\n  for (var groups0 = this._groups, groups1 = selection._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {\n    for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {\n      if (node = group0[i] || group1[i]) {\n        merge[i] = node;\n      }\n    }\n  }\n\n  for (; j < m0; ++j) {\n    merges[j] = groups0[j];\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](merges, this._parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/merge.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/node.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/node.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n\n  for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {\n    for (var group = groups[j], i = 0, n = group.length; i < n; ++i) {\n      var node = group[i];\n      if (node) return node;\n    }\n  }\n\n  return null;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/node.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/nodes.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/nodes.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  var nodes = new Array(this.size()), i = -1;\n  this.each(function() { nodes[++i] = this; });\n  return nodes;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/nodes.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/on.js':
+      /*!*******************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/on.js ***!
+  \*******************************************************/
+      /*! exports provided: event, default, customEvent */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "event", function() { return event; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "customEvent", function() { return customEvent; });\nvar filterEvents = {};\n\nvar event = null;\n\nif (typeof document !== "undefined") {\n  var element = document.documentElement;\n  if (!("onmouseenter" in element)) {\n    filterEvents = {mouseenter: "mouseover", mouseleave: "mouseout"};\n  }\n}\n\nfunction filterContextListener(listener, index, group) {\n  listener = contextListener(listener, index, group);\n  return function(event) {\n    var related = event.relatedTarget;\n    if (!related || (related !== this && !(related.compareDocumentPosition(this) & 8))) {\n      listener.call(this, event);\n    }\n  };\n}\n\nfunction contextListener(listener, index, group) {\n  return function(event1) {\n    var event0 = event; // Events can be reentrant (e.g., focus).\n    event = event1;\n    try {\n      listener.call(this, this.__data__, index, group);\n    } finally {\n      event = event0;\n    }\n  };\n}\n\nfunction parseTypenames(typenames) {\n  return typenames.trim().split(/^|\\s+/).map(function(t) {\n    var name = "", i = t.indexOf(".");\n    if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);\n    return {type: t, name: name};\n  });\n}\n\nfunction onRemove(typename) {\n  return function() {\n    var on = this.__on;\n    if (!on) return;\n    for (var j = 0, i = -1, m = on.length, o; j < m; ++j) {\n      if (o = on[j], (!typename.type || o.type === typename.type) && o.name === typename.name) {\n        this.removeEventListener(o.type, o.listener, o.capture);\n      } else {\n        on[++i] = o;\n      }\n    }\n    if (++i) on.length = i;\n    else delete this.__on;\n  };\n}\n\nfunction onAdd(typename, value, capture) {\n  var wrap = filterEvents.hasOwnProperty(typename.type) ? filterContextListener : contextListener;\n  return function(d, i, group) {\n    var on = this.__on, o, listener = wrap(value, i, group);\n    if (on) for (var j = 0, m = on.length; j < m; ++j) {\n      if ((o = on[j]).type === typename.type && o.name === typename.name) {\n        this.removeEventListener(o.type, o.listener, o.capture);\n        this.addEventListener(o.type, o.listener = listener, o.capture = capture);\n        o.value = value;\n        return;\n      }\n    }\n    this.addEventListener(typename.type, listener, capture);\n    o = {type: typename.type, name: typename.name, value: value, listener: listener, capture: capture};\n    if (!on) this.__on = [o];\n    else on.push(o);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(typename, value, capture) {\n  var typenames = parseTypenames(typename + ""), i, n = typenames.length, t;\n\n  if (arguments.length < 2) {\n    var on = this.node().__on;\n    if (on) for (var j = 0, m = on.length, o; j < m; ++j) {\n      for (i = 0, o = on[j]; i < n; ++i) {\n        if ((t = typenames[i]).type === o.type && t.name === o.name) {\n          return o.value;\n        }\n      }\n    }\n    return;\n  }\n\n  on = value ? onAdd : onRemove;\n  if (capture == null) capture = false;\n  for (i = 0; i < n; ++i) this.each(on(typenames[i], value, capture));\n  return this;\n});\n\nfunction customEvent(event1, listener, that, args) {\n  var event0 = event;\n  event1.sourceEvent = event;\n  event = event1;\n  try {\n    return listener.apply(that, args);\n  } finally {\n    event = event0;\n  }\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/on.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/order.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/order.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n\n  for (var groups = this._groups, j = -1, m = groups.length; ++j < m;) {\n    for (var group = groups[j], i = group.length - 1, next = group[i], node; --i >= 0;) {\n      if (node = group[i]) {\n        if (next && next !== node.nextSibling) next.parentNode.insertBefore(node, next);\n        next = node;\n      }\n    }\n  }\n\n  return this;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/order.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/property.js':
+      /*!*************************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/property.js ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction propertyRemove(name) {\n  return function() {\n    delete this[name];\n  };\n}\n\nfunction propertyConstant(name, value) {\n  return function() {\n    this[name] = value;\n  };\n}\n\nfunction propertyFunction(name, value) {\n  return function() {\n    var v = value.apply(this, arguments);\n    if (v == null) delete this[name];\n    else this[name] = v;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  return arguments.length > 1\n      ? this.each((value == null\n          ? propertyRemove : typeof value === "function"\n          ? propertyFunction\n          : propertyConstant)(name, value))\n      : this.node()[name];\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/property.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/raise.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/raise.js ***!
+  \**********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction raise() {\n  if (this.nextSibling) this.parentNode.appendChild(this);\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return this.each(raise);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/raise.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/remove.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/remove.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction remove() {\n  var parent = this.parentNode;\n  if (parent) parent.removeChild(this);\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return this.each(remove);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/remove.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/select.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/select.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../selector */ "./node_modules/d3-selection/src/selector.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(select) {\n  if (typeof select !== "function") select = Object(_selector__WEBPACK_IMPORTED_MODULE_1__["default"])(select);\n\n  for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {\n      if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {\n        if ("__data__" in node) subnode.__data__ = node.__data__;\n        subgroup[i] = subnode;\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](subgroups, this._parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/select.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/selectAll.js':
+      /*!**************************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/selectAll.js ***!
+  \**************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n/* harmony import */ var _selectorAll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../selectorAll */ "./node_modules/d3-selection/src/selectorAll.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(select) {\n  if (typeof select !== "function") select = Object(_selectorAll__WEBPACK_IMPORTED_MODULE_1__["default"])(select);\n\n  for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {\n      if (node = group[i]) {\n        subgroups.push(select.call(node, node.__data__, i, group));\n        parents.push(node);\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](subgroups, parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/selectAll.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/size.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/size.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  var size = 0;\n  this.each(function() { ++size; });\n  return size;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/size.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/sort.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/sort.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-selection/src/selection/index.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(compare) {\n  if (!compare) compare = ascending;\n\n  function compareNode(a, b) {\n    return a && b ? compare(a.__data__, b.__data__) : !a - !b;\n  }\n\n  for (var groups = this._groups, m = groups.length, sortgroups = new Array(m), j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, sortgroup = sortgroups[j] = new Array(n), node, i = 0; i < n; ++i) {\n      if (node = group[i]) {\n        sortgroup[i] = node;\n      }\n    }\n    sortgroup.sort(compareNode);\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Selection"](sortgroups, this._parents).order();\n});\n\nfunction ascending(a, b) {\n  return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/sort.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/sparse.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/sparse.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(update) {\n  return new Array(update.length);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/sparse.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/style.js':
+      /*!**********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/style.js ***!
+  \**********************************************************/
+      /*! exports provided: default, styleValue */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styleValue", function() { return styleValue; });\n/* harmony import */ var _window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../window */ "./node_modules/d3-selection/src/window.js");\n\n\nfunction styleRemove(name) {\n  return function() {\n    this.style.removeProperty(name);\n  };\n}\n\nfunction styleConstant(name, value, priority) {\n  return function() {\n    this.style.setProperty(name, value, priority);\n  };\n}\n\nfunction styleFunction(name, value, priority) {\n  return function() {\n    var v = value.apply(this, arguments);\n    if (v == null) this.style.removeProperty(name);\n    else this.style.setProperty(name, v, priority);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value, priority) {\n  return arguments.length > 1\n      ? this.each((value == null\n            ? styleRemove : typeof value === "function"\n            ? styleFunction\n            : styleConstant)(name, value, priority == null ? "" : priority))\n      : styleValue(this.node(), name);\n});\n\nfunction styleValue(node, name) {\n  return node.style.getPropertyValue(name)\n      || Object(_window__WEBPACK_IMPORTED_MODULE_0__["default"])(node).getComputedStyle(node, null).getPropertyValue(name);\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/style.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selection/text.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-selection/src/selection/text.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction textRemove() {\n  this.textContent = "";\n}\n\nfunction textConstant(value) {\n  return function() {\n    this.textContent = value;\n  };\n}\n\nfunction textFunction(value) {\n  return function() {\n    var v = value.apply(this, arguments);\n    this.textContent = v == null ? "" : v;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  return arguments.length\n      ? this.each(value == null\n          ? textRemove : (typeof value === "function"\n          ? textFunction\n          : textConstant)(value))\n      : this.node().textContent;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selection/text.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selector.js':
+      /*!***************************************************!*\
+  !*** ./node_modules/d3-selection/src/selector.js ***!
+  \***************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction none() {}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(selector) {\n  return selector == null ? none : function() {\n    return this.querySelector(selector);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selector.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/selectorAll.js':
+      /*!******************************************************!*\
+  !*** ./node_modules/d3-selection/src/selectorAll.js ***!
+  \******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction empty() {\n  return [];\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(selector) {\n  return selector == null ? empty : function() {\n    return this.querySelectorAll(selector);\n  };\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/selectorAll.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/sourceEvent.js':
+      /*!******************************************************!*\
+  !*** ./node_modules/d3-selection/src/sourceEvent.js ***!
+  \******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _selection_on__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selection/on */ "./node_modules/d3-selection/src/selection/on.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  var current = _selection_on__WEBPACK_IMPORTED_MODULE_0__["event"], source;\n  while (source = current.sourceEvent) current = source;\n  return current;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/sourceEvent.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/touch.js':
+      /*!************************************************!*\
+  !*** ./node_modules/d3-selection/src/touch.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sourceEvent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sourceEvent */ "./node_modules/d3-selection/src/sourceEvent.js");\n/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./point */ "./node_modules/d3-selection/src/point.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node, touches, identifier) {\n  if (arguments.length < 3) identifier = touches, touches = Object(_sourceEvent__WEBPACK_IMPORTED_MODULE_0__["default"])().changedTouches;\n\n  for (var i = 0, n = touches ? touches.length : 0, touch; i < n; ++i) {\n    if ((touch = touches[i]).identifier === identifier) {\n      return Object(_point__WEBPACK_IMPORTED_MODULE_1__["default"])(node, touch);\n    }\n  }\n\n  return null;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/touch.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/touches.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-selection/src/touches.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sourceEvent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sourceEvent */ "./node_modules/d3-selection/src/sourceEvent.js");\n/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./point */ "./node_modules/d3-selection/src/point.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node, touches) {\n  if (touches == null) touches = Object(_sourceEvent__WEBPACK_IMPORTED_MODULE_0__["default"])().touches;\n\n  for (var i = 0, n = touches ? touches.length : 0, points = new Array(n); i < n; ++i) {\n    points[i] = Object(_point__WEBPACK_IMPORTED_MODULE_1__["default"])(node, touches[i]);\n  }\n\n  return points;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/touches.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-selection/src/window.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-selection/src/window.js ***!
+  \*************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__["default"] = (function(node) {\n  return (node.ownerDocument && node.ownerDocument.defaultView) // node is a Node\n      || (node.document && node) // node is a Window\n      || node.defaultView; // node is a Document\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-selection/src/window.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-timer/src/index.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-timer/src/index.js ***!
+  \********************************************/
+      /*! exports provided: now, timer, timerFlush, timeout, interval */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ "./node_modules/d3-timer/src/timer.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "now", function() { return _timer__WEBPACK_IMPORTED_MODULE_0__["now"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "timer", function() { return _timer__WEBPACK_IMPORTED_MODULE_0__["timer"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "timerFlush", function() { return _timer__WEBPACK_IMPORTED_MODULE_0__["timerFlush"]; });\n\n/* harmony import */ var _timeout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeout */ "./node_modules/d3-timer/src/timeout.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "timeout", function() { return _timeout__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony import */ var _interval__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interval */ "./node_modules/d3-timer/src/interval.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interval", function() { return _interval__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-timer/src/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-timer/src/interval.js':
+      /*!***********************************************!*\
+  !*** ./node_modules/d3-timer/src/interval.js ***!
+  \***********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ "./node_modules/d3-timer/src/timer.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(callback, delay, time) {\n  var t = new _timer__WEBPACK_IMPORTED_MODULE_0__["Timer"], total = delay;\n  if (delay == null) return t.restart(callback, delay, time), t;\n  delay = +delay, time = time == null ? Object(_timer__WEBPACK_IMPORTED_MODULE_0__["now"])() : +time;\n  t.restart(function tick(elapsed) {\n    elapsed += total;\n    t.restart(tick, total += delay, time);\n    callback(elapsed);\n  }, delay, time);\n  return t;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-timer/src/interval.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-timer/src/timeout.js':
+      /*!**********************************************!*\
+  !*** ./node_modules/d3-timer/src/timeout.js ***!
+  \**********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ "./node_modules/d3-timer/src/timer.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(callback, delay, time) {\n  var t = new _timer__WEBPACK_IMPORTED_MODULE_0__["Timer"];\n  delay = delay == null ? 0 : +delay;\n  t.restart(function(elapsed) {\n    t.stop();\n    callback(elapsed + delay);\n  }, delay, time);\n  return t;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-timer/src/timeout.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-timer/src/timer.js':
+      /*!********************************************!*\
+  !*** ./node_modules/d3-timer/src/timer.js ***!
+  \********************************************/
+      /*! exports provided: now, Timer, timer, timerFlush */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "now", function() { return now; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Timer", function() { return Timer; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "timer", function() { return timer; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "timerFlush", function() { return timerFlush; });\nvar frame = 0, // is an animation frame pending?\n    timeout = 0, // is a timeout pending?\n    interval = 0, // are any timers active?\n    pokeDelay = 1000, // how frequently we check for clock skew\n    taskHead,\n    taskTail,\n    clockLast = 0,\n    clockNow = 0,\n    clockSkew = 0,\n    clock = typeof performance === "object" && performance.now ? performance : Date,\n    setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function(f) { setTimeout(f, 17); };\n\nfunction now() {\n  return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);\n}\n\nfunction clearNow() {\n  clockNow = 0;\n}\n\nfunction Timer() {\n  this._call =\n  this._time =\n  this._next = null;\n}\n\nTimer.prototype = timer.prototype = {\n  constructor: Timer,\n  restart: function(callback, delay, time) {\n    if (typeof callback !== "function") throw new TypeError("callback is not a function");\n    time = (time == null ? now() : +time) + (delay == null ? 0 : +delay);\n    if (!this._next && taskTail !== this) {\n      if (taskTail) taskTail._next = this;\n      else taskHead = this;\n      taskTail = this;\n    }\n    this._call = callback;\n    this._time = time;\n    sleep();\n  },\n  stop: function() {\n    if (this._call) {\n      this._call = null;\n      this._time = Infinity;\n      sleep();\n    }\n  }\n};\n\nfunction timer(callback, delay, time) {\n  var t = new Timer;\n  t.restart(callback, delay, time);\n  return t;\n}\n\nfunction timerFlush() {\n  now(); // Get the current time, if not already set.\n  ++frame; // Pretend we’ve set an alarm, if we haven’t already.\n  var t = taskHead, e;\n  while (t) {\n    if ((e = clockNow - t._time) >= 0) t._call.call(null, e);\n    t = t._next;\n  }\n  --frame;\n}\n\nfunction wake() {\n  clockNow = (clockLast = clock.now()) + clockSkew;\n  frame = timeout = 0;\n  try {\n    timerFlush();\n  } finally {\n    frame = 0;\n    nap();\n    clockNow = 0;\n  }\n}\n\nfunction poke() {\n  var now = clock.now(), delay = now - clockLast;\n  if (delay > pokeDelay) clockSkew -= delay, clockLast = now;\n}\n\nfunction nap() {\n  var t0, t1 = taskHead, t2, time = Infinity;\n  while (t1) {\n    if (t1._call) {\n      if (time > t1._time) time = t1._time;\n      t0 = t1, t1 = t1._next;\n    } else {\n      t2 = t1._next, t1._next = null;\n      t1 = t0 ? t0._next = t2 : taskHead = t2;\n    }\n  }\n  taskTail = t0;\n  sleep(time);\n}\n\nfunction sleep(time) {\n  if (frame) return; // Soonest alarm already set, or will be.\n  if (timeout) timeout = clearTimeout(timeout);\n  var delay = time - clockNow; // Strictly less than if we recomputed clockNow.\n  if (delay > 24) {\n    if (time < Infinity) timeout = setTimeout(wake, time - clock.now() - clockSkew);\n    if (interval) interval = clearInterval(interval);\n  } else {\n    if (!interval) clockLast = clock.now(), interval = setInterval(poke, pokeDelay);\n    frame = 1, setFrame(wake);\n  }\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-timer/src/timer.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/active.js':
+      /*!**************************************************!*\
+  !*** ./node_modules/d3-transition/src/active.js ***!
+  \**************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _transition_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./transition/index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony import */ var _transition_schedule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transition/schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\n\nvar root = [null];\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node, name) {\n  var schedules = node.__transition,\n      schedule,\n      i;\n\n  if (schedules) {\n    name = name == null ? null : name + "";\n    for (i in schedules) {\n      if ((schedule = schedules[i]).state > _transition_schedule__WEBPACK_IMPORTED_MODULE_1__["SCHEDULED"] && schedule.name === name) {\n        return new _transition_index__WEBPACK_IMPORTED_MODULE_0__["Transition"]([[node]], root, name, +i);\n      }\n    }\n  }\n\n  return null;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/active.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/index.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/d3-transition/src/index.js ***!
+  \*************************************************/
+      /*! exports provided: transition, active, interrupt */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _selection_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selection/index */ "./node_modules/d3-transition/src/selection/index.js");\n/* harmony import */ var _transition_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transition/index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "transition", function() { return _transition_index__WEBPACK_IMPORTED_MODULE_1__["default"]; });\n\n/* harmony import */ var _active__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./active */ "./node_modules/d3-transition/src/active.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "active", function() { return _active__WEBPACK_IMPORTED_MODULE_2__["default"]; });\n\n/* harmony import */ var _interrupt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interrupt */ "./node_modules/d3-transition/src/interrupt.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interrupt", function() { return _interrupt__WEBPACK_IMPORTED_MODULE_3__["default"]; });\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/interrupt.js':
+      /*!*****************************************************!*\
+  !*** ./node_modules/d3-transition/src/interrupt.js ***!
+  \*****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _transition_schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./transition/schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node, name) {\n  var schedules = node.__transition,\n      schedule,\n      active,\n      empty = true,\n      i;\n\n  if (!schedules) return;\n\n  name = name == null ? null : name + "";\n\n  for (i in schedules) {\n    if ((schedule = schedules[i]).name !== name) { empty = false; continue; }\n    active = schedule.state > _transition_schedule__WEBPACK_IMPORTED_MODULE_0__["STARTING"] && schedule.state < _transition_schedule__WEBPACK_IMPORTED_MODULE_0__["ENDING"];\n    schedule.state = _transition_schedule__WEBPACK_IMPORTED_MODULE_0__["ENDED"];\n    schedule.timer.stop();\n    if (active) schedule.on.call("interrupt", node, node.__data__, schedule.index, schedule.group);\n    delete schedules[i];\n  }\n\n  if (empty) delete node.__transition;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/interrupt.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/selection/index.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-transition/src/selection/index.js ***!
+  \***********************************************************/
+      /*! no exports provided */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _interrupt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interrupt */ "./node_modules/d3-transition/src/selection/interrupt.js");\n/* harmony import */ var _transition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./transition */ "./node_modules/d3-transition/src/selection/transition.js");\n\n\n\n\nd3_selection__WEBPACK_IMPORTED_MODULE_0__["selection"].prototype.interrupt = _interrupt__WEBPACK_IMPORTED_MODULE_1__["default"];\nd3_selection__WEBPACK_IMPORTED_MODULE_0__["selection"].prototype.transition = _transition__WEBPACK_IMPORTED_MODULE_2__["default"];\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/selection/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/selection/interrupt.js':
+      /*!***************************************************************!*\
+  !*** ./node_modules/d3-transition/src/selection/interrupt.js ***!
+  \***************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _interrupt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../interrupt */ "./node_modules/d3-transition/src/interrupt.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  return this.each(function() {\n    Object(_interrupt__WEBPACK_IMPORTED_MODULE_0__["default"])(this, name);\n  });\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/selection/interrupt.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/selection/transition.js':
+      /*!****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/selection/transition.js ***!
+  \****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _transition_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../transition/index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony import */ var _transition_schedule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../transition/schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n/* harmony import */ var d3_ease__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3-ease */ "./node_modules/d3-ease/src/index.js");\n/* harmony import */ var d3_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3-timer */ "./node_modules/d3-timer/src/index.js");\n\n\n\n\n\nvar defaultTiming = {\n  time: null, // Set on use.\n  delay: 0,\n  duration: 250,\n  ease: d3_ease__WEBPACK_IMPORTED_MODULE_2__["easeCubicInOut"]\n};\n\nfunction inherit(node, id) {\n  var timing;\n  while (!(timing = node.__transition) || !(timing = timing[id])) {\n    if (!(node = node.parentNode)) {\n      return defaultTiming.time = Object(d3_timer__WEBPACK_IMPORTED_MODULE_3__["now"])(), defaultTiming;\n    }\n  }\n  return timing;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name) {\n  var id,\n      timing;\n\n  if (name instanceof _transition_index__WEBPACK_IMPORTED_MODULE_0__["Transition"]) {\n    id = name._id, name = name._name;\n  } else {\n    id = Object(_transition_index__WEBPACK_IMPORTED_MODULE_0__["newId"])(), (timing = defaultTiming).time = Object(d3_timer__WEBPACK_IMPORTED_MODULE_3__["now"])(), name = name == null ? null : name + "";\n  }\n\n  for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {\n      if (node = group[i]) {\n        Object(_transition_schedule__WEBPACK_IMPORTED_MODULE_1__["default"])(node, name, id, i, group, timing || inherit(node, id));\n      }\n    }\n  }\n\n  return new _transition_index__WEBPACK_IMPORTED_MODULE_0__["Transition"](groups, this._parents, name, id);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/selection/transition.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/attr.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/attr.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_interpolate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-interpolate */ "./node_modules/d3-interpolate/src/index.js");\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _tween__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tween */ "./node_modules/d3-transition/src/transition/tween.js");\n/* harmony import */ var _interpolate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interpolate */ "./node_modules/d3-transition/src/transition/interpolate.js");\n\n\n\n\n\nfunction attrRemove(name) {\n  return function() {\n    this.removeAttribute(name);\n  };\n}\n\nfunction attrRemoveNS(fullname) {\n  return function() {\n    this.removeAttributeNS(fullname.space, fullname.local);\n  };\n}\n\nfunction attrConstant(name, interpolate, value1) {\n  var value00,\n      interpolate0;\n  return function() {\n    var value0 = this.getAttribute(name);\n    return value0 === value1 ? null\n        : value0 === value00 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value1);\n  };\n}\n\nfunction attrConstantNS(fullname, interpolate, value1) {\n  var value00,\n      interpolate0;\n  return function() {\n    var value0 = this.getAttributeNS(fullname.space, fullname.local);\n    return value0 === value1 ? null\n        : value0 === value00 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value1);\n  };\n}\n\nfunction attrFunction(name, interpolate, value) {\n  var value00,\n      value10,\n      interpolate0;\n  return function() {\n    var value0, value1 = value(this);\n    if (value1 == null) return void this.removeAttribute(name);\n    value0 = this.getAttribute(name);\n    return value0 === value1 ? null\n        : value0 === value00 && value1 === value10 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value10 = value1);\n  };\n}\n\nfunction attrFunctionNS(fullname, interpolate, value) {\n  var value00,\n      value10,\n      interpolate0;\n  return function() {\n    var value0, value1 = value(this);\n    if (value1 == null) return void this.removeAttributeNS(fullname.space, fullname.local);\n    value0 = this.getAttributeNS(fullname.space, fullname.local);\n    return value0 === value1 ? null\n        : value0 === value00 && value1 === value10 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value10 = value1);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  var fullname = Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["namespace"])(name), i = fullname === "transform" ? d3_interpolate__WEBPACK_IMPORTED_MODULE_0__["interpolateTransformSvg"] : _interpolate__WEBPACK_IMPORTED_MODULE_3__["default"];\n  return this.attrTween(name, typeof value === "function"\n      ? (fullname.local ? attrFunctionNS : attrFunction)(fullname, i, Object(_tween__WEBPACK_IMPORTED_MODULE_2__["tweenValue"])(this, "attr." + name, value))\n      : value == null ? (fullname.local ? attrRemoveNS : attrRemove)(fullname)\n      : (fullname.local ? attrConstantNS : attrConstant)(fullname, i, value + ""));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/attr.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/attrTween.js':
+      /*!****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/attrTween.js ***!
+  \****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n\n\nfunction attrTweenNS(fullname, value) {\n  function tween() {\n    var node = this, i = value.apply(node, arguments);\n    return i && function(t) {\n      node.setAttributeNS(fullname.space, fullname.local, i(t));\n    };\n  }\n  tween._value = value;\n  return tween;\n}\n\nfunction attrTween(name, value) {\n  function tween() {\n    var node = this, i = value.apply(node, arguments);\n    return i && function(t) {\n      node.setAttribute(name, i(t));\n    };\n  }\n  tween._value = value;\n  return tween;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  var key = "attr." + name;\n  if (arguments.length < 2) return (key = this.tween(key)) && key._value;\n  if (value == null) return this.tween(key, null);\n  if (typeof value !== "function") throw new Error;\n  var fullname = Object(d3_selection__WEBPACK_IMPORTED_MODULE_0__["namespace"])(name);\n  return this.tween(key, (fullname.local ? attrTweenNS : attrTween)(fullname, value));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/attrTween.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/delay.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/delay.js ***!
+  \************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\nfunction delayFunction(id, value) {\n  return function() {\n    Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["init"])(this, id).delay = +value.apply(this, arguments);\n  };\n}\n\nfunction delayConstant(id, value) {\n  return value = +value, function() {\n    Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["init"])(this, id).delay = value;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  var id = this._id;\n\n  return arguments.length\n      ? this.each((typeof value === "function"\n          ? delayFunction\n          : delayConstant)(id, value))\n      : Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(this.node(), id).delay;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/delay.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/duration.js':
+      /*!***************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/duration.js ***!
+  \***************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\nfunction durationFunction(id, value) {\n  return function() {\n    Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id).duration = +value.apply(this, arguments);\n  };\n}\n\nfunction durationConstant(id, value) {\n  return value = +value, function() {\n    Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id).duration = value;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  var id = this._id;\n\n  return arguments.length\n      ? this.each((typeof value === "function"\n          ? durationFunction\n          : durationConstant)(id, value))\n      : Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(this.node(), id).duration;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/duration.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/ease.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/ease.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\nfunction easeConstant(id, value) {\n  if (typeof value !== "function") throw new Error;\n  return function() {\n    Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id).ease = value;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  var id = this._id;\n\n  return arguments.length\n      ? this.each(easeConstant(id, value))\n      : Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(this.node(), id).ease;\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/ease.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/filter.js':
+      /*!*************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/filter.js ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/d3-transition/src/transition/index.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(match) {\n  if (typeof match !== "function") match = Object(d3_selection__WEBPACK_IMPORTED_MODULE_0__["matcher"])(match);\n\n  for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {\n      if ((node = group[i]) && match.call(node, node.__data__, i, group)) {\n        subgroup.push(node);\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_1__["Transition"](subgroups, this._parents, this._name, this._id);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/filter.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/index.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/index.js ***!
+  \************************************************************/
+      /*! exports provided: Transition, default, newId */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Transition", function() { return Transition; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return transition; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newId", function() { return newId; });\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _attr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attr */ "./node_modules/d3-transition/src/transition/attr.js");\n/* harmony import */ var _attrTween__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attrTween */ "./node_modules/d3-transition/src/transition/attrTween.js");\n/* harmony import */ var _delay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./delay */ "./node_modules/d3-transition/src/transition/delay.js");\n/* harmony import */ var _duration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./duration */ "./node_modules/d3-transition/src/transition/duration.js");\n/* harmony import */ var _ease__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ease */ "./node_modules/d3-transition/src/transition/ease.js");\n/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./filter */ "./node_modules/d3-transition/src/transition/filter.js");\n/* harmony import */ var _merge__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./merge */ "./node_modules/d3-transition/src/transition/merge.js");\n/* harmony import */ var _on__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./on */ "./node_modules/d3-transition/src/transition/on.js");\n/* harmony import */ var _remove__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./remove */ "./node_modules/d3-transition/src/transition/remove.js");\n/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./select */ "./node_modules/d3-transition/src/transition/select.js");\n/* harmony import */ var _selectAll__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./selectAll */ "./node_modules/d3-transition/src/transition/selectAll.js");\n/* harmony import */ var _selection__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./selection */ "./node_modules/d3-transition/src/transition/selection.js");\n/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./style */ "./node_modules/d3-transition/src/transition/style.js");\n/* harmony import */ var _styleTween__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./styleTween */ "./node_modules/d3-transition/src/transition/styleTween.js");\n/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./text */ "./node_modules/d3-transition/src/transition/text.js");\n/* harmony import */ var _transition__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./transition */ "./node_modules/d3-transition/src/transition/transition.js");\n/* harmony import */ var _tween__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./tween */ "./node_modules/d3-transition/src/transition/tween.js");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar id = 0;\n\nfunction Transition(groups, parents, name, id) {\n  this._groups = groups;\n  this._parents = parents;\n  this._name = name;\n  this._id = id;\n}\n\nfunction transition(name) {\n  return Object(d3_selection__WEBPACK_IMPORTED_MODULE_0__["selection"])().transition(name);\n}\n\nfunction newId() {\n  return ++id;\n}\n\nvar selection_prototype = d3_selection__WEBPACK_IMPORTED_MODULE_0__["selection"].prototype;\n\nTransition.prototype = transition.prototype = {\n  constructor: Transition,\n  select: _select__WEBPACK_IMPORTED_MODULE_10__["default"],\n  selectAll: _selectAll__WEBPACK_IMPORTED_MODULE_11__["default"],\n  filter: _filter__WEBPACK_IMPORTED_MODULE_6__["default"],\n  merge: _merge__WEBPACK_IMPORTED_MODULE_7__["default"],\n  selection: _selection__WEBPACK_IMPORTED_MODULE_12__["default"],\n  transition: _transition__WEBPACK_IMPORTED_MODULE_16__["default"],\n  call: selection_prototype.call,\n  nodes: selection_prototype.nodes,\n  node: selection_prototype.node,\n  size: selection_prototype.size,\n  empty: selection_prototype.empty,\n  each: selection_prototype.each,\n  on: _on__WEBPACK_IMPORTED_MODULE_8__["default"],\n  attr: _attr__WEBPACK_IMPORTED_MODULE_1__["default"],\n  attrTween: _attrTween__WEBPACK_IMPORTED_MODULE_2__["default"],\n  style: _style__WEBPACK_IMPORTED_MODULE_13__["default"],\n  styleTween: _styleTween__WEBPACK_IMPORTED_MODULE_14__["default"],\n  text: _text__WEBPACK_IMPORTED_MODULE_15__["default"],\n  remove: _remove__WEBPACK_IMPORTED_MODULE_9__["default"],\n  tween: _tween__WEBPACK_IMPORTED_MODULE_17__["default"],\n  delay: _delay__WEBPACK_IMPORTED_MODULE_3__["default"],\n  duration: _duration__WEBPACK_IMPORTED_MODULE_4__["default"],\n  ease: _ease__WEBPACK_IMPORTED_MODULE_5__["default"]\n};\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/interpolate.js':
+      /*!******************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/interpolate.js ***!
+  \******************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-color */ "./node_modules/d3-color/src/index.js");\n/* harmony import */ var d3_interpolate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-interpolate */ "./node_modules/d3-interpolate/src/index.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(a, b) {\n  var c;\n  return (typeof b === "number" ? d3_interpolate__WEBPACK_IMPORTED_MODULE_1__["interpolateNumber"]\n      : b instanceof d3_color__WEBPACK_IMPORTED_MODULE_0__["color"] ? d3_interpolate__WEBPACK_IMPORTED_MODULE_1__["interpolateRgb"]\n      : (c = Object(d3_color__WEBPACK_IMPORTED_MODULE_0__["color"])(b)) ? (b = c, d3_interpolate__WEBPACK_IMPORTED_MODULE_1__["interpolateRgb"])\n      : d3_interpolate__WEBPACK_IMPORTED_MODULE_1__["interpolateString"])(a, b);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/interpolate.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/merge.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/merge.js ***!
+  \************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-transition/src/transition/index.js");\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(transition) {\n  if (transition._id !== this._id) throw new Error;\n\n  for (var groups0 = this._groups, groups1 = transition._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {\n    for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {\n      if (node = group0[i] || group1[i]) {\n        merge[i] = node;\n      }\n    }\n  }\n\n  for (; j < m0; ++j) {\n    merges[j] = groups0[j];\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Transition"](merges, this._parents, this._name, this._id);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/merge.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/on.js':
+      /*!*********************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/on.js ***!
+  \*********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\nfunction start(name) {\n  return (name + "").trim().split(/^|\\s+/).every(function(t) {\n    var i = t.indexOf(".");\n    if (i >= 0) t = t.slice(0, i);\n    return !t || t === "start";\n  });\n}\n\nfunction onFunction(id, name, listener) {\n  var on0, on1, sit = start(name) ? _schedule__WEBPACK_IMPORTED_MODULE_0__["init"] : _schedule__WEBPACK_IMPORTED_MODULE_0__["set"];\n  return function() {\n    var schedule = sit(this, id),\n        on = schedule.on;\n\n    // If this node shared a dispatch with the previous node,\n    // just assign the updated shared dispatch and we’re done!\n    // Otherwise, copy-on-write.\n    if (on !== on0) (on1 = (on0 = on).copy()).on(name, listener);\n\n    schedule.on = on1;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, listener) {\n  var id = this._id;\n\n  return arguments.length < 2\n      ? Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(this.node(), id).on.on(name)\n      : this.each(onFunction(id, name, listener));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/on.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/remove.js':
+      /*!*************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/remove.js ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction removeFunction(id) {\n  return function() {\n    var parent = this.parentNode;\n    for (var i in this.__transition) if (+i !== id) return;\n    if (parent) parent.removeChild(this);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return this.on("end.remove", removeFunction(this._id));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/remove.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/schedule.js':
+      /*!***************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/schedule.js ***!
+  \***************************************************************/
+      /*! exports provided: CREATED, SCHEDULED, STARTING, STARTED, RUNNING, ENDING, ENDED, default, init, set, get */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATED", function() { return CREATED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCHEDULED", function() { return SCHEDULED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STARTING", function() { return STARTING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STARTED", function() { return STARTED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RUNNING", function() { return RUNNING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENDING", function() { return ENDING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENDED", function() { return ENDED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "init", function() { return init; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "set", function() { return set; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });\n/* harmony import */ var d3_dispatch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-dispatch */ "./node_modules/d3-dispatch/src/index.js");\n/* harmony import */ var d3_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-timer */ "./node_modules/d3-timer/src/index.js");\n\n\n\nvar emptyOn = Object(d3_dispatch__WEBPACK_IMPORTED_MODULE_0__["dispatch"])("start", "end", "interrupt");\nvar emptyTween = [];\n\nvar CREATED = 0;\nvar SCHEDULED = 1;\nvar STARTING = 2;\nvar STARTED = 3;\nvar RUNNING = 4;\nvar ENDING = 5;\nvar ENDED = 6;\n\n/* harmony default export */ __webpack_exports__["default"] = (function(node, name, id, index, group, timing) {\n  var schedules = node.__transition;\n  if (!schedules) node.__transition = {};\n  else if (id in schedules) return;\n  create(node, id, {\n    name: name,\n    index: index, // For context during callback.\n    group: group, // For context during callback.\n    on: emptyOn,\n    tween: emptyTween,\n    time: timing.time,\n    delay: timing.delay,\n    duration: timing.duration,\n    ease: timing.ease,\n    timer: null,\n    state: CREATED\n  });\n});\n\nfunction init(node, id) {\n  var schedule = get(node, id);\n  if (schedule.state > CREATED) throw new Error("too late; already scheduled");\n  return schedule;\n}\n\nfunction set(node, id) {\n  var schedule = get(node, id);\n  if (schedule.state > STARTING) throw new Error("too late; already started");\n  return schedule;\n}\n\nfunction get(node, id) {\n  var schedule = node.__transition;\n  if (!schedule || !(schedule = schedule[id])) throw new Error("transition not found");\n  return schedule;\n}\n\nfunction create(node, id, self) {\n  var schedules = node.__transition,\n      tween;\n\n  // Initialize the self timer when the transition is created.\n  // Note the actual delay is not known until the first callback!\n  schedules[id] = self;\n  self.timer = Object(d3_timer__WEBPACK_IMPORTED_MODULE_1__["timer"])(schedule, 0, self.time);\n\n  function schedule(elapsed) {\n    self.state = SCHEDULED;\n    self.timer.restart(start, self.delay, self.time);\n\n    // If the elapsed delay is less than our first sleep, start immediately.\n    if (self.delay <= elapsed) start(elapsed - self.delay);\n  }\n\n  function start(elapsed) {\n    var i, j, n, o;\n\n    // If the state is not SCHEDULED, then we previously errored on start.\n    if (self.state !== SCHEDULED) return stop();\n\n    for (i in schedules) {\n      o = schedules[i];\n      if (o.name !== self.name) continue;\n\n      // While this element already has a starting transition during this frame,\n      // defer starting an interrupting transition until that transition has a\n      // chance to tick (and possibly end); see d3/d3-transition#54!\n      if (o.state === STARTED) return Object(d3_timer__WEBPACK_IMPORTED_MODULE_1__["timeout"])(start);\n\n      // Interrupt the active transition, if any.\n      // Dispatch the interrupt event.\n      if (o.state === RUNNING) {\n        o.state = ENDED;\n        o.timer.stop();\n        o.on.call("interrupt", node, node.__data__, o.index, o.group);\n        delete schedules[i];\n      }\n\n      // Cancel any pre-empted transitions. No interrupt event is dispatched\n      // because the cancelled transitions never started. Note that this also\n      // removes this transition from the pending list!\n      else if (+i < id) {\n        o.state = ENDED;\n        o.timer.stop();\n        delete schedules[i];\n      }\n    }\n\n    // Defer the first tick to end of the current frame; see d3/d3#1576.\n    // Note the transition may be canceled after start and before the first tick!\n    // Note this must be scheduled before the start event; see d3/d3-transition#16!\n    // Assuming this is successful, subsequent callbacks go straight to tick.\n    Object(d3_timer__WEBPACK_IMPORTED_MODULE_1__["timeout"])(function() {\n      if (self.state === STARTED) {\n        self.state = RUNNING;\n        self.timer.restart(tick, self.delay, self.time);\n        tick(elapsed);\n      }\n    });\n\n    // Dispatch the start event.\n    // Note this must be done before the tween are initialized.\n    self.state = STARTING;\n    self.on.call("start", node, node.__data__, self.index, self.group);\n    if (self.state !== STARTING) return; // interrupted\n    self.state = STARTED;\n\n    // Initialize the tween, deleting null tween.\n    tween = new Array(n = self.tween.length);\n    for (i = 0, j = -1; i < n; ++i) {\n      if (o = self.tween[i].value.call(node, node.__data__, self.index, self.group)) {\n        tween[++j] = o;\n      }\n    }\n    tween.length = j + 1;\n  }\n\n  function tick(elapsed) {\n    var t = elapsed < self.duration ? self.ease.call(null, elapsed / self.duration) : (self.timer.restart(stop), self.state = ENDING, 1),\n        i = -1,\n        n = tween.length;\n\n    while (++i < n) {\n      tween[i].call(null, t);\n    }\n\n    // Dispatch the end event.\n    if (self.state === ENDING) {\n      self.on.call("end", node, node.__data__, self.index, self.group);\n      stop();\n    }\n  }\n\n  function stop() {\n    self.state = ENDED;\n    self.timer.stop();\n    delete schedules[id];\n    for (var i in schedules) return; // eslint-disable-line no-unused-vars\n    delete node.__transition;\n  }\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/schedule.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/select.js':
+      /*!*************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/select.js ***!
+  \*************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(select) {\n  var name = this._name,\n      id = this._id;\n\n  if (typeof select !== "function") select = Object(d3_selection__WEBPACK_IMPORTED_MODULE_0__["selector"])(select);\n\n  for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {\n      if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {\n        if ("__data__" in node) subnode.__data__ = node.__data__;\n        subgroup[i] = subnode;\n        Object(_schedule__WEBPACK_IMPORTED_MODULE_2__["default"])(subgroup[i], name, id, i, subgroup, Object(_schedule__WEBPACK_IMPORTED_MODULE_2__["get"])(node, id));\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_1__["Transition"](subgroups, this._parents, name, id);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/select.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/selectAll.js':
+      /*!****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/selectAll.js ***!
+  \****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function(select) {\n  var name = this._name,\n      id = this._id;\n\n  if (typeof select !== "function") select = Object(d3_selection__WEBPACK_IMPORTED_MODULE_0__["selectorAll"])(select);\n\n  for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {\n      if (node = group[i]) {\n        for (var children = select.call(node, node.__data__, i, group), child, inherit = Object(_schedule__WEBPACK_IMPORTED_MODULE_2__["get"])(node, id), k = 0, l = children.length; k < l; ++k) {\n          if (child = children[k]) {\n            Object(_schedule__WEBPACK_IMPORTED_MODULE_2__["default"])(child, name, id, k, children, inherit);\n          }\n        }\n        subgroups.push(children);\n        parents.push(node);\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_1__["Transition"](subgroups, parents, name, id);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/selectAll.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/selection.js':
+      /*!****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/selection.js ***!
+  \****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n\n\nvar Selection = d3_selection__WEBPACK_IMPORTED_MODULE_0__["selection"].prototype.constructor;\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  return new Selection(this._groups, this._parents);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/selection.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/style.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/style.js ***!
+  \************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3_interpolate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-interpolate */ "./node_modules/d3-interpolate/src/index.js");\n/* harmony import */ var d3_selection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-selection */ "./node_modules/d3-selection/src/index.js");\n/* harmony import */ var _tween__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tween */ "./node_modules/d3-transition/src/transition/tween.js");\n/* harmony import */ var _interpolate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interpolate */ "./node_modules/d3-transition/src/transition/interpolate.js");\n\n\n\n\n\nfunction styleRemove(name, interpolate) {\n  var value00,\n      value10,\n      interpolate0;\n  return function() {\n    var value0 = Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["style"])(this, name),\n        value1 = (this.style.removeProperty(name), Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["style"])(this, name));\n    return value0 === value1 ? null\n        : value0 === value00 && value1 === value10 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value10 = value1);\n  };\n}\n\nfunction styleRemoveEnd(name) {\n  return function() {\n    this.style.removeProperty(name);\n  };\n}\n\nfunction styleConstant(name, interpolate, value1) {\n  var value00,\n      interpolate0;\n  return function() {\n    var value0 = Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["style"])(this, name);\n    return value0 === value1 ? null\n        : value0 === value00 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value1);\n  };\n}\n\nfunction styleFunction(name, interpolate, value) {\n  var value00,\n      value10,\n      interpolate0;\n  return function() {\n    var value0 = Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["style"])(this, name),\n        value1 = value(this);\n    if (value1 == null) value1 = (this.style.removeProperty(name), Object(d3_selection__WEBPACK_IMPORTED_MODULE_1__["style"])(this, name));\n    return value0 === value1 ? null\n        : value0 === value00 && value1 === value10 ? interpolate0\n        : interpolate0 = interpolate(value00 = value0, value10 = value1);\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value, priority) {\n  var i = (name += "") === "transform" ? d3_interpolate__WEBPACK_IMPORTED_MODULE_0__["interpolateTransformCss"] : _interpolate__WEBPACK_IMPORTED_MODULE_3__["default"];\n  return value == null ? this\n          .styleTween(name, styleRemove(name, i))\n          .on("end.style." + name, styleRemoveEnd(name))\n      : this.styleTween(name, typeof value === "function"\n          ? styleFunction(name, i, Object(_tween__WEBPACK_IMPORTED_MODULE_2__["tweenValue"])(this, "style." + name, value))\n          : styleConstant(name, i, value + ""), priority);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/style.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/styleTween.js':
+      /*!*****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/styleTween.js ***!
+  \*****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nfunction styleTween(name, value, priority) {\n  function tween() {\n    var node = this, i = value.apply(node, arguments);\n    return i && function(t) {\n      node.style.setProperty(name, i(t), priority);\n    };\n  }\n  tween._value = value;\n  return tween;\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value, priority) {\n  var key = "style." + (name += "");\n  if (arguments.length < 2) return (key = this.tween(key)) && key._value;\n  if (value == null) return this.tween(key, null);\n  if (typeof value !== "function") throw new Error;\n  return this.tween(key, styleTween(name, value, priority == null ? "" : priority));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/styleTween.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/text.js':
+      /*!***********************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/text.js ***!
+  \***********************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tween__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tween */ "./node_modules/d3-transition/src/transition/tween.js");\n\n\nfunction textConstant(value) {\n  return function() {\n    this.textContent = value;\n  };\n}\n\nfunction textFunction(value) {\n  return function() {\n    var value1 = value(this);\n    this.textContent = value1 == null ? "" : value1;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(value) {\n  return this.tween("text", typeof value === "function"\n      ? textFunction(Object(_tween__WEBPACK_IMPORTED_MODULE_0__["tweenValue"])(this, "text", value))\n      : textConstant(value == null ? "" : value + ""));\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/text.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/transition.js':
+      /*!*****************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/transition.js ***!
+  \*****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./node_modules/d3-transition/src/transition/index.js");\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\n\n/* harmony default export */ __webpack_exports__["default"] = (function() {\n  var name = this._name,\n      id0 = this._id,\n      id1 = Object(_index__WEBPACK_IMPORTED_MODULE_0__["newId"])();\n\n  for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {\n    for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {\n      if (node = group[i]) {\n        var inherit = Object(_schedule__WEBPACK_IMPORTED_MODULE_1__["get"])(node, id0);\n        Object(_schedule__WEBPACK_IMPORTED_MODULE_1__["default"])(node, name, id1, i, group, {\n          time: inherit.time + inherit.delay + inherit.duration,\n          delay: 0,\n          duration: inherit.duration,\n          ease: inherit.ease\n        });\n      }\n    }\n  }\n\n  return new _index__WEBPACK_IMPORTED_MODULE_0__["Transition"](groups, this._parents, name, id1);\n});\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/transition.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/d3-transition/src/transition/tween.js':
+      /*!************************************************************!*\
+  !*** ./node_modules/d3-transition/src/transition/tween.js ***!
+  \************************************************************/
+      /*! exports provided: default, tweenValue */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tweenValue", function() { return tweenValue; });\n/* harmony import */ var _schedule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schedule */ "./node_modules/d3-transition/src/transition/schedule.js");\n\n\nfunction tweenRemove(id, name) {\n  var tween0, tween1;\n  return function() {\n    var schedule = Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id),\n        tween = schedule.tween;\n\n    // If this node shared tween with the previous node,\n    // just assign the updated shared tween and we’re done!\n    // Otherwise, copy-on-write.\n    if (tween !== tween0) {\n      tween1 = tween0 = tween;\n      for (var i = 0, n = tween1.length; i < n; ++i) {\n        if (tween1[i].name === name) {\n          tween1 = tween1.slice();\n          tween1.splice(i, 1);\n          break;\n        }\n      }\n    }\n\n    schedule.tween = tween1;\n  };\n}\n\nfunction tweenFunction(id, name, value) {\n  var tween0, tween1;\n  if (typeof value !== "function") throw new Error;\n  return function() {\n    var schedule = Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id),\n        tween = schedule.tween;\n\n    // If this node shared tween with the previous node,\n    // just assign the updated shared tween and we’re done!\n    // Otherwise, copy-on-write.\n    if (tween !== tween0) {\n      tween1 = (tween0 = tween).slice();\n      for (var t = {name: name, value: value}, i = 0, n = tween1.length; i < n; ++i) {\n        if (tween1[i].name === name) {\n          tween1[i] = t;\n          break;\n        }\n      }\n      if (i === n) tween1.push(t);\n    }\n\n    schedule.tween = tween1;\n  };\n}\n\n/* harmony default export */ __webpack_exports__["default"] = (function(name, value) {\n  var id = this._id;\n\n  name += "";\n\n  if (arguments.length < 2) {\n    var tween = Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(this.node(), id).tween;\n    for (var i = 0, n = tween.length, t; i < n; ++i) {\n      if ((t = tween[i]).name === name) {\n        return t.value;\n      }\n    }\n    return null;\n  }\n\n  return this.each((value == null ? tweenRemove : tweenFunction)(id, name, value));\n});\n\nfunction tweenValue(transition, name, value) {\n  var id = transition._id;\n\n  transition.each(function() {\n    var schedule = Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["set"])(this, id);\n    (schedule.value || (schedule.value = {}))[name] = value.apply(this, arguments);\n  });\n\n  return function(node) {\n    return Object(_schedule__WEBPACK_IMPORTED_MODULE_0__["get"])(node, id).value[name];\n  };\n}\n\n\n//# sourceURL=webpack:///./node_modules/d3-transition/src/transition/tween.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './node_modules/node-fetch/browser.js':
+      /*!********************************************!*\
+  !*** ./node_modules/node-fetch/browser.js ***!
+  \********************************************/
+      /*! no static exports found */
+      /***/ function(module, exports, __webpack_require__) {
+        'use strict'
+        eval(
+          '\n\nmodule.exports = exports = self.fetch;\n\n// Needed for TypeScript and Webpack.\nexports.default = self.fetch.bind(self);\n\nexports.Headers = self.Headers;\nexports.Request = self.Request;\nexports.Response = self.Response;\n\n\n//# sourceURL=webpack:///./node_modules/node-fetch/browser.js?'
+        )
+
+        /***/
       }
-    } : d3_scale_niceIdentity;
-  }
-  var d3_scale_niceIdentity = {
-    floor: d3_identity,
-    ceil: d3_identity
-  };
-  function d3_scale_polylinear(domain, range, uninterpolate, interpolate) {
-    var u = [], i = [], j = 0, k = Math.min(domain.length, range.length) - 1;
-    if (domain[k] < domain[0]) {
-      domain = domain.slice().reverse();
-      range = range.slice().reverse();
-    }
-    while (++j <= k) {
-      u.push(uninterpolate(domain[j - 1], domain[j]));
-      i.push(interpolate(range[j - 1], range[j]));
-    }
-    return function(x) {
-      var j = d3.bisect(domain, x, 1, k) - 1;
-      return i[j](u[j](x));
-    };
-  }
-  d3.scale.linear = function() {
-    return d3_scale_linear([ 0, 1 ], [ 0, 1 ], d3_interpolate, false);
-  };
-  function d3_scale_linear(domain, range, interpolate, clamp) {
-    var output, input;
-    function rescale() {
-      var linear = Math.min(domain.length, range.length) > 2 ? d3_scale_polylinear : d3_scale_bilinear, uninterpolate = clamp ? d3_uninterpolateClamp : d3_uninterpolateNumber;
-      output = linear(domain, range, uninterpolate, interpolate);
-      input = linear(range, domain, uninterpolate, d3_interpolate);
-      return scale;
-    }
-    function scale(x) {
-      return output(x);
-    }
-    scale.invert = function(y) {
-      return input(y);
-    };
-    scale.domain = function(x) {
-      if (!arguments.length) return domain;
-      domain = x.map(Number);
-      return rescale();
-    };
-    scale.range = function(x) {
-      if (!arguments.length) return range;
-      range = x;
-      return rescale();
-    };
-    scale.rangeRound = function(x) {
-      return scale.range(x).interpolate(d3_interpolateRound);
-    };
-    scale.clamp = function(x) {
-      if (!arguments.length) return clamp;
-      clamp = x;
-      return rescale();
-    };
-    scale.interpolate = function(x) {
-      if (!arguments.length) return interpolate;
-      interpolate = x;
-      return rescale();
-    };
-    scale.ticks = function(m) {
-      return d3_scale_linearTicks(domain, m);
-    };
-    scale.tickFormat = function(m, format) {
-      return d3_scale_linearTickFormat(domain, m, format);
-    };
-    scale.nice = function(m) {
-      d3_scale_linearNice(domain, m);
-      return rescale();
-    };
-    scale.copy = function() {
-      return d3_scale_linear(domain, range, interpolate, clamp);
-    };
-    return rescale();
-  }
-  function d3_scale_linearRebind(scale, linear) {
-    return d3.rebind(scale, linear, "range", "rangeRound", "interpolate", "clamp");
-  }
-  function d3_scale_linearNice(domain, m) {
-    d3_scale_nice(domain, d3_scale_niceStep(d3_scale_linearTickRange(domain, m)[2]));
-    d3_scale_nice(domain, d3_scale_niceStep(d3_scale_linearTickRange(domain, m)[2]));
-    return domain;
-  }
-  function d3_scale_linearTickRange(domain, m) {
-    if (m == null) m = 10;
-    var extent = d3_scaleExtent(domain), span = extent[1] - extent[0], step = Math.pow(10, Math.floor(Math.log(span / m) / Math.LN10)), err = m / span * step;
-    if (err <= .15) step *= 10; else if (err <= .35) step *= 5; else if (err <= .75) step *= 2;
-    extent[0] = Math.ceil(extent[0] / step) * step;
-    extent[1] = Math.floor(extent[1] / step) * step + step * .5;
-    extent[2] = step;
-    return extent;
-  }
-  function d3_scale_linearTicks(domain, m) {
-    return d3.range.apply(d3, d3_scale_linearTickRange(domain, m));
-  }
-  function d3_scale_linearTickFormat(domain, m, format) {
-    var range = d3_scale_linearTickRange(domain, m);
-    if (format) {
-      var match = d3_format_re.exec(format);
-      match.shift();
-      if (match[8] === "s") {
-        var prefix = d3.formatPrefix(Math.max(abs(range[0]), abs(range[1])));
-        if (!match[7]) match[7] = "." + d3_scale_linearPrecision(prefix.scale(range[2]));
-        match[8] = "f";
-        format = d3.format(match.join(""));
-        return function(d) {
-          return format(prefix.scale(d)) + prefix.symbol;
-        };
-      }
-      if (!match[7]) match[7] = "." + d3_scale_linearFormatPrecision(match[8], range);
-      format = match.join("");
-    } else {
-      format = ",." + d3_scale_linearPrecision(range[2]) + "f";
-    }
-    return d3.format(format);
-  }
-  var d3_scale_linearFormatSignificant = {
-    s: 1,
-    g: 1,
-    p: 1,
-    r: 1,
-    e: 1
-  };
-  function d3_scale_linearPrecision(value) {
-    return -Math.floor(Math.log(value) / Math.LN10 + .01);
-  }
-  function d3_scale_linearFormatPrecision(type, range) {
-    var p = d3_scale_linearPrecision(range[2]);
-    return type in d3_scale_linearFormatSignificant ? Math.abs(p - d3_scale_linearPrecision(Math.max(abs(range[0]), abs(range[1])))) + +(type !== "e") : p - (type === "%") * 2;
-  }
-  d3.scale.log = function() {
-    return d3_scale_log(d3.scale.linear().domain([ 0, 1 ]), 10, true, [ 1, 10 ]);
-  };
-  function d3_scale_log(linear, base, positive, domain) {
-    function log(x) {
-      return (positive ? Math.log(x < 0 ? 0 : x) : -Math.log(x > 0 ? 0 : -x)) / Math.log(base);
-    }
-    function pow(x) {
-      return positive ? Math.pow(base, x) : -Math.pow(base, -x);
-    }
-    function scale(x) {
-      return linear(log(x));
-    }
-    scale.invert = function(x) {
-      return pow(linear.invert(x));
-    };
-    scale.domain = function(x) {
-      if (!arguments.length) return domain;
-      positive = x[0] >= 0;
-      linear.domain((domain = x.map(Number)).map(log));
-      return scale;
-    };
-    scale.base = function(_) {
-      if (!arguments.length) return base;
-      base = +_;
-      linear.domain(domain.map(log));
-      return scale;
-    };
-    scale.nice = function() {
-      var niced = d3_scale_nice(domain.map(log), positive ? Math : d3_scale_logNiceNegative);
-      linear.domain(niced);
-      domain = niced.map(pow);
-      return scale;
-    };
-    scale.ticks = function() {
-      var extent = d3_scaleExtent(domain), ticks = [], u = extent[0], v = extent[1], i = Math.floor(log(u)), j = Math.ceil(log(v)), n = base % 1 ? 2 : base;
-      if (isFinite(j - i)) {
-        if (positive) {
-          for (;i < j; i++) for (var k = 1; k < n; k++) ticks.push(pow(i) * k);
-          ticks.push(pow(i));
-        } else {
-          ticks.push(pow(i));
-          for (;i++ < j; ) for (var k = n - 1; k > 0; k--) ticks.push(pow(i) * k);
-        }
-        for (i = 0; ticks[i] < u; i++) {}
-        for (j = ticks.length; ticks[j - 1] > v; j--) {}
-        ticks = ticks.slice(i, j);
-      }
-      return ticks;
-    };
-    scale.tickFormat = function(n, format) {
-      if (!arguments.length) return d3_scale_logFormat;
-      if (arguments.length < 2) format = d3_scale_logFormat; else if (typeof format !== "function") format = d3.format(format);
-      var k = Math.max(1, base * n / scale.ticks().length);
-      return function(d) {
-        var i = d / pow(Math.round(log(d)));
-        if (i * base < base - .5) i *= base;
-        return i <= k ? format(d) : "";
-      };
-    };
-    scale.copy = function() {
-      return d3_scale_log(linear.copy(), base, positive, domain);
-    };
-    return d3_scale_linearRebind(scale, linear);
-  }
-  var d3_scale_logFormat = d3.format(".0e"), d3_scale_logNiceNegative = {
-    floor: function(x) {
-      return -Math.ceil(-x);
-    },
-    ceil: function(x) {
-      return -Math.floor(-x);
-    }
-  };
-  d3.scale.pow = function() {
-    return d3_scale_pow(d3.scale.linear(), 1, [ 0, 1 ]);
-  };
-  function d3_scale_pow(linear, exponent, domain) {
-    var powp = d3_scale_powPow(exponent), powb = d3_scale_powPow(1 / exponent);
-    function scale(x) {
-      return linear(powp(x));
-    }
-    scale.invert = function(x) {
-      return powb(linear.invert(x));
-    };
-    scale.domain = function(x) {
-      if (!arguments.length) return domain;
-      linear.domain((domain = x.map(Number)).map(powp));
-      return scale;
-    };
-    scale.ticks = function(m) {
-      return d3_scale_linearTicks(domain, m);
-    };
-    scale.tickFormat = function(m, format) {
-      return d3_scale_linearTickFormat(domain, m, format);
-    };
-    scale.nice = function(m) {
-      return scale.domain(d3_scale_linearNice(domain, m));
-    };
-    scale.exponent = function(x) {
-      if (!arguments.length) return exponent;
-      powp = d3_scale_powPow(exponent = x);
-      powb = d3_scale_powPow(1 / exponent);
-      linear.domain(domain.map(powp));
-      return scale;
-    };
-    scale.copy = function() {
-      return d3_scale_pow(linear.copy(), exponent, domain);
-    };
-    return d3_scale_linearRebind(scale, linear);
-  }
-  function d3_scale_powPow(e) {
-    return function(x) {
-      return x < 0 ? -Math.pow(-x, e) : Math.pow(x, e);
-    };
-  }
-  d3.scale.sqrt = function() {
-    return d3.scale.pow().exponent(.5);
-  };
-  d3.scale.ordinal = function() {
-    return d3_scale_ordinal([], {
-      t: "range",
-      a: [ [] ]
-    });
-  };
-  function d3_scale_ordinal(domain, ranger) {
-    var index, range, rangeBand;
-    function scale(x) {
-      return range[((index.get(x) || (ranger.t === "range" ? index.set(x, domain.push(x)) : NaN)) - 1) % range.length];
-    }
-    function steps(start, step) {
-      return d3.range(domain.length).map(function(i) {
-        return start + step * i;
-      });
-    }
-    scale.domain = function(x) {
-      if (!arguments.length) return domain;
-      domain = [];
-      index = new d3_Map();
-      var i = -1, n = x.length, xi;
-      while (++i < n) if (!index.has(xi = x[i])) index.set(xi, domain.push(xi));
-      return scale[ranger.t].apply(scale, ranger.a);
-    };
-    scale.range = function(x) {
-      if (!arguments.length) return range;
-      range = x;
-      rangeBand = 0;
-      ranger = {
-        t: "range",
-        a: arguments
-      };
-      return scale;
-    };
-    scale.rangePoints = function(x, padding) {
-      if (arguments.length < 2) padding = 0;
-      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = (start + stop) / 2, 
-      0) : (stop - start) / (domain.length - 1 + padding);
-      range = steps(start + step * padding / 2, step);
-      rangeBand = 0;
-      ranger = {
-        t: "rangePoints",
-        a: arguments
-      };
-      return scale;
-    };
-    scale.rangeRoundPoints = function(x, padding) {
-      if (arguments.length < 2) padding = 0;
-      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = stop = Math.round((start + stop) / 2), 
-      0) : (stop - start) / (domain.length - 1 + padding) | 0;
-      range = steps(start + Math.round(step * padding / 2 + (stop - start - (domain.length - 1 + padding) * step) / 2), step);
-      rangeBand = 0;
-      ranger = {
-        t: "rangeRoundPoints",
-        a: arguments
-      };
-      return scale;
-    };
-    scale.rangeBands = function(x, padding, outerPadding) {
-      if (arguments.length < 2) padding = 0;
-      if (arguments.length < 3) outerPadding = padding;
-      var reverse = x[1] < x[0], start = x[reverse - 0], stop = x[1 - reverse], step = (stop - start) / (domain.length - padding + 2 * outerPadding);
-      range = steps(start + step * outerPadding, step);
-      if (reverse) range.reverse();
-      rangeBand = step * (1 - padding);
-      ranger = {
-        t: "rangeBands",
-        a: arguments
-      };
-      return scale;
-    };
-    scale.rangeRoundBands = function(x, padding, outerPadding) {
-      if (arguments.length < 2) padding = 0;
-      if (arguments.length < 3) outerPadding = padding;
-      var reverse = x[1] < x[0], start = x[reverse - 0], stop = x[1 - reverse], step = Math.floor((stop - start) / (domain.length - padding + 2 * outerPadding));
-      range = steps(start + Math.round((stop - start - (domain.length - padding) * step) / 2), step);
-      if (reverse) range.reverse();
-      rangeBand = Math.round(step * (1 - padding));
-      ranger = {
-        t: "rangeRoundBands",
-        a: arguments
-      };
-      return scale;
-    };
-    scale.rangeBand = function() {
-      return rangeBand;
-    };
-    scale.rangeExtent = function() {
-      return d3_scaleExtent(ranger.a[0]);
-    };
-    scale.copy = function() {
-      return d3_scale_ordinal(domain, ranger);
-    };
-    return scale.domain(domain);
-  }
-  d3.scale.category10 = function() {
-    return d3.scale.ordinal().range(d3_category10);
-  };
-  d3.scale.category20 = function() {
-    return d3.scale.ordinal().range(d3_category20);
-  };
-  d3.scale.category20b = function() {
-    return d3.scale.ordinal().range(d3_category20b);
-  };
-  d3.scale.category20c = function() {
-    return d3.scale.ordinal().range(d3_category20c);
-  };
-  var d3_category10 = [ 2062260, 16744206, 2924588, 14034728, 9725885, 9197131, 14907330, 8355711, 12369186, 1556175 ].map(d3_rgbString);
-  var d3_category20 = [ 2062260, 11454440, 16744206, 16759672, 2924588, 10018698, 14034728, 16750742, 9725885, 12955861, 9197131, 12885140, 14907330, 16234194, 8355711, 13092807, 12369186, 14408589, 1556175, 10410725 ].map(d3_rgbString);
-  var d3_category20b = [ 3750777, 5395619, 7040719, 10264286, 6519097, 9216594, 11915115, 13556636, 9202993, 12426809, 15186514, 15190932, 8666169, 11356490, 14049643, 15177372, 8077683, 10834324, 13528509, 14589654 ].map(d3_rgbString);
-  var d3_category20c = [ 3244733, 7057110, 10406625, 13032431, 15095053, 16616764, 16625259, 16634018, 3253076, 7652470, 10607003, 13101504, 7695281, 10394312, 12369372, 14342891, 6513507, 9868950, 12434877, 14277081 ].map(d3_rgbString);
-  d3.scale.quantile = function() {
-    return d3_scale_quantile([], []);
-  };
-  function d3_scale_quantile(domain, range) {
-    var thresholds;
-    function rescale() {
-      var k = 0, q = range.length;
-      thresholds = [];
-      while (++k < q) thresholds[k - 1] = d3.quantile(domain, k / q);
-      return scale;
-    }
-    function scale(x) {
-      if (!isNaN(x = +x)) return range[d3.bisect(thresholds, x)];
-    }
-    scale.domain = function(x) {
-      if (!arguments.length) return domain;
-      domain = x.map(d3_number).filter(d3_numeric).sort(d3_ascending);
-      return rescale();
-    };
-    scale.range = function(x) {
-      if (!arguments.length) return range;
-      range = x;
-      return rescale();
-    };
-    scale.quantiles = function() {
-      return thresholds;
-    };
-    scale.invertExtent = function(y) {
-      y = range.indexOf(y);
-      return y < 0 ? [ NaN, NaN ] : [ y > 0 ? thresholds[y - 1] : domain[0], y < thresholds.length ? thresholds[y] : domain[domain.length - 1] ];
-    };
-    scale.copy = function() {
-      return d3_scale_quantile(domain, range);
-    };
-    return rescale();
-  }
-  d3.scale.quantize = function() {
-    return d3_scale_quantize(0, 1, [ 0, 1 ]);
-  };
-  function d3_scale_quantize(x0, x1, range) {
-    var kx, i;
-    function scale(x) {
-      return range[Math.max(0, Math.min(i, Math.floor(kx * (x - x0))))];
-    }
-    function rescale() {
-      kx = range.length / (x1 - x0);
-      i = range.length - 1;
-      return scale;
-    }
-    scale.domain = function(x) {
-      if (!arguments.length) return [ x0, x1 ];
-      x0 = +x[0];
-      x1 = +x[x.length - 1];
-      return rescale();
-    };
-    scale.range = function(x) {
-      if (!arguments.length) return range;
-      range = x;
-      return rescale();
-    };
-    scale.invertExtent = function(y) {
-      y = range.indexOf(y);
-      y = y < 0 ? NaN : y / kx + x0;
-      return [ y, y + 1 / kx ];
-    };
-    scale.copy = function() {
-      return d3_scale_quantize(x0, x1, range);
-    };
-    return rescale();
-  }
-  d3.scale.threshold = function() {
-    return d3_scale_threshold([ .5 ], [ 0, 1 ]);
-  };
-  function d3_scale_threshold(domain, range) {
-    function scale(x) {
-      if (x <= x) return range[d3.bisect(domain, x)];
-    }
-    scale.domain = function(_) {
-      if (!arguments.length) return domain;
-      domain = _;
-      return scale;
-    };
-    scale.range = function(_) {
-      if (!arguments.length) return range;
-      range = _;
-      return scale;
-    };
-    scale.invertExtent = function(y) {
-      y = range.indexOf(y);
-      return [ domain[y - 1], domain[y] ];
-    };
-    scale.copy = function() {
-      return d3_scale_threshold(domain, range);
-    };
-    return scale;
-  }
-  d3.scale.identity = function() {
-    return d3_scale_identity([ 0, 1 ]);
-  };
-  function d3_scale_identity(domain) {
-    function identity(x) {
-      return +x;
-    }
-    identity.invert = identity;
-    identity.domain = identity.range = function(x) {
-      if (!arguments.length) return domain;
-      domain = x.map(identity);
-      return identity;
-    };
-    identity.ticks = function(m) {
-      return d3_scale_linearTicks(domain, m);
-    };
-    identity.tickFormat = function(m, format) {
-      return d3_scale_linearTickFormat(domain, m, format);
-    };
-    identity.copy = function() {
-      return d3_scale_identity(domain);
-    };
-    return identity;
-  }
-  d3.svg = {};
-  function d3_zero() {
-    return 0;
-  }
-  d3.svg.arc = function() {
-    var innerRadius = d3_svg_arcInnerRadius, outerRadius = d3_svg_arcOuterRadius, cornerRadius = d3_zero, padRadius = d3_svg_arcAuto, startAngle = d3_svg_arcStartAngle, endAngle = d3_svg_arcEndAngle, padAngle = d3_svg_arcPadAngle;
-    function arc() {
-      var r0 = Math.max(0, +innerRadius.apply(this, arguments)), r1 = Math.max(0, +outerRadius.apply(this, arguments)), a0 = startAngle.apply(this, arguments) - halfπ, a1 = endAngle.apply(this, arguments) - halfπ, da = Math.abs(a1 - a0), cw = a0 > a1 ? 0 : 1;
-      if (r1 < r0) rc = r1, r1 = r0, r0 = rc;
-      if (da >= τε) return circleSegment(r1, cw) + (r0 ? circleSegment(r0, 1 - cw) : "") + "Z";
-      var rc, cr, rp, ap, p0 = 0, p1 = 0, x0, y0, x1, y1, x2, y2, x3, y3, path = [];
-      if (ap = (+padAngle.apply(this, arguments) || 0) / 2) {
-        rp = padRadius === d3_svg_arcAuto ? Math.sqrt(r0 * r0 + r1 * r1) : +padRadius.apply(this, arguments);
-        if (!cw) p1 *= -1;
-        if (r1) p1 = d3_asin(rp / r1 * Math.sin(ap));
-        if (r0) p0 = d3_asin(rp / r0 * Math.sin(ap));
-      }
-      if (r1) {
-        x0 = r1 * Math.cos(a0 + p1);
-        y0 = r1 * Math.sin(a0 + p1);
-        x1 = r1 * Math.cos(a1 - p1);
-        y1 = r1 * Math.sin(a1 - p1);
-        var l1 = Math.abs(a1 - a0 - 2 * p1) <= π ? 0 : 1;
-        if (p1 && d3_svg_arcSweep(x0, y0, x1, y1) === cw ^ l1) {
-          var h1 = (a0 + a1) / 2;
-          x0 = r1 * Math.cos(h1);
-          y0 = r1 * Math.sin(h1);
-          x1 = y1 = null;
-        }
-      } else {
-        x0 = y0 = 0;
-      }
-      if (r0) {
-        x2 = r0 * Math.cos(a1 - p0);
-        y2 = r0 * Math.sin(a1 - p0);
-        x3 = r0 * Math.cos(a0 + p0);
-        y3 = r0 * Math.sin(a0 + p0);
-        var l0 = Math.abs(a0 - a1 + 2 * p0) <= π ? 0 : 1;
-        if (p0 && d3_svg_arcSweep(x2, y2, x3, y3) === 1 - cw ^ l0) {
-          var h0 = (a0 + a1) / 2;
-          x2 = r0 * Math.cos(h0);
-          y2 = r0 * Math.sin(h0);
-          x3 = y3 = null;
-        }
-      } else {
-        x2 = y2 = 0;
-      }
-      if (da > ε && (rc = Math.min(Math.abs(r1 - r0) / 2, +cornerRadius.apply(this, arguments))) > .001) {
-        cr = r0 < r1 ^ cw ? 0 : 1;
-        var rc1 = rc, rc0 = rc;
-        if (da < π) {
-          var oc = x3 == null ? [ x2, y2 ] : x1 == null ? [ x0, y0 ] : d3_geom_polygonIntersect([ x0, y0 ], [ x3, y3 ], [ x1, y1 ], [ x2, y2 ]), ax = x0 - oc[0], ay = y0 - oc[1], bx = x1 - oc[0], by = y1 - oc[1], kc = 1 / Math.sin(Math.acos((ax * bx + ay * by) / (Math.sqrt(ax * ax + ay * ay) * Math.sqrt(bx * bx + by * by))) / 2), lc = Math.sqrt(oc[0] * oc[0] + oc[1] * oc[1]);
-          rc0 = Math.min(rc, (r0 - lc) / (kc - 1));
-          rc1 = Math.min(rc, (r1 - lc) / (kc + 1));
-        }
-        if (x1 != null) {
-          var t30 = d3_svg_arcCornerTangents(x3 == null ? [ x2, y2 ] : [ x3, y3 ], [ x0, y0 ], r1, rc1, cw), t12 = d3_svg_arcCornerTangents([ x1, y1 ], [ x2, y2 ], r1, rc1, cw);
-          if (rc === rc1) {
-            path.push("M", t30[0], "A", rc1, ",", rc1, " 0 0,", cr, " ", t30[1], "A", r1, ",", r1, " 0 ", 1 - cw ^ d3_svg_arcSweep(t30[1][0], t30[1][1], t12[1][0], t12[1][1]), ",", cw, " ", t12[1], "A", rc1, ",", rc1, " 0 0,", cr, " ", t12[0]);
-          } else {
-            path.push("M", t30[0], "A", rc1, ",", rc1, " 0 1,", cr, " ", t12[0]);
-          }
-        } else {
-          path.push("M", x0, ",", y0);
-        }
-        if (x3 != null) {
-          var t03 = d3_svg_arcCornerTangents([ x0, y0 ], [ x3, y3 ], r0, -rc0, cw), t21 = d3_svg_arcCornerTangents([ x2, y2 ], x1 == null ? [ x0, y0 ] : [ x1, y1 ], r0, -rc0, cw);
-          if (rc === rc0) {
-            path.push("L", t21[0], "A", rc0, ",", rc0, " 0 0,", cr, " ", t21[1], "A", r0, ",", r0, " 0 ", cw ^ d3_svg_arcSweep(t21[1][0], t21[1][1], t03[1][0], t03[1][1]), ",", 1 - cw, " ", t03[1], "A", rc0, ",", rc0, " 0 0,", cr, " ", t03[0]);
-          } else {
-            path.push("L", t21[0], "A", rc0, ",", rc0, " 0 0,", cr, " ", t03[0]);
-          }
-        } else {
-          path.push("L", x2, ",", y2);
-        }
-      } else {
-        path.push("M", x0, ",", y0);
-        if (x1 != null) path.push("A", r1, ",", r1, " 0 ", l1, ",", cw, " ", x1, ",", y1);
-        path.push("L", x2, ",", y2);
-        if (x3 != null) path.push("A", r0, ",", r0, " 0 ", l0, ",", 1 - cw, " ", x3, ",", y3);
-      }
-      path.push("Z");
-      return path.join("");
-    }
-    function circleSegment(r1, cw) {
-      return "M0," + r1 + "A" + r1 + "," + r1 + " 0 1," + cw + " 0," + -r1 + "A" + r1 + "," + r1 + " 0 1," + cw + " 0," + r1;
-    }
-    arc.innerRadius = function(v) {
-      if (!arguments.length) return innerRadius;
-      innerRadius = d3_functor(v);
-      return arc;
-    };
-    arc.outerRadius = function(v) {
-      if (!arguments.length) return outerRadius;
-      outerRadius = d3_functor(v);
-      return arc;
-    };
-    arc.cornerRadius = function(v) {
-      if (!arguments.length) return cornerRadius;
-      cornerRadius = d3_functor(v);
-      return arc;
-    };
-    arc.padRadius = function(v) {
-      if (!arguments.length) return padRadius;
-      padRadius = v == d3_svg_arcAuto ? d3_svg_arcAuto : d3_functor(v);
-      return arc;
-    };
-    arc.startAngle = function(v) {
-      if (!arguments.length) return startAngle;
-      startAngle = d3_functor(v);
-      return arc;
-    };
-    arc.endAngle = function(v) {
-      if (!arguments.length) return endAngle;
-      endAngle = d3_functor(v);
-      return arc;
-    };
-    arc.padAngle = function(v) {
-      if (!arguments.length) return padAngle;
-      padAngle = d3_functor(v);
-      return arc;
-    };
-    arc.centroid = function() {
-      var r = (+innerRadius.apply(this, arguments) + +outerRadius.apply(this, arguments)) / 2, a = (+startAngle.apply(this, arguments) + +endAngle.apply(this, arguments)) / 2 - halfπ;
-      return [ Math.cos(a) * r, Math.sin(a) * r ];
-    };
-    return arc;
-  };
-  var d3_svg_arcAuto = "auto";
-  function d3_svg_arcInnerRadius(d) {
-    return d.innerRadius;
-  }
-  function d3_svg_arcOuterRadius(d) {
-    return d.outerRadius;
-  }
-  function d3_svg_arcStartAngle(d) {
-    return d.startAngle;
-  }
-  function d3_svg_arcEndAngle(d) {
-    return d.endAngle;
-  }
-  function d3_svg_arcPadAngle(d) {
-    return d && d.padAngle;
-  }
-  function d3_svg_arcSweep(x0, y0, x1, y1) {
-    return (x0 - x1) * y0 - (y0 - y1) * x0 > 0 ? 0 : 1;
-  }
-  function d3_svg_arcCornerTangents(p0, p1, r1, rc, cw) {
-    var x01 = p0[0] - p1[0], y01 = p0[1] - p1[1], lo = (cw ? rc : -rc) / Math.sqrt(x01 * x01 + y01 * y01), ox = lo * y01, oy = -lo * x01, x1 = p0[0] + ox, y1 = p0[1] + oy, x2 = p1[0] + ox, y2 = p1[1] + oy, x3 = (x1 + x2) / 2, y3 = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1, d2 = dx * dx + dy * dy, r = r1 - rc, D = x1 * y2 - x2 * y1, d = (dy < 0 ? -1 : 1) * Math.sqrt(Math.max(0, r * r * d2 - D * D)), cx0 = (D * dy - dx * d) / d2, cy0 = (-D * dx - dy * d) / d2, cx1 = (D * dy + dx * d) / d2, cy1 = (-D * dx + dy * d) / d2, dx0 = cx0 - x3, dy0 = cy0 - y3, dx1 = cx1 - x3, dy1 = cy1 - y3;
-    if (dx0 * dx0 + dy0 * dy0 > dx1 * dx1 + dy1 * dy1) cx0 = cx1, cy0 = cy1;
-    return [ [ cx0 - ox, cy0 - oy ], [ cx0 * r1 / r, cy0 * r1 / r ] ];
-  }
-  function d3_svg_line(projection) {
-    var x = d3_geom_pointX, y = d3_geom_pointY, defined = d3_true, interpolate = d3_svg_lineLinear, interpolateKey = interpolate.key, tension = .7;
-    function line(data) {
-      var segments = [], points = [], i = -1, n = data.length, d, fx = d3_functor(x), fy = d3_functor(y);
-      function segment() {
-        segments.push("M", interpolate(projection(points), tension));
-      }
-      while (++i < n) {
-        if (defined.call(this, d = data[i], i)) {
-          points.push([ +fx.call(this, d, i), +fy.call(this, d, i) ]);
-        } else if (points.length) {
-          segment();
-          points = [];
-        }
-      }
-      if (points.length) segment();
-      return segments.length ? segments.join("") : null;
-    }
-    line.x = function(_) {
-      if (!arguments.length) return x;
-      x = _;
-      return line;
-    };
-    line.y = function(_) {
-      if (!arguments.length) return y;
-      y = _;
-      return line;
-    };
-    line.defined = function(_) {
-      if (!arguments.length) return defined;
-      defined = _;
-      return line;
-    };
-    line.interpolate = function(_) {
-      if (!arguments.length) return interpolateKey;
-      if (typeof _ === "function") interpolateKey = interpolate = _; else interpolateKey = (interpolate = d3_svg_lineInterpolators.get(_) || d3_svg_lineLinear).key;
-      return line;
-    };
-    line.tension = function(_) {
-      if (!arguments.length) return tension;
-      tension = _;
-      return line;
-    };
-    return line;
-  }
-  d3.svg.line = function() {
-    return d3_svg_line(d3_identity);
-  };
-  var d3_svg_lineInterpolators = d3.map({
-    linear: d3_svg_lineLinear,
-    "linear-closed": d3_svg_lineLinearClosed,
-    step: d3_svg_lineStep,
-    "step-before": d3_svg_lineStepBefore,
-    "step-after": d3_svg_lineStepAfter,
-    basis: d3_svg_lineBasis,
-    "basis-open": d3_svg_lineBasisOpen,
-    "basis-closed": d3_svg_lineBasisClosed,
-    bundle: d3_svg_lineBundle,
-    cardinal: d3_svg_lineCardinal,
-    "cardinal-open": d3_svg_lineCardinalOpen,
-    "cardinal-closed": d3_svg_lineCardinalClosed,
-    monotone: d3_svg_lineMonotone
-  });
-  d3_svg_lineInterpolators.forEach(function(key, value) {
-    value.key = key;
-    value.closed = /-closed$/.test(key);
-  });
-  function d3_svg_lineLinear(points) {
-    return points.length > 1 ? points.join("L") : points + "Z";
-  }
-  function d3_svg_lineLinearClosed(points) {
-    return points.join("L") + "Z";
-  }
-  function d3_svg_lineStep(points) {
-    var i = 0, n = points.length, p = points[0], path = [ p[0], ",", p[1] ];
-    while (++i < n) path.push("H", (p[0] + (p = points[i])[0]) / 2, "V", p[1]);
-    if (n > 1) path.push("H", p[0]);
-    return path.join("");
-  }
-  function d3_svg_lineStepBefore(points) {
-    var i = 0, n = points.length, p = points[0], path = [ p[0], ",", p[1] ];
-    while (++i < n) path.push("V", (p = points[i])[1], "H", p[0]);
-    return path.join("");
-  }
-  function d3_svg_lineStepAfter(points) {
-    var i = 0, n = points.length, p = points[0], path = [ p[0], ",", p[1] ];
-    while (++i < n) path.push("H", (p = points[i])[0], "V", p[1]);
-    return path.join("");
-  }
-  function d3_svg_lineCardinalOpen(points, tension) {
-    return points.length < 4 ? d3_svg_lineLinear(points) : points[1] + d3_svg_lineHermite(points.slice(1, -1), d3_svg_lineCardinalTangents(points, tension));
-  }
-  function d3_svg_lineCardinalClosed(points, tension) {
-    return points.length < 3 ? d3_svg_lineLinearClosed(points) : points[0] + d3_svg_lineHermite((points.push(points[0]), 
-    points), d3_svg_lineCardinalTangents([ points[points.length - 2] ].concat(points, [ points[1] ]), tension));
-  }
-  function d3_svg_lineCardinal(points, tension) {
-    return points.length < 3 ? d3_svg_lineLinear(points) : points[0] + d3_svg_lineHermite(points, d3_svg_lineCardinalTangents(points, tension));
-  }
-  function d3_svg_lineHermite(points, tangents) {
-    if (tangents.length < 1 || points.length != tangents.length && points.length != tangents.length + 2) {
-      return d3_svg_lineLinear(points);
-    }
-    var quad = points.length != tangents.length, path = "", p0 = points[0], p = points[1], t0 = tangents[0], t = t0, pi = 1;
-    if (quad) {
-      path += "Q" + (p[0] - t0[0] * 2 / 3) + "," + (p[1] - t0[1] * 2 / 3) + "," + p[0] + "," + p[1];
-      p0 = points[1];
-      pi = 2;
-    }
-    if (tangents.length > 1) {
-      t = tangents[1];
-      p = points[pi];
-      pi++;
-      path += "C" + (p0[0] + t0[0]) + "," + (p0[1] + t0[1]) + "," + (p[0] - t[0]) + "," + (p[1] - t[1]) + "," + p[0] + "," + p[1];
-      for (var i = 2; i < tangents.length; i++, pi++) {
-        p = points[pi];
-        t = tangents[i];
-        path += "S" + (p[0] - t[0]) + "," + (p[1] - t[1]) + "," + p[0] + "," + p[1];
-      }
-    }
-    if (quad) {
-      var lp = points[pi];
-      path += "Q" + (p[0] + t[0] * 2 / 3) + "," + (p[1] + t[1] * 2 / 3) + "," + lp[0] + "," + lp[1];
-    }
-    return path;
-  }
-  function d3_svg_lineCardinalTangents(points, tension) {
-    var tangents = [], a = (1 - tension) / 2, p0, p1 = points[0], p2 = points[1], i = 1, n = points.length;
-    while (++i < n) {
-      p0 = p1;
-      p1 = p2;
-      p2 = points[i];
-      tangents.push([ a * (p2[0] - p0[0]), a * (p2[1] - p0[1]) ]);
-    }
-    return tangents;
-  }
-  function d3_svg_lineBasis(points) {
-    if (points.length < 3) return d3_svg_lineLinear(points);
-    var i = 1, n = points.length, pi = points[0], x0 = pi[0], y0 = pi[1], px = [ x0, x0, x0, (pi = points[1])[0] ], py = [ y0, y0, y0, pi[1] ], path = [ x0, ",", y0, "L", d3_svg_lineDot4(d3_svg_lineBasisBezier3, px), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier3, py) ];
-    points.push(points[n - 1]);
-    while (++i <= n) {
-      pi = points[i];
-      px.shift();
-      px.push(pi[0]);
-      py.shift();
-      py.push(pi[1]);
-      d3_svg_lineBasisBezier(path, px, py);
-    }
-    points.pop();
-    path.push("L", pi);
-    return path.join("");
-  }
-  function d3_svg_lineBasisOpen(points) {
-    if (points.length < 4) return d3_svg_lineLinear(points);
-    var path = [], i = -1, n = points.length, pi, px = [ 0 ], py = [ 0 ];
-    while (++i < 3) {
-      pi = points[i];
-      px.push(pi[0]);
-      py.push(pi[1]);
-    }
-    path.push(d3_svg_lineDot4(d3_svg_lineBasisBezier3, px) + "," + d3_svg_lineDot4(d3_svg_lineBasisBezier3, py));
-    --i;
-    while (++i < n) {
-      pi = points[i];
-      px.shift();
-      px.push(pi[0]);
-      py.shift();
-      py.push(pi[1]);
-      d3_svg_lineBasisBezier(path, px, py);
-    }
-    return path.join("");
-  }
-  function d3_svg_lineBasisClosed(points) {
-    var path, i = -1, n = points.length, m = n + 4, pi, px = [], py = [];
-    while (++i < 4) {
-      pi = points[i % n];
-      px.push(pi[0]);
-      py.push(pi[1]);
-    }
-    path = [ d3_svg_lineDot4(d3_svg_lineBasisBezier3, px), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier3, py) ];
-    --i;
-    while (++i < m) {
-      pi = points[i % n];
-      px.shift();
-      px.push(pi[0]);
-      py.shift();
-      py.push(pi[1]);
-      d3_svg_lineBasisBezier(path, px, py);
-    }
-    return path.join("");
-  }
-  function d3_svg_lineBundle(points, tension) {
-    var n = points.length - 1;
-    if (n) {
-      var x0 = points[0][0], y0 = points[0][1], dx = points[n][0] - x0, dy = points[n][1] - y0, i = -1, p, t;
-      while (++i <= n) {
-        p = points[i];
-        t = i / n;
-        p[0] = tension * p[0] + (1 - tension) * (x0 + t * dx);
-        p[1] = tension * p[1] + (1 - tension) * (y0 + t * dy);
-      }
-    }
-    return d3_svg_lineBasis(points);
-  }
-  function d3_svg_lineDot4(a, b) {
-    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
-  }
-  var d3_svg_lineBasisBezier1 = [ 0, 2 / 3, 1 / 3, 0 ], d3_svg_lineBasisBezier2 = [ 0, 1 / 3, 2 / 3, 0 ], d3_svg_lineBasisBezier3 = [ 0, 1 / 6, 2 / 3, 1 / 6 ];
-  function d3_svg_lineBasisBezier(path, x, y) {
-    path.push("C", d3_svg_lineDot4(d3_svg_lineBasisBezier1, x), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier1, y), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier2, x), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier2, y), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier3, x), ",", d3_svg_lineDot4(d3_svg_lineBasisBezier3, y));
-  }
-  function d3_svg_lineSlope(p0, p1) {
-    return (p1[1] - p0[1]) / (p1[0] - p0[0]);
-  }
-  function d3_svg_lineFiniteDifferences(points) {
-    var i = 0, j = points.length - 1, m = [], p0 = points[0], p1 = points[1], d = m[0] = d3_svg_lineSlope(p0, p1);
-    while (++i < j) {
-      m[i] = (d + (d = d3_svg_lineSlope(p0 = p1, p1 = points[i + 1]))) / 2;
-    }
-    m[i] = d;
-    return m;
-  }
-  function d3_svg_lineMonotoneTangents(points) {
-    var tangents = [], d, a, b, s, m = d3_svg_lineFiniteDifferences(points), i = -1, j = points.length - 1;
-    while (++i < j) {
-      d = d3_svg_lineSlope(points[i], points[i + 1]);
-      if (abs(d) < ε) {
-        m[i] = m[i + 1] = 0;
-      } else {
-        a = m[i] / d;
-        b = m[i + 1] / d;
-        s = a * a + b * b;
-        if (s > 9) {
-          s = d * 3 / Math.sqrt(s);
-          m[i] = s * a;
-          m[i + 1] = s * b;
-        }
-      }
-    }
-    i = -1;
-    while (++i <= j) {
-      s = (points[Math.min(j, i + 1)][0] - points[Math.max(0, i - 1)][0]) / (6 * (1 + m[i] * m[i]));
-      tangents.push([ s || 0, m[i] * s || 0 ]);
-    }
-    return tangents;
-  }
-  function d3_svg_lineMonotone(points) {
-    return points.length < 3 ? d3_svg_lineLinear(points) : points[0] + d3_svg_lineHermite(points, d3_svg_lineMonotoneTangents(points));
-  }
-  d3.svg.line.radial = function() {
-    var line = d3_svg_line(d3_svg_lineRadial);
-    line.radius = line.x, delete line.x;
-    line.angle = line.y, delete line.y;
-    return line;
-  };
-  function d3_svg_lineRadial(points) {
-    var point, i = -1, n = points.length, r, a;
-    while (++i < n) {
-      point = points[i];
-      r = point[0];
-      a = point[1] - halfπ;
-      point[0] = r * Math.cos(a);
-      point[1] = r * Math.sin(a);
-    }
-    return points;
-  }
-  function d3_svg_area(projection) {
-    var x0 = d3_geom_pointX, x1 = d3_geom_pointX, y0 = 0, y1 = d3_geom_pointY, defined = d3_true, interpolate = d3_svg_lineLinear, interpolateKey = interpolate.key, interpolateReverse = interpolate, L = "L", tension = .7;
-    function area(data) {
-      var segments = [], points0 = [], points1 = [], i = -1, n = data.length, d, fx0 = d3_functor(x0), fy0 = d3_functor(y0), fx1 = x0 === x1 ? function() {
-        return x;
-      } : d3_functor(x1), fy1 = y0 === y1 ? function() {
-        return y;
-      } : d3_functor(y1), x, y;
-      function segment() {
-        segments.push("M", interpolate(projection(points1), tension), L, interpolateReverse(projection(points0.reverse()), tension), "Z");
-      }
-      while (++i < n) {
-        if (defined.call(this, d = data[i], i)) {
-          points0.push([ x = +fx0.call(this, d, i), y = +fy0.call(this, d, i) ]);
-          points1.push([ +fx1.call(this, d, i), +fy1.call(this, d, i) ]);
-        } else if (points0.length) {
-          segment();
-          points0 = [];
-          points1 = [];
-        }
-      }
-      if (points0.length) segment();
-      return segments.length ? segments.join("") : null;
-    }
-    area.x = function(_) {
-      if (!arguments.length) return x1;
-      x0 = x1 = _;
-      return area;
-    };
-    area.x0 = function(_) {
-      if (!arguments.length) return x0;
-      x0 = _;
-      return area;
-    };
-    area.x1 = function(_) {
-      if (!arguments.length) return x1;
-      x1 = _;
-      return area;
-    };
-    area.y = function(_) {
-      if (!arguments.length) return y1;
-      y0 = y1 = _;
-      return area;
-    };
-    area.y0 = function(_) {
-      if (!arguments.length) return y0;
-      y0 = _;
-      return area;
-    };
-    area.y1 = function(_) {
-      if (!arguments.length) return y1;
-      y1 = _;
-      return area;
-    };
-    area.defined = function(_) {
-      if (!arguments.length) return defined;
-      defined = _;
-      return area;
-    };
-    area.interpolate = function(_) {
-      if (!arguments.length) return interpolateKey;
-      if (typeof _ === "function") interpolateKey = interpolate = _; else interpolateKey = (interpolate = d3_svg_lineInterpolators.get(_) || d3_svg_lineLinear).key;
-      interpolateReverse = interpolate.reverse || interpolate;
-      L = interpolate.closed ? "M" : "L";
-      return area;
-    };
-    area.tension = function(_) {
-      if (!arguments.length) return tension;
-      tension = _;
-      return area;
-    };
-    return area;
-  }
-  d3_svg_lineStepBefore.reverse = d3_svg_lineStepAfter;
-  d3_svg_lineStepAfter.reverse = d3_svg_lineStepBefore;
-  d3.svg.area = function() {
-    return d3_svg_area(d3_identity);
-  };
-  d3.svg.area.radial = function() {
-    var area = d3_svg_area(d3_svg_lineRadial);
-    area.radius = area.x, delete area.x;
-    area.innerRadius = area.x0, delete area.x0;
-    area.outerRadius = area.x1, delete area.x1;
-    area.angle = area.y, delete area.y;
-    area.startAngle = area.y0, delete area.y0;
-    area.endAngle = area.y1, delete area.y1;
-    return area;
-  };
-  d3.svg.chord = function() {
-    var source = d3_source, target = d3_target, radius = d3_svg_chordRadius, startAngle = d3_svg_arcStartAngle, endAngle = d3_svg_arcEndAngle;
-    function chord(d, i) {
-      var s = subgroup(this, source, d, i), t = subgroup(this, target, d, i);
-      return "M" + s.p0 + arc(s.r, s.p1, s.a1 - s.a0) + (equals(s, t) ? curve(s.r, s.p1, s.r, s.p0) : curve(s.r, s.p1, t.r, t.p0) + arc(t.r, t.p1, t.a1 - t.a0) + curve(t.r, t.p1, s.r, s.p0)) + "Z";
-    }
-    function subgroup(self, f, d, i) {
-      var subgroup = f.call(self, d, i), r = radius.call(self, subgroup, i), a0 = startAngle.call(self, subgroup, i) - halfπ, a1 = endAngle.call(self, subgroup, i) - halfπ;
-      return {
-        r: r,
-        a0: a0,
-        a1: a1,
-        p0: [ r * Math.cos(a0), r * Math.sin(a0) ],
-        p1: [ r * Math.cos(a1), r * Math.sin(a1) ]
-      };
-    }
-    function equals(a, b) {
-      return a.a0 == b.a0 && a.a1 == b.a1;
-    }
-    function arc(r, p, a) {
-      return "A" + r + "," + r + " 0 " + +(a > π) + ",1 " + p;
-    }
-    function curve(r0, p0, r1, p1) {
-      return "Q 0,0 " + p1;
-    }
-    chord.radius = function(v) {
-      if (!arguments.length) return radius;
-      radius = d3_functor(v);
-      return chord;
-    };
-    chord.source = function(v) {
-      if (!arguments.length) return source;
-      source = d3_functor(v);
-      return chord;
-    };
-    chord.target = function(v) {
-      if (!arguments.length) return target;
-      target = d3_functor(v);
-      return chord;
-    };
-    chord.startAngle = function(v) {
-      if (!arguments.length) return startAngle;
-      startAngle = d3_functor(v);
-      return chord;
-    };
-    chord.endAngle = function(v) {
-      if (!arguments.length) return endAngle;
-      endAngle = d3_functor(v);
-      return chord;
-    };
-    return chord;
-  };
-  function d3_svg_chordRadius(d) {
-    return d.radius;
-  }
-  d3.svg.diagonal = function() {
-    var source = d3_source, target = d3_target, projection = d3_svg_diagonalProjection;
-    function diagonal(d, i) {
-      var p0 = source.call(this, d, i), p3 = target.call(this, d, i), m = (p0.y + p3.y) / 2, p = [ p0, {
-        x: p0.x,
-        y: m
-      }, {
-        x: p3.x,
-        y: m
-      }, p3 ];
-      p = p.map(projection);
-      return "M" + p[0] + "C" + p[1] + " " + p[2] + " " + p[3];
-    }
-    diagonal.source = function(x) {
-      if (!arguments.length) return source;
-      source = d3_functor(x);
-      return diagonal;
-    };
-    diagonal.target = function(x) {
-      if (!arguments.length) return target;
-      target = d3_functor(x);
-      return diagonal;
-    };
-    diagonal.projection = function(x) {
-      if (!arguments.length) return projection;
-      projection = x;
-      return diagonal;
-    };
-    return diagonal;
-  };
-  function d3_svg_diagonalProjection(d) {
-    return [ d.x, d.y ];
-  }
-  d3.svg.diagonal.radial = function() {
-    var diagonal = d3.svg.diagonal(), projection = d3_svg_diagonalProjection, projection_ = diagonal.projection;
-    diagonal.projection = function(x) {
-      return arguments.length ? projection_(d3_svg_diagonalRadialProjection(projection = x)) : projection;
-    };
-    return diagonal;
-  };
-  function d3_svg_diagonalRadialProjection(projection) {
-    return function() {
-      var d = projection.apply(this, arguments), r = d[0], a = d[1] - halfπ;
-      return [ r * Math.cos(a), r * Math.sin(a) ];
-    };
-  }
-  d3.svg.symbol = function() {
-    var type = d3_svg_symbolType, size = d3_svg_symbolSize;
-    function symbol(d, i) {
-      return (d3_svg_symbols.get(type.call(this, d, i)) || d3_svg_symbolCircle)(size.call(this, d, i));
-    }
-    symbol.type = function(x) {
-      if (!arguments.length) return type;
-      type = d3_functor(x);
-      return symbol;
-    };
-    symbol.size = function(x) {
-      if (!arguments.length) return size;
-      size = d3_functor(x);
-      return symbol;
-    };
-    return symbol;
-  };
-  function d3_svg_symbolSize() {
-    return 64;
-  }
-  function d3_svg_symbolType() {
-    return "circle";
-  }
-  function d3_svg_symbolCircle(size) {
-    var r = Math.sqrt(size / π);
-    return "M0," + r + "A" + r + "," + r + " 0 1,1 0," + -r + "A" + r + "," + r + " 0 1,1 0," + r + "Z";
-  }
-  var d3_svg_symbols = d3.map({
-    circle: d3_svg_symbolCircle,
-    cross: function(size) {
-      var r = Math.sqrt(size / 5) / 2;
-      return "M" + -3 * r + "," + -r + "H" + -r + "V" + -3 * r + "H" + r + "V" + -r + "H" + 3 * r + "V" + r + "H" + r + "V" + 3 * r + "H" + -r + "V" + r + "H" + -3 * r + "Z";
-    },
-    diamond: function(size) {
-      var ry = Math.sqrt(size / (2 * d3_svg_symbolTan30)), rx = ry * d3_svg_symbolTan30;
-      return "M0," + -ry + "L" + rx + ",0" + " 0," + ry + " " + -rx + ",0" + "Z";
-    },
-    square: function(size) {
-      var r = Math.sqrt(size) / 2;
-      return "M" + -r + "," + -r + "L" + r + "," + -r + " " + r + "," + r + " " + -r + "," + r + "Z";
-    },
-    "triangle-down": function(size) {
-      var rx = Math.sqrt(size / d3_svg_symbolSqrt3), ry = rx * d3_svg_symbolSqrt3 / 2;
-      return "M0," + ry + "L" + rx + "," + -ry + " " + -rx + "," + -ry + "Z";
-    },
-    "triangle-up": function(size) {
-      var rx = Math.sqrt(size / d3_svg_symbolSqrt3), ry = rx * d3_svg_symbolSqrt3 / 2;
-      return "M0," + -ry + "L" + rx + "," + ry + " " + -rx + "," + ry + "Z";
-    }
-  });
-  d3.svg.symbolTypes = d3_svg_symbols.keys();
-  var d3_svg_symbolSqrt3 = Math.sqrt(3), d3_svg_symbolTan30 = Math.tan(30 * d3_radians);
-  d3_selectionPrototype.transition = function(name) {
-    var id = d3_transitionInheritId || ++d3_transitionId, ns = d3_transitionNamespace(name), subgroups = [], subgroup, node, transition = d3_transitionInherit || {
-      time: Date.now(),
-      ease: d3_ease_cubicInOut,
-      delay: 0,
-      duration: 250
-    };
-    for (var j = -1, m = this.length; ++j < m; ) {
-      subgroups.push(subgroup = []);
-      for (var group = this[j], i = -1, n = group.length; ++i < n; ) {
-        if (node = group[i]) d3_transitionNode(node, i, ns, id, transition);
-        subgroup.push(node);
-      }
-    }
-    return d3_transition(subgroups, ns, id);
-  };
-  d3_selectionPrototype.interrupt = function(name) {
-    return this.each(name == null ? d3_selection_interrupt : d3_selection_interruptNS(d3_transitionNamespace(name)));
-  };
-  var d3_selection_interrupt = d3_selection_interruptNS(d3_transitionNamespace());
-  function d3_selection_interruptNS(ns) {
-    return function() {
-      var lock, activeId, active;
-      if ((lock = this[ns]) && (active = lock[activeId = lock.active])) {
-        active.timer.c = null;
-        active.timer.t = NaN;
-        if (--lock.count) delete lock[activeId]; else delete this[ns];
-        lock.active += .5;
-        active.event && active.event.interrupt.call(this, this.__data__, active.index);
-      }
-    };
-  }
-  function d3_transition(groups, ns, id) {
-    d3_subclass(groups, d3_transitionPrototype);
-    groups.namespace = ns;
-    groups.id = id;
-    return groups;
-  }
-  var d3_transitionPrototype = [], d3_transitionId = 0, d3_transitionInheritId, d3_transitionInherit;
-  d3_transitionPrototype.call = d3_selectionPrototype.call;
-  d3_transitionPrototype.empty = d3_selectionPrototype.empty;
-  d3_transitionPrototype.node = d3_selectionPrototype.node;
-  d3_transitionPrototype.size = d3_selectionPrototype.size;
-  d3.transition = function(selection, name) {
-    return selection && selection.transition ? d3_transitionInheritId ? selection.transition(name) : selection : d3.selection().transition(selection);
-  };
-  d3.transition.prototype = d3_transitionPrototype;
-  d3_transitionPrototype.select = function(selector) {
-    var id = this.id, ns = this.namespace, subgroups = [], subgroup, subnode, node;
-    selector = d3_selection_selector(selector);
-    for (var j = -1, m = this.length; ++j < m; ) {
-      subgroups.push(subgroup = []);
-      for (var group = this[j], i = -1, n = group.length; ++i < n; ) {
-        if ((node = group[i]) && (subnode = selector.call(node, node.__data__, i, j))) {
-          if ("__data__" in node) subnode.__data__ = node.__data__;
-          d3_transitionNode(subnode, i, ns, id, node[ns][id]);
-          subgroup.push(subnode);
-        } else {
-          subgroup.push(null);
-        }
-      }
-    }
-    return d3_transition(subgroups, ns, id);
-  };
-  d3_transitionPrototype.selectAll = function(selector) {
-    var id = this.id, ns = this.namespace, subgroups = [], subgroup, subnodes, node, subnode, transition;
-    selector = d3_selection_selectorAll(selector);
-    for (var j = -1, m = this.length; ++j < m; ) {
-      for (var group = this[j], i = -1, n = group.length; ++i < n; ) {
-        if (node = group[i]) {
-          transition = node[ns][id];
-          subnodes = selector.call(node, node.__data__, i, j);
-          subgroups.push(subgroup = []);
-          for (var k = -1, o = subnodes.length; ++k < o; ) {
-            if (subnode = subnodes[k]) d3_transitionNode(subnode, k, ns, id, transition);
-            subgroup.push(subnode);
-          }
-        }
-      }
-    }
-    return d3_transition(subgroups, ns, id);
-  };
-  d3_transitionPrototype.filter = function(filter) {
-    var subgroups = [], subgroup, group, node;
-    if (typeof filter !== "function") filter = d3_selection_filter(filter);
-    for (var j = 0, m = this.length; j < m; j++) {
-      subgroups.push(subgroup = []);
-      for (var group = this[j], i = 0, n = group.length; i < n; i++) {
-        if ((node = group[i]) && filter.call(node, node.__data__, i, j)) {
-          subgroup.push(node);
-        }
-      }
-    }
-    return d3_transition(subgroups, this.namespace, this.id);
-  };
-  d3_transitionPrototype.tween = function(name, tween) {
-    var id = this.id, ns = this.namespace;
-    if (arguments.length < 2) return this.node()[ns][id].tween.get(name);
-    return d3_selection_each(this, tween == null ? function(node) {
-      node[ns][id].tween.remove(name);
-    } : function(node) {
-      node[ns][id].tween.set(name, tween);
-    });
-  };
-  function d3_transition_tween(groups, name, value, tween) {
-    var id = groups.id, ns = groups.namespace;
-    return d3_selection_each(groups, typeof value === "function" ? function(node, i, j) {
-      node[ns][id].tween.set(name, tween(value.call(node, node.__data__, i, j)));
-    } : (value = tween(value), function(node) {
-      node[ns][id].tween.set(name, value);
-    }));
-  }
-  d3_transitionPrototype.attr = function(nameNS, value) {
-    if (arguments.length < 2) {
-      for (value in nameNS) this.attr(value, nameNS[value]);
-      return this;
-    }
-    var interpolate = nameNS == "transform" ? d3_interpolateTransform : d3_interpolate, name = d3.ns.qualify(nameNS);
-    function attrNull() {
-      this.removeAttribute(name);
-    }
-    function attrNullNS() {
-      this.removeAttributeNS(name.space, name.local);
-    }
-    function attrTween(b) {
-      return b == null ? attrNull : (b += "", function() {
-        var a = this.getAttribute(name), i;
-        return a !== b && (i = interpolate(a, b), function(t) {
-          this.setAttribute(name, i(t));
-        });
-      });
-    }
-    function attrTweenNS(b) {
-      return b == null ? attrNullNS : (b += "", function() {
-        var a = this.getAttributeNS(name.space, name.local), i;
-        return a !== b && (i = interpolate(a, b), function(t) {
-          this.setAttributeNS(name.space, name.local, i(t));
-        });
-      });
-    }
-    return d3_transition_tween(this, "attr." + nameNS, value, name.local ? attrTweenNS : attrTween);
-  };
-  d3_transitionPrototype.attrTween = function(nameNS, tween) {
-    var name = d3.ns.qualify(nameNS);
-    function attrTween(d, i) {
-      var f = tween.call(this, d, i, this.getAttribute(name));
-      return f && function(t) {
-        this.setAttribute(name, f(t));
-      };
-    }
-    function attrTweenNS(d, i) {
-      var f = tween.call(this, d, i, this.getAttributeNS(name.space, name.local));
-      return f && function(t) {
-        this.setAttributeNS(name.space, name.local, f(t));
-      };
-    }
-    return this.tween("attr." + nameNS, name.local ? attrTweenNS : attrTween);
-  };
-  d3_transitionPrototype.style = function(name, value, priority) {
-    var n = arguments.length;
-    if (n < 3) {
-      if (typeof name !== "string") {
-        if (n < 2) value = "";
-        for (priority in name) this.style(priority, name[priority], value);
-        return this;
-      }
-      priority = "";
-    }
-    function styleNull() {
-      this.style.removeProperty(name);
-    }
-    function styleString(b) {
-      return b == null ? styleNull : (b += "", function() {
-        var a = d3_window(this).getComputedStyle(this, null).getPropertyValue(name), i;
-        return a !== b && (i = d3_interpolate(a, b), function(t) {
-          this.style.setProperty(name, i(t), priority);
-        });
-      });
-    }
-    return d3_transition_tween(this, "style." + name, value, styleString);
-  };
-  d3_transitionPrototype.styleTween = function(name, tween, priority) {
-    if (arguments.length < 3) priority = "";
-    function styleTween(d, i) {
-      var f = tween.call(this, d, i, d3_window(this).getComputedStyle(this, null).getPropertyValue(name));
-      return f && function(t) {
-        this.style.setProperty(name, f(t), priority);
-      };
-    }
-    return this.tween("style." + name, styleTween);
-  };
-  d3_transitionPrototype.text = function(value) {
-    return d3_transition_tween(this, "text", value, d3_transition_text);
-  };
-  function d3_transition_text(b) {
-    if (b == null) b = "";
-    return function() {
-      this.textContent = b;
-    };
-  }
-  d3_transitionPrototype.remove = function() {
-    var ns = this.namespace;
-    return this.each("end.transition", function() {
-      var p;
-      if (this[ns].count < 2 && (p = this.parentNode)) p.removeChild(this);
-    });
-  };
-  d3_transitionPrototype.ease = function(value) {
-    var id = this.id, ns = this.namespace;
-    if (arguments.length < 1) return this.node()[ns][id].ease;
-    if (typeof value !== "function") value = d3.ease.apply(d3, arguments);
-    return d3_selection_each(this, function(node) {
-      node[ns][id].ease = value;
-    });
-  };
-  d3_transitionPrototype.delay = function(value) {
-    var id = this.id, ns = this.namespace;
-    if (arguments.length < 1) return this.node()[ns][id].delay;
-    return d3_selection_each(this, typeof value === "function" ? function(node, i, j) {
-      node[ns][id].delay = +value.call(node, node.__data__, i, j);
-    } : (value = +value, function(node) {
-      node[ns][id].delay = value;
-    }));
-  };
-  d3_transitionPrototype.duration = function(value) {
-    var id = this.id, ns = this.namespace;
-    if (arguments.length < 1) return this.node()[ns][id].duration;
-    return d3_selection_each(this, typeof value === "function" ? function(node, i, j) {
-      node[ns][id].duration = Math.max(1, value.call(node, node.__data__, i, j));
-    } : (value = Math.max(1, value), function(node) {
-      node[ns][id].duration = value;
-    }));
-  };
-  d3_transitionPrototype.each = function(type, listener) {
-    var id = this.id, ns = this.namespace;
-    if (arguments.length < 2) {
-      var inherit = d3_transitionInherit, inheritId = d3_transitionInheritId;
-      try {
-        d3_transitionInheritId = id;
-        d3_selection_each(this, function(node, i, j) {
-          d3_transitionInherit = node[ns][id];
-          type.call(node, node.__data__, i, j);
-        });
-      } finally {
-        d3_transitionInherit = inherit;
-        d3_transitionInheritId = inheritId;
-      }
-    } else {
-      d3_selection_each(this, function(node) {
-        var transition = node[ns][id];
-        (transition.event || (transition.event = d3.dispatch("start", "end", "interrupt"))).on(type, listener);
-      });
-    }
-    return this;
-  };
-  d3_transitionPrototype.transition = function() {
-    var id0 = this.id, id1 = ++d3_transitionId, ns = this.namespace, subgroups = [], subgroup, group, node, transition;
-    for (var j = 0, m = this.length; j < m; j++) {
-      subgroups.push(subgroup = []);
-      for (var group = this[j], i = 0, n = group.length; i < n; i++) {
-        if (node = group[i]) {
-          transition = node[ns][id0];
-          d3_transitionNode(node, i, ns, id1, {
-            time: transition.time,
-            ease: transition.ease,
-            delay: transition.delay + transition.duration,
-            duration: transition.duration
-          });
-        }
-        subgroup.push(node);
-      }
-    }
-    return d3_transition(subgroups, ns, id1);
-  };
-  function d3_transitionNamespace(name) {
-    return name == null ? "__transition__" : "__transition_" + name + "__";
-  }
-  function d3_transitionNode(node, i, ns, id, inherit) {
-    var lock = node[ns] || (node[ns] = {
-      active: 0,
-      count: 0
-    }), transition = lock[id], time, timer, duration, ease, tweens;
-    function schedule(elapsed) {
-      var delay = transition.delay;
-      timer.t = delay + time;
-      if (delay <= elapsed) return start(elapsed - delay);
-      timer.c = start;
-    }
-    function start(elapsed) {
-      var activeId = lock.active, active = lock[activeId];
-      if (active) {
-        active.timer.c = null;
-        active.timer.t = NaN;
-        --lock.count;
-        delete lock[activeId];
-        active.event && active.event.interrupt.call(node, node.__data__, active.index);
-      }
-      for (var cancelId in lock) {
-        if (+cancelId < id) {
-          var cancel = lock[cancelId];
-          cancel.timer.c = null;
-          cancel.timer.t = NaN;
-          --lock.count;
-          delete lock[cancelId];
-        }
-      }
-      timer.c = tick;
-      d3_timer(function() {
-        if (timer.c && tick(elapsed || 1)) {
-          timer.c = null;
-          timer.t = NaN;
-        }
-        return 1;
-      }, 0, time);
-      lock.active = id;
-      transition.event && transition.event.start.call(node, node.__data__, i);
-      tweens = [];
-      transition.tween.forEach(function(key, value) {
-        if (value = value.call(node, node.__data__, i)) {
-          tweens.push(value);
-        }
-      });
-      ease = transition.ease;
-      duration = transition.duration;
-    }
-    function tick(elapsed) {
-      var t = elapsed / duration, e = ease(t), n = tweens.length;
-      while (n > 0) {
-        tweens[--n].call(node, e);
-      }
-      if (t >= 1) {
-        transition.event && transition.event.end.call(node, node.__data__, i);
-        if (--lock.count) delete lock[id]; else delete node[ns];
-        return 1;
-      }
-    }
-    if (!transition) {
-      time = inherit.time;
-      timer = d3_timer(schedule, 0, time);
-      transition = lock[id] = {
-        tween: new d3_Map(),
-        time: time,
-        timer: timer,
-        delay: inherit.delay,
-        duration: inherit.duration,
-        ease: inherit.ease,
-        index: i
-      };
-      inherit = null;
-      ++lock.count;
-    }
-  }
-  d3.svg.axis = function() {
-    var scale = d3.scale.linear(), orient = d3_svg_axisDefaultOrient, innerTickSize = 6, outerTickSize = 6, tickPadding = 3, tickArguments_ = [ 10 ], tickValues = null, tickFormat_;
-    function axis(g) {
-      g.each(function() {
-        var g = d3.select(this);
-        var scale0 = this.__chart__ || scale, scale1 = this.__chart__ = scale.copy();
-        var ticks = tickValues == null ? scale1.ticks ? scale1.ticks.apply(scale1, tickArguments_) : scale1.domain() : tickValues, tickFormat = tickFormat_ == null ? scale1.tickFormat ? scale1.tickFormat.apply(scale1, tickArguments_) : d3_identity : tickFormat_, tick = g.selectAll(".tick").data(ticks, scale1), tickEnter = tick.enter().insert("g", ".domain").attr("class", "tick").style("opacity", ε), tickExit = d3.transition(tick.exit()).style("opacity", ε).remove(), tickUpdate = d3.transition(tick.order()).style("opacity", 1), tickSpacing = Math.max(innerTickSize, 0) + tickPadding, tickTransform;
-        var range = d3_scaleRange(scale1), path = g.selectAll(".domain").data([ 0 ]), pathUpdate = (path.enter().append("path").attr("class", "domain"), 
-        d3.transition(path));
-        tickEnter.append("line");
-        tickEnter.append("text");
-        var lineEnter = tickEnter.select("line"), lineUpdate = tickUpdate.select("line"), text = tick.select("text").text(tickFormat), textEnter = tickEnter.select("text"), textUpdate = tickUpdate.select("text"), sign = orient === "top" || orient === "left" ? -1 : 1, x1, x2, y1, y2;
-        if (orient === "bottom" || orient === "top") {
-          tickTransform = d3_svg_axisX, x1 = "x", y1 = "y", x2 = "x2", y2 = "y2";
-          text.attr("dy", sign < 0 ? "0em" : ".71em").style("text-anchor", "middle");
-          pathUpdate.attr("d", "M" + range[0] + "," + sign * outerTickSize + "V0H" + range[1] + "V" + sign * outerTickSize);
-        } else {
-          tickTransform = d3_svg_axisY, x1 = "y", y1 = "x", x2 = "y2", y2 = "x2";
-          text.attr("dy", ".32em").style("text-anchor", sign < 0 ? "end" : "start");
-          pathUpdate.attr("d", "M" + sign * outerTickSize + "," + range[0] + "H0V" + range[1] + "H" + sign * outerTickSize);
-        }
-        lineEnter.attr(y2, sign * innerTickSize);
-        textEnter.attr(y1, sign * tickSpacing);
-        lineUpdate.attr(x2, 0).attr(y2, sign * innerTickSize);
-        textUpdate.attr(x1, 0).attr(y1, sign * tickSpacing);
-        if (scale1.rangeBand) {
-          var x = scale1, dx = x.rangeBand() / 2;
-          scale0 = scale1 = function(d) {
-            return x(d) + dx;
-          };
-        } else if (scale0.rangeBand) {
-          scale0 = scale1;
-        } else {
-          tickExit.call(tickTransform, scale1, scale0);
-        }
-        tickEnter.call(tickTransform, scale0, scale1);
-        tickUpdate.call(tickTransform, scale1, scale1);
-      });
-    }
-    axis.scale = function(x) {
-      if (!arguments.length) return scale;
-      scale = x;
-      return axis;
-    };
-    axis.orient = function(x) {
-      if (!arguments.length) return orient;
-      orient = x in d3_svg_axisOrients ? x + "" : d3_svg_axisDefaultOrient;
-      return axis;
-    };
-    axis.ticks = function() {
-      if (!arguments.length) return tickArguments_;
-      tickArguments_ = d3_array(arguments);
-      return axis;
-    };
-    axis.tickValues = function(x) {
-      if (!arguments.length) return tickValues;
-      tickValues = x;
-      return axis;
-    };
-    axis.tickFormat = function(x) {
-      if (!arguments.length) return tickFormat_;
-      tickFormat_ = x;
-      return axis;
-    };
-    axis.tickSize = function(x) {
-      var n = arguments.length;
-      if (!n) return innerTickSize;
-      innerTickSize = +x;
-      outerTickSize = +arguments[n - 1];
-      return axis;
-    };
-    axis.innerTickSize = function(x) {
-      if (!arguments.length) return innerTickSize;
-      innerTickSize = +x;
-      return axis;
-    };
-    axis.outerTickSize = function(x) {
-      if (!arguments.length) return outerTickSize;
-      outerTickSize = +x;
-      return axis;
-    };
-    axis.tickPadding = function(x) {
-      if (!arguments.length) return tickPadding;
-      tickPadding = +x;
-      return axis;
-    };
-    axis.tickSubdivide = function() {
-      return arguments.length && axis;
-    };
-    return axis;
-  };
-  var d3_svg_axisDefaultOrient = "bottom", d3_svg_axisOrients = {
-    top: 1,
-    right: 1,
-    bottom: 1,
-    left: 1
-  };
-  function d3_svg_axisX(selection, x0, x1) {
-    selection.attr("transform", function(d) {
-      var v0 = x0(d);
-      return "translate(" + (isFinite(v0) ? v0 : x1(d)) + ",0)";
-    });
-  }
-  function d3_svg_axisY(selection, y0, y1) {
-    selection.attr("transform", function(d) {
-      var v0 = y0(d);
-      return "translate(0," + (isFinite(v0) ? v0 : y1(d)) + ")";
-    });
-  }
-  d3.svg.brush = function() {
-    var event = d3_eventDispatch(brush, "brushstart", "brush", "brushend"), x = null, y = null, xExtent = [ 0, 0 ], yExtent = [ 0, 0 ], xExtentDomain, yExtentDomain, xClamp = true, yClamp = true, resizes = d3_svg_brushResizes[0];
-    function brush(g) {
-      g.each(function() {
-        var g = d3.select(this).style("pointer-events", "all").style("-webkit-tap-highlight-color", "rgba(0,0,0,0)").on("mousedown.brush", brushstart).on("touchstart.brush", brushstart);
-        var background = g.selectAll(".background").data([ 0 ]);
-        background.enter().append("rect").attr("class", "background").style("visibility", "hidden").style("cursor", "crosshair");
-        g.selectAll(".extent").data([ 0 ]).enter().append("rect").attr("class", "extent").style("cursor", "move");
-        var resize = g.selectAll(".resize").data(resizes, d3_identity);
-        resize.exit().remove();
-        resize.enter().append("g").attr("class", function(d) {
-          return "resize " + d;
-        }).style("cursor", function(d) {
-          return d3_svg_brushCursor[d];
-        }).append("rect").attr("x", function(d) {
-          return /[ew]$/.test(d) ? -3 : null;
-        }).attr("y", function(d) {
-          return /^[ns]/.test(d) ? -3 : null;
-        }).attr("width", 6).attr("height", 6).style("visibility", "hidden");
-        resize.style("display", brush.empty() ? "none" : null);
-        var gUpdate = d3.transition(g), backgroundUpdate = d3.transition(background), range;
-        if (x) {
-          range = d3_scaleRange(x);
-          backgroundUpdate.attr("x", range[0]).attr("width", range[1] - range[0]);
-          redrawX(gUpdate);
-        }
-        if (y) {
-          range = d3_scaleRange(y);
-          backgroundUpdate.attr("y", range[0]).attr("height", range[1] - range[0]);
-          redrawY(gUpdate);
-        }
-        redraw(gUpdate);
-      });
-    }
-    brush.event = function(g) {
-      g.each(function() {
-        var event_ = event.of(this, arguments), extent1 = {
-          x: xExtent,
-          y: yExtent,
-          i: xExtentDomain,
-          j: yExtentDomain
-        }, extent0 = this.__chart__ || extent1;
-        this.__chart__ = extent1;
-        if (d3_transitionInheritId) {
-          d3.select(this).transition().each("start.brush", function() {
-            xExtentDomain = extent0.i;
-            yExtentDomain = extent0.j;
-            xExtent = extent0.x;
-            yExtent = extent0.y;
-            event_({
-              type: "brushstart"
-            });
-          }).tween("brush:brush", function() {
-            var xi = d3_interpolateArray(xExtent, extent1.x), yi = d3_interpolateArray(yExtent, extent1.y);
-            xExtentDomain = yExtentDomain = null;
-            return function(t) {
-              xExtent = extent1.x = xi(t);
-              yExtent = extent1.y = yi(t);
-              event_({
-                type: "brush",
-                mode: "resize"
-              });
-            };
-          }).each("end.brush", function() {
-            xExtentDomain = extent1.i;
-            yExtentDomain = extent1.j;
-            event_({
-              type: "brush",
-              mode: "resize"
-            });
-            event_({
-              type: "brushend"
-            });
-          });
-        } else {
-          event_({
-            type: "brushstart"
-          });
-          event_({
-            type: "brush",
-            mode: "resize"
-          });
-          event_({
-            type: "brushend"
-          });
-        }
-      });
-    };
-    function redraw(g) {
-      g.selectAll(".resize").attr("transform", function(d) {
-        return "translate(" + xExtent[+/e$/.test(d)] + "," + yExtent[+/^s/.test(d)] + ")";
-      });
-    }
-    function redrawX(g) {
-      g.select(".extent").attr("x", xExtent[0]);
-      g.selectAll(".extent,.n>rect,.s>rect").attr("width", xExtent[1] - xExtent[0]);
-    }
-    function redrawY(g) {
-      g.select(".extent").attr("y", yExtent[0]);
-      g.selectAll(".extent,.e>rect,.w>rect").attr("height", yExtent[1] - yExtent[0]);
-    }
-    function brushstart() {
-      var target = this, eventTarget = d3.select(d3.event.target), event_ = event.of(target, arguments), g = d3.select(target), resizing = eventTarget.datum(), resizingX = !/^(n|s)$/.test(resizing) && x, resizingY = !/^(e|w)$/.test(resizing) && y, dragging = eventTarget.classed("extent"), dragRestore = d3_event_dragSuppress(target), center, origin = d3.mouse(target), offset;
-      var w = d3.select(d3_window(target)).on("keydown.brush", keydown).on("keyup.brush", keyup);
-      if (d3.event.changedTouches) {
-        w.on("touchmove.brush", brushmove).on("touchend.brush", brushend);
-      } else {
-        w.on("mousemove.brush", brushmove).on("mouseup.brush", brushend);
-      }
-      g.interrupt().selectAll("*").interrupt();
-      if (dragging) {
-        origin[0] = xExtent[0] - origin[0];
-        origin[1] = yExtent[0] - origin[1];
-      } else if (resizing) {
-        var ex = +/w$/.test(resizing), ey = +/^n/.test(resizing);
-        offset = [ xExtent[1 - ex] - origin[0], yExtent[1 - ey] - origin[1] ];
-        origin[0] = xExtent[ex];
-        origin[1] = yExtent[ey];
-      } else if (d3.event.altKey) center = origin.slice();
-      g.style("pointer-events", "none").selectAll(".resize").style("display", null);
-      d3.select("body").style("cursor", eventTarget.style("cursor"));
-      event_({
-        type: "brushstart"
-      });
-      brushmove();
-      function keydown() {
-        if (d3.event.keyCode == 32) {
-          if (!dragging) {
-            center = null;
-            origin[0] -= xExtent[1];
-            origin[1] -= yExtent[1];
-            dragging = 2;
-          }
-          d3_eventPreventDefault();
-        }
-      }
-      function keyup() {
-        if (d3.event.keyCode == 32 && dragging == 2) {
-          origin[0] += xExtent[1];
-          origin[1] += yExtent[1];
-          dragging = 0;
-          d3_eventPreventDefault();
-        }
-      }
-      function brushmove() {
-        var point = d3.mouse(target), moved = false;
-        if (offset) {
-          point[0] += offset[0];
-          point[1] += offset[1];
-        }
-        if (!dragging) {
-          if (d3.event.altKey) {
-            if (!center) center = [ (xExtent[0] + xExtent[1]) / 2, (yExtent[0] + yExtent[1]) / 2 ];
-            origin[0] = xExtent[+(point[0] < center[0])];
-            origin[1] = yExtent[+(point[1] < center[1])];
-          } else center = null;
-        }
-        if (resizingX && move1(point, x, 0)) {
-          redrawX(g);
-          moved = true;
-        }
-        if (resizingY && move1(point, y, 1)) {
-          redrawY(g);
-          moved = true;
-        }
-        if (moved) {
-          redraw(g);
-          event_({
-            type: "brush",
-            mode: dragging ? "move" : "resize"
-          });
-        }
-      }
-      function move1(point, scale, i) {
-        var range = d3_scaleRange(scale), r0 = range[0], r1 = range[1], position = origin[i], extent = i ? yExtent : xExtent, size = extent[1] - extent[0], min, max;
-        if (dragging) {
-          r0 -= position;
-          r1 -= size + position;
-        }
-        min = (i ? yClamp : xClamp) ? Math.max(r0, Math.min(r1, point[i])) : point[i];
-        if (dragging) {
-          max = (min += position) + size;
-        } else {
-          if (center) position = Math.max(r0, Math.min(r1, 2 * center[i] - min));
-          if (position < min) {
-            max = min;
-            min = position;
-          } else {
-            max = position;
-          }
-        }
-        if (extent[0] != min || extent[1] != max) {
-          if (i) yExtentDomain = null; else xExtentDomain = null;
-          extent[0] = min;
-          extent[1] = max;
-          return true;
-        }
-      }
-      function brushend() {
-        brushmove();
-        g.style("pointer-events", "all").selectAll(".resize").style("display", brush.empty() ? "none" : null);
-        d3.select("body").style("cursor", null);
-        w.on("mousemove.brush", null).on("mouseup.brush", null).on("touchmove.brush", null).on("touchend.brush", null).on("keydown.brush", null).on("keyup.brush", null);
-        dragRestore();
-        event_({
-          type: "brushend"
-        });
-      }
-    }
-    brush.x = function(z) {
-      if (!arguments.length) return x;
-      x = z;
-      resizes = d3_svg_brushResizes[!x << 1 | !y];
-      return brush;
-    };
-    brush.y = function(z) {
-      if (!arguments.length) return y;
-      y = z;
-      resizes = d3_svg_brushResizes[!x << 1 | !y];
-      return brush;
-    };
-    brush.clamp = function(z) {
-      if (!arguments.length) return x && y ? [ xClamp, yClamp ] : x ? xClamp : y ? yClamp : null;
-      if (x && y) xClamp = !!z[0], yClamp = !!z[1]; else if (x) xClamp = !!z; else if (y) yClamp = !!z;
-      return brush;
-    };
-    brush.extent = function(z) {
-      var x0, x1, y0, y1, t;
-      if (!arguments.length) {
-        if (x) {
-          if (xExtentDomain) {
-            x0 = xExtentDomain[0], x1 = xExtentDomain[1];
-          } else {
-            x0 = xExtent[0], x1 = xExtent[1];
-            if (x.invert) x0 = x.invert(x0), x1 = x.invert(x1);
-            if (x1 < x0) t = x0, x0 = x1, x1 = t;
-          }
-        }
-        if (y) {
-          if (yExtentDomain) {
-            y0 = yExtentDomain[0], y1 = yExtentDomain[1];
-          } else {
-            y0 = yExtent[0], y1 = yExtent[1];
-            if (y.invert) y0 = y.invert(y0), y1 = y.invert(y1);
-            if (y1 < y0) t = y0, y0 = y1, y1 = t;
-          }
-        }
-        return x && y ? [ [ x0, y0 ], [ x1, y1 ] ] : x ? [ x0, x1 ] : y && [ y0, y1 ];
-      }
-      if (x) {
-        x0 = z[0], x1 = z[1];
-        if (y) x0 = x0[0], x1 = x1[0];
-        xExtentDomain = [ x0, x1 ];
-        if (x.invert) x0 = x(x0), x1 = x(x1);
-        if (x1 < x0) t = x0, x0 = x1, x1 = t;
-        if (x0 != xExtent[0] || x1 != xExtent[1]) xExtent = [ x0, x1 ];
-      }
-      if (y) {
-        y0 = z[0], y1 = z[1];
-        if (x) y0 = y0[1], y1 = y1[1];
-        yExtentDomain = [ y0, y1 ];
-        if (y.invert) y0 = y(y0), y1 = y(y1);
-        if (y1 < y0) t = y0, y0 = y1, y1 = t;
-        if (y0 != yExtent[0] || y1 != yExtent[1]) yExtent = [ y0, y1 ];
-      }
-      return brush;
-    };
-    brush.clear = function() {
-      if (!brush.empty()) {
-        xExtent = [ 0, 0 ], yExtent = [ 0, 0 ];
-        xExtentDomain = yExtentDomain = null;
-      }
-      return brush;
-    };
-    brush.empty = function() {
-      return !!x && xExtent[0] == xExtent[1] || !!y && yExtent[0] == yExtent[1];
-    };
-    return d3.rebind(brush, event, "on");
-  };
-  var d3_svg_brushCursor = {
-    n: "ns-resize",
-    e: "ew-resize",
-    s: "ns-resize",
-    w: "ew-resize",
-    nw: "nwse-resize",
-    ne: "nesw-resize",
-    se: "nwse-resize",
-    sw: "nesw-resize"
-  };
-  var d3_svg_brushResizes = [ [ "n", "e", "s", "w", "nw", "ne", "se", "sw" ], [ "e", "w" ], [ "n", "s" ], [] ];
-  var d3_time_format = d3_time.format = d3_locale_enUS.timeFormat;
-  var d3_time_formatUtc = d3_time_format.utc;
-  var d3_time_formatIso = d3_time_formatUtc("%Y-%m-%dT%H:%M:%S.%LZ");
-  d3_time_format.iso = Date.prototype.toISOString && +new Date("2000-01-01T00:00:00.000Z") ? d3_time_formatIsoNative : d3_time_formatIso;
-  function d3_time_formatIsoNative(date) {
-    return date.toISOString();
-  }
-  d3_time_formatIsoNative.parse = function(string) {
-    var date = new Date(string);
-    return isNaN(date) ? null : date;
-  };
-  d3_time_formatIsoNative.toString = d3_time_formatIso.toString;
-  d3_time.second = d3_time_interval(function(date) {
-    return new d3_date(Math.floor(date / 1e3) * 1e3);
-  }, function(date, offset) {
-    date.setTime(date.getTime() + Math.floor(offset) * 1e3);
-  }, function(date) {
-    return date.getSeconds();
-  });
-  d3_time.seconds = d3_time.second.range;
-  d3_time.seconds.utc = d3_time.second.utc.range;
-  d3_time.minute = d3_time_interval(function(date) {
-    return new d3_date(Math.floor(date / 6e4) * 6e4);
-  }, function(date, offset) {
-    date.setTime(date.getTime() + Math.floor(offset) * 6e4);
-  }, function(date) {
-    return date.getMinutes();
-  });
-  d3_time.minutes = d3_time.minute.range;
-  d3_time.minutes.utc = d3_time.minute.utc.range;
-  d3_time.hour = d3_time_interval(function(date) {
-    var timezone = date.getTimezoneOffset() / 60;
-    return new d3_date((Math.floor(date / 36e5 - timezone) + timezone) * 36e5);
-  }, function(date, offset) {
-    date.setTime(date.getTime() + Math.floor(offset) * 36e5);
-  }, function(date) {
-    return date.getHours();
-  });
-  d3_time.hours = d3_time.hour.range;
-  d3_time.hours.utc = d3_time.hour.utc.range;
-  d3_time.month = d3_time_interval(function(date) {
-    date = d3_time.day(date);
-    date.setDate(1);
-    return date;
-  }, function(date, offset) {
-    date.setMonth(date.getMonth() + offset);
-  }, function(date) {
-    return date.getMonth();
-  });
-  d3_time.months = d3_time.month.range;
-  d3_time.months.utc = d3_time.month.utc.range;
-  function d3_time_scale(linear, methods, format) {
-    function scale(x) {
-      return linear(x);
-    }
-    scale.invert = function(x) {
-      return d3_time_scaleDate(linear.invert(x));
-    };
-    scale.domain = function(x) {
-      if (!arguments.length) return linear.domain().map(d3_time_scaleDate);
-      linear.domain(x);
-      return scale;
-    };
-    function tickMethod(extent, count) {
-      var span = extent[1] - extent[0], target = span / count, i = d3.bisect(d3_time_scaleSteps, target);
-      return i == d3_time_scaleSteps.length ? [ methods.year, d3_scale_linearTickRange(extent.map(function(d) {
-        return d / 31536e6;
-      }), count)[2] ] : !i ? [ d3_time_scaleMilliseconds, d3_scale_linearTickRange(extent, count)[2] ] : methods[target / d3_time_scaleSteps[i - 1] < d3_time_scaleSteps[i] / target ? i - 1 : i];
-    }
-    scale.nice = function(interval, skip) {
-      var domain = scale.domain(), extent = d3_scaleExtent(domain), method = interval == null ? tickMethod(extent, 10) : typeof interval === "number" && tickMethod(extent, interval);
-      if (method) interval = method[0], skip = method[1];
-      function skipped(date) {
-        return !isNaN(date) && !interval.range(date, d3_time_scaleDate(+date + 1), skip).length;
-      }
-      return scale.domain(d3_scale_nice(domain, skip > 1 ? {
-        floor: function(date) {
-          while (skipped(date = interval.floor(date))) date = d3_time_scaleDate(date - 1);
-          return date;
-        },
-        ceil: function(date) {
-          while (skipped(date = interval.ceil(date))) date = d3_time_scaleDate(+date + 1);
-          return date;
-        }
-      } : interval));
-    };
-    scale.ticks = function(interval, skip) {
-      var extent = d3_scaleExtent(scale.domain()), method = interval == null ? tickMethod(extent, 10) : typeof interval === "number" ? tickMethod(extent, interval) : !interval.range && [ {
-        range: interval
-      }, skip ];
-      if (method) interval = method[0], skip = method[1];
-      return interval.range(extent[0], d3_time_scaleDate(+extent[1] + 1), skip < 1 ? 1 : skip);
-    };
-    scale.tickFormat = function() {
-      return format;
-    };
-    scale.copy = function() {
-      return d3_time_scale(linear.copy(), methods, format);
-    };
-    return d3_scale_linearRebind(scale, linear);
-  }
-  function d3_time_scaleDate(t) {
-    return new Date(t);
-  }
-  var d3_time_scaleSteps = [ 1e3, 5e3, 15e3, 3e4, 6e4, 3e5, 9e5, 18e5, 36e5, 108e5, 216e5, 432e5, 864e5, 1728e5, 6048e5, 2592e6, 7776e6, 31536e6 ];
-  var d3_time_scaleLocalMethods = [ [ d3_time.second, 1 ], [ d3_time.second, 5 ], [ d3_time.second, 15 ], [ d3_time.second, 30 ], [ d3_time.minute, 1 ], [ d3_time.minute, 5 ], [ d3_time.minute, 15 ], [ d3_time.minute, 30 ], [ d3_time.hour, 1 ], [ d3_time.hour, 3 ], [ d3_time.hour, 6 ], [ d3_time.hour, 12 ], [ d3_time.day, 1 ], [ d3_time.day, 2 ], [ d3_time.week, 1 ], [ d3_time.month, 1 ], [ d3_time.month, 3 ], [ d3_time.year, 1 ] ];
-  var d3_time_scaleLocalFormat = d3_time_format.multi([ [ ".%L", function(d) {
-    return d.getMilliseconds();
-  } ], [ ":%S", function(d) {
-    return d.getSeconds();
-  } ], [ "%I:%M", function(d) {
-    return d.getMinutes();
-  } ], [ "%I %p", function(d) {
-    return d.getHours();
-  } ], [ "%a %d", function(d) {
-    return d.getDay() && d.getDate() != 1;
-  } ], [ "%b %d", function(d) {
-    return d.getDate() != 1;
-  } ], [ "%B", function(d) {
-    return d.getMonth();
-  } ], [ "%Y", d3_true ] ]);
-  var d3_time_scaleMilliseconds = {
-    range: function(start, stop, step) {
-      return d3.range(Math.ceil(start / step) * step, +stop, step).map(d3_time_scaleDate);
-    },
-    floor: d3_identity,
-    ceil: d3_identity
-  };
-  d3_time_scaleLocalMethods.year = d3_time.year;
-  d3_time.scale = function() {
-    return d3_time_scale(d3.scale.linear(), d3_time_scaleLocalMethods, d3_time_scaleLocalFormat);
-  };
-  var d3_time_scaleUtcMethods = d3_time_scaleLocalMethods.map(function(m) {
-    return [ m[0].utc, m[1] ];
-  });
-  var d3_time_scaleUtcFormat = d3_time_formatUtc.multi([ [ ".%L", function(d) {
-    return d.getUTCMilliseconds();
-  } ], [ ":%S", function(d) {
-    return d.getUTCSeconds();
-  } ], [ "%I:%M", function(d) {
-    return d.getUTCMinutes();
-  } ], [ "%I %p", function(d) {
-    return d.getUTCHours();
-  } ], [ "%a %d", function(d) {
-    return d.getUTCDay() && d.getUTCDate() != 1;
-  } ], [ "%b %d", function(d) {
-    return d.getUTCDate() != 1;
-  } ], [ "%B", function(d) {
-    return d.getUTCMonth();
-  } ], [ "%Y", d3_true ] ]);
-  d3_time_scaleUtcMethods.year = d3_time.year.utc;
-  d3_time.scale.utc = function() {
-    return d3_time_scale(d3.scale.linear(), d3_time_scaleUtcMethods, d3_time_scaleUtcFormat);
-  };
-  d3.text = d3_xhrType(function(request) {
-    return request.responseText;
-  });
-  d3.json = function(url, callback) {
-    return d3_xhr(url, "application/json", d3_json, callback);
-  };
-  function d3_json(request) {
-    return JSON.parse(request.responseText);
-  }
-  d3.html = function(url, callback) {
-    return d3_xhr(url, "text/html", d3_html, callback);
-  };
-  function d3_html(request) {
-    var range = d3_document.createRange();
-    range.selectNode(d3_document.body);
-    return range.createContextualFragment(request.responseText);
-  }
-  d3.xml = d3_xhrType(function(request) {
-    return request.responseXML;
-  });
-  if (true) this.d3 = d3, !(__WEBPACK_AMD_DEFINE_FACTORY__ = (d3),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)); else if (typeof module === "object" && module.exports) module.exports = d3; else this.d3 = d3;
-}();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = [{ "buttonPC": "fn-tag-sapporo", "buttonSP": "fn-button-sapporo", "searchWord": "札幌市", "cityJP": "札幌", "cityEN": "SAPPORO", "cityLowerEN": "sapporo" }, { "buttonPC": "fn-tag-sendai", "buttonSP": "fn-button-sendai", "searchWord": "仙台市", "cityJP": "仙台", "cityEN": "SENDAI", "cityLowerEN": "sendai" }, { "buttonPC": "fn-tag-tokyo", "buttonSP": "fn-button-tokyo", "searchWord": "東京都", "cityJP": "東京", "cityEN": "TOKYO", "cityLowerEN": "tokyo" }, { "buttonPC": "fn-tag-nagoya", "buttonSP": "fn-button-nagoya", "searchWord": "名古屋市", "cityJP": "名古屋", "cityEN": "NAGOYA", "cityLowerEN": "nagoya" }, { "buttonPC": "fn-tag-kyoto", "buttonSP": "fn-button-kyoto", "searchWord": "京都市", "cityJP": "京都", "cityEN": "KYOTO", "cityLowerEN": "kyoto" }, { "buttonPC": "fn-tag-osaka", "buttonSP": "fn-button-osaka", "searchWord": "大阪市", "cityJP": "大阪", "cityEN": "OSAKA", "cityLowerEN": "osaka" }, { "buttonPC": "fn-tag-hiroshima", "buttonSP": "fn-button-hiroshima", "searchWord": "広島市", "cityJP": "広島", "cityEN": "HIROSHIMA", "cityLowerEN": "hiroshima" }, { "buttonPC": "fn-tag-fukuoka", "buttonSP": "fn-button-fukuoka", "searchWord": "福岡市", "cityJP": "福岡", "cityEN": "FUKUOKA", "cityLowerEN": "fukuoka" }, { "buttonPC": "fn-tag-naha", "buttonSP": "fn-button-naha", "searchWord": "那覇市", "cityJP": "那覇", "cityEN": "NAHA", "cityLowerEN": "naha" }];
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = [{ "time": "6:00", "meridiem": "a.m.", "militaryTime": "6:00" }, { "time": "7:00", "meridiem": "a.m.", "militaryTime": "7:00" }, { "time": "8:00", "meridiem": "a.m.", "militaryTime": "8:00" }, { "time": "9:00", "meridiem": "a.m.", "militaryTime": "9:00" }, { "time": "10:00", "meridiem": "a.m.", "militaryTime": "10:00" }, { "time": "11:00", "meridiem": "a.m.", "militaryTime": "11:00" }, { "time": "12:00", "meridiem": "p.m.", "militaryTime": "12:00" }, { "time": "1:00", "meridiem": "p.m.", "militaryTime": "13:00" }, { "time": "2:00", "meridiem": "p.m.", "militaryTime": "14:00" }, { "time": "3:00", "meridiem": "p.m.", "militaryTime": "15:00" }, { "time": "4:00", "meridiem": "p.m.", "militaryTime": "16:00" }, { "time": "5:00", "meridiem": "p.m.", "militaryTime": "17:00" }, { "time": "6:00", "meridiem": "p.m.", "militaryTime": "18:00" }, { "time": "7:00", "meridiem": "p.m.", "militaryTime": "19:00" }, { "time": "8:00", "meridiem": "p.m.", "militaryTime": "20:00" }, { "time": "9:00", "meridiem": "p.m.", "militaryTime": "21:00" }, { "time": "10:00", "meridiem": "p.m.", "militaryTime": "22:00" }, { "time": "11:00", "meridiem": "p.m.", "militaryTime": "23:00" }, { "time": "12:00", "meridiem": "a.m.", "militaryTime": "0:00" }];
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Drawer Total Population of Foreign Tourist Count Up Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawerForeignTotalPopCountUp = function drawerForeignTotalPopCountUp(totalForeignArry) {
-  var foreignTotalPop = document.querySelector('.fn-app-visited-population');
-  var totalForeignArryLen = totalForeignArry.length;
-  var addTotalPop = totalForeignArry.reduce(function (current, arryForeign) {
-    return current += arryForeign;
-  }, 0);
-  var startTotalPop = addTotalPop - 100;
-  var getTotalPop = addTotalPop;
-  var duration = 10;
-  totalForeignArry.length = 0;
-  setTimeout(function () {
-    setInterval(function () {
-      if (startTotalPop <= getTotalPop) {
-        foreignTotalPop.innerText = startTotalPop.toLocaleString();
-        startTotalPop++;
-      }
-    }, duration);
-  }, 500);
-};
-
-exports.default = drawerForeignTotalPopCountUp;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var _arguments = arguments;
-
-// Import Json.
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _countryName = __webpack_require__(20);
-
-var _countryName2 = _interopRequireDefault(_countryName);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Drawer Foreign Tourists Functions.
-var drawerForeignTourists = function drawerForeignTourists(csv2, i, totalForeignArry, getMilitaryTime, getCity) {
-  var getPoplutaionArry = [];
-  var getCountriesArry = [];
-  var getCountriesFlagArry = [];
-  var csv2Len = csv2.length;
-  var countryNameLen = _countryName2.default.length;
-  var addCountries = document.querySelectorAll('.fn-countries-name');
-  var addCountriesLen = addCountries.length;
-  var countriesPop = document.querySelectorAll('.fn-countries-population');
-  var countriesFlag = document.querySelectorAll('.fn-icon-flag');
-  var countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');
-  var countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');
-  var closeBTN = document.querySelector('.fn-button-back-to-map');
-  var graphCallBackCore = function graphCallBackCore(transition, callback) {
-    var index = 0;
-    transition.each(function () {
-      ++index;
-    }).each('end', function () {
-      if (! --index) callback.apply(undefined, _arguments);
-    });
-  };
-
-  for (var _i = 0; _i < csv2Len; _i++) {
-    if (getMilitaryTime === csv2[_i].time && getCity === csv2[_i].city) {
-      totalForeignArry.push(Number(csv2[_i].population));
-      getPoplutaionArry.push(Number(csv2[_i].population));
-      var getCountries = csv2[_i].country;
-      for (var _i2 = 0; _i2 < countryNameLen; _i2++) {
-        if (getCountries === _countryName2.default[_i2].countryNameJP) {
-          getCountriesArry.push(_countryName2.default[_i2].countryNameEN);
-          getCountriesFlagArry.push(_countryName2.default[_i2].flagPath);
-
-          var _loop = function _loop(_i3) {
-            var getGraphWidth = getPoplutaionArry[_i3] / getPoplutaionArry[0] * 100;
-            var startPop = getPoplutaionArry[_i3] - 100 >= 0 ? getPoplutaionArry[_i3] - 100 : 0;
-            var getPop = getPoplutaionArry[_i3];
-            var duration = 10;
-            addCountries[_i3].innerText = getCountriesArry[_i3];
-            countriesFlag[_i3].setAttribute('src', 'images/icon_' + getCountriesFlagArry[_i3] + '.svg');
-            countriesGraphWrap[_i3].style.width = getGraphWidth + '%';
-            setTimeout(function () {
-              setInterval(function () {
-                if (startPop <= getPop) {
-                  countriesPop[_i3].innerText = startPop.toLocaleString();
-                  startPop++;
-                }
-              }, duration);
-              _d2.default.select(countriesGraph[_i3]).transition().duration(1500).style('width', '100%').call(graphCallBackCore, function () {
-                closeBTN.disabled = false;
-              });
-            }, 500);
-          };
-
-          for (var _i3 = 0; _i3 < addCountriesLen; _i3++) {
-            _loop(_i3);
-          }
-        }
-      }
-    }
-  }
-};
-
-exports.default = drawerForeignTourists;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Drawer Gender Population Count Up Functions.
-var drawerGenderPopCountUp = function drawerGenderPopCountUp(csv1, i, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP) {
-  var csv1Len = csv1.length;
-  var cityEN = document.querySelector('.fn-app-city-en');
-  var cityJP = document.querySelector('.fn-app-city-ja');
-  var malePop = document.querySelector('.fn-app-male-population');
-  var femalePop = document.querySelector('.fn-app-female-population');
-  for (var _i = 0; _i < csv1Len; _i++) {
-    if (getMilitaryTime === csv1[_i].time && getCity === csv1[_i].city) {
-      var getGender = csv1[_i].gender;
-      cityEN.innerText = getCityEN;
-      cityJP.innerText = getCityJP;
-      if (getGender === '男') {
-        (function () {
-          totalPopArry.push(Number(csv1[_i].population.replace(/\,/g, '')));
-          var startPop = Number(csv1[_i].population.replace(/\,/g, '') - 100);
-          var getPop = Number(csv1[_i].population.replace(/\,/g, ''));
-          var duration = 10;
-          setTimeout(function () {
-            setInterval(function () {
-              if (startPop <= getPop) {
-                malePop.innerText = startPop.toLocaleString();
-                startPop++;
-              }
-            }, duration);
-            _d2.default.select('.fn-app-male-graph-inner').transition().duration(1500).style('width', '100%');
-          }, 500);
-        })();
-      }
-      if (getGender === '女') {
-        (function () {
-          totalPopArry.push(Number(csv1[_i].population.replace(/\,/g, '')));
-          var startPop = Number(csv1[_i].population.replace(/\,/g, '') - 100);
-          var getPop = Number(csv1[_i].population.replace(/\,/g, ''));
-          var duration = 10;
-          setTimeout(function () {
-            setInterval(function () {
-              if (startPop <= getPop) {
-                femalePop.innerText = startPop.toLocaleString();
-                startPop++;
-              }
-            }, duration);
-            _d2.default.select('.fn-app-female-graph-inner').transition().duration(1500).style('width', '100%');
-          }, 500);
-        })();
-      }
-    }
-  }
-};exports.default = drawerGenderPopCountUp;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Drawer Heat Graph Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawerHeatGraph = function drawerHeatGraph(getCityLower) {
-  var target = document.querySelector('.fn-add-heat-graph');
-  var getHeatGraph = document.querySelector('.fn-triangle-graph-' + getCityLower);
-  var cloneHeatGraph = getHeatGraph.cloneNode(true);
-  var getSVG = cloneHeatGraph.firstElementChild;
-  var setClsSVG = getSVG.classList.add('clone-svg-graph');
-  var getDefs = getSVG.lastElementChild;
-  var getClipPath = getDefs.lastElementChild;
-  var repID = getClipPath.setAttribute('id', 'clone-svg-clip');
-  target.appendChild(cloneHeatGraph);
-};
-
-exports.default = drawerHeatGraph;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Drawer Total Population Count Up Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawerTotalPopCountUp = function drawerTotalPopCountUp(totalPopArry) {
-  var totalPop = document.querySelector('.fn-app-population');
-  var maleWrap = document.querySelector('.fn-gender-male-wrapper');
-  var femaleWrap = document.querySelector('.fn-gender-female-wrapper');
-  var totalPopArryLen = totalPopArry.length;
-  var addTotalPop = 0;
-  for (var i = 0; i < totalPopArryLen; i++) {
-    addTotalPop += totalPopArry[i];
-  }
-  var startTotalPop = addTotalPop - 100;
-  var getTotalPop = addTotalPop;
-  var getMalePop = totalPopArry[0];
-  var getFemalePop = totalPopArry[1];
-  var getMaleWidth = getMalePop / getTotalPop * 100;
-  var getFemaleWidth = getFemalePop / getTotalPop * 100;
-  var duration = 10;
-  maleWrap.style.width = getMaleWidth + '%';
-  femaleWrap.style.width = getFemaleWidth + '%';
-  totalPopArry.length = 0;
-  setTimeout(function () {
-    setInterval(function () {
-      if (startTotalPop <= getTotalPop) {
-        totalPop.innerText = startTotalPop.toLocaleString();
-        startTotalPop++;
-      }
-    }, duration);
-  }, 500);
-};
-
-exports.default = drawerTotalPopCountUp;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Json.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Drawer Close Functions.
-var drawerClosed = function drawerClosed() {
-  var closeBTN = document.querySelector('.fn-button-back-to-map');
-  var movie = document.getElementById('fn-movie');
-  var drawer = document.querySelector('.fn-drawer-city');
-  var totalPop = document.querySelector('.fn-app-population');
-  var malePop = document.querySelector('.fn-app-male-population');
-  var femalePop = document.querySelector('.fn-app-female-population');
-  var foreignTotalPop = document.querySelector('.fn-app-visited-population');
-  var maleWrap = document.querySelector('.fn-gender-male-wrapper');
-  var femaleWrap = document.querySelector('.fn-gender-female-wrapper');
-  var maleGraph = document.querySelector('.fn-app-female-graph-inner');
-  var femaleGraph = document.querySelector('.fn-app-male-graph-inner');
-  var drawerHeatGraphWrap = document.querySelector('.fn-add-heat-graph');
-  var countriesPop = document.querySelectorAll('.fn-countries-population');
-  var countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population');
-  var countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner');
-  var countriesPopLen = countriesPop.length;
-  var drawerCityBG = document.querySelector('.fn-city-map');
-  var cityCheckedLen = _cityChecked2.default.length;
-
-  var coreFunc = function coreFunc() {
-    movie.play();
-    drawer.classList.remove('is-active');
-    totalPop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
-    malePop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
-    femalePop.innerText = '\u30FC\u30FC\u30FC\u30FC\u30FC';
-    foreignTotalPop.innerText = '\u30FC\u30FC\u30FC\u30FC';
-    maleWrap.removeAttribute('style');
-    femaleWrap.removeAttribute('style');
-    maleGraph.removeAttribute('style');
-    femaleGraph.removeAttribute('style');
-    drawerHeatGraphWrap.textContent = null;
-    for (var i = 0; i < countriesPopLen; i++) {
-      countriesPop[i].innerText = '\u30FC\u30FC\u30FC';
-      countriesGraphWrap[i].removeAttribute('style');
-      countriesGraph[i].removeAttribute('style');
-    }
-    for (var _i = 0; _i < cityCheckedLen; _i++) {
-      var getCityLower = _cityChecked2.default[_i].cityLowerEN;
-      drawerCityBG.classList.remove(_cityChecked2.default[_i].cityLowerEN);
-    }
-    closeBTN.disabled = true;
-  };
-  closeBTN.addEventListener('click', coreFunc, false);
-};exports.default = drawerClosed;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Init Heat Graph Functions.
-var initHeatGraph = function initHeatGraph() {
-  var target = document.querySelectorAll('.fn-triangle-graph-polygon');
-  var targetLen = target.length;
-  var checkFlag = document.querySelector('.first-view');
-  var coreFunc = function coreFunc() {
-    var flagSP = checkFlag.classList.contains('sp');
-    var flagPCTB = checkFlag.classList.contains('pctb');
-    var flagPC = checkFlag.classList.contains('pc');
-    var addSizePoint = flagSP ? '62' : flagPCTB ? '107' : '162';
-    if (flagSP) {
-      for (var i = 0; i < targetLen; i++) {
-        target[i].setAttribute('points', '11,0 23,62 0,62');
-      }
-    }
-    if (flagPCTB) {
-      for (var _i = 0; _i < targetLen; _i++) {
-        target[_i].setAttribute('points', '20,0 40,107 0,107');
-      }
-    }
-    if (flagPC) {
-      for (var _i2 = 0; _i2 < targetLen; _i2++) {
-        target[_i2].setAttribute('points', '30,0 60,160 0,160');
-      }
-    }
-    _d2.default.selectAll(target).classed({
-      'is-init': false
-    }).attr('transform', 'translate(0, ' + addSizePoint + ')');
-  };
-  window.addEventListener('load', coreFunc, false);
-  window.addEventListener('resize', coreFunc, false);
-};exports.default = initHeatGraph;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Add Flag on Body Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var addFlag = function addFlag() {
-  var target = document.querySelector('.first-view');
-  var SP = 768;
-  var PCTB = 1280;
-  var PC = 1920;
-  var coreFunc = function coreFunc() {
-    var WW = window.innerWidth;
-    if (WW < SP) {
-      target.classList.add('sp');
-      target.classList.remove('pctb');
-      target.classList.remove('pc');
-    } else if (WW >= SP && WW < PCTB) {
-      target.classList.add('pctb');
-      target.classList.remove('sp');
-      target.classList.remove('pc');
-    } else if (WW >= PCTB) {
-      target.classList.add('pc');
-      target.classList.remove('sp');
-      target.classList.remove('pctb');
-    }
-  };
-  window.addEventListener('load', coreFunc, false);
-  window.addEventListener('resize', coreFunc, false);
-};
-
-exports.default = addFlag;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// For IE Functions.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var forIE = function forIE() {
-  var showTarget = document.querySelectorAll('.fn-IE-triangle-graph');
-  var targetLen = showTarget.length;
-  var hideTarget = document.querySelectorAll('.fn-svg-graph');
-  var ua = navigator.userAgent;
-  if (ua.indexOf('MSIE') > -1 || ua.indexOf('Trident') > -1 || ua.indexOf('Edge') > -1) {
-    for (var i = 0; 0 < targetLen; i++) {
-      showTarget[i].classList.add('is-IE');
-      hideTarget[i].classList.add('is-IE');
-    }
-  }
-};
-
-exports.default = forIE;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-// Slider Clicked Function.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sliderClicked = function sliderClicked() {
-  var movie = document.getElementById('fn-movie');
-  var playButtonSP = document.querySelector('.fn-button-play');
-  playButtonSP.addEventListener('click', function () {
-    if (movie.paused === true) {
-      movie.play();
-      playButtonSP.classList.remove('is-stop');
-      slider.classList.remove('is-stop');
-    } else {
-      movie.pause();
-      playButtonSP.classList.add('is-stop');
-      slider.classList.add('is-stop');
-    }
-  });
-};
-
-exports.default = sliderClicked;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Json.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _timeAlignment = __webpack_require__(2);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _sliders = __webpack_require__(19);
-
-var _sliders2 = _interopRequireDefault(_sliders);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Sync Setting Movies <-> Slider.
-var syncSliders = function syncSliders() {
-  var movie = document.getElementById('fn-movie');
-  var slider = document.querySelector('.fn-slider');
-  var addTimeTarget = document.querySelector('.fn-time');
-  var addMeridiemTarget = document.querySelector('.fn-meridiem');
-  var timeAlignmentLen = _timeAlignment2.default.length;
-  var addHour = document.querySelector('.fn-hour');
-  var addMinute = document.querySelector('.fn-minute');
-
-  // Sync of Slider for Movie.
-  var syncSlider = function syncSlider(sliderMaxVal, setCalculation) {
-    slider.addEventListener('input', function () {
-      var time = slider.value / setCalculation;
-      movie.currentTime = time;
-      (0, _sliders2.default)(slider, sliderMaxVal);
-    });
-  };
-
-  // Created Sync of Movie for Slider & Time View Functions.
-  var moviePlay = function moviePlay(sliderMaxVal, setHourPoints, setCalculation) {
-    movie.addEventListener('timeupdate', function () {
-      var val = movie.currentTime * setCalculation;
-      slider.value = val;
-      for (var i = 0; i < timeAlignmentLen; i++) {
-        if (val > setHourPoints * i && val <= setHourPoints * (i + 1)) {
-          addTimeTarget.innerText = _timeAlignment2.default[i].time;
-          addMeridiemTarget.innerText = _timeAlignment2.default[i].meridiem;
-        }
-      }
-      var getColonPosition = addTimeTarget.innerText.indexOf(':');
-      var getHour = addTimeTarget.innerText.slice(0, getColonPosition);
-      var getNumber = Math.floor(movie.currentTime);
-      var getMinute = getNumber % 2 != 0 ? 30 : 0;
-      addHour.innerText = getHour;
-      addMinute.innerText = ('0' + getMinute).slice(-2);
-      (0, _sliders2.default)(slider, sliderMaxVal);
-    });
-  };
-
-  // Movie Loaded Functions => CallBack Sync Slider & Movie Play Functions.
-  movie.addEventListener('loadedmetadata', function () {
-    var sliderMaxVal = slider.max;
-    var movieTotalTime = Math.round(movie.duration);
-    var setCalculation = Math.round(sliderMaxVal / movieTotalTime);
-    var totalHour = 18;
-    var setHourPoints = movieTotalTime * setCalculation / totalHour;
-    syncSlider(sliderMaxVal, setCalculation);
-    moviePlay(sliderMaxVal, setHourPoints, setCalculation);
-  });
-};
-
-// Import Customize of Slider Functions.
-exports.default = syncSliders;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _timeAlignment = __webpack_require__(2);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-var _heatGraph = __webpack_require__(18);
-
-var _heatGraph2 = _interopRequireDefault(_heatGraph);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Visualizations Functions.
-var visualizations = function visualizations() {
-
-  // Import CSV.
-  var importCSV1 = './csv/data.csv';
-
-  // Core Functions.
-  _d2.default.csv(importCSV1, function (error, csv1) {
-
-    var totalPopArry = [];
-    var csv1Len = csv1.length;
-    var movie = document.getElementById('fn-movie');
-    var cityBTNPC = document.querySelectorAll('.fn-tag');
-    var cityBTNPCLen = cityBTNPC.length;
-    var timeAlignmentLen = _timeAlignment2.default.length;
-    var cityCheckedLen = _cityChecked2.default.length;
-
-    movie.addEventListener('timeupdate', function () {
-      var getHour = document.querySelector('.fn-time').innerText;
-      var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-      for (var i = 0; i < timeAlignmentLen; i++) {
-        if (getMeridiem === _timeAlignment2.default[i].meridiem && getHour === _timeAlignment2.default[i].time) {
-          var getMilitaryTime = _timeAlignment2.default[i].militaryTime;
-          for (var _i = 0; _i < cityBTNPCLen; _i++) {
-            var getID = cityBTNPC[_i].getAttribute('id');
-            for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
-              if (getID === _cityChecked2.default[_i2].buttonPC) {
-                var getCity = _cityChecked2.default[_i2].searchWord;
-                for (var _i3 = 0; _i3 < csv1Len; _i3++) {
-                  if (getMilitaryTime === csv1[_i3].time && getCity === csv1[_i3].city) {
-                    totalPopArry.push(Number(csv1[_i3].population.replace(/\,/g, '')));
-                  }
-                }
-              }
-            }
-            (0, _heatGraph2.default)(totalPopArry, getID);
-          }
-        }
-      }
-    });
-  });
-};
-
-// Import Heat Graph Functions.
-
-
-// Import Json.
-exports.default = visualizations;
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _timeAlignment = __webpack_require__(2);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-var _drawerTotalPopCountUp = __webpack_require__(7);
-
-var _drawerTotalPopCountUp2 = _interopRequireDefault(_drawerTotalPopCountUp);
-
-var _drawerGenderPopCountUp = __webpack_require__(5);
-
-var _drawerGenderPopCountUp2 = _interopRequireDefault(_drawerGenderPopCountUp);
-
-var _drawerForeignTotalPopCountUp = __webpack_require__(3);
-
-var _drawerForeignTotalPopCountUp2 = _interopRequireDefault(_drawerForeignTotalPopCountUp);
-
-var _drawerForeignTourists = __webpack_require__(4);
-
-var _drawerForeignTourists2 = _interopRequireDefault(_drawerForeignTourists);
-
-var _drawerHeatGraph = __webpack_require__(6);
-
-var _drawerHeatGraph2 = _interopRequireDefault(_drawerHeatGraph);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Visualizations PC Functions.
-var visualizationsDrawerPC = function visualizationsDrawerPC() {
-
-  var cityBTNPC = document.querySelectorAll('.fn-tag');
-  var cityBTNPCLen = cityBTNPC.length;
-
-  // Clicked City Button, Function Start on PC.
-  for (var i = 0; i < cityBTNPCLen; i++) {
-    cityBTNPC[i].onclick = function () {
-      var _this = this;
-
-      // Import CSV.
-      var importCSV1 = './csv/data.csv';
-      var importCSV2 = './csv/foreignTourists.csv';
-
-      var movie = document.getElementById('fn-movie');
-      var drawer = document.querySelector('.fn-drawer-city');
-      var drawerCityBG = document.querySelector('.fn-city-map');
-      var cityCheckedLen = _cityChecked2.default.length;
-      var timeAlignmentLen = _timeAlignment2.default.length;
-
-      // Core Functions.
-      _d2.default.csv(importCSV1, function (error, csv1) {
-        _d2.default.csv(importCSV2, function (error, csv2) {
-
-          var totalPopArry = [];
-          var totalForeignArry = [];
-          var getHour = document.querySelector('.fn-time').innerText;
-          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-          var getID = _this.getAttribute('id');
-          movie.pause();
-          drawer.classList.add('is-active');
-          for (var _i = 0; _i < timeAlignmentLen; _i++) {
-            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
-              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
-              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
-                if (getID === _cityChecked2.default[_i2].buttonPC) {
-                  var getCity = _cityChecked2.default[_i2].searchWord;
-                  var getCityEN = _cityChecked2.default[_i2].cityEN;
-                  var getCityJP = _cityChecked2.default[_i2].cityJP;
-                  var getCityLower = _cityChecked2.default[_i2].cityLowerEN;
-                  drawerCityBG.classList.add(getCityLower);
-                  (0, _drawerGenderPopCountUp2.default)(csv1, _i2, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP);
-                  (0, _drawerForeignTourists2.default)(csv2, _i2, totalForeignArry, getMilitaryTime, getCity);
-                  (0, _drawerHeatGraph2.default)(getCityLower);
-                }
-              }
-            }
-          }
-          (0, _drawerTotalPopCountUp2.default)(totalPopArry);
-          (0, _drawerForeignTotalPopCountUp2.default)(totalForeignArry);
-        });
-      });
-    };
-  }
-};
-
-// Import Common Drawer Visualization Functions.
-
-
-// Import Json.
-exports.default = visualizationsDrawerPC;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-var _timeAlignment = __webpack_require__(2);
-
-var _timeAlignment2 = _interopRequireDefault(_timeAlignment);
-
-var _cityChecked = __webpack_require__(1);
-
-var _cityChecked2 = _interopRequireDefault(_cityChecked);
-
-var _drawerTotalPopCountUp = __webpack_require__(7);
-
-var _drawerTotalPopCountUp2 = _interopRequireDefault(_drawerTotalPopCountUp);
-
-var _drawerGenderPopCountUp = __webpack_require__(5);
-
-var _drawerGenderPopCountUp2 = _interopRequireDefault(_drawerGenderPopCountUp);
-
-var _drawerForeignTotalPopCountUp = __webpack_require__(3);
-
-var _drawerForeignTotalPopCountUp2 = _interopRequireDefault(_drawerForeignTotalPopCountUp);
-
-var _drawerForeignTourists = __webpack_require__(4);
-
-var _drawerForeignTourists2 = _interopRequireDefault(_drawerForeignTourists);
-
-var _drawerHeatGraph = __webpack_require__(6);
-
-var _drawerHeatGraph2 = _interopRequireDefault(_drawerHeatGraph);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Visualizations SP Functions.
-var visualizationsDrawerSP = function visualizationsDrawerSP() {
-
-  var cityBTNSP = document.querySelectorAll('.fn-button-city');
-  var cityBTNSPLen = cityBTNSP.length;
-
-  // Clicked City Button, Function Start on SP.
-  for (var i = 0; i < cityBTNSPLen; i++) {
-    cityBTNSP[i].onclick = function () {
-      var _this = this;
-
-      // Import CSV.
-      var importCSV1 = './csv/data.csv';
-      var importCSV2 = './csv/foreignTourists.csv';
-
-      var movie = document.getElementById('fn-movie');
-      var drawer = document.querySelector('.fn-drawer-city');
-      var drawerCityBG = document.querySelector('.fn-city-map');
-      var cityCheckedLen = _cityChecked2.default.length;
-      var timeAlignmentLen = _timeAlignment2.default.length;
-
-      // Core Functions.
-      _d2.default.csv(importCSV1, function (error, csv1) {
-        _d2.default.csv(importCSV2, function (error, csv2) {
-
-          var totalPopArry = [];
-          var totalForeignArry = [];
-          var getHour = document.querySelector('.fn-time').innerText;
-          var getMeridiem = document.querySelector('.fn-meridiem').innerText;
-          var getID = _this.getAttribute('id');
-          movie.pause();
-          drawer.classList.add('is-active');
-          for (var _i = 0; _i < timeAlignmentLen; _i++) {
-            if (getMeridiem === _timeAlignment2.default[_i].meridiem && getHour === _timeAlignment2.default[_i].time) {
-              var getMilitaryTime = _timeAlignment2.default[_i].militaryTime;
-              for (var _i2 = 0; _i2 < cityCheckedLen; _i2++) {
-                if (getID === _cityChecked2.default[_i2].buttonSP) {
-                  var getCity = _cityChecked2.default[_i2].searchWord;
-                  var getCityEN = _cityChecked2.default[_i2].cityEN;
-                  var getCityJP = _cityChecked2.default[_i2].cityJP;
-                  var getCityLower = _cityChecked2.default[_i2].cityLowerEN;
-                  drawerCityBG.classList.add(getCityLower);
-                  (0, _drawerGenderPopCountUp2.default)(csv1, _i2, totalPopArry, getMilitaryTime, getCity, getCityEN, getCityJP);
-                  (0, _drawerForeignTourists2.default)(csv2, _i2, totalForeignArry, getMilitaryTime, getCity);
-                  (0, _drawerHeatGraph2.default)(getCityLower);
-                }
-              }
-            }
-          }
-          (0, _drawerTotalPopCountUp2.default)(totalPopArry);
-          (0, _drawerForeignTotalPopCountUp2.default)(totalForeignArry);
-        });
-      });
-    };
-  }
-};
-
-// Import Common Drawer Visualization Functions.
-
-
-// Import Json.
-exports.default = visualizationsDrawerSP;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import Modules.
-
-var _forIE = __webpack_require__(11);
-
-var _forIE2 = _interopRequireDefault(_forIE);
-
-var _addFlag = __webpack_require__(10);
-
-var _addFlag2 = _interopRequireDefault(_addFlag);
-
-var _initHeatGraph = __webpack_require__(9);
-
-var _initHeatGraph2 = _interopRequireDefault(_initHeatGraph);
-
-var _drawerClosed = __webpack_require__(8);
-
-var _drawerClosed2 = _interopRequireDefault(_drawerClosed);
-
-var _sliderClicked = __webpack_require__(12);
-
-var _sliderClicked2 = _interopRequireDefault(_sliderClicked);
-
-var _syncSliders = __webpack_require__(13);
-
-var _syncSliders2 = _interopRequireDefault(_syncSliders);
-
-var _visualizationsDrawerPC = __webpack_require__(15);
-
-var _visualizationsDrawerPC2 = _interopRequireDefault(_visualizationsDrawerPC);
-
-var _visualizationsDrawerSP = __webpack_require__(16);
-
-var _visualizationsDrawerSP2 = _interopRequireDefault(_visualizationsDrawerSP);
-
-var _visualizations = __webpack_require__(14);
-
-var _visualizations2 = _interopRequireDefault(_visualizations);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Require All Functions.
-(0, _forIE2.default)();
-(0, _addFlag2.default)();
-(0, _initHeatGraph2.default)();
-(0, _drawerClosed2.default)();
-(0, _sliderClicked2.default)();
-(0, _syncSliders2.default)();
-(0, _visualizationsDrawerPC2.default)();
-(0, _visualizationsDrawerSP2.default)();
-(0, _visualizations2.default)();
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import D3.js
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _d = __webpack_require__(0);
-
-var _d2 = _interopRequireDefault(_d);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// Heat Graph PC Functions.
-var heatGraph = function heatGraph(totalPopArry, getID) {
-
-  var totalPopArryLen = totalPopArry.length;
-  var getTags = document.getElementById(getID);
-  var dummyChild = getTags.firstElementChild;
-  var addPop = getTags.lastElementChild;
-  var addTotalPop = 0;
-  for (var i = 0; i < totalPopArryLen; i++) {
-    addTotalPop += totalPopArry[i];
-  }
-  var startTotalPop = addTotalPop - 40;
-  var getTotalPop = addTotalPop;
-  var duration = 1;
-  totalPopArry.length = 0;
-  if (dummyChild.innerText != getTotalPop) {
-    dummyChild.innerText = getTotalPop;
-    setTimeout(function () {
-      var checkFlag = document.querySelector('.first-view');
-      var flagSP = checkFlag.classList.contains('sp');
-      var flagPCTB = checkFlag.classList.contains('pctb');
-      var flagPC = checkFlag.classList.contains('pc');
-      var addSizePoint = flagSP ? '62' : flagPCTB ? '107' : '162';
-      var addBasisRatio = flagSP ? '1' : '0.8';
-      var setBasisCity = document.getElementById('fn-tag-osaka');
-      var getBasisPop = setBasisCity.firstElementChild.innerText;
-      var getCityPopRatio = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * addBasisRatio);
-      var getCityPopRatioNaha = addSizePoint - addSizePoint * (dummyChild.innerText / getBasisPop * 2.5);
-      _d2.default.select('#' + getID + '-sync-polygon').transition().duration(750).attr('transform', 'translate(0, ' + getCityPopRatio + ')');
-      _d2.default.select('#fn-tag-tokyo-sync-polygon').transition().duration(750).attr('transform', 'translate(0, 0)');
-      _d2.default.select('#fn-tag-naha-sync-polygon').transition().duration(750).attr('transform', 'translate(0, ' + getCityPopRatioNaha + ')');
-    }, 10);
-    setInterval(function () {
-      if (startTotalPop <= getTotalPop) {
-        addPop.innerText = startTotalPop.toLocaleString();
-        startTotalPop++;
-      }
-    }, duration);
-  }
-};exports.default = heatGraph;
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Customize of Slider.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var sliders = function sliders(slider, sliderMaxVal) {
-  var target = document.querySelector('.fn-range-active');
-  var rangePoint = document.querySelectorAll('.fn-range-point');
-  var pointLen = rangePoint.length;
-  var pointVal = sliderMaxVal / (pointLen - 1);
-  var sliderTime = document.querySelectorAll('.fn-slider-time');
-  if (slider.value < sliderMaxVal / 2) {
-    target.style.width = slider.value / sliderMaxVal * 100 + 1 + '%';
+    /******/
   }
-  if (slider.value >= sliderMaxVal / 2) {
-    target.style.width = slider.value / sliderMaxVal * 100 + '%';
-  }
-  for (var i = 0; i < pointLen; i++) {
-    if (slider.value >= pointVal * i) {
-      rangePoint[i].classList.add('is-active');
-      sliderTime[i].classList.add('is-active');
-    } else {
-      rangePoint[i].classList.remove('is-active');
-      sliderTime[i].classList.remove('is-active');
-    }
-  }
-};
-
-exports.default = sliders;
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = [{ "countryNameJP": "オーストラリア", "countryNameEN": "Australia", "flagPath": "australia" }, { "countryNameJP": "オーストリア", "countryNameEN": "Austria", "flagPath": "austria" }, { "countryNameJP": "中華人民共和国|中国", "countryNameEN": "China", "flagPath": "china" }, { "countryNameJP": "イギリス", "countryNameEN": "United Kingdom", "flagPath": "united-kingdom" }, { "countryNameJP": "香港", "countryNameEN": "Hong Kong", "flagPath": "hong-kong" }, { "countryNameJP": "大韓民国", "countryNameEN": "Korea", "flagPath": "korea" }, { "countryNameJP": "マレーシア", "countryNameEN": "Malaysia", "flagPath": "malaysia" }, { "countryNameJP": "ロシア|ロシア連邦", "countryNameEN": "Russia", "flagPath": "russia" }, { "countryNameJP": "シンガポール", "countryNameEN": "Singapore", "flagPath": "singapore" }, { "countryNameJP": "スウェーデン", "countryNameEN": "Sweden", "flagPath": "sweden" }, { "countryNameJP": "タイ王国|タイ", "countryNameEN": "Thailand", "flagPath": "thailand" }, { "countryNameJP": "台湾", "countryNameEN": "Taiwan", "flagPath": "taiwan" }, { "countryNameJP": "アメリカ合衆国", "countryNameEN": "USA", "flagPath": "usa" }, { "countryNameJP": "不明", "countryNameEN": "Unknown", "flagPath": "unknown" }, { "countryNameJP": "フランス", "countryNameEN": "France", "flagPath": "france" }, { "countryNameJP": "インドネシア", "countryNameEN": "Indonesia", "flagPath": "indonesia" }, { "countryNameJP": "イタリア", "countryNameEN": "Italy", "flagPath": "italy" }, { "countryNameJP": "ベルギー", "countryNameEN": "Belgium", "flagPath": "belgium" }, { "countryNameJP": "カナダ", "countryNameEN": "Canada", "flagPath": "canada" }, { "countryNameJP": "スイス", "countryNameEN": "Switzerland", "flagPath": "switzerland" }, { "countryNameJP": "チェコ", "countryNameEN": "Czech", "flagPath": "czech" }, { "countryNameJP": "ドイツ", "countryNameEN": "Germany", "flagPath": "germany" }, { "countryNameJP": "デンマーク", "countryNameEN": "Denmark", "flagPath": "denmark" }, { "countryNameJP": "スペイン", "countryNameEN": "Spain", "flagPath": "spain" }, { "countryNameJP": "エストニア", "countryNameEN": "Estonia", "flagPath": "estonia" }, { "countryNameJP": "フィンランド", "countryNameEN": "Finland", "flagPath": "finland" }, { "countryNameJP": "インド", "countryNameEN": "India", "flagPath": "india" }, { "countryNameJP": "イスラエル", "countryNameEN": "Israel", "flagPath": "israel" }, { "countryNameJP": "メキシコ", "countryNameEN": "Mexico", "flagPath": "mexico" }, { "countryNameJP": "オランダ", "countryNameEN": "Netherlands", "flagPath": "netherlands" }, { "countryNameJP": "ノルウェー", "countryNameEN": "Norway", "flagPath": "norway" }, { "countryNameJP": "ニュージーランド", "countryNameEN": "New zealand", "flagPath": "new-zealand" }, { "countryNameJP": "フィリピン", "countryNameEN": "Philippines", "flagPath": "philippines" }, { "countryNameJP": "ポーランド", "countryNameEN": "Poland", "flagPath": "poland" }, { "countryNameJP": "ポルトガル", "countryNameEN": "Portugal", "flagPath": "portugal" }, { "countryNameJP": "カタール", "countryNameEN": "Qatar", "flagPath": "qatar" }, { "countryNameJP": "ルーマニア", "countryNameEN": "Romania", "flagPath": "romania" }, { "countryNameJP": "トルコ", "countryNameEN": "Turkey", "flagPath": "turkey" }, { "countryNameJP": "ベトナム", "countryNameEN": "Vietnam", "flagPath": "vietnam" }, { "countryNameJP": "ルクセンブルク", "countryNameEN": "Luxembourg", "flagPath": "luxembourg" }, { "countryNameJP": "アラブ首長国連邦", "countryNameEN": "UAE", "flagPath": "uae" }, { "countryNameJP": "ミャンマー", "countryNameEN": "Myanmar", "flagPath": "myanmar" }, { "countryNameJP": "ブラジル", "countryNameEN": "Brazil", "flagPath": "brazil" }, { "countryNameJP": "アイルランド", "countryNameEN": "Ireland", "flagPath": "ireland" }, { "countryNameJP": "アルゼンチン", "countryNameEN": "Argentina", "flagPath": "argentina" }];
-
-/***/ })
-/******/ ]);
+)
