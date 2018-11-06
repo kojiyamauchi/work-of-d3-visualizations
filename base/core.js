@@ -1,23 +1,40 @@
-'use strict'
+/*
+
+ Core.js
+
+*/
 
 // Import Modules.
-import forIE from './modules/settings/forIE'
-import addFlag from './modules/settings/addFlag'
-import initHeatGraph from './modules/heatGraph/initHeatGraph'
-import drawerClosed from './modules/drawers/drawerClosed'
-import sliderClicked from './modules/sliders/sliderClicked'
-import syncSliders from './modules/sliders/syncSliders'
-import visualizationsDrawerPC from './modules/visualizationsDrawerPC'
-import visualizationsDrawerSP from './modules/visualizationsDrawerSP'
-import visualizations from './modules/visualizations'
+import App from '@/base/modules/App'
+import SetStates from '@/base/modules/state/SetStates'
 
-// Require All Functions.
-forIE()
-addFlag()
-initHeatGraph()
-drawerClosed()
-sliderClicked()
-syncSliders()
-visualizationsDrawerPC()
-visualizationsDrawerSP()
-visualizations()
+// Created Instance.
+const app = new App()
+const setStates = new SetStates()
+
+// Initial.
+app.initialize()
+
+// DOM Content Loaded.
+window.addEventListener('DOMContentLoaded', () => {
+  // Call DOM Content Loaded Method.
+})
+
+// Load.
+window.addEventListener('load', () => {
+  // Call Load Method.
+  app.load(setStates.getWidth)
+})
+
+// Resize.
+window.addEventListener('resize', () => {
+  // Set View State.
+  setStates.setWidth = document.body.clientWidth
+  // Call Resize Method.
+  app.resize(setStates.getWidth)
+})
+
+// Scroll.
+window.addEventListener('scroll', () => {
+  // Call Scroll Method.
+})

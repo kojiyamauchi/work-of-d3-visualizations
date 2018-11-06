@@ -1,0 +1,45 @@
+/*
+
+ SliderStyles.ts
+
+*/
+
+// Import Sliders.ts
+import SyncPlayMovie from '@/base/modules/sliders/modules/SyncPlayMovie'
+
+export default class SyncSliderStyles extends SyncPlayMovie {
+  // Types.
+  target: HTMLElement | null
+  rangePoint: NodeListOf<HTMLElement>
+  pointLen: number
+  sliderTime: NodeListOf<HTMLElement>
+
+  constructor() {
+    super()
+    this.target = document.querySelector('.fn-range-active')
+    this.rangePoint = document.querySelectorAll('.fn-range-point')
+    this.pointLen = this.rangePoint.length
+    this.sliderTime = document.querySelectorAll('.fn-slider-time')
+  }
+
+  callSyncStyles() {
+    this.movie.addEventListener('timeupdate', () => {
+      const pointVal = this.propMaxVal! / (this.pointLen - 1)
+      if (Number(this.slider!.value) < this.propMaxVal! / 2) {
+        ;(this.target as HTMLElement).style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100 + 1}%`
+      }
+      if (Number(this.slider!.value) >= this.propMaxVal! / 2) {
+        ;(this.target as HTMLElement).style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100}%`
+      }
+      for (let i = 0; i < this.pointLen; i++) {
+        if (Number(this.slider!.value) >= pointVal * i) {
+          this.rangePoint[i].classList.add('is-active')
+          this.sliderTime[i].classList.add('is-active')
+        } else {
+          this.rangePoint[i].classList.remove('is-active')
+          this.sliderTime[i].classList.remove('is-active')
+        }
+      }
+    })
+  }
+}

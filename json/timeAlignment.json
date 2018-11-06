@@ -1,4 +1,5 @@
-[{
+[
+  {
     "time": "6:00",
     "meridiem": "a.m.",
     "militaryTime": "6:00"
@@ -37,7 +38,6 @@
     "time": "1:00",
     "meridiem": "p.m.",
     "militaryTime": "13:00"
-
   },
   {
     "time": "2:00",
@@ -93,5 +93,30 @@
     "time": "12:00",
     "meridiem": "a.m.",
     "militaryTime": "0:00"
+  },
+  {
+    "time": "1:00",
+    "meridiem": "a.m.",
+    "militaryTime": "1:00"
+  },
+  {
+    "time": "2:00",
+    "meridiem": "a.m.",
+    "militaryTime": "2:00"
+  },
+  {
+    "time": "3:00",
+    "meridiem": "a.m.",
+    "militaryTime": "3:00"
+  },
+  {
+    "time": "4:00",
+    "meridiem": "a.m.",
+    "militaryTime": "4:00"
+  },
+  {
+    "time": "5:00",
+    "meridiem": "a.m.",
+    "militaryTime": "5:00"
   }
 ]
