@@ -74,7 +74,6 @@ export default class VisualizationsDrawer {
     this.triangleGraph = document.querySelector('.fn-add-heat-graph')
     this.closeBTN = document.querySelector('.fn-button-back-to-map')
     this.graphCallBackCore = (transition, callback) => {
-      // TODO.
       let index = 0
       transition
         .on('start', () => {
