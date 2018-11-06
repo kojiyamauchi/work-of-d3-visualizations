@@ -20,7 +20,7 @@ export default class DrawerClosed {
   femaleWrap!: HTMLElement | null
   maleGraph!: HTMLElement | null
   femaleGraph!: HTMLElement | null
-  drawerHeatGraphWrap!: HTMLElement | null
+  drawerTriangleGraphWrap!: HTMLElement | null
   countriesPop!: NodeListOf<HTMLElement>
   countriesGraphWrap!: NodeListOf<HTMLElement>
   countriesGraph!: NodeListOf<HTMLElement>
@@ -38,7 +38,7 @@ export default class DrawerClosed {
     this.femaleWrap = document.querySelector('.fn-gender-female-wrapper')
     this.maleGraph = document.querySelector('.fn-app-female-graph-inner')
     this.femaleGraph = document.querySelector('.fn-app-male-graph-inner')
-    this.drawerHeatGraphWrap = document.querySelector('.fn-add-heat-graph')
+    this.drawerTriangleGraphWrap = document.querySelector('.fn-add-heat-graph')
     this.countriesPop = document.querySelectorAll('.fn-countries-population')
     this.countriesGraphWrap = document.querySelectorAll('.fn-graph-countries-population')
     this.countriesGraph = document.querySelectorAll('.fn-graph-countries-population-inner')
@@ -56,7 +56,7 @@ export default class DrawerClosed {
       this.femaleWrap!.removeAttribute('style')
       this.maleGraph!.removeAttribute('style')
       this.femaleGraph!.removeAttribute('style')
-      this.drawerHeatGraphWrap!.textContent = null
+      this.drawerTriangleGraphWrap!.textContent = null
       Array.from(this.countriesPop).map((info, index) => {
         info.textContent = `ーーー`
         this.countriesGraphWrap[index].removeAttribute('style')

@@ -185,10 +185,10 @@ export default class VisualizationsDrawer {
     }, 500)
   }
 
-  drawerHeatGraph(getCityLower: string) {
-    const getHeatGraph = document.querySelector(`.fn-triangle-graph-${getCityLower}`)
-    const cloneHeatGraph = getHeatGraph!.cloneNode(true) as HTMLElement
-    this.triangleGraph!.appendChild(cloneHeatGraph)
+  drawerTriangleGraph(getCityLower: string) {
+    const getTriangleGraph = document.querySelector(`.fn-triangle-graph-${getCityLower}`)
+    const cloneTriangleGraph = getTriangleGraph!.cloneNode(true) as HTMLElement
+    this.triangleGraph!.appendChild(cloneTriangleGraph)
   }
 
   callDrawerSP(propDataBaseJapanese: DataBaseJapaneseTypes[], propDataBaseTourists: DataBaseTouristsTypes[]) {
@@ -221,7 +221,7 @@ export default class VisualizationsDrawer {
         this.totalPopCountUp()
         this.foreignTourists()
         this.foreignTotalPopCountUp()
-        this.drawerHeatGraph(this.getCityLower)
+        this.drawerTriangleGraph(this.getCityLower)
       })
     })
   }
@@ -256,7 +256,7 @@ export default class VisualizationsDrawer {
         this.totalPopCountUp()
         this.foreignTourists()
         this.foreignTotalPopCountUp()
-        this.drawerHeatGraph(this.getCityLower)
+        this.drawerTriangleGraph(this.getCityLower)
       })
     })
   }
