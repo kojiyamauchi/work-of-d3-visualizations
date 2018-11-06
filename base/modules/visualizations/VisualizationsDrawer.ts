@@ -92,8 +92,8 @@ export default class VisualizationsDrawer {
     const coreFunction = (setPop: HTMLElement | null, setGraph: HTMLElement | null) => {
       this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\,/g, '')))
       const getPop = Number(dataBaseInfo.population.replace(/\,/g, ''))
-      let startPop = getPop - 100
-      const duration = 10
+      let startPop = getPop - 30
+      const duration = 50
       setTimeout(() => {
         setInterval(() => {
           if (startPop <= getPop) {
@@ -122,13 +122,13 @@ export default class VisualizationsDrawer {
 
   totalPopCountUp() {
     const addTotalPop = this.totalPopArry.reduce((prev, current) => (prev += current), 0)
-    let startTotalPop = addTotalPop - 100
+    let startTotalPop = addTotalPop - 30
     const getTotalPop = addTotalPop
     const getMalePop = this.totalPopArry[0]
     const getFemalePop = this.totalPopArry[1]
     const getMaleWidth = (getMalePop / getTotalPop) * 100
     const getFemaleWidth = (getFemalePop / getTotalPop) * 100
-    const duration = 10
+    const duration = 50
     this.maleWrap!.style.width = `${getMaleWidth}%`
     this.femaleWrap!.style.width = `${getFemaleWidth}%`
     this.totalPopArry.length = 0
@@ -145,9 +145,9 @@ export default class VisualizationsDrawer {
   foreignTourists() {
     Array.from(this.addCountries).map((countriesInfo, index) => {
       const getGraphWidth = (this.totalForeignArry[index] / this.totalForeignArry[0]) * 100
-      let startPop = this.totalForeignArry[index] - 100 >= 0 ? this.totalForeignArry[index] - 100 : 0
+      let startPop = this.totalForeignArry[index] - 30 >= 0 ? this.totalForeignArry[index] - 30 : 0
       const getPop = this.totalForeignArry[index]
-      const duration = 10
+      const duration = 50
       countriesInfo.textContent = this.countriesArry[index]
       this.countriesFlag[index].setAttribute('src', `images/icon_${this.countriesFlagArry[index]}.svg`)
       this.countriesGraphWrap[index].style.width = `${getGraphWidth}%`
@@ -171,9 +171,9 @@ export default class VisualizationsDrawer {
 
   foreignTotalPopCountUp() {
     const addTotalPop = this.totalForeignArry.reduce((prev, current) => (prev += current), 0)
-    let startTotalPop = addTotalPop - 100
+    let startTotalPop = addTotalPop - 30
     const getTotalPop = addTotalPop
-    const duration = 10
+    const duration = 50
     this.totalForeignArry.length = 0
     setTimeout(() => {
       setInterval(() => {
