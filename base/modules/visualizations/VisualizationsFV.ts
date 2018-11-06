@@ -51,9 +51,9 @@ export default class VisualizationsFV {
           // Sum All Population.
           const addTotalPop = this.totalPopArry.reduce((prev, current) => (prev += current), 0)
 
-          let startTotalPop = addTotalPop - 40
+          let startTotalPop = addTotalPop - 10
           const getTotalPop = addTotalPop
-          const duration = 1
+          const duration = 50
           this.totalPopArry.length = 0
 
           const getTags = document.getElementById(getID!)
