@@ -26,10 +26,10 @@ export default class SyncSliderStyles extends SyncPlayMovie {
     this.movie.addEventListener('timeupdate', () => {
       const pointVal = this.propMaxVal! / (this.pointLen - 1)
       if (Number(this.slider!.value) < this.propMaxVal! / 2) {
-        ;(this.target as HTMLElement).style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100 + 1}%`
+        this.target!.style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100 + 1}%`
       }
       if (Number(this.slider!.value) >= this.propMaxVal! / 2) {
-        ;(this.target as HTMLElement).style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100}%`
+        this.target!.style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100}%`
       }
       Array.from(this.rangePoint).map((info, index) => {
         if (Number(this.slider!.value) >= pointVal * index) {
