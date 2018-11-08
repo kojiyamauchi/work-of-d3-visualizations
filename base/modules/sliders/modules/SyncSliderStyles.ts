@@ -31,15 +31,15 @@ export default class SyncSliderStyles extends SyncPlayMovie {
       if (Number(this.slider!.value) >= this.propMaxVal! / 2) {
         ;(this.target as HTMLElement).style.width = `${(Number(this.slider!.value) / this.propMaxVal!) * 100}%`
       }
-      for (let i = 0; i < this.pointLen; i++) {
-        if (Number(this.slider!.value) >= pointVal * i) {
-          this.rangePoint[i].classList.add('is-active')
-          this.sliderTime[i].classList.add('is-active')
+      Array.from(this.rangePoint).map((info, index) => {
+        if (Number(this.slider!.value) >= pointVal * index) {
+          info.classList.add('is-active')
+          this.sliderTime[index].classList.add('is-active')
         } else {
-          this.rangePoint[i].classList.remove('is-active')
-          this.sliderTime[i].classList.remove('is-active')
+          info.classList.remove('is-active')
+          this.sliderTime[index].classList.remove('is-active')
         }
-      }
+      })
     })
   }
 }
