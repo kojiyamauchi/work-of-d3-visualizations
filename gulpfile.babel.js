@@ -69,13 +69,7 @@ gulp.task('webpack', () => {
 gulp.task('jsmin', () => {
   return gulp
     .src('js/core.js')
-    .pipe(
-      jsmin({
-        output: {
-          comments: /^!/
-        }
-      })
-    )
+    .pipe(jsmin())
     .pipe(
       rename({
         suffix: '.min'
