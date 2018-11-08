@@ -12,6 +12,7 @@ import { DataBaseJapaneseTypes, DataBaseTouristsTypes } from '@/types/interface'
 
 export default class VisualizationsDrawer {
   // Types.
+  genderArry: string[]
   totalPopArry: number[]
   totalForeignArry: number[]
   countriesArry: string[]
@@ -44,6 +45,7 @@ export default class VisualizationsDrawer {
   graphCallBackCore: (transition: any, callback: any) => void
 
   constructor() {
+    this.genderArry = []
     this.totalPopArry = []
     this.totalForeignArry = []
     this.countriesArry = []
@@ -87,11 +89,10 @@ export default class VisualizationsDrawer {
     }
   }
 
-  genderPopCountUp(dataBaseInfo: DataBaseJapaneseTypes) {
+  genderPopCountUp() {
     // Core Functions.
-    const coreFunction = (setPop: HTMLElement | null, setGraph: HTMLElement | null) => {
-      this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\,/g, '')))
-      const getPop = Number(dataBaseInfo.population.replace(/\,/g, ''))
+    const coreFunction = (genderIndex: number, setPop: HTMLElement | null, setGraph: HTMLElement | null) => {
+      const getPop = this.totalPopArry[genderIndex]
       let startPop = getPop - 30
       const duration = 50
       setTimeout(() => {
@@ -108,16 +109,20 @@ export default class VisualizationsDrawer {
       }, 500)
     }
     // Branches.
-    if (dataBaseInfo.gender === '男') {
-      const setPop = this.malePop
-      const setGraph = this.maleGraph
-      coreFunction(setPop, setGraph)
-    }
-    if (dataBaseInfo.gender === '女') {
-      const setPop = this.femalePop
-      const setGraph = this.femaleGraph
-      coreFunction(setPop, setGraph)
-    }
+    this.genderArry.map(genderInfo => {
+      if (genderInfo === '男') {
+        const genderIndex = 0
+        const setPop = this.malePop
+        const setGraph = this.maleGraph
+        coreFunction(genderIndex, setPop, setGraph)
+      }
+      if (genderInfo === '女') {
+        const genderIndex = 1
+        const setPop = this.femalePop
+        const setGraph = this.femaleGraph
+        coreFunction(genderIndex, setPop, setGraph)
+      }
+    })
   }
 
   totalPopCountUp() {
@@ -206,7 +211,8 @@ export default class VisualizationsDrawer {
             this.cityEN!.textContent = dataBaseInfo.cityEN
             this.cityJP!.textContent = dataBaseInfo.cityJP
             this.drawerCityBG!.classList.add(this.getCityLower)
-            this.genderPopCountUp(dataBaseInfo)
+            this.genderArry.push(dataBaseInfo.gender)
+            this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\,/g, '')))
           }
         })
 
@@ -218,6 +224,7 @@ export default class VisualizationsDrawer {
           }
         })
 
+        this.genderPopCountUp()
         this.totalPopCountUp()
         this.foreignTourists()
         this.foreignTotalPopCountUp()
@@ -241,7 +248,8 @@ export default class VisualizationsDrawer {
             this.cityEN!.textContent = dataBaseInfo.cityEN
             this.cityJP!.textContent = dataBaseInfo.cityJP
             this.drawerCityBG!.classList.add(this.getCityLower)
-            this.genderPopCountUp(dataBaseInfo)
+            this.genderArry.push(dataBaseInfo.gender)
+            this.totalPopArry.push(Number(dataBaseInfo.population.replace(/\,/g, '')))
           }
         })
 
@@ -253,6 +261,7 @@ export default class VisualizationsDrawer {
           }
         })
 
+        this.genderPopCountUp()
         this.totalPopCountUp()
         this.foreignTourists()
         this.foreignTotalPopCountUp()
