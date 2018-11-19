@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: ['babel-loader']
+        loader: 'babel-loader'
       },
       // ES2015 End.
       // TypeScript.
@@ -48,7 +48,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: ['ts-loader']
+        loader: 'ts-loader'
       },
       // TypeScript End.
       // Import Json File.
