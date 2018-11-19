@@ -32,7 +32,6 @@
   "include": [
     "base/**/*",
     "apps/**/*",
-    "json/**/*",
     "types/**/*",
     "src/**/*"
   ],
